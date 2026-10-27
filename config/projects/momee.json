@@ -1,0 +1,22 @@
+{
+  "id": "momee",
+  "name": "Momee",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "app-momee",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "momee",
+      "subdomain": "momee"
+    }
+  },
+  "description": {
+    "en": "An interactive bilingual storybook adventure in development for parents and young children.",
+    "id": "Petualangan buku cerita interaktif dwibahasa yang sedang dikembangkan untuk orang tua dan anak kecil."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/momee/thumbnail.webp"
+  }
+}

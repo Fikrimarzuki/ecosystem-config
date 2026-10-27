@@ -1,0 +1,27 @@
+{
+  "id": "blog",
+  "name": "FM Blog",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "platforms",
+  "repository": "web-blog",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "blog",
+      "subdomain": "blog"
+    }
+  },
+  "tagline": {
+    "en": "Technical writing and project stories",
+    "id": "Tulisan teknis dan kisah proyek"
+  },
+  "description": {
+    "en": "A developer blog for technical articles, developer journal entries, project notes, and FM Work updates. The current site includes clearly marked sample entries.",
+    "id": "Blog pengembang untuk artikel teknis, entri jurnal pengembang, catatan proyek, dan kabar FM Work. Situs saat ini memuat contoh entri yang ditandai dengan jelas."
+  },
+  "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shiki"],
+  "assets": {
+    "thumbnail": "assets/projects/blog/thumbnail.webp"
+  }
+}

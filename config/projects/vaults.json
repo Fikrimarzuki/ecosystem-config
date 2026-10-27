@@ -1,0 +1,38 @@
+{
+  "id": "vaults",
+  "name": "FM Vaults",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-vaults",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "vaults",
+      "subdomain": "vaults"
+    }
+  },
+  "tagline": {
+    "en": "Your space. Your data. Your vault.",
+    "id": "Ruangmu. Datamu. Brankasmu."
+  },
+  "description": {
+    "en": "A local-first, encrypted vault for secrets, credentials, environment variables and structured notes, with encrypted backups and JSON, CSV or .env export.",
+    "id": "Brankas terenkripsi yang mengutamakan penyimpanan lokal untuk rahasia, kredensial, variabel lingkungan, dan catatan terstruktur, dengan cadangan terenkripsi serta ekspor JSON, CSV, atau .env."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "tags": [
+    "security",
+    "encryption",
+    "local-first",
+    "productivity"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/vaults/thumbnail.webp"
+  }
+}

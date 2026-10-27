@@ -1,0 +1,325 @@
+{
+  "experience": [
+    {
+      "id": "spacetoco",
+      "fields": [
+        "company",
+        "role",
+        "start",
+        "end"
+      ],
+      "fingerprints": {
+        "fields": {
+          "company": "sha256:fd2fd9fb2c2b3fe674fc706ad3d7c9892bb02b8368067a3a0a9edd774e63e608",
+          "role": "sha256:988e0f06367fb7678b5f3db9fe91dc282eb2b03645c41eed52ad77a3063e9dbc",
+          "start": "sha256:fd28fb22738debf8899c3739ec6bf231ab27f522372c1f802c7e0e46a10d73dc",
+          "end": "sha256:a1e5a80b5bc8a8bf77ce770098cb4faf33cde678618cd27fbcc6354150eb164b"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "hacktiv8",
+      "fields": [
+        "company",
+        "role",
+        "start",
+        "end"
+      ],
+      "fingerprints": {
+        "fields": {
+          "company": "sha256:e635ef23e9709875c815c26013e828d48cc5808a8e0a2bd864eb9b6792693405",
+          "role": "sha256:c2952b0ffe3f5e3dee8bc8d597036ebcae31d1e1cd0629bb82a0a06b7d5694a9",
+          "start": "sha256:6c23e01958c3c2590db937667d88cbc51cea5f8752b137edcc271e7f252d0cd5",
+          "end": "sha256:fd9909f3b5b5d31933218d7850ec7f0e3b4951f5a6224bd12883e4de0270f586"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    }
+  ],
+  "work": [
+    {
+      "employerId": "pixelHouseStudio",
+      "id": "nodejs-data-converter",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Node.js"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:6f67bb6383109fa565b3141b4b6742aedb06d80008775403829849c8cbf478d8",
+          "description.en": "sha256:583219e565f91b027adb1d19a7cbc83311fe4e42a40dbae727be7b7002cdaa00",
+          "description.id": "sha256:d76d64e64e6b742182637d729f8e00452db0a7c6118d535c139fbdd01c933f31"
+        },
+        "technologies": {
+          "Node.js": "sha256:2a9f28dd13540028b3096979b40c6c3b5ebee708bcee36ab30d455315b8d441b"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "employerId": "hacktiv8",
+      "id": "github-classroom-automation",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Bash",
+        "GitHub CLI"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:23f4527a2b811309c7395075057c22b88b93408286652377352954bc0be16674",
+          "description.en": "sha256:1939ed12f64cba7e89f9745c88d5a1c68147c2921a594e10ce89635dc0156b2b",
+          "description.id": "sha256:2cdaa7a66be49d8eb2bbb50a8f0dcfa3a4eafc5d4ec18c83fde52332e750435b"
+        },
+        "technologies": {
+          "Bash": "sha256:f7758a7f56fb330b466caa452307fef3794a8c8b9927188614859d09d99ecbef",
+          "GitHub CLI": "sha256:7689edcfc5de3cffb06cb0914227e1a0911767187505152f5049556e82ee46ec"
+        },
+        "relatedProjects": {}
+      }
+    }
+  ],
+  "freelance": [
+    {
+      "id": "automotiveInventorySystem",
+      "fields": [
+        "title",
+        "engagement",
+        "role",
+        "start",
+        "end",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Express.js",
+        "MySQL",
+        "Node.js",
+        "React.js"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:657f3cb0274f33eac0c0a72c760537889ae0fc742212920d9fccdda19bdfb1c5",
+          "engagement": "sha256:07b45b8107e9d6f46824b3dd560c4a25ddde7c1339d6e351ec0f755da0f8cba5",
+          "role": "sha256:e35d8bbd833bda7959a13bd611aa76b3ebe62c45271f5668659204e1819365ca",
+          "start": "sha256:6879721449603587cf0b39022f8d02f80085bc7e0e0af142867667a80a57d20e",
+          "end": "sha256:7d6ac2a1706825f4238a988f20479484dad03b2ed8b11f358ac44e56a30d9547",
+          "description.en": "sha256:5a1e536ce137194eb949b20b793be8a73cd163fa5a8dc19359b035f26b0e7d65",
+          "description.id": "sha256:5828161f6f2eeca08c4423e48c3724b640cb330d690bc1a254ca5f6428594d4f"
+        },
+        "technologies": {
+          "Express.js": "sha256:7cf4ca73e69d36c60719f826d7cde126a26982ea09e9b06419427c8ae7654bd0",
+          "MySQL": "sha256:8b8642dd20c159a948f700fc94192771e2460a87fd378034c85a977096590c71",
+          "Node.js": "sha256:9790f033fd3b8f8bb8d3ef00b81fca709072cb57baff4b1a558ce004f1e779e4",
+          "React.js": "sha256:d1900187911781dce32a65bd8d5081fd23b83bef7886bf50ce1372862b973648"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "miningOperationsPlatform",
+      "fields": [
+        "title",
+        "engagement",
+        "role",
+        "start",
+        "end",
+        "description.en"
+      ],
+      "technologies": [
+        "Next.js",
+        "React Native",
+        "Tailwind CSS",
+        "TanStack Query",
+        "TypeScript",
+        "shadcn/ui"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:574d5a41a5092ae79d56fdc011d05495fdf27883e394843bb425bc6d29b6ac01",
+          "engagement": "sha256:809d43214d3391790e41544db18e2652722ae89a1dd515a16fe7ae6e4dc92c9b",
+          "role": "sha256:e5be44d6ebdec491279d2c785013d51b230fe55a3b07c909179f1f90fe7d509d",
+          "start": "sha256:f62d52e1e42ed521df7fff5b4539c18c64191430bb48c532d2c0c0f8109fa975",
+          "end": "sha256:3c73582b56a714fdf71090dc36f989275d0c4414e8c67a0a122cd9c70bf0ef49",
+          "description.en": "sha256:82e4671c7adcfe4112326d6c1affc4841ee88ed81ebe4e4e23e3e5685be14fa1"
+        },
+        "technologies": {
+          "Next.js": "sha256:de7706bb1ec9e8031b5219cd97142d7031a75b84e420eb60bd5b945f60818d83",
+          "React Native": "sha256:9925d93da4a79a1545aa4e48c129ceb931845b8f30b616382a354f70ca286be1",
+          "Tailwind CSS": "sha256:65bf147a159acfb5f0282c21205e0cabbb87016011343262626e3caf47c9b4f5",
+          "TanStack Query": "sha256:6112ca535073e58ce67867797621a7f331b843b19b5867f2e466c792dca6de02",
+          "TypeScript": "sha256:6aa85cca38e10df19fec6529b99e25931d5ec0c493ddf5853f0d57f87ee40bd1",
+          "shadcn/ui": "sha256:1a56ceec5b29aa704b6ebdf9bd79e6ee26f24de7308a70824d6ce3184e6cf17c"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "myconnect",
+      "fields": [
+        "title",
+        "engagement",
+        "description.en"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:39a0e6e4ef553b4522b384e49126bac3b56e6950424aa6895b1f00fb4f50a84e",
+          "engagement": "sha256:4269a480779a5e5f67913a75683251cef16a395f286b68caaf6a983a52ed7bc0",
+          "description.en": "sha256:d869ae63785faf6eec166043b3ebc0c83e1c1f0a0dbc9839bac04b2f9f89ccf9"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "shipMonitoringPlatform",
+      "fields": [
+        "title",
+        "engagement",
+        "role",
+        "start",
+        "end",
+        "description.en"
+      ],
+      "technologies": [
+        "Material UI",
+        "React Leaflet",
+        "React.js",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:aab0ba0e45a5f15624f33dd6fd87b9e41048ff9a2b4d0798334d28fa2ac9e8b6",
+          "engagement": "sha256:64d17f564770e019003f576e6d65ae2449f6dc27321b65b21835d3aada4e6560",
+          "role": "sha256:43f5cc374d4b87d91ed2d3dd8d78a27a6d0c25bed92ee4ceeed8cfbe971f5c95",
+          "start": "sha256:d019eb508f972769087731a9c7ec82a3af40cb35aad7be67e442f9e3413b0fff",
+          "end": "sha256:6ac593bcbfa4f8563ceaf61cd6658734048b7979c2178e5d72434bc0f6f37876",
+          "description.en": "sha256:f898e7ac430921b6161c1611a138f13b238b397463a206f0feddb9fcf1e7eda9"
+        },
+        "technologies": {
+          "Material UI": "sha256:5eb377905ea7bcb7e0a52a67e499bccb3cf106890e8e1e8e456704b44857257e",
+          "React Leaflet": "sha256:e8167ec704a5d7cb4bc1ceeb281792c0dfe725065d045195c57e033d3f3c1229",
+          "React.js": "sha256:574bf714081430caa5f0a6f4a151016d721bb3d48518eb54a652968daac429be",
+          "Tailwind CSS": "sha256:381cee8777470af6aaf06611fcfa0a5d25d22c637d0f387974d09051db37eb11",
+          "TypeScript": "sha256:5cc3533cd17c655013e34aa6db7786e76c12fee25ddecc51fe9896a4386d2ddf"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "tokenLoyaltyPlatform",
+      "fields": [
+        "title",
+        "engagement",
+        "description.en"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:a544ba07fd4144ead0abbfa19823cc4a6ac039c33caa99cc4f5683451811b563",
+          "engagement": "sha256:b2efa299cbb968ed8e3ce334cec780a6e2a3adf0e7d28ac0ee1fe66fa21c5cb2",
+          "description.en": "sha256:2deeef5ce79670e93de88032eb614dc712442dacfb8f2c84e5fd036f4ff0f88e"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "tradingCommunityPlatform",
+      "fields": [
+        "title",
+        "engagement",
+        "role",
+        "start",
+        "end",
+        "description.en"
+      ],
+      "technologies": [
+        "Figma",
+        "Jira",
+        "Whimsical"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:07a958e9f58ad3154adbbcdbdc940012265df8d3be01bed66c20527caf6d4ce9",
+          "engagement": "sha256:4cb07a8fdc7939c743517ba2506c5e7b1539c6820fa1261dc2acd81cc7a5404d",
+          "role": "sha256:ed8a5e3a6719d6b48c7f2bc582c1b609753c0a6e0b98b6ca43072d6b6adb8b17",
+          "start": "sha256:8a75ae373feac9bb5ef866233442d8b9e1f51112f0328211df4f4d98c777574a",
+          "end": "sha256:912a33d7ef03cbff3b36eb3b4bb6b763afb93450108268a59450fb7ae935e3b2",
+          "description.en": "sha256:4c99a2714fea0ddcb6b5fc82d4f7fc28fcc4b60b890043f13669684301c45e42"
+        },
+        "technologies": {
+          "Figma": "sha256:99fa193cf7b1554ea40c6b23da750dfec599dddf61a3a0ea11a96448fdebc96d",
+          "Jira": "sha256:5a6b1850e9f4f882a5bd89af57fe2a221efe89fedcd445b6afec4e1a5d07d19b",
+          "Whimsical": "sha256:fb47e87f3f41340914c5eee0227187ba10a55655a3eeb3045168926152d61a10"
+        },
+        "relatedProjects": {}
+      }
+    }
+  ],
+  "components": [],
+  "assessments": [
+    {
+      "id": "aiSessionManager",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:71275781246a60b3a09dcb8596eee3d2dfc8eea6dbc26a9e15ba23091cb7cffd",
+          "year": "sha256:001bce537a74725764c655da98a9592e33a08bf8ca64ab4fa53e49774b3b1f78",
+          "description.en": "sha256:410853598756af91a284971c19765e1ecbc7d93a66d937405a6d8f42881d341d",
+          "description.id": "sha256:818e8cc7af69b9ab28ee376d1d0e73458976ade59c388d5a6733912bf2c448d2"
+        },
+        "technologies": {
+          "Next.js": "sha256:fe9bc3812c9561274e3a3c7f8f49c34e2ad45efe9d36baa25a2b3a333ce00faa",
+          "TypeScript": "sha256:7e6356c0fbcd178d4afd85c8ebbae7075196576e6ae0715a6e8dc78dd2e36ce8"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "evermosFrontend",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Nuxt.js",
+        "Pinia"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:1710e06bbe93998db89fb7660a525e1d068c5bd0fe4c6f217c7893872f6c1566",
+          "year": "sha256:be41659d77a01490e5de6a9703f9a1bdf20063e8347ec5c7adfd0ff014ef4fc4",
+          "description.en": "sha256:e92de4eec05730d33b3770bcef1ee845c211ed12540fce1f51eb418e95c7fc57",
+          "description.id": "sha256:6c0ae1e50f0f9851d3be55867ee28415d05e95f376d17afdcb287bf7b83b33ee"
+        },
+        "technologies": {
+          "Nuxt.js": "sha256:879a2f30799fb6c6301a04ce74ec257d6a6763c2cb101a5ea29c65a53c386c2c",
+          "Pinia": "sha256:c8e0b502994d6070c5ddf7bc4edef32790684dc405524eeeee74f4c696903b56"
+        },
+        "relatedProjects": {}
+      }
+    }
+  ]
+}

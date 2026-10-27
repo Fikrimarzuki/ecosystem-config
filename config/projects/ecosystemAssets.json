@@ -1,0 +1,28 @@
+{
+  "id": "ecosystemAssets",
+  "name": "Ecosystem Assets",
+  "status": "completed",
+  "listing": "hidden",
+  "destination": "central-station",
+  "repository": "ecosystem-assets",
+  "repositoryVisibility": "public",
+  "deployments": {
+    "main": {
+      "name": "ecosystem-assets",
+      "subdomain": "assets"
+    }
+  },
+  "description": {
+    "en": "Creative source files, brand assets and production tooling for the FM Work ecosystem, with a public Asset Studio website.",
+    "id": "File sumber kreatif, aset merek, dan perangkat produksi untuk ekosistem FM Work, dengan situs Asset Studio publik."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/ecosystemAssets/thumbnail.webp"
+  }
+}

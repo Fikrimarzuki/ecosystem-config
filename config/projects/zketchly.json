@@ -1,0 +1,35 @@
+{
+  "id": "zketchly",
+  "name": "Zketchly",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-zketchly",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "zketchly",
+      "subdomain": "zketchly"
+    }
+  },
+  "tagline": {
+    "en": "Shape ideas. Connect everything.",
+    "id": "Bentuk ide. Hubungkan semuanya."
+  },
+  "description": {
+    "en": "A local-first visual workspace for diagrams, ERDs, mind maps, documents and whiteboards that stay connected.",
+    "id": "Ruang kerja visual berbasis lokal untuk diagram, ERD, peta pikiran, dokumen, dan papan tulis yang saling terhubung."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "IndexedDB",
+    "React Flow",
+    "Tiptap"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/zketchly/thumbnail.webp"
+  }
+}

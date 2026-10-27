@@ -1,0 +1,48 @@
+{
+  "id": "pixelHouseStudio",
+  "company": "Pixel House Studio",
+  "role": "Software Engineer",
+  "start": "2020-06",
+  "end": "2021-12",
+  "country": "ID",
+  "listing": "public",
+  "description": {
+    "en": "Developed a page builder and rendering engine for drag-and-drop website creation, frontend applications with Vue.js and Nuxt.js, and Node.js migration scripts for legacy data."
+  },
+  "technologies": [
+    "Vue.js",
+    "Nuxt.js",
+    "Bootstrap",
+    "Sass",
+    "Node.js",
+    "PostgreSQL",
+    "CircleCI"
+  ],
+  "work": [
+    {
+      "id": "managix-page-builder",
+      "title": "Managix Page Builder",
+      "description": {
+        "en": "Contributed to a company product by developing a drag-and-drop website page builder and rendering engine, including live preview and publishing workflows.",
+        "id": "Berkontribusi pada produk perusahaan dengan mengembangkan page builder situs web berbasis drag-and-drop beserta rendering engine, termasuk pratinjau langsung dan alur publikasi."
+      },
+      "technologies": [
+        "Vue.js",
+        "Nuxt.js"
+      ],
+      "kind": "product"
+    },
+    {
+      "id": "nodejs-data-converter",
+      "title": "Node.js Data Converter",
+      "description": {
+        "en": "Developed Node.js scripts for converting and migrating legacy data.",
+        "id": "Mengembangkan skrip Node.js untuk mengonversi dan memigrasikan data lama."
+      },
+      "technologies": [
+        "Node.js"
+      ],
+      "kind": "tool"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "roadmap",
+  "name": "FM Roadmap",
+  "status": "active",
+  "listing": "public",
+  "destination": "learning",
+  "repository": "web-roadmap",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "roadmap",
+      "subdomain": "roadmap"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/roadmap/thumbnail.webp"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "projects",
+  "name": "FM Projects",
+  "status": "active",
+  "listing": "public",
+  "destination": "platforms",
+  "repository": "web-projects",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "projects",
+      "subdomain": "projects"
+    }
+  },
+  "assets": {
+    "icon": "assets/projects/projects/icon.png"
+  },
+  "description": {
+    "en": "A curated collection of smaller applications, utilities, experiments, and showcases.",
+    "id": "Koleksi pilihan aplikasi kecil, utilitas, eksperimen, dan showcase."
+  }
+}

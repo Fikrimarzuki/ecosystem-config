@@ -1,0 +1,20 @@
+{
+  "id": "quibiq",
+  "name": "Quibiq",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "learning",
+  "deployments": {
+    "main": {
+      "name": "quibiq",
+      "subdomain": "quibiq"
+    }
+  },
+  "description": {
+    "en": "A quiz platform in development, with a local quiz editor and solo play, plus simulated sign-in and host-led live sessions.",
+    "id": "Platform kuis yang sedang dikembangkan, dengan editor kuis dan permainan solo lokal, serta simulasi masuk akun dan sesi langsung yang dipandu pembawa acara."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/quibiq/thumbnail.webp"
+  }
+}

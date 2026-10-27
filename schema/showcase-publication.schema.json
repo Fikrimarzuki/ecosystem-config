@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://config-ecosystem.invalid/schema/showcase-publication.schema.json",
+  "title": "Independent content-bound A–Z surface permissions",
+  "type": "array",
+  "items": { "oneOf": [{ "$ref": "#/$defs/project" }, { "$ref": "#/$defs/assessment" }, { "$ref": "#/$defs/work" }, { "$ref": "#/$defs/engagement" }, { "$ref": "#/$defs/concept" }, { "$ref": "#/$defs/projectLifecycle" }] },
+  "$defs": {
+    "projectLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "surface",
+        "fingerprint",
+        "presentationFingerprint",
+        "fields"
+      ],
+      "properties": {
+        "kind": {
+          "const": "project"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-zA-Z0-9]*$"
+        },
+        "surface": {
+          "const": "az"
+        },
+        "fingerprint": {
+          "$ref": "#/$defs/digest"
+        },
+        "presentationFingerprint": {
+          "$ref": "#/$defs/digest"
+        },
+        "fields": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "enum": [
+              "title",
+              "description.en",
+              "description.id",
+              "lifecycle"
+            ]
+          }
+        }
+      }
+    },
+    "concept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "surface",
+        "fields",
+        "fingerprint",
+        "presentationFingerprint"
+      ],
+      "properties": {
+        "kind": {
+          "const": "concept"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-zA-Z0-9]*$"
+        },
+        "surface": {
+          "const": "az"
+        },
+        "fields": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "enum": [
+              "title",
+              "description.en",
+              "description.id",
+              "status"
+            ]
+          }
+        },
+        "fingerprint": {
+          "$ref": "#/$defs/digest"
+        },
+        "presentationFingerprint": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "digest": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "engagement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "id", "surface", "fields", "fingerprint"],
+      "properties": {
+        "kind": { "const": "engagement" },
+        "id": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+        "surface": { "const": "az" }, "fingerprint": { "$ref": "#/$defs/digest" },
+        "publicTitle": { "$ref": "project.schema.json#/$defs/meaningfulString" },
+        "fields": { "type": "array", "uniqueItems": true, "minItems": 1,
+          "contains": { "const": "title" },
+          "items": { "enum": ["title", "description.en", "description.id"] } },
+        "technologies": { "type": "array", "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "project": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "id", "surface", "fingerprint", "presentationFingerprint"],
+      "properties": {
+        "kind": { "const": "project" }, "id": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+        "surface": { "const": "az" }, "fingerprint": { "$ref": "#/$defs/digest" },
+        "presentationFingerprint": { "$ref": "#/$defs/digest" }
+      }
+    },
+    "work": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "employerId", "id", "surface", "fields", "fingerprint"],
+      "properties": {
+        "kind": { "const": "work" },
+        "employerId": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$" },
+        "surface": { "const": "az" }, "fingerprint": { "$ref": "#/$defs/digest" },
+        "fields": { "type": "array", "uniqueItems": true, "minItems": 1,
+          "contains": { "const": "title" },
+          "items": { "enum": ["title", "description.en", "description.id"] } },
+        "technologies": { "type": "array", "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "assessment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "id", "surface", "fields", "fingerprint"],
+      "properties": {
+        "kind": { "const": "assessment" }, "id": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+        "surface": { "const": "az" }, "fingerprint": { "$ref": "#/$defs/digest" },
+        "fields": { "type": "array", "uniqueItems": true, "minItems": 1,
+          "contains": { "const": "title" },
+          "items": { "enum": ["title", "year", "description.en", "description.id"] } },
+        "technologies": { "type": "array", "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

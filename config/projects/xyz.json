@@ -1,0 +1,20 @@
+{
+  "id": "xyz",
+  "name": "XYZ",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "learning",
+  "deployments": {
+    "main": {
+      "name": "xyz",
+      "subdomain": "xyz"
+    }
+  },
+  "description": {
+    "en": "A multi-skill learning platform in development, starting with interactive JavaScript challenges and local progress, with learning paths and more skill areas planned.",
+    "id": "Platform belajar berbagai keterampilan yang sedang dikembangkan, dimulai dengan tantangan JavaScript interaktif dan kemajuan yang disimpan secara lokal, dengan jalur belajar dan bidang keterampilan lain yang direncanakan."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/xyz/thumbnail.webp"
+  }
+}

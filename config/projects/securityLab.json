@@ -1,0 +1,18 @@
+{
+  "id": "securityLab",
+  "name": "Security Lab",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "labs",
+  "repository": "lab-security",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "security",
+      "subdomain": "security"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/securityLab/thumbnail.webp"
+  }
+}

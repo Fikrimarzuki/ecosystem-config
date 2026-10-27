@@ -1,0 +1,18 @@
+{
+  "id": "courses",
+  "name": "FM Courses",
+  "status": "completed",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "web-courses",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "courses",
+      "subdomain": "courses"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/courses/thumbnail.webp"
+  }
+}

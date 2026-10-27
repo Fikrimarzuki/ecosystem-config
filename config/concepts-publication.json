@@ -1,0 +1,13 @@
+[
+  {
+    "id": "forgebox",
+    "fields": [
+      "title"
+    ],
+    "fingerprints": {
+      "fields": {
+        "title": "sha256:af534a918ea0fdfa392c6c267c640288d5e9a978fbc10d49e7cda86f14559ef2"
+      }
+    }
+  }
+]

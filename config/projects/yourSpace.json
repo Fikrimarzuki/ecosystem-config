@@ -1,0 +1,20 @@
+{
+  "id": "yourSpace",
+  "name": "Your Space",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "learning",
+  "deployments": {
+    "main": {
+      "name": "yourspace",
+      "subdomain": "yourspace"
+    }
+  },
+  "description": {
+    "en": "A local-first study app in development, with learning plans, focus sessions and progress tracking, alongside customizable room prototypes.",
+    "id": "Aplikasi belajar berbasis lokal yang sedang dikembangkan, dengan rencana belajar, sesi fokus dan pelacakan kemajuan, serta prototipe ruangan yang dapat disesuaikan."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/yourSpace/thumbnail.webp"
+  }
+}

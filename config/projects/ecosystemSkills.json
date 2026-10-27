@@ -1,0 +1,20 @@
+{
+  "id": "ecosystemSkills",
+  "name": "Ecosystem Skills",
+  "status": "active",
+  "listing": "public",
+  "destination": "central-station",
+  "deployments": {
+    "main": {
+      "name": "skills",
+      "subdomain": "skills"
+    }
+  },
+  "description": {
+    "en": "Shared ecosystem infrastructure for reusable AI-agent skills, reviewed capabilities, and project integrations.",
+    "id": "Infrastruktur bersama ekosistem untuk keterampilan agen AI yang dapat digunakan ulang, kapabilitas yang ditinjau, dan integrasi proyek."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/ecosystemSkills/thumbnail.webp"
+  }
+}

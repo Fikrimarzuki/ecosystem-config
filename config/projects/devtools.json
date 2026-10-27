@@ -1,0 +1,18 @@
+{
+  "id": "devtools",
+  "name": "FM DevTools",
+  "status": "active",
+  "listing": "public",
+  "destination": "tools",
+  "repository": "web-devtools",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "devtools",
+      "subdomain": "devtools"
+    }
+  },
+  "assets": {
+    "icon": "assets/projects/devtools/icon.png"
+  }
+}

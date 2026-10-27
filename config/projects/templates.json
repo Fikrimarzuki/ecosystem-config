@@ -1,0 +1,29 @@
+{
+  "id": "templates",
+  "name": "FM Templates",
+  "status": "completed",
+  "listing": "hidden",
+  "destination": "platforms",
+  "repository": "web-templates",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "templates",
+      "subdomain": "templates"
+    }
+  },
+  "tagline": {
+    "en": "Designs for every idea, each with a live preview.",
+    "id": "Desain untuk setiap ide, masing-masing dengan pratinjau langsung."
+  },
+  "description": {
+    "en": "A curated library of website templates, invitations and digital designs, with live responsive previews and appearance customisation.",
+    "id": "Koleksi pilihan template website, undangan, dan desain digital, dengan pratinjau responsif langsung dan kustomisasi tampilan."
+  },
+  "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "next-intl"],
+  "tags": ["templates", "web-design", "live-preview", "customization"],
+  "assets": {
+    "icon": "assets/projects/templates/icon.png",
+    "thumbnail": "assets/projects/templates/thumbnail.webp"
+  }
+}

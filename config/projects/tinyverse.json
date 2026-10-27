@@ -1,0 +1,18 @@
+{
+  "id": "tinyverse",
+  "name": "Tinyverse",
+  "status": "active",
+  "listing": "public",
+  "destination": "games",
+  "repository": "game-tinyverse",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "tinyverse",
+      "subdomain": "tinyverse"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/tinyverse/thumbnail.webp"
+  }
+}

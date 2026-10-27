@@ -1,0 +1,153 @@
+[
+  {
+    "kind": "project",
+    "id": "courses",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:a4b6156809c90a78aadeceffb456da57ecfdf2e2e8e8fed78cb0f0743478292b"
+  },
+  {
+    "kind": "project",
+    "id": "blog",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:9f6ad0acab4c54de1eab5022a6328fd4573ebe407ba7d52564a163eb88170159"
+  },
+  {
+    "kind": "project",
+    "id": "links",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:d20b9e1b4c308984d17470c1007dc290ef8c56c5ef331bdaa48d5621aba2e148"
+  },
+  {
+    "kind": "project",
+    "id": "fmStudios",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:f8bc93dd118003819f5880d0545a1515cf880825a9ca80c353a9be37e7c1f51b"
+  },
+  {
+    "kind": "project",
+    "id": "templates",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:3b4e244328c061b9a63057acb7b26a4453bb928321e5adc46f8bae466f65c218"
+  },
+  {
+    "kind": "project",
+    "id": "watch",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:538bd05c89843e5cc91cf3d544ac62ba1c4c0822fd8645a57e3a7e40384da487"
+  },
+  {
+    "kind": "project",
+    "id": "frontendLab",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:8a8b8e0ff274fb160574960820a1603b8517b601e0f3f6ef4af2d2c5a1a70c9c"
+  },
+  {
+    "kind": "project",
+    "id": "littleRoars",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:037682c59c0d33416774a9c9b86c8921da92163897a28ee7d816cf80dfa1d5c0"
+  },
+  {
+    "kind": "project",
+    "id": "securityLab",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:7ad59513c33be23535c4c582e01ae69f3d1a3b2134f7b86391e1fa4d5fb640cb"
+  },
+  {
+    "kind": "project",
+    "id": "weddingVendorScraper",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:c6c1083fde3364f82ac2f85964ba16f0e570b5205dff0bfa50e7c066305ff321"
+  },
+  {
+    "kind": "concept",
+    "id": "forgebox",
+    "surface": "az",
+    "fingerprint": "sha256:145f306d0a24a9723cfe773ab57c20616d56f9d5ddf614c30f29aee9034819fb"
+  },
+  {
+    "kind": "project",
+    "id": "hearthside",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:71408bd801ab0ea5a45124ffdd08f5d9eb71deaff47437c614fec0ba9d9bce14"
+  },
+  {
+    "kind": "project",
+    "id": "momee",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:f2ac13f7184b17398ab04e2e3bdb6519e1749f0cf2401b084a3d554bddb6d393"
+  },
+  {
+    "kind": "concept",
+    "id": "ohBabyGrow",
+    "surface": "az",
+    "fingerprint": "sha256:54cdc1a3af67c44758a514913dd85c17d697e573fc03551014479b4696164f95"
+  },
+  {
+    "kind": "concept",
+    "id": "vynote",
+    "surface": "az",
+    "fingerprint": "sha256:f13657bbc50cf442e5acf52199123eb48807a2cf8fd7b7518e7b3a0af0d267c3"
+  },
+  {
+    "kind": "project",
+    "id": "quibiq",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:e1e4c2cd72524d52bbb722a661ac646c7a022a52b7ab7488f3f77fce4fc812df"
+  },
+  {
+    "kind": "project",
+    "id": "xyz",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:2536532bf1377eb0b29c64d17a83ed0ec857dfa9fa101816218966d8198a87c7"
+  },
+  {
+    "kind": "project",
+    "id": "yourSpace",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:0b92ee3a89d249eacb2e39eba9fa0ab8aa626fc5ab15171a25ae3a47503f2f76"
+  },
+  {
+    "kind": "project",
+    "id": "vaults",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:c49c9a12afa2e1b33e614b98b6fb7579ec5e82a60c2d4beef110f381114171a6"
+  },
+  {
+    "kind": "project",
+    "id": "zketchly",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:82a90b6ec1002fe341079e242d3d1d71a75f715ae41ab4701e0666abe93d6f15"
+  },
+  {
+    "kind": "project",
+    "id": "urchinRelay",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:f34798400745693590be047a4f8351a89d11eadf598f02a85aa0798020f4de58"
+  },
+  {
+    "kind": "project",
+    "id": "ecosystemAssets",
+    "surface": "az",
+    "listing": "hidden",
+    "fingerprint": "sha256:c9a8eae2666034b85f31fd75fb71d22441190d913f33194b4a0d955354dd0060"
+  }
+]

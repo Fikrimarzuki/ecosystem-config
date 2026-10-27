@@ -1,0 +1,19 @@
+{
+  "id": "cv",
+  "name": "CV",
+  "status": "active",
+  "listing": "public",
+  "destination": "sun",
+  "repository": "web-cv",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "cv",
+      "subdomain": "cv"
+    }
+  },
+  "assets": {
+    "icon": "assets/projects/cv/icon.png",
+    "thumbnail": "assets/projects/cv/thumbnail.webp"
+  }
+}

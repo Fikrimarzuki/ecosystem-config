@@ -1,0 +1,38 @@
+{
+  "id": "watch",
+  "name": "FM Watch",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "web-watch",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "watch",
+      "subdomain": "watch"
+    }
+  },
+  "tagline": {
+    "en": "Videos you choose, ready for your child.",
+    "id": "Video pilihan Anda, siap untuk anak Anda."
+  },
+  "description": {
+    "en": "A parent-controlled children's video app in development: parents approve each YouTube video, and a child's tablet plays only what was approved.",
+    "id": "Aplikasi video anak yang dikendalikan orang tua, masih dalam pengembangan: orang tua menyetujui setiap video YouTube, dan tablet anak hanya memutar video yang telah disetujui."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "tags": [
+    "parental-controls",
+    "kids",
+    "video",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/watch/thumbnail.webp"
+  }
+}

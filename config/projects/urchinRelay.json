@@ -1,0 +1,33 @@
+{
+  "id": "urchinRelay",
+  "name": "Urchin Relay",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "tool-urchin-relay",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "urchin-relay",
+      "subdomain": "urchinrelay"
+    }
+  },
+  "tagline": {
+    "en": "Send. Inspect. Connect.",
+    "id": "Kirim. Periksa. Hubungkan."
+  },
+  "description": {
+    "en": "A local-first API testing and integration workspace for composing requests, inspecting responses and building developer workflows.",
+    "id": "Ruang kerja pengujian dan integrasi API berbasis lokal untuk menyusun request, memeriksa respons dan membangun alur kerja developer."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Tauri"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/urchinRelay/thumbnail.webp"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "learning",
+  "name": "FM Learning",
+  "status": "active",
+  "listing": "public",
+  "destination": "learning",
+  "repository": "web-learning",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "learning",
+      "subdomain": "learn"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/learning/thumbnail.webp"
+  }
+}

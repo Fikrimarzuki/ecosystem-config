@@ -1,0 +1,29 @@
+{
+  "id": "links",
+  "name": "FM Links",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "repository": "web-links",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "links",
+      "subdomain": "links"
+    }
+  },
+  "tagline": {
+    "en": "One short address for every link worth sharing.",
+    "id": "Satu alamat singkat untuk setiap tautan yang layak dibagikan."
+  },
+  "description": {
+    "en": "Link sharing and curated resource pages, managed in Notion.",
+    "id": "Halaman berbagi tautan dan kumpulan sumber daya pilihan, dikelola di Notion."
+  },
+  "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Notion API"],
+  "tags": ["links", "creators", "notion"],
+  "assets": {
+    "icon": "assets/projects/links/icon.png",
+    "thumbnail": "assets/projects/links/thumbnail.webp"
+  }
+}
