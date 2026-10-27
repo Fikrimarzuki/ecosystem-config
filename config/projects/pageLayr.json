@@ -1,0 +1,18 @@
+{
+  "id": "pageLayr",
+  "name": "Page Layr",
+  "status": "active",
+  "listing": "public",
+  "destination": "platforms",
+  "repository": "app-pagelayr",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "page-layr",
+      "subdomain": "page-layr"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/pageLayr/thumbnail.webp"
+  }
+}

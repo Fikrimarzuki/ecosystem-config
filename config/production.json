@@ -1,0 +1,2698 @@
+{
+  "version": 1,
+  "username": "Fikrimarzuki",
+  "domains": {
+    "primary": "fikrimarzuki.work"
+  },
+  "profile": {
+    "name": "M Fikri Marzuki",
+    "title": "Full-Stack Software Engineer",
+    "email": "marzuki.fikri@gmail.com",
+    "links": {
+      "github": "https://github.com/Fikrimarzuki",
+      "linkedin": "https://www.linkedin.com/in/fikri-marzuki/",
+      "gitlab": "https://gitlab.com/fikrimarzuki"
+    },
+    "assets": {
+      "resume": "assets/profile/cv.pdf",
+      "logo": "assets/profile/logo.png",
+      "avatar": "assets/profile/avatar.jpg"
+    }
+  },
+  "ecosystem": {
+    "name": "FM Work"
+  },
+  "projects": {
+    "blog": {
+      "name": "FM Blog",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "web-blog",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "blog",
+          "subdomain": "blog"
+        }
+      },
+      "tagline": {
+        "en": "Technical writing and project stories",
+        "id": "Tulisan teknis dan kisah proyek"
+      },
+      "description": {
+        "en": "A developer blog for technical articles, developer journal entries, project notes, and FM Work updates. The current site includes clearly marked sample entries.",
+        "id": "Blog pengembang untuk artikel teknis, entri jurnal pengembang, catatan proyek, dan kabar FM Work. Situs saat ini memuat contoh entri yang ditandai dengan jelas."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shiki"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/blog/thumbnail.webp"
+      }
+    },
+    "careerLens": {
+      "name": "CareerLens",
+      "status": "completed",
+      "listing": "public",
+      "destination": "tools",
+      "repository": "app-career-lens",
+      "repositoryVisibility": "private"
+    },
+    "configEcosystem": {
+      "name": "Ecosystem Config",
+      "status": "active",
+      "listing": "public",
+      "destination": "central-station",
+      "repository": "ecosystem-config",
+      "repositoryVisibility": "public",
+      "deployments": {
+        "main": {
+          "name": "config-ecosystem",
+          "subdomain": "config"
+        }
+      },
+      "description": {
+        "en": "Centralized project metadata, schemas, validation, and generated configuration for my developer ecosystem."
+      },
+      "assets": {
+        "icon": "assets/projects/configEcosystem/icon.png",
+        "thumbnail": "assets/projects/configEcosystem/thumbnail.webp"
+      }
+    },
+    "courses": {
+      "name": "Courses",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "learning",
+      "repository": "web-courses",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "courses",
+          "subdomain": "courses"
+        }
+      }
+    },
+    "cssTricks": {
+      "name": "CSS Tricks",
+      "status": "paused",
+      "listing": "public",
+      "destination": "labs",
+      "repository": "lab-css-tricks",
+      "repositoryVisibility": "public",
+      "deployments": {
+        "main": {
+          "name": "css-tricks",
+          "url": "https://fikrimarzuki.github.io/lab-css-tricks/"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/cssTricks/thumbnail.webp"
+      }
+    },
+    "cv": {
+      "name": "CV",
+      "status": "active",
+      "listing": "public",
+      "destination": "sun",
+      "repository": "web-cv",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "cv",
+          "subdomain": "cv"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/cv/icon.png"
+      }
+    },
+    "developerRoadmap": {
+      "name": "Developer Roadmap",
+      "status": "paused",
+      "listing": "public",
+      "destination": "learning",
+      "repository": "developer-roadmap",
+      "repositoryVisibility": "public",
+      "description": {
+        "en": "A collection of developer learning resources and roadmap content: language notes, practice projects, and role-based and skill-based learning paths."
+      },
+      "assets": {
+        "thumbnail": "assets/projects/developerRoadmap/thumbnail.webp"
+      }
+    },
+    "devtools": {
+      "name": "FM DevTools",
+      "status": "active",
+      "listing": "public",
+      "destination": "tools",
+      "repository": "web-devtools",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "devtools",
+          "subdomain": "devtools"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/devtools/icon.png"
+      }
+    },
+    "ecosystemSkills": {
+      "name": "Ecosystem Skills",
+      "status": "active",
+      "listing": "public",
+      "destination": "central-station",
+      "deployments": {
+        "main": {
+          "name": "skills",
+          "subdomain": "skills"
+        }
+      },
+      "description": {
+        "en": "Shared ecosystem infrastructure for reusable AI-agent skills, reviewed capabilities, and project integrations.",
+        "id": "Infrastruktur bersama ekosistem untuk keterampilan agen AI yang dapat digunakan ulang, kapabilitas yang ditinjau, dan integrasi proyek."
+      }
+    },
+    "fmMonorepo": {
+      "name": "FM Monorepo",
+      "status": "completed",
+      "listing": "public",
+      "destination": "labs",
+      "repository": "lab-fm-monorepo",
+      "repositoryVisibility": "private",
+      "description": {
+        "en": "A completed, reusable monorepo architecture for learning, isolated experiments, shared documentation tooling, and application implementations.",
+        "id": "Arsitektur monorepo yang telah selesai dan dapat digunakan ulang untuk pembelajaran, eksperimen terisolasi, perkakas dokumentasi bersama, dan implementasi aplikasi."
+      }
+    },
+    "fmStudios": {
+      "name": "FM Studios",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "app-fm-studios",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "fm-studios",
+          "subdomain": "fm-studios"
+        }
+      },
+      "description": {
+        "en": "A local-first virtual software studio in development: a manager supervises a team of AI employees through a private dashboard."
+      }
+    },
+    "foodieMap": {
+      "name": "Foodie Map",
+      "status": "paused",
+      "listing": "public",
+      "destination": "products",
+      "repository": "lab-projects",
+      "repositoryVisibility": "private",
+      "path": "foodie-map",
+      "deployments": {
+        "main": {
+          "name": "foodie-map",
+          "subdomain": "foodie-map"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/foodieMap/thumbnail.webp"
+      }
+    },
+    "frontendLab": {
+      "name": "Frontend Lab",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "labs",
+      "repository": "lab-frontend",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "frontend",
+          "subdomain": "frontend"
+        }
+      }
+    },
+    "games": {
+      "name": "Games",
+      "status": "active",
+      "listing": "public",
+      "destination": "games",
+      "repository": "web-games",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "games",
+          "subdomain": "games"
+        }
+      }
+    },
+    "gateway": {
+      "name": "Gateway",
+      "status": "active",
+      "listing": "public",
+      "destination": "central-station",
+      "repository": "web-gateway",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "gateway",
+          "subdomain": null,
+          "aliases": [
+            "www"
+          ]
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/gateway/thumbnail.webp"
+      }
+    },
+    "inventory": {
+      "name": "Inventory",
+      "status": "paused",
+      "listing": "public",
+      "destination": "products",
+      "repository": "app-inventory",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "inventory",
+          "subdomain": "inventory"
+        }
+      },
+      "description": {
+        "en": "A demo inventory management application that uses mock data."
+      },
+      "assets": {
+        "thumbnail": "assets/projects/inventory/thumbnail.webp"
+      }
+    },
+    "javascriptia": {
+      "name": "JavaScriptia",
+      "status": "active",
+      "listing": "public",
+      "destination": "learning",
+      "repository": "game-javascriptia",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "javascriptia",
+          "subdomain": "javascriptia"
+        }
+      }
+    },
+    "kodeStep": {
+      "name": "KodeStep",
+      "status": "completed",
+      "listing": "public",
+      "destination": "learning",
+      "repository": "learn-kodestep",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "kodestep",
+          "subdomain": "kodestep"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/kodeStep/thumbnail.webp"
+      }
+    },
+    "learning": {
+      "name": "Learning",
+      "status": "active",
+      "listing": "public",
+      "destination": "learning",
+      "repository": "web-learning",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "learning",
+          "subdomain": "learn"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/learning/thumbnail.webp"
+      }
+    },
+    "links": {
+      "name": "FM Links",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "web-links",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "links",
+          "subdomain": "links"
+        }
+      },
+      "tagline": {
+        "en": "One short address for every link worth sharing.",
+        "id": "Satu alamat singkat untuk setiap tautan yang layak dibagikan."
+      },
+      "description": {
+        "en": "Link sharing and curated resource pages, managed in Notion.",
+        "id": "Halaman berbagi tautan dan kumpulan sumber daya pilihan, dikelola di Notion."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Notion API"
+      ],
+      "tags": [
+        "links",
+        "creators",
+        "notion"
+      ],
+      "assets": {
+        "icon": "assets/projects/links/icon.png",
+        "thumbnail": "assets/projects/links/thumbnail.webp"
+      }
+    },
+    "littleRoars": {
+      "name": "Little Roars",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "games",
+      "repository": "game-little-roars",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "littleroars",
+          "subdomain": "littleroars"
+        }
+      },
+      "tagline": {
+        "en": "Little Roars. Big Adventures. Your Voice!",
+        "id": "Auman Kecil. Petualangan Besar. Suaramu!"
+      }
+    },
+    "multiRepoClone": {
+      "name": "Multiple Git Clone",
+      "status": "completed",
+      "listing": "public",
+      "destination": "tools",
+      "repository": "tool-multiple-git-clone",
+      "repositoryVisibility": "public",
+      "assets": {
+        "thumbnail": "assets/projects/multiRepoClone/thumbnail.webp"
+      }
+    },
+    "neuran": {
+      "name": "Neuran",
+      "status": "paused",
+      "listing": "public",
+      "destination": "platforms",
+      "repository": "app-neuran",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "neuran",
+          "subdomain": "neuran"
+        },
+        "admin": {
+          "name": "neuran-admin",
+          "subdomain": "neuran-admin"
+        },
+        "lms": {
+          "name": "neuran-lms",
+          "subdomain": "neuran-lms"
+        },
+        "skill": {
+          "name": "neuran-skill",
+          "subdomain": "neuran-skill"
+        },
+        "social": {
+          "name": "neuran-social",
+          "subdomain": "neuran-social"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/neuran/thumbnail.webp"
+      }
+    },
+    "nikahkuy": {
+      "name": "Nikah Kuy",
+      "status": "completed",
+      "listing": "public",
+      "destination": "products",
+      "repository": "lab-projects",
+      "repositoryVisibility": "private",
+      "path": "nikah-kuy",
+      "deployments": {
+        "main": {
+          "name": "nikahkuy",
+          "subdomain": "nikahkuy"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/nikahkuy/thumbnail.webp"
+      }
+    },
+    "nikahyuk": {
+      "name": "Nikah Yuk",
+      "status": "active",
+      "listing": "public",
+      "destination": "products",
+      "repository": "nikahyuk-app",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "nikahyuk",
+          "subdomain": "nikahyuk"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/nikahyuk/thumbnail.webp"
+      }
+    },
+    "nikahyukPrototype": {
+      "name": "Nikah Yuk Prototype",
+      "status": "completed",
+      "listing": "public",
+      "destination": "products",
+      "repository": "lab-projects",
+      "repositoryVisibility": "private",
+      "path": "nikah-yuk",
+      "deployments": {
+        "main": {
+          "name": "nikahyuk-prototype",
+          "subdomain": "nikahyuk-prototype"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/nikahyukPrototype/thumbnail.webp"
+      }
+    },
+    "nodeApi": {
+      "name": "Node API",
+      "status": "paused",
+      "listing": "public",
+      "destination": "labs",
+      "repository": "lab-node-api",
+      "repositoryVisibility": "public"
+    },
+    "pageLayr": {
+      "name": "Page Layr",
+      "status": "active",
+      "listing": "public",
+      "destination": "platforms",
+      "repository": "app-pagelayr",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "page-layr",
+          "subdomain": "page-layr"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/pageLayr/thumbnail.webp"
+      }
+    },
+    "playdeck": {
+      "name": "Playdeck",
+      "status": "active",
+      "listing": "public",
+      "destination": "platforms",
+      "repository": "app-playdeck",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "playdeck",
+          "subdomain": "playdeck"
+        }
+      },
+      "description": {
+        "en": "Turn presentations into playable worlds."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Phaser"
+      ],
+      "tags": [
+        "presentation",
+        "game"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/playdeck/thumbnail.webp"
+      }
+    },
+    "playground": {
+      "name": "Playground",
+      "status": "paused",
+      "listing": "public",
+      "destination": "platforms",
+      "repository": "web-playground",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "playground",
+          "subdomain": "play"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/playground/icon.png"
+      }
+    },
+    "playnest": {
+      "name": "Playnest",
+      "status": "active",
+      "listing": "public",
+      "destination": "games",
+      "repository": "web-playnest",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "playnest",
+          "subdomain": "playnest"
+        }
+      },
+      "description": {
+        "en": "A colourful collection of mini-games and interactive learning activities for children, featuring puzzles, challenges, and family-friendly multiplayer games."
+      },
+      "technologies": [
+        "Vite",
+        "Vanilla JavaScript",
+        "PWA"
+      ],
+      "tags": [
+        "games",
+        "kids",
+        "learning",
+        "multiplayer"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/playnest/thumbnail.webp"
+      }
+    },
+    "projects": {
+      "name": "FM Projects",
+      "status": "active",
+      "listing": "public",
+      "destination": "platforms",
+      "repository": "web-projects",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "projects",
+          "subdomain": "projects"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/projects/icon.png"
+      },
+      "description": {
+        "en": "A curated collection of smaller applications, utilities, experiments, and showcases.",
+        "id": "Koleksi pilihan aplikasi kecil, utilitas, eksperimen, dan showcase."
+      }
+    },
+    "quibiq": {
+      "name": "Quibiq",
+      "status": "active",
+      "lifecycle": "in-progress",
+      "listing": "hidden",
+      "destination": "learning",
+      "description": {
+        "en": "A quiz platform in development, with a local quiz editor and solo play, plus simulated sign-in and host-led live sessions.",
+        "id": "Platform kuis yang sedang dikembangkan, dengan editor kuis dan permainan solo lokal, serta simulasi masuk akun dan sesi langsung yang dipandu pembawa acara."
+      }
+    },
+    "roadmap": {
+      "name": "FM Roadmap",
+      "status": "active",
+      "listing": "public",
+      "destination": "learning",
+      "repository": "web-roadmap",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "roadmap",
+          "subdomain": "roadmap"
+        }
+      }
+    },
+    "scriptoria": {
+      "name": "Scriptoria",
+      "status": "paused",
+      "listing": "public",
+      "destination": "games",
+      "repository": "game-scriptoria",
+      "repositoryVisibility": "private"
+    },
+    "securityLab": {
+      "name": "Security Lab",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "labs",
+      "repository": "lab-security",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "security",
+          "subdomain": "security"
+        }
+      }
+    },
+    "support": {
+      "name": "Support",
+      "status": "active",
+      "listing": "public",
+      "destination": "moon",
+      "repository": "web-support",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "support",
+          "subdomain": "support"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/support/icon.png",
+        "thumbnail": "assets/projects/support/thumbnail.webp"
+      }
+    },
+    "tcgHub": {
+      "name": "TCG Hub",
+      "status": "paused",
+      "listing": "public",
+      "destination": "products",
+      "repository": "lab-projects",
+      "repositoryVisibility": "private",
+      "path": "tcg-hub-starter",
+      "deployments": {
+        "main": {
+          "name": "tcg-hub",
+          "subdomain": "tcg-hub"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/tcgHub/thumbnail.webp"
+      }
+    },
+    "templates": {
+      "name": "FM Templates",
+      "status": "completed",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "web-templates",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "templates",
+          "subdomain": "templates"
+        }
+      },
+      "tagline": {
+        "en": "Designs for every idea, each with a live preview.",
+        "id": "Desain untuk setiap ide, masing-masing dengan pratinjau langsung."
+      },
+      "description": {
+        "en": "A curated library of website templates, invitations and digital designs, with live responsive previews and appearance customisation.",
+        "id": "Koleksi pilihan template website, undangan, dan desain digital, dengan pratinjau responsif langsung dan kustomisasi tampilan."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "next-intl"
+      ],
+      "tags": [
+        "templates",
+        "web-design",
+        "live-preview",
+        "customization"
+      ],
+      "assets": {
+        "icon": "assets/projects/templates/icon.png",
+        "thumbnail": "assets/projects/templates/thumbnail.webp"
+      }
+    },
+    "tinyverse": {
+      "name": "Tinyverse",
+      "status": "active",
+      "listing": "public",
+      "destination": "games",
+      "repository": "game-tinyverse",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "tinyverse",
+          "subdomain": "tinyverse"
+        }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/tinyverse/thumbnail.webp"
+      }
+    },
+    "tools": {
+      "name": "FM Tools",
+      "status": "active",
+      "listing": "public",
+      "destination": "tools",
+      "repository": "web-tools",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "tools",
+          "subdomain": "tools"
+        }
+      },
+      "assets": {
+        "icon": "assets/projects/tools/icon.png"
+      }
+    },
+    "urchinRelay": {
+      "name": "Urchin Relay",
+      "status": "active",
+      "lifecycle": "in-progress",
+      "listing": "hidden",
+      "destination": "tools",
+      "tagline": {
+        "en": "Send. Inspect. Connect.",
+        "id": "Kirim. Periksa. Hubungkan."
+      },
+      "description": {
+        "en": "A local-first API testing and integration workspace in development, for composing requests, inspecting responses and building developer workflows.",
+        "id": "Ruang kerja pengujian dan integrasi API berbasis lokal yang sedang dikembangkan, untuk menyusun request, memeriksa respons dan membangun alur kerja developer."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Tauri"
+      ]
+    },
+    "watch": {
+      "name": "FM Watch",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "web-watch",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "watch",
+          "subdomain": "watch"
+        }
+      },
+      "tagline": {
+        "en": "Videos you choose, ready for your child.",
+        "id": "Video pilihan Anda, siap untuk anak Anda."
+      },
+      "description": {
+        "en": "A parent-controlled children's video app in development: parents approve each YouTube video, and a child's tablet plays only what was approved.",
+        "id": "Aplikasi video anak yang dikendalikan orang tua, masih dalam pengembangan: orang tua menyetujui setiap video YouTube, dan tablet anak hanya memutar video yang telah disetujui."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "tags": [
+        "parental-controls",
+        "kids",
+        "video",
+        "pwa"
+      ]
+    },
+    "wedding": {
+      "name": "Wedding",
+      "status": "completed",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "wedding-invitation",
+      "repositoryVisibility": "private"
+    },
+    "weddingVendorScraper": {
+      "name": "Wedding Vendor Scraper",
+      "status": "completed",
+      "listing": "hidden",
+      "destination": "labs",
+      "repository": "lab-wedding-vendor-scraper",
+      "repositoryVisibility": "private",
+      "description": {
+        "en": "A local tool for collecting wedding vendor profiles, packages, and reviews from supported directories, with resumable runs and CSV/JSON exports.",
+        "id": "Alat lokal untuk mengumpulkan profil vendor pernikahan, paket, dan ulasan dari direktori yang didukung, dengan proses yang dapat dilanjutkan serta ekspor CSV/JSON."
+      },
+      "related": [
+        "nikahyuk"
+      ]
+    },
+    "xyz": {
+      "name": "XYZ",
+      "status": "active",
+      "lifecycle": "in-progress",
+      "listing": "hidden",
+      "destination": "learning",
+      "description": {
+        "en": "A multi-skill learning platform in development, starting with interactive JavaScript challenges and local progress, with learning paths and more skill areas planned.",
+        "id": "Platform belajar berbagai keterampilan yang sedang dikembangkan, dimulai dengan tantangan JavaScript interaktif dan kemajuan yang disimpan secara lokal, dengan jalur belajar dan bidang keterampilan lain yang direncanakan."
+      }
+    },
+    "yourSpace": {
+      "name": "Your Space",
+      "status": "active",
+      "lifecycle": "in-progress",
+      "listing": "hidden",
+      "destination": "learning",
+      "description": {
+        "en": "A local-first study app in development, with learning plans, focus sessions and progress tracking, alongside customizable room prototypes.",
+        "id": "Aplikasi belajar berbasis lokal yang sedang dikembangkan, dengan rencana belajar, sesi fokus dan pelacakan kemajuan, serta prototipe ruangan yang dapat disesuaikan."
+      }
+    }
+  },
+  "career": {
+    "experience": [
+      {
+        "id": "pixelHouseStudio",
+        "company": "Pixel House Studio",
+        "role": "Software Engineer",
+        "start": "2020-06",
+        "end": "2021-12",
+        "country": "ID",
+        "listing": "public",
+        "description": {
+          "en": "Developed a page builder and rendering engine for drag-and-drop website creation, frontend applications with Vue.js and Nuxt.js, and Node.js migration scripts for legacy data."
+        },
+        "technologies": [
+          "Vue.js",
+          "Nuxt.js",
+          "Bootstrap",
+          "Sass",
+          "Node.js",
+          "PostgreSQL",
+          "CircleCI"
+        ],
+        "work": [
+          {
+            "id": "managix-page-builder",
+            "title": "Managix Page Builder",
+            "description": {
+              "en": "Contributed to a company product by developing a drag-and-drop website page builder and rendering engine, including live preview and publishing workflows.",
+              "id": "Berkontribusi pada produk perusahaan dengan mengembangkan page builder situs web berbasis drag-and-drop beserta rendering engine, termasuk pratinjau langsung dan alur publikasi."
+            },
+            "technologies": [
+              "Vue.js",
+              "Nuxt.js"
+            ],
+            "kind": "product"
+          },
+          {
+            "id": "nodejs-data-converter",
+            "title": "Node.js Data Converter",
+            "description": {
+              "en": "Developed Node.js scripts for converting and migrating legacy data.",
+              "id": "Mengembangkan skrip Node.js untuk mengonversi dan memigrasikan data lama."
+            },
+            "technologies": [
+              "Node.js"
+            ],
+            "kind": "tool"
+          }
+        ]
+      },
+      {
+        "id": "sekolahmu",
+        "company": "Sekolah.mu",
+        "role": "Backend Software Engineer",
+        "start": "2022-01",
+        "end": "2022-10",
+        "country": "ID",
+        "listing": "public",
+        "description": {
+          "en": "Developed payment microservices integrating Midtrans and Xendit with Go and Redis, migrated legacy Python services to Go, and built backend services for course management, cart, email and vouchers."
+        },
+        "technologies": [
+          "Go",
+          "Python",
+          "Redis",
+          "MySQL",
+          "Elasticsearch"
+        ],
+        "work": [
+          {
+            "id": "payment-services",
+            "title": "Payment Service",
+            "description": {
+              "en": "Developed payment services integrating Midtrans and Xendit payment gateways."
+            },
+            "technologies": [
+              "Go",
+              "Redis"
+            ],
+            "kind": "contribution"
+          },
+          {
+            "id": "product-and-supporting-services",
+            "title": "Product & Supporting Services",
+            "description": {
+              "en": "Developed product-related backend services and supporting functionality, including email and other services."
+            },
+            "kind": "contribution"
+          }
+        ]
+      },
+      {
+        "id": "rollingGlory",
+        "role": "Software Developer",
+        "country": "ID",
+        "start": "2022-07",
+        "end": "2022-10",
+        "listing": "public",
+        "description": {
+          "en": "Developed and maintained CMS and client-facing web applications for a confidential fintech project while working with Rolling Glory."
+        },
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Material UI",
+          "Styled Components"
+        ],
+        "company": "Rolling Glory",
+        "engagement": "part-time",
+        "work": [
+          {
+            "id": "finance-platform",
+            "title": "Finance Platform",
+            "kind": "product",
+            "description": {
+              "en": "Developed and maintained CMS and client-facing web applications for a confidential fintech project while working with Rolling Glory."
+            },
+            "listing": "hidden"
+          }
+        ]
+      },
+      {
+        "id": "hacktiv8",
+        "company": "Hacktiv8",
+        "role": "Full Stack JavaScript Instructor",
+        "start": "2022-10",
+        "end": "2023-09",
+        "country": "ID",
+        "listing": "public",
+        "description": {
+          "en": "Taught JavaScript, HTML/CSS, Express.js and PostgreSQL to full-stack bootcamp students, and built an internal grading system and GitHub Classroom automation scripts."
+        },
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "Sequelize",
+          "PostgreSQL",
+          "Bash",
+          "GitHub CLI"
+        ],
+        "work": [
+          {
+            "id": "grading-system",
+            "title": "Grading System",
+            "description": {
+              "en": "Developed an internal system to support student assignment grading and assessment."
+            },
+            "kind": "tool"
+          },
+          {
+            "id": "github-classroom-automation",
+            "title": "GitHub Classroom Automation",
+            "description": {
+              "en": "Developed scripts to automate cloning, archiving and testing student repositories.",
+              "id": "Mengembangkan skrip untuk mengotomatiskan proses kloning, pengarsipan, dan pengujian repositori siswa."
+            },
+            "technologies": [
+              "Bash",
+              "GitHub CLI"
+            ],
+            "relatedProjects": [
+              "multiRepoClone"
+            ],
+            "kind": "tool"
+          }
+        ]
+      },
+      {
+        "id": "bisnistrip",
+        "company": "BisnisTrip",
+        "role": "Software Engineer",
+        "start": "2024-04",
+        "end": "2025-12",
+        "country": "ID",
+        "listing": "public",
+        "description": {
+          "en": "Developed and maintained enterprise web platforms for membership, apartment, travel, hotel and document management, including business workflows, ERDs, REST APIs and Nginx deployments."
+        },
+        "technologies": [
+          "Nuxt.js",
+          "Tailwind CSS",
+          "TypeScript",
+          ".NET",
+          "SQL Server",
+          "Firebase",
+          "Nginx",
+          "GitLab CI/CD"
+        ],
+        "work": [
+          {
+            "id": "membership-platform",
+            "title": "Membership Platform",
+            "description": {
+              "en": "Developed and maintained a membership management web application."
+            },
+            "kind": "product"
+          },
+          {
+            "id": "apartment-platform",
+            "title": "Apartment Platform",
+            "description": {
+              "en": "Developed and maintained an apartment management web application."
+            },
+            "kind": "product"
+          },
+          {
+            "id": "hotel-platform",
+            "title": "Hotel Platform",
+            "description": {
+              "en": "Developed and maintained a hotel-related web application."
+            },
+            "kind": "product"
+          },
+          {
+            "id": "residential-platform",
+            "title": "Residential Platform",
+            "description": {
+              "en": "Developed and maintained a residential management web application."
+            },
+            "kind": "product"
+          },
+          {
+            "id": "travel-platform",
+            "title": "Travel Platform",
+            "description": {
+              "en": "Developed and maintained a travel-related web application."
+            },
+            "kind": "product"
+          },
+          {
+            "id": "digital-document-management",
+            "title": "Digital Document Management",
+            "description": {
+              "en": "Developed and maintained a digital document management web application."
+            },
+            "kind": "product"
+          }
+        ]
+      },
+      {
+        "id": "spacetoco",
+        "company": "SpacetoCo",
+        "role": "Full Stack Engineer",
+        "start": "2026-04",
+        "end": null,
+        "country": "AU",
+        "listing": "public",
+        "description": {
+          "en": "Build and maintain APIs, backend services and features across customer-facing and internal applications, and contribute to platform architecture, shared infrastructure, reliability, observability and testing."
+        },
+        "technologies": [
+          "Nuxt.js",
+          "FeathersJS",
+          "TypeScript",
+          "Tailwind CSS",
+          "MongoDB",
+          "Terraform",
+          "OpenTelemetry"
+        ]
+      }
+    ],
+    "freelance": [
+      {
+        "id": "myconnect",
+        "title": "MyConnect.ai",
+        "role": "Senior Frontend Engineer",
+        "country": "US",
+        "start": "2026-02",
+        "end": "2026-06",
+        "listing": "public",
+        "order": 10,
+        "description": {
+          "en": "Developed and enhanced production features for a Next.js and TypeScript web application, including bug fixes, performance improvements, refactoring, and monitoring with Sentry and Matomo."
+        },
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "TanStack Query",
+          "Sentry",
+          "Matomo",
+          "GitHub Actions"
+        ],
+        "engagement": "contract"
+      },
+      {
+        "id": "miningOperationsPlatform",
+        "title": "Mining Operations Platform",
+        "role": "Frontend Developer",
+        "country": "AU",
+        "start": "2025-06",
+        "end": "2025-10",
+        "listing": "public",
+        "order": 20,
+        "description": {
+          "en": "Developed web and mobile applications for a mining operations platform, including a block builder for mining planning, live camera and video management, dashboards, and a React Native task management app."
+        },
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "React Native",
+          "TanStack Query",
+          "shadcn/ui"
+        ],
+        "components": [
+          {
+            "id": "operations-application",
+            "title": "Operations Application"
+          },
+          {
+            "id": "block-builder",
+            "title": "Block Builder",
+            "description": {
+              "en": "Block builder application for mining planning and operations."
+            }
+          },
+          {
+            "id": "live-camera-video",
+            "title": "Live Camera & Video Management",
+            "description": {
+              "en": "Camera management with live streaming and video management."
+            }
+          },
+          {
+            "id": "dashboards",
+            "title": "Dashboards",
+            "description": {
+              "en": "Administrative dashboard."
+            }
+          },
+          {
+            "id": "task-management-app",
+            "title": "Task Management App",
+            "description": {
+              "en": "React Native application for task management."
+            },
+            "technologies": [
+              "React Native"
+            ]
+          }
+        ],
+        "engagement": "freelance"
+      },
+      {
+        "id": "tokenLoyaltyPlatform",
+        "title": "Token Loyalty Platform",
+        "role": "Software Engineer",
+        "country": "MY",
+        "start": "2022-10",
+        "end": "2024-12",
+        "listing": "public",
+        "order": 30,
+        "description": {
+          "en": "Led frontend development for a token loyalty platform, including a landing page, client PWA, and admin dashboard with QR token collection, redemption and reward management."
+        },
+        "technologies": [
+          "Next.js",
+          "Nuxt.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Pinia",
+          "PWA"
+        ],
+        "components": [
+          {
+            "id": "landing-page",
+            "title": "Landing Page"
+          },
+          {
+            "id": "client-pwa",
+            "title": "Client PWA",
+            "description": {
+              "en": "Progressive web application supporting token collection and redemption."
+            }
+          },
+          {
+            "id": "admin-dashboard",
+            "title": "Admin Dashboard",
+            "description": {
+              "en": "Dashboard supporting token and reward management."
+            }
+          }
+        ],
+        "engagement": "part-time"
+      },
+      {
+        "id": "automotiveInventorySystem",
+        "title": "Automotive Spare Parts Inventory Management System",
+        "role": "Full Stack Developer",
+        "country": "ID",
+        "start": "2024-04",
+        "end": "2024-06",
+        "listing": "public",
+        "order": 40,
+        "description": {
+          "en": "Designed and developed an inventory management CMS for an automotive spare parts retailer, including REST APIs and frontend modules for products, inventory, locations and orders.",
+          "id": "Merancang dan mengembangkan CMS manajemen inventaris untuk pengecer suku cadang otomotif, termasuk REST API dan modul frontend untuk produk, inventaris, lokasi, dan pesanan."
+        },
+        "technologies": [
+          "React.js",
+          "Tailwind CSS",
+          "Zustand",
+          "Node.js",
+          "Express.js",
+          "Sequelize",
+          "MySQL"
+        ],
+        "engagement": "freelance"
+      },
+      {
+        "id": "shipMonitoringPlatform",
+        "title": "Ship Monitoring Platform",
+        "role": "Frontend Developer",
+        "country": "ID",
+        "start": "2024-01",
+        "end": "2024-03",
+        "listing": "public",
+        "order": 50,
+        "description": {
+          "en": "Developed real-time ship monitoring applications with interactive maps, playback, radar visualization, geofencing and CCTV management."
+        },
+        "technologies": [
+          "React.js",
+          "TypeScript",
+          "React Leaflet",
+          "Material UI",
+          "Tailwind CSS"
+        ],
+        "engagement": "freelance"
+      },
+      {
+        "id": "tradingCommunityPlatform",
+        "title": "Trading Community Platform",
+        "role": "Technical Project Consultant",
+        "country": "ID",
+        "start": "2023-10",
+        "end": "2024-02",
+        "listing": "public",
+        "order": 60,
+        "description": {
+          "en": "Audited an existing web platform, identified feature gaps through technical and UI reviews, and planned development roadmaps and sprint backlogs."
+        },
+        "technologies": [
+          "Jira",
+          "Whimsical",
+          "Figma"
+        ],
+        "engagement": "freelance"
+      }
+    ],
+    "assessments": [
+      {
+        "id": "aiSessionManager",
+        "title": "AI Session Manager",
+        "company": "MyConnect.ai",
+        "year": 2026,
+        "listing": "public",
+        "description": {
+          "en": "A Next.js application for creating and managing AI conversation sessions, with a pluggable AI provider, simulated delays and failures, error monitoring, dark mode and unit tests.",
+          "id": "Aplikasi Next.js untuk membuat dan mengelola sesi percakapan AI, dengan penyedia AI yang dapat diganti, simulasi penundaan dan kegagalan, pemantauan kesalahan, mode gelap, dan pengujian unit."
+        },
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Prisma",
+          "SQLite",
+          "TanStack Query",
+          "Framer Motion",
+          "Vitest"
+        ],
+        "repository": "test-ai-session-manager",
+        "repositoryVisibility": "public"
+      },
+      {
+        "id": "evermosFrontend",
+        "title": "E-commerce Storefront",
+        "company": "Evermos",
+        "year": 2024,
+        "listing": "public",
+        "description": {
+          "en": "A Nuxt storefront with product listings, categories, search and product detail pages, using Pinia and server API routes over mock product data.",
+          "id": "Etalase toko berbasis Nuxt dengan daftar produk, kategori, pencarian, dan halaman detail produk, menggunakan Pinia serta rute API server berbasis data produk tiruan."
+        },
+        "technologies": [
+          "Nuxt.js",
+          "Vue.js",
+          "TypeScript",
+          "Pinia",
+          "Sass"
+        ],
+        "repository": "test-evermos-fe",
+        "repositoryVisibility": "public"
+      },
+      {
+        "id": "angularEmployeeManagement",
+        "title": "Employee Management App",
+        "company": "Mandiri",
+        "year": 2023,
+        "listing": "public",
+        "description": {
+          "en": "An Angular employee management app with login, a dashboard, and employee list, detail and create pages backed by a mock JSON API."
+        },
+        "technologies": [
+          "Angular",
+          "TypeScript",
+          "Tailwind CSS",
+          "RxJS"
+        ],
+        "repository": "test-fe-angular-web-developer",
+        "repositoryVisibility": "public"
+      },
+      {
+        "id": "pixelHouse1Kanban",
+        "title": "Algorithms and Kanban Board",
+        "company": "Pixel House Studio",
+        "year": 2020,
+        "listing": "public",
+        "description": {
+          "en": "JavaScript algorithm exercises covering palindromes, random arrays and sorting, alongside a Vue kanban board using Vuex state management."
+        },
+        "technologies": [
+          "Vue.js",
+          "Vuex",
+          "Buefy",
+          "JavaScript"
+        ],
+        "repository": "test-pixel-house",
+        "repositoryVisibility": "public"
+      },
+      {
+        "id": "pixelHouse2DataTable",
+        "title": "Data Table Manager",
+        "company": "Pixel House Studio",
+        "year": 2020,
+        "listing": "public",
+        "description": {
+          "en": "A Vue and Quasar data table with search, filtering, single and bulk update and delete, and Jest unit tests."
+        },
+        "technologies": [
+          "Vue.js",
+          "Vuex",
+          "Quasar",
+          "Jest"
+        ],
+        "repository": "test-pixel-house-2",
+        "repositoryVisibility": "public"
+      },
+      {
+        "id": "refactoryGraphqlApi",
+        "title": "Meeting Room Booking GraphQL API",
+        "company": "Refactory",
+        "year": 2020,
+        "listing": "public",
+        "description": {
+          "en": "A GraphQL API for the meeting room booking service, exposing users, rooms and bookings through Apollo Server on top of the REST API."
+        },
+        "technologies": [
+          "Node.js",
+          "GraphQL",
+          "Apollo Server",
+          "Axios"
+        ]
+      },
+      {
+        "id": "refactoryRestApi",
+        "title": "Meeting Room Booking REST API",
+        "company": "Refactory",
+        "year": 2020,
+        "listing": "public",
+        "description": {
+          "en": "A meeting room booking REST API with authentication, room and booking management, MySQL migrations and seeders, and email notifications."
+        },
+        "technologies": [
+          "Node.js",
+          "Express.js",
+          "MySQL",
+          "JWT",
+          "Nodemailer",
+          "SendGrid"
+        ]
+      }
+    ]
+  },
+  "origins": [
+    {
+      "id": "coursesLearning",
+      "title": "Courses & Learning",
+      "year": 2020,
+      "order": 10,
+      "listing": "public",
+      "description": {
+        "en": "Continued learning through Python, React, Laravel, React Native and Kotlin, including coursework, coding exercises, quizzes and final projects."
+      },
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "React",
+        "React Native",
+        "PHP",
+        "Laravel",
+        "Kotlin"
+      ]
+    },
+    {
+      "id": "realtimeSlideshow",
+      "title": "Real-Time Slideshow",
+      "year": 2020,
+      "order": 20,
+      "listing": "public",
+      "description": {
+        "en": "A Vue carousel synchronized across viewers in real time using Socket.io to broadcast slide changes."
+      },
+      "technologies": [
+        "Vue.js",
+        "BootstrapVue",
+        "Socket.io",
+        "Node.js"
+      ],
+      "repositories": [
+        {
+          "name": "realtime-slideshow",
+          "role": "Application"
+        }
+      ]
+    },
+    {
+      "id": "ecommerceApplications",
+      "title": "E-commerce Applications",
+      "year": 2020,
+      "order": 30,
+      "listing": "public",
+      "description": {
+        "en": "A three-part e-commerce application with a tested REST API, an admin dashboard for managing products, categories and users, and a customer storefront with cart and checkout functionality."
+      },
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "Sequelize",
+        "PostgreSQL",
+        "JWT",
+        "Jest",
+        "Supertest",
+        "Vue.js",
+        "Vuex",
+        "Vue Router",
+        "Vuetify"
+      ],
+      "repositories": [
+        {
+          "name": "ecommerce-server",
+          "role": "Server"
+        },
+        {
+          "name": "ecommerce-admin",
+          "role": "Admin"
+        },
+        {
+          "name": "ecommerce-customer",
+          "role": "Customer"
+        }
+      ]
+    },
+    {
+      "id": "fullStackKanban",
+      "title": "Full-Stack Kanban",
+      "year": 2020,
+      "order": 40,
+      "listing": "public",
+      "description": {
+        "en": "A full-stack Kanban board with a REST API and Vue client, supporting categories, tasks, Google Sign-In and per-user authorization."
+      },
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "Sequelize",
+        "PostgreSQL",
+        "JWT",
+        "Vue.js",
+        "Google Sign-In"
+      ],
+      "repositories": [
+        {
+          "name": "kanban",
+          "role": "Server"
+        },
+        {
+          "name": "kanban-porto",
+          "role": "Client"
+        }
+      ]
+    },
+    {
+      "id": "firstAttack",
+      "title": "First Attack!",
+      "year": 2019,
+      "order": 50,
+      "listing": "public",
+      "description": {
+        "en": "Attack Wars is a turn-based browser battle game built with JavaScript, featuring a story intro, hero naming, difficulty levels, critical attacks, spells and replay."
+      },
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "repositories": [
+        {
+          "name": "javascript-Game",
+          "role": "Game"
+        }
+      ]
+    },
+    {
+      "id": "weCanCode",
+      "title": "We Can Code",
+      "year": 2019,
+      "order": 60,
+      "listing": "public",
+      "description": {
+        "en": "A multi-page coding-course website concept with lessons, a playground and a quiz, built using HTML and CSS."
+      },
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Font Awesome"
+      ],
+      "repositories": [
+        {
+          "name": "Fikrimarzuki.github.io",
+          "role": "Website"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "forgebox",
+      "title": "Forgebox",
+      "kind": "concept",
+      "order": 10,
+      "status": "planned",
+      "destination": "tools",
+      "description": {
+        "en": "A planned creative sandbox for building 3D worlds and designing playable game experiences.",
+        "id": "Sandbox kreatif yang direncanakan untuk membangun dunia 3D dan merancang pengalaman permainan yang dapat dimainkan."
+      }
+    },
+    {
+      "id": "hearthside",
+      "title": "Hearthside",
+      "kind": "concept",
+      "order": 20,
+      "status": "in-progress",
+      "destination": "platforms",
+      "description": {
+        "en": "A virtual workspace in development, with customizable rooms and avatars for meeting and working together.",
+        "id": "Ruang kerja virtual yang sedang dikembangkan, dengan ruangan dan avatar yang dapat disesuaikan untuk bertemu dan bekerja bersama."
+      }
+    },
+    {
+      "id": "momee",
+      "title": "Momee",
+      "kind": "concept",
+      "order": 30,
+      "status": "in-progress",
+      "destination": "learning",
+      "description": {
+        "en": "An interactive bilingual storybook adventure in development for parents and young children.",
+        "id": "Petualangan buku cerita interaktif dwibahasa yang sedang dikembangkan untuk orang tua dan anak kecil."
+      }
+    },
+    {
+      "id": "comingSoon",
+      "title": "Coming Soon",
+      "kind": "placeholder",
+      "order": 40
+    },
+    {
+      "id": "ohBabyGrow",
+      "title": "Oh Baby Grow",
+      "kind": "concept",
+      "order": 50,
+      "status": "planned",
+      "description": {
+        "en": "A planned app for tracking a baby's growth and development and exploring parenting education.",
+        "id": "Aplikasi yang direncanakan untuk memantau pertumbuhan dan perkembangan bayi serta mempelajari pengasuhan anak."
+      }
+    },
+    {
+      "id": "vynote",
+      "title": "Vynote",
+      "kind": "concept",
+      "order": 60,
+      "status": "planned",
+      "description": {
+        "en": "A planned desktop assistant for meeting transcription and communication support.",
+        "id": "Asisten desktop yang direncanakan untuk transkripsi rapat dan dukungan komunikasi."
+      }
+    }
+  ],
+  "careerPublication": {
+    "experience": [
+      {
+        "id": "hacktiv8",
+        "fields": [
+          "company",
+          "end",
+          "role",
+          "start"
+        ],
+        "fingerprints": {
+          "fields": {
+            "company": "sha256:e635ef23e9709875c815c26013e828d48cc5808a8e0a2bd864eb9b6792693405",
+            "role": "sha256:c2952b0ffe3f5e3dee8bc8d597036ebcae31d1e1cd0629bb82a0a06b7d5694a9",
+            "start": "sha256:6c23e01958c3c2590db937667d88cbc51cea5f8752b137edcc271e7f252d0cd5",
+            "end": "sha256:fd9909f3b5b5d31933218d7850ec7f0e3b4951f5a6224bd12883e4de0270f586"
+          },
+          "technologies": {},
+          "relatedProjects": {}
+        }
+      },
+      {
+        "id": "spacetoco",
+        "fields": [
+          "company",
+          "end",
+          "role",
+          "start"
+        ],
+        "fingerprints": {
+          "fields": {
+            "company": "sha256:fd2fd9fb2c2b3fe674fc706ad3d7c9892bb02b8368067a3a0a9edd774e63e608",
+            "role": "sha256:988e0f06367fb7678b5f3db9fe91dc282eb2b03645c41eed52ad77a3063e9dbc",
+            "start": "sha256:fd28fb22738debf8899c3739ec6bf231ab27f522372c1f802c7e0e46a10d73dc",
+            "end": "sha256:a1e5a80b5bc8a8bf77ce770098cb4faf33cde678618cd27fbcc6354150eb164b"
+          },
+          "technologies": {},
+          "relatedProjects": {}
+        }
+      }
+    ],
+    "work": [
+      {
+        "employerId": "hacktiv8",
+        "id": "github-classroom-automation",
+        "fields": [
+          "description.en",
+          "description.id",
+          "title"
+        ],
+        "technologies": [
+          "Bash",
+          "GitHub CLI"
+        ],
+        "fingerprints": {
+          "fields": {
+            "title": "sha256:23f4527a2b811309c7395075057c22b88b93408286652377352954bc0be16674",
+            "description.en": "sha256:1939ed12f64cba7e89f9745c88d5a1c68147c2921a594e10ce89635dc0156b2b",
+            "description.id": "sha256:2cdaa7a66be49d8eb2bbb50a8f0dcfa3a4eafc5d4ec18c83fde52332e750435b"
+          },
+          "technologies": {
+            "Bash": "sha256:f7758a7f56fb330b466caa452307fef3794a8c8b9927188614859d09d99ecbef",
+            "GitHub CLI": "sha256:7689edcfc5de3cffb06cb0914227e1a0911767187505152f5049556e82ee46ec"
+          },
+          "relatedProjects": {}
+        }
+      },
+      {
+        "employerId": "pixelHouseStudio",
+        "id": "nodejs-data-converter",
+        "fields": [
+          "description.en",
+          "description.id",
+          "title"
+        ],
+        "technologies": [
+          "Node.js"
+        ],
+        "fingerprints": {
+          "fields": {
+            "title": "sha256:6f67bb6383109fa565b3141b4b6742aedb06d80008775403829849c8cbf478d8",
+            "description.en": "sha256:583219e565f91b027adb1d19a7cbc83311fe4e42a40dbae727be7b7002cdaa00",
+            "description.id": "sha256:d76d64e64e6b742182637d729f8e00452db0a7c6118d535c139fbdd01c933f31"
+          },
+          "technologies": {
+            "Node.js": "sha256:2a9f28dd13540028b3096979b40c6c3b5ebee708bcee36ab30d455315b8d441b"
+          },
+          "relatedProjects": {}
+        }
+      }
+    ],
+    "freelance": [],
+    "components": [],
+    "assessments": [
+      {
+        "id": "aiSessionManager",
+        "fields": [
+          "description.en",
+          "description.id",
+          "title",
+          "year"
+        ],
+        "technologies": [
+          "Next.js",
+          "TypeScript"
+        ],
+        "fingerprints": {
+          "fields": {
+            "title": "sha256:71275781246a60b3a09dcb8596eee3d2dfc8eea6dbc26a9e15ba23091cb7cffd",
+            "year": "sha256:001bce537a74725764c655da98a9592e33a08bf8ca64ab4fa53e49774b3b1f78",
+            "description.en": "sha256:410853598756af91a284971c19765e1ecbc7d93a66d937405a6d8f42881d341d",
+            "description.id": "sha256:818e8cc7af69b9ab28ee376d1d0e73458976ade59c388d5a6733912bf2c448d2"
+          },
+          "technologies": {
+            "Next.js": "sha256:fe9bc3812c9561274e3a3c7f8f49c34e2ad45efe9d36baa25a2b3a333ce00faa",
+            "TypeScript": "sha256:7e6356c0fbcd178d4afd85c8ebbae7075196576e6ae0715a6e8dc78dd2e36ce8"
+          },
+          "relatedProjects": {}
+        }
+      },
+      {
+        "id": "evermosFrontend",
+        "fields": [
+          "description.en",
+          "description.id",
+          "title",
+          "year"
+        ],
+        "technologies": [
+          "Nuxt.js",
+          "Pinia"
+        ],
+        "fingerprints": {
+          "fields": {
+            "title": "sha256:1710e06bbe93998db89fb7660a525e1d068c5bd0fe4c6f217c7893872f6c1566",
+            "year": "sha256:be41659d77a01490e5de6a9703f9a1bdf20063e8347ec5c7adfd0ff014ef4fc4",
+            "description.en": "sha256:e92de4eec05730d33b3770bcef1ee845c211ed12540fce1f51eb418e95c7fc57",
+            "description.id": "sha256:6c0ae1e50f0f9851d3be55867ee28415d05e95f376d17afdcb287bf7b83b33ee"
+          },
+          "technologies": {
+            "Nuxt.js": "sha256:879a2f30799fb6c6301a04ce74ec257d6a6763c2cb101a5ea29c65a53c386c2c",
+            "Pinia": "sha256:c8e0b502994d6070c5ddf7bc4edef32790684dc405524eeeee74f4c696903b56"
+          },
+          "relatedProjects": {}
+        }
+      }
+    ]
+  },
+  "conceptsPublication": [
+    {
+      "id": "forgebox",
+      "fields": [
+        "title"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:af534a918ea0fdfa392c6c267c640288d5e9a978fbc10d49e7cda86f14559ef2"
+        }
+      }
+    },
+    {
+      "id": "hearthside",
+      "fields": [
+        "title"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:282c390db263df31aed0df609c31f538fd14cabd4591e8afb4211f6e13babd62"
+        }
+      }
+    },
+    {
+      "id": "momee",
+      "fields": [
+        "title"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:ce6ff9112b5f48c0b53e6a4ad32ab0fefe1cd353ee183715ba2a2f925660b191"
+        }
+      }
+    }
+  ],
+  "showcases": [
+    {
+      "kind": "assessment",
+      "id": "aiSessionManager"
+    },
+    {
+      "kind": "engagement",
+      "id": "automotiveInventorySystem"
+    },
+    {
+      "kind": "project",
+      "id": "careerLens"
+    },
+    {
+      "kind": "assessment",
+      "id": "evermosFrontend"
+    },
+    {
+      "kind": "project",
+      "id": "kodeStep"
+    },
+    {
+      "kind": "work",
+      "employerId": "pixelHouseStudio",
+      "id": "managix-page-builder"
+    },
+    {
+      "kind": "project",
+      "id": "multiRepoClone"
+    },
+    {
+      "kind": "work",
+      "employerId": "pixelHouseStudio",
+      "id": "nodejs-data-converter"
+    },
+    {
+      "kind": "project",
+      "id": "pageLayr"
+    },
+    {
+      "kind": "project",
+      "id": "tinyverse"
+    },
+    {
+      "kind": "project",
+      "id": "cssTricks"
+    },
+    {
+      "kind": "project",
+      "id": "cv"
+    },
+    {
+      "kind": "project",
+      "id": "developerRoadmap"
+    },
+    {
+      "kind": "project",
+      "id": "configEcosystem"
+    },
+    {
+      "kind": "project",
+      "id": "ecosystemSkills"
+    },
+    {
+      "kind": "project",
+      "id": "devtools"
+    },
+    {
+      "kind": "project",
+      "id": "fmMonorepo"
+    },
+    {
+      "kind": "project",
+      "id": "projects"
+    },
+    {
+      "kind": "project",
+      "id": "roadmap"
+    },
+    {
+      "kind": "project",
+      "id": "tools"
+    },
+    {
+      "kind": "project",
+      "id": "foodieMap"
+    },
+    {
+      "kind": "project",
+      "id": "games"
+    },
+    {
+      "kind": "project",
+      "id": "gateway"
+    },
+    {
+      "kind": "project",
+      "id": "inventory"
+    },
+    {
+      "kind": "project",
+      "id": "javascriptia"
+    },
+    {
+      "kind": "project",
+      "id": "learning"
+    },
+    {
+      "kind": "project",
+      "id": "neuran"
+    },
+    {
+      "kind": "project",
+      "id": "nikahkuy"
+    },
+    {
+      "kind": "project",
+      "id": "nikahyuk"
+    },
+    {
+      "kind": "project",
+      "id": "nikahyukPrototype"
+    },
+    {
+      "kind": "project",
+      "id": "nodeApi"
+    },
+    {
+      "kind": "project",
+      "id": "playdeck"
+    },
+    {
+      "kind": "project",
+      "id": "playground"
+    },
+    {
+      "kind": "project",
+      "id": "playnest"
+    },
+    {
+      "kind": "project",
+      "id": "scriptoria"
+    },
+    {
+      "kind": "project",
+      "id": "support"
+    },
+    {
+      "kind": "project",
+      "id": "tcgHub"
+    },
+    {
+      "kind": "project",
+      "id": "courses"
+    },
+    {
+      "kind": "project",
+      "id": "blog"
+    },
+    {
+      "kind": "project",
+      "id": "links"
+    },
+    {
+      "kind": "project",
+      "id": "fmStudios"
+    },
+    {
+      "kind": "project",
+      "id": "templates"
+    },
+    {
+      "kind": "project",
+      "id": "watch"
+    },
+    {
+      "kind": "project",
+      "id": "frontendLab"
+    },
+    {
+      "kind": "project",
+      "id": "littleRoars"
+    },
+    {
+      "kind": "project",
+      "id": "securityLab"
+    },
+    {
+      "kind": "project",
+      "id": "weddingVendorScraper"
+    },
+    {
+      "kind": "concept",
+      "id": "forgebox"
+    },
+    {
+      "kind": "concept",
+      "id": "hearthside"
+    },
+    {
+      "kind": "concept",
+      "id": "momee"
+    },
+    {
+      "kind": "concept",
+      "id": "ohBabyGrow"
+    },
+    {
+      "kind": "concept",
+      "id": "vynote"
+    },
+    {
+      "kind": "project",
+      "id": "quibiq"
+    },
+    {
+      "kind": "project",
+      "id": "xyz"
+    },
+    {
+      "kind": "project",
+      "id": "yourSpace"
+    }
+  ],
+  "showcasePublication": [
+    {
+      "kind": "assessment",
+      "id": "aiSessionManager",
+      "surface": "az",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "fingerprint": "sha256:dc9bf2de243e174c836b6b2b6f2f62f799c5aead28410e0e791dc6b8ac65e633"
+    },
+    {
+      "kind": "project",
+      "id": "careerLens",
+      "surface": "az",
+      "fingerprint": "sha256:798706accadf322112372ce7d860d363b7017311a7ad086b58b75fb127409838",
+      "presentationFingerprint": "sha256:e7bcdf9d1332cb49a018f87ce89b9459668f099698403c0a4bc458ac4ac68896"
+    },
+    {
+      "kind": "project",
+      "id": "kodeStep",
+      "surface": "az",
+      "fingerprint": "sha256:47a25adbb178e5012bef4274dba623cd75661ba750fa50d006cf866ce937ae34",
+      "presentationFingerprint": "sha256:cf4bba50b5d954aac2f64bd5d058f263b2ffe3d10a8fafe50c781a7cd4cd6d4f"
+    },
+    {
+      "kind": "project",
+      "id": "multiRepoClone",
+      "surface": "az",
+      "fingerprint": "sha256:6a32d48e2e12b98fdc6ad6ef6d161e9ce2367d841e5ef6ae824e6f13c31615b0",
+      "presentationFingerprint": "sha256:f9af8693e5902f2765608eebed7f942685735c87d48c1881fc2064e7bfbf6c37"
+    },
+    {
+      "kind": "project",
+      "id": "pageLayr",
+      "surface": "az",
+      "fingerprint": "sha256:c8d89b119cb61a8af62659d6da5ac3bab829d0dd58a2a5835b8770f8de483444",
+      "presentationFingerprint": "sha256:b473289229926038fc339c3525393f2d58b9315f569bf8f4c1bcf1213fed1980"
+    },
+    {
+      "kind": "project",
+      "id": "tinyverse",
+      "surface": "az",
+      "fingerprint": "sha256:2dcf8e87acf0c6a7dd4f726b77b993a9e4004c5d1529d02d376f4745de712d4d",
+      "presentationFingerprint": "sha256:85f33a3ad1b3d85123e766d62b170d69eb0688516c67e0eaa408cdb5b00ccb9b"
+    },
+    {
+      "kind": "assessment",
+      "id": "evermosFrontend",
+      "surface": "az",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Nuxt.js",
+        "Pinia"
+      ],
+      "fingerprint": "sha256:578a45e72ca4738e5d1e6328704d616ae7fa741563b88598134c85799e709c7e"
+    },
+    {
+      "kind": "work",
+      "employerId": "pixelHouseStudio",
+      "id": "nodejs-data-converter",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Node.js"
+      ],
+      "fingerprint": "sha256:f96b9c0f8427aacba90c2904d62731c23a457516936e32fd8e04b00faae23520"
+    },
+    {
+      "kind": "work",
+      "employerId": "pixelHouseStudio",
+      "id": "managix-page-builder",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Vue.js",
+        "Nuxt.js"
+      ],
+      "fingerprint": "sha256:dd8306bc7ea4ff859124eb45ab37a8d0b147f99714b71162ccadf51bc10edb41"
+    },
+    {
+      "kind": "engagement",
+      "id": "automotiveInventorySystem",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MySQL"
+      ],
+      "publicTitle": "Automotive Inventory System",
+      "fingerprint": "sha256:4ad04cbde1fb8e5f8c74e9f2a4d3ba0143afb14d23eabf0e533a6a2807b41606"
+    },
+    {
+      "kind": "project",
+      "id": "cssTricks",
+      "surface": "az",
+      "fingerprint": "sha256:579794c16e7eff10181293ca1b34ba804cb38380d06282e61fc06949df3bdfaf",
+      "presentationFingerprint": "sha256:a8b59ee88e266759d6fcac3796bd8614d2e1891188e1cb03827a536948b6f3ad"
+    },
+    {
+      "kind": "project",
+      "id": "cv",
+      "surface": "az",
+      "fingerprint": "sha256:ca3417601260ebb412b349b875508a1a2d0202e082a4fe4c4244f0e4c0da2fc0",
+      "presentationFingerprint": "sha256:2c5b4263fbbe558d71abc1474062e8fff5ea6ccc63e636a10137d21cff0e809b"
+    },
+    {
+      "kind": "project",
+      "id": "developerRoadmap",
+      "surface": "az",
+      "fingerprint": "sha256:648e6097718df25bff8730ba94d29ecda66db85d8ea307ffc5f5516b208a19e4",
+      "presentationFingerprint": "sha256:5a0589a02118db0f928009a4d7b81d6f5dd5b9fbd478f2c33c2f5e7aef5c2278"
+    },
+    {
+      "kind": "project",
+      "id": "configEcosystem",
+      "surface": "az",
+      "fingerprint": "sha256:bf1fc19ab3aa9f9edd4aa89ad0e28f1748f07c03d11168310bf0d30c3631c58d",
+      "presentationFingerprint": "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900"
+    },
+    {
+      "kind": "project",
+      "id": "ecosystemSkills",
+      "surface": "az",
+      "fingerprint": "sha256:eddb1d4a1bdb30dfe52e14d57c5c3d287ef08af2e726687712c7eebf0ec9fd50",
+      "presentationFingerprint": "sha256:281ffdfbe3a64ee00c072bf325703d54d3b2831c3408d8266af5941b5b6386a3"
+    },
+    {
+      "kind": "project",
+      "id": "devtools",
+      "surface": "az",
+      "fingerprint": "sha256:f22fc52ccf5517dd625fb39bb1ff1d74032b9de8f6b40ea1177e122b93507184",
+      "presentationFingerprint": "sha256:53c8ef6ec909dccec9f51e81d8abecb758ff23a92d5f8a6d63d3e1fdab460748"
+    },
+    {
+      "kind": "project",
+      "id": "fmMonorepo",
+      "surface": "az",
+      "fingerprint": "sha256:db5c929fd51f1e5c8dc32b11afbd728a7d523a54f034a78082c88874d3c6effd",
+      "presentationFingerprint": "sha256:8995c45cc76b57f9657d7514b147ef9764f7ab81af71e60defb478db4a743005"
+    },
+    {
+      "kind": "project",
+      "id": "projects",
+      "surface": "az",
+      "fingerprint": "sha256:2b7c598a1a85e6bd0297ca230bdc3fb63c2969e763972f000a9f6c8e5a7578bc",
+      "presentationFingerprint": "sha256:918b5a1d94eba97a36b5bcb0f47313fd0ffa6b3e2af56623d52e9581d611305f"
+    },
+    {
+      "kind": "project",
+      "id": "roadmap",
+      "surface": "az",
+      "fingerprint": "sha256:f51c02b4577b7cd05a3d1aecdd2eec2ac511dd1ee8dd66bd80d2b6630d43dc0c",
+      "presentationFingerprint": "sha256:3ced05e69dde93fb805643b59ee6e1b62a9c2b22d66339fe4d5b12c732d896bb"
+    },
+    {
+      "kind": "project",
+      "id": "tools",
+      "surface": "az",
+      "fingerprint": "sha256:025166a948f9d8280cb8baa565e67dc76d74e794ce3b23cd1fa4868117e2856a",
+      "presentationFingerprint": "sha256:3069eff5cfa5c1676f3dbfe698f70bbb22c8d74b022ccbcba055eca8bda3c6c4"
+    },
+    {
+      "kind": "project",
+      "id": "foodieMap",
+      "surface": "az",
+      "fingerprint": "sha256:d8920fdff94df263c0d80d64320149b2003bb4fa04db0b6ebbf26b1be71403cf",
+      "presentationFingerprint": "sha256:0c3fcc43b0b7d1673afd9108c08e8a9acbfeca467d50daf83b4c6dc9b297d00d"
+    },
+    {
+      "kind": "project",
+      "id": "games",
+      "surface": "az",
+      "fingerprint": "sha256:3ba7ab5abcf3201eaf0e2d3a2b06c49db3c501d27c2b32c9c9e249ba257d79c3",
+      "presentationFingerprint": "sha256:3361ab1dccac92b15bdce2f680f944fc59e1339fb665540d1aaf3c026da3ba1b"
+    },
+    {
+      "kind": "project",
+      "id": "gateway",
+      "surface": "az",
+      "fingerprint": "sha256:d7774b0d2c2b1fbfb09ce42f16667155085e18b0abfc99d93953518a15b19abe",
+      "presentationFingerprint": "sha256:0206cae6b32c6377bc2d7f4ae3080007161858c2d06d7d9913c3bb105e571f3e"
+    },
+    {
+      "kind": "project",
+      "id": "inventory",
+      "surface": "az",
+      "fingerprint": "sha256:f01dcd50698c247eb906596288f89427c8a5d3506f6704facb3561583b6d95b6",
+      "presentationFingerprint": "sha256:617b008b20957f4acfcdfec7805c5e1267ef326cada2ddb9cbacba73670c41e9"
+    },
+    {
+      "kind": "project",
+      "id": "javascriptia",
+      "surface": "az",
+      "fingerprint": "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83",
+      "presentationFingerprint": "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84"
+    },
+    {
+      "kind": "project",
+      "id": "learning",
+      "surface": "az",
+      "fingerprint": "sha256:8382dc06ccec219521d0d30bb3adc9ba5991f01313260f890ba30b2682921d55",
+      "presentationFingerprint": "sha256:c0d770f36431d69d3076955ce93b6c8950378a770d3a8883ce960391dd8cf78b"
+    },
+    {
+      "kind": "project",
+      "id": "neuran",
+      "surface": "az",
+      "fingerprint": "sha256:e6cce4a69d873216f0755b225ace27d3e7ddcde48ec9883f205f1ef7807151ad",
+      "presentationFingerprint": "sha256:02a9a81174301b576916f9540e79d99ade5ff833290c02de16f89ccf55e7e92d"
+    },
+    {
+      "kind": "project",
+      "id": "nikahkuy",
+      "surface": "az",
+      "fingerprint": "sha256:e36f1992a2e59b9191411a1523c1673e1af69c42841f0a131f618f6be2a27663",
+      "presentationFingerprint": "sha256:a3aac107488b5548d0ae686395bfea3fb4e9de466257511467d615b44c44cec3"
+    },
+    {
+      "kind": "project",
+      "id": "nikahyuk",
+      "surface": "az",
+      "fingerprint": "sha256:0eb59f00ad8e19d312b782e95ab4981bab0f9ddfe71ffd977b8bc4b19054dd23",
+      "presentationFingerprint": "sha256:b640b88d974f4e37110e7c899a918ab2d1ff3b35ca2bfaf0955b6ea8dd1e2bf1"
+    },
+    {
+      "kind": "project",
+      "id": "nikahyukPrototype",
+      "surface": "az",
+      "fingerprint": "sha256:79a32e90d10f3272790d937430908e96ac26299c8e6fb24058e42caeb9a9c7d5",
+      "presentationFingerprint": "sha256:11959fcde9b00ae79387cf9ad971d3259bfdd7632ee772b148535cff8b657d92"
+    },
+    {
+      "kind": "project",
+      "id": "nodeApi",
+      "surface": "az",
+      "fingerprint": "sha256:3329a2f8d0e2d0389311360d5e7ece573502bb8b9cd9845d70f6592e293378de",
+      "presentationFingerprint": "sha256:e828f8abaf69a1ba69f81e42a0ebfe1e4d40428c2d8e736b6a2debf5b658f9ac"
+    },
+    {
+      "kind": "project",
+      "id": "playdeck",
+      "surface": "az",
+      "fingerprint": "sha256:952d03e9e528f9dfa2c8de0d127f364c796967201b8d39d9e2912dc83aaabc5b",
+      "presentationFingerprint": "sha256:833a87033909897d7a118a7d937f8e5ac98f5ce9431e776495ae2561c4aa7822"
+    },
+    {
+      "kind": "project",
+      "id": "playground",
+      "surface": "az",
+      "fingerprint": "sha256:560e418bff687bcc8dd6c2200986997e4de4733582074782f99c9c0a1f29f941",
+      "presentationFingerprint": "sha256:70dd9a8ea95c8dc8195a8b4171a9afc7238507cb3b7bc916bbdd2281eb6c5d81"
+    },
+    {
+      "kind": "project",
+      "id": "playnest",
+      "surface": "az",
+      "fingerprint": "sha256:72fcdc232db2a2f24a5804a65348146eb1afbbb1220a5af5f4a695900961d13f",
+      "presentationFingerprint": "sha256:2c60fdea7e57af2fe3df008e4960d90e572466ca64393e119c7d711813073e73"
+    },
+    {
+      "kind": "project",
+      "id": "scriptoria",
+      "surface": "az",
+      "fingerprint": "sha256:fdcb93be104a1836bedea1ed3d020a6e6030f921fc074287392d0cd71dbd1931",
+      "presentationFingerprint": "sha256:fa6cc69db22fba23fe7bbb0ebea132dd3c63f32ad10d9008b71674a27df7143b"
+    },
+    {
+      "kind": "project",
+      "id": "support",
+      "surface": "az",
+      "fingerprint": "sha256:db9a0cc5c28c8320cd007395119276ce39ba3301470c01ffb36b14ef7715d986",
+      "presentationFingerprint": "sha256:df3beec54bd7559500b7d0ce666591f25e4404313938f0af2f0facad60393739"
+    },
+    {
+      "kind": "project",
+      "id": "tcgHub",
+      "surface": "az",
+      "fingerprint": "sha256:82ecd8ee865a8f8fa1b4f0d942a68dee737d931d4265318b191bf2b4009afb65",
+      "presentationFingerprint": "sha256:3b7bcea7a871979d9bbe7906b745e8fdfdb0cd6467ed3618dacc673505d4415f"
+    },
+    {
+      "kind": "project",
+      "id": "courses",
+      "surface": "az",
+      "fingerprint": "sha256:9a6f2bdc00a7d904d3d437f1038c3002f594c9c1103bf351efd67c4ef47ab5d9",
+      "presentationFingerprint": "sha256:240547cf0f88392ffeab308516f0201ede977d02f747981ae22f8fefb9e7299d"
+    },
+    {
+      "kind": "project",
+      "id": "blog",
+      "surface": "az",
+      "fingerprint": "sha256:290f8459f371d8b87a6aceaab54e1ddf737e55f862f867a23951c5dd60ea91b6",
+      "presentationFingerprint": "sha256:1b37f3d31a8eda46945c15216d47b845a7a63d4c5e675ed00690ad2d3503dc74"
+    },
+    {
+      "kind": "project",
+      "id": "links",
+      "surface": "az",
+      "fingerprint": "sha256:5a341cca77f1ff590ddea4e2cc3fb9a021ca0e2cb2fcf5a8ae1ae9ca5eb4e446",
+      "presentationFingerprint": "sha256:fac1bb8ed644a388b26ba2f64470cddaa86433d72d0496de239ad86208a95248"
+    },
+    {
+      "kind": "project",
+      "id": "fmStudios",
+      "surface": "az",
+      "fingerprint": "sha256:c68d573bbf2c1f7ec25e42ec183c70a0912560935ed02d004a11692592400e19",
+      "presentationFingerprint": "sha256:883951177e3cea292e869c9b2c6b5bad59d60c152397cdb7dce075cfd9d71ffc"
+    },
+    {
+      "kind": "project",
+      "id": "templates",
+      "surface": "az",
+      "fingerprint": "sha256:30fe3d339c8598bc27abb7860573259adc1bec2c31d5ed79d4c38d504c5ba573",
+      "presentationFingerprint": "sha256:d50b88146da2306d93ab95e68dd9ae37babde1df4907f0a5b01654a94eb85fb1"
+    },
+    {
+      "kind": "project",
+      "id": "watch",
+      "surface": "az",
+      "fingerprint": "sha256:548a957eb225bedea1b35f822c2b78d819310050014cb00057afe6a109025689",
+      "presentationFingerprint": "sha256:169ca7927d834d93b7f28aeecc2709730e3ab539abffd8fda3efcbd790f1fdb3"
+    },
+    {
+      "kind": "project",
+      "id": "frontendLab",
+      "surface": "az",
+      "fingerprint": "sha256:57fe0fd2388563da2eff36f1f8eea86cb5a9e1fc3a7e6d0dc25137a2289eff13",
+      "presentationFingerprint": "sha256:0557a396c7c39fbcb6b609a1097a07bdcedc7bdfe2acab6fd4a41c6f965f35d4"
+    },
+    {
+      "kind": "project",
+      "id": "littleRoars",
+      "surface": "az",
+      "fingerprint": "sha256:924492f07ec22338179bd2965540e29df99a1a22c8526f08194c3e6bffdb3e19",
+      "presentationFingerprint": "sha256:aab215bc5a4a43faa50959f2fcfeffbdca0f81e4c32a2926a9f5474001c3edbb"
+    },
+    {
+      "kind": "project",
+      "id": "securityLab",
+      "surface": "az",
+      "fingerprint": "sha256:a7f991ca0b5101e3136aa7cfcddcba36a6b6898929d89a94342969c8c9e11a80",
+      "presentationFingerprint": "sha256:a2d7d41cf3e9aeccc3ab52f2bed6bd22f1fb7f586609649927938dea995c327f"
+    },
+    {
+      "kind": "project",
+      "id": "weddingVendorScraper",
+      "surface": "az",
+      "fingerprint": "sha256:3c0f6998458ef617b3379a932667c4600bac1ee93a6ddad775a41a89b7d46c4f",
+      "presentationFingerprint": "sha256:09a72c4f53b2917294dc6c991de24cd6a74af822105dec59afd128748536c37b"
+    },
+    {
+      "kind": "concept",
+      "id": "forgebox",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "status"
+      ],
+      "fingerprint": "sha256:a29d71c50532c410f3390fa3ec7ee4243a99dab088af3948786d0eb0c6943e1a",
+      "presentationFingerprint": "sha256:a5d383e53980effe79980f742521129500100e6922b6d44f324c8afd1eb6078a"
+    },
+    {
+      "kind": "concept",
+      "id": "hearthside",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "status"
+      ],
+      "fingerprint": "sha256:9a95862dc6a11b92c0f749740a07713673fcd4cd7af5d733273cb83c20259cce",
+      "presentationFingerprint": "sha256:b98a1f80cb7c485d6070c46b347d777910dc576d001e527c212df1492d3e62e7"
+    },
+    {
+      "kind": "concept",
+      "id": "momee",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "status"
+      ],
+      "fingerprint": "sha256:f8398738057ae4ba9a8532a5bf50766648218cf2b39e37fb1c26ec8633c916ce",
+      "presentationFingerprint": "sha256:c03987f591d4d5febe21902f7d48a666d8d7efd39c3b7c2d55ae28c16f2c03bb"
+    },
+    {
+      "kind": "concept",
+      "id": "ohBabyGrow",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "status"
+      ],
+      "fingerprint": "sha256:09366966450ad27d4936ce861ac0fc66e9686393aa0a97722a44378c1445d411",
+      "presentationFingerprint": "sha256:fecfaa0bc2e791dd930c62184d06904a395bf8d4b533e864611c9c1aa526d0f4"
+    },
+    {
+      "kind": "concept",
+      "id": "vynote",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "status"
+      ],
+      "fingerprint": "sha256:11bcda78d812d3405e7438e1ab4dbfbed197060660817c50017f1937162dfef4",
+      "presentationFingerprint": "sha256:d906e54c613b8d924f917000e71b0dc9927b37489adf7688062f9d2f30de9409"
+    },
+    {
+      "kind": "project",
+      "id": "quibiq",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "lifecycle"
+      ],
+      "fingerprint": "sha256:19e07f6afb85c85316399da9f2c047ecde5f04f7831cc2e51f9335dd849ca4c7",
+      "presentationFingerprint": "sha256:3b97d9ce3fcfc335f20643faa72ad0b8a32c37a7218e317fe9fb7d11ad73372c"
+    },
+    {
+      "kind": "project",
+      "id": "xyz",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "lifecycle"
+      ],
+      "fingerprint": "sha256:b740bd73b59f1c6351d59859eb06fc83dcb963fba536007e5e70398c3bd96dcb",
+      "presentationFingerprint": "sha256:23483bb173b0ac392643c779f626d5323f0446bbe320eb68e2bf288906fde50b"
+    },
+    {
+      "kind": "project",
+      "id": "yourSpace",
+      "surface": "az",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id",
+        "lifecycle"
+      ],
+      "fingerprint": "sha256:7e162683d87c32aec5d690c38155154766fdd1f387135a16779fe3f4de18f250",
+      "presentationFingerprint": "sha256:b778ad4aca15dedbc41b071e04af8638ed2540f9d381a518e97d595c56b3d408"
+    }
+  ],
+  "showcaseEligibility": [
+    {
+      "kind": "project",
+      "id": "courses",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:4cd8c13895974d1e745209834aa2ba3b96dd1157477b74379f58c26fe9672a01"
+    },
+    {
+      "kind": "project",
+      "id": "blog",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:9f6ad0acab4c54de1eab5022a6328fd4573ebe407ba7d52564a163eb88170159"
+    },
+    {
+      "kind": "project",
+      "id": "links",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:d20b9e1b4c308984d17470c1007dc290ef8c56c5ef331bdaa48d5621aba2e148"
+    },
+    {
+      "kind": "project",
+      "id": "fmStudios",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:f8bc93dd118003819f5880d0545a1515cf880825a9ca80c353a9be37e7c1f51b"
+    },
+    {
+      "kind": "project",
+      "id": "templates",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:3b4e244328c061b9a63057acb7b26a4453bb928321e5adc46f8bae466f65c218"
+    },
+    {
+      "kind": "project",
+      "id": "watch",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:1bfe5b70b859ae0d6263f53f9b9547f96a23a620f7c3e844b8b75fb477e02928"
+    },
+    {
+      "kind": "project",
+      "id": "frontendLab",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:98406b1f08efb249c7bbc22217a9250e5fae652d99bfba7796e747d46f7c78f4"
+    },
+    {
+      "kind": "project",
+      "id": "littleRoars",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:4d87162a25b5825a83b91e594f55396f01ae6fe67489519b9f20c05236bed0d7"
+    },
+    {
+      "kind": "project",
+      "id": "securityLab",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:17b31e3497b6fdd900c3e58542fc0bc97f0b315bf699b1ffdf49ea04ae1e22c8"
+    },
+    {
+      "kind": "project",
+      "id": "weddingVendorScraper",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:c6c1083fde3364f82ac2f85964ba16f0e570b5205dff0bfa50e7c066305ff321"
+    },
+    {
+      "kind": "concept",
+      "id": "forgebox",
+      "surface": "az",
+      "fingerprint": "sha256:145f306d0a24a9723cfe773ab57c20616d56f9d5ddf614c30f29aee9034819fb"
+    },
+    {
+      "kind": "concept",
+      "id": "hearthside",
+      "surface": "az",
+      "fingerprint": "sha256:022e301f8d003356fddfc106d00f663e2b308411bd016db28dfef3652a4863c0"
+    },
+    {
+      "kind": "concept",
+      "id": "momee",
+      "surface": "az",
+      "fingerprint": "sha256:e9db33841618fee6fb0f500c48815c6ae4d2fec0c5ee4aab88ae3b35e0285966"
+    },
+    {
+      "kind": "concept",
+      "id": "ohBabyGrow",
+      "surface": "az",
+      "fingerprint": "sha256:54cdc1a3af67c44758a514913dd85c17d697e573fc03551014479b4696164f95"
+    },
+    {
+      "kind": "concept",
+      "id": "vynote",
+      "surface": "az",
+      "fingerprint": "sha256:f13657bbc50cf442e5acf52199123eb48807a2cf8fd7b7518e7b3a0af0d267c3"
+    },
+    {
+      "kind": "project",
+      "id": "quibiq",
+      "surface": "az",
+      "listing": "hidden",
+      "lifecycle": true,
+      "fingerprint": "sha256:74f1c4738aa716b9e188565589d16babd914d5959e8bb03f1e8e40a05fc22bce"
+    },
+    {
+      "kind": "project",
+      "id": "xyz",
+      "surface": "az",
+      "listing": "hidden",
+      "lifecycle": true,
+      "fingerprint": "sha256:a8c482f56b08b02c471e7191470fa278aa8450cd34bba0e9ad0e26470794aa30"
+    },
+    {
+      "kind": "project",
+      "id": "yourSpace",
+      "surface": "az",
+      "listing": "hidden",
+      "lifecycle": true,
+      "fingerprint": "sha256:061527555f813f5e0f0f44839373c6e1494201de7310f91d595cb5b8226fb417"
+    }
+  ]
+}

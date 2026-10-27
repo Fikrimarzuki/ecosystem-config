@@ -1,0 +1,20 @@
+{
+  "id": "evermosFrontend",
+  "title": "E-commerce Storefront",
+  "company": "Evermos",
+  "year": 2024,
+  "listing": "public",
+  "description": {
+    "en": "A Nuxt storefront with product listings, categories, search and product detail pages, using Pinia and server API routes over mock product data.",
+    "id": "Etalase toko berbasis Nuxt dengan daftar produk, kategori, pencarian, dan halaman detail produk, menggunakan Pinia serta rute API server berbasis data produk tiruan."
+  },
+  "technologies": [
+    "Nuxt.js",
+    "Vue.js",
+    "TypeScript",
+    "Pinia",
+    "Sass"
+  ],
+  "repository": "test-evermos-fe",
+  "repositoryVisibility": "public"
+}

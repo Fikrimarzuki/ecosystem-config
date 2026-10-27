@@ -1,0 +1,31 @@
+{
+  "id": "rollingGlory",
+  "role": "Software Developer",
+  "country": "ID",
+  "start": "2022-07",
+  "end": "2022-10",
+  "listing": "public",
+  "description": {
+    "en": "Developed and maintained CMS and client-facing web applications for a confidential fintech project while working with Rolling Glory."
+  },
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Material UI",
+    "Styled Components"
+  ],
+  "company": "Rolling Glory",
+  "engagement": "part-time",
+  "work": [
+    {
+      "id": "finance-platform",
+      "title": "Finance Platform",
+      "kind": "product",
+      "description": {
+        "en": "Developed and maintained CMS and client-facing web applications for a confidential fintech project while working with Rolling Glory."
+      },
+      "listing": "hidden"
+    }
+  ]
+}

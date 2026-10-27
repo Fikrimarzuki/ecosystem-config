@@ -1,0 +1,11 @@
+{
+  "id": "vynote",
+  "title": "Vynote",
+  "kind": "concept",
+  "order": 60,
+  "status": "planned",
+  "description": {
+    "en": "A planned desktop assistant for meeting transcription and communication support.",
+    "id": "Asisten desktop yang direncanakan untuk transkripsi rapat dan dukungan komunikasi."
+  }
+}

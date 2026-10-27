@@ -1,0 +1,19 @@
+{
+  "id": "littleRoars",
+  "name": "Little Roars",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "games",
+  "repository": "game-little-roars",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "littleroars",
+      "subdomain": "littleroars"
+    }
+  },
+  "tagline": {
+    "en": "Little Roars. Big Adventures. Your Voice!",
+    "id": "Auman Kecil. Petualangan Besar. Suaramu!"
+  }
+}

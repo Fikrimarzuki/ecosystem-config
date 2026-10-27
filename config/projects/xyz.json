@@ -1,0 +1,12 @@
+{
+  "id": "xyz",
+  "name": "XYZ",
+  "status": "active",
+  "lifecycle": "in-progress",
+  "listing": "hidden",
+  "destination": "learning",
+  "description": {
+    "en": "A multi-skill learning platform in development, starting with interactive JavaScript challenges and local progress, with learning paths and more skill areas planned.",
+    "id": "Platform belajar berbagai keterampilan yang sedang dikembangkan, dimulai dengan tantangan JavaScript interaktif dan kemajuan yang disimpan secara lokal, dengan jalur belajar dan bidang keterampilan lain yang direncanakan."
+  }
+}

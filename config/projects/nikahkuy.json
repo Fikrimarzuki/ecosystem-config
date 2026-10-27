@@ -1,0 +1,19 @@
+{
+  "id": "nikahkuy",
+  "name": "Nikah Kuy",
+  "status": "completed",
+  "listing": "public",
+  "destination": "products",
+  "repository": "lab-projects",
+  "repositoryVisibility": "private",
+  "path": "nikah-kuy",
+  "deployments": {
+    "main": {
+      "name": "nikahkuy",
+      "subdomain": "nikahkuy"
+    }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/nikahkuy/thumbnail.webp"
+  }
+}

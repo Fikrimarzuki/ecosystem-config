@@ -1,0 +1,15 @@
+{
+  "id": "frontendLab",
+  "name": "Frontend Lab",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "labs",
+  "repository": "lab-frontend",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "frontend",
+      "subdomain": "frontend"
+    }
+  }
+}

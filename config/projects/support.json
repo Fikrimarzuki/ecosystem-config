@@ -1,0 +1,19 @@
+{
+  "id": "support",
+  "name": "Support",
+  "status": "active",
+  "listing": "public",
+  "destination": "moon",
+  "repository": "web-support",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "support",
+      "subdomain": "support"
+    }
+  },
+  "assets": {
+    "icon": "assets/projects/support/icon.png",
+    "thumbnail": "assets/projects/support/thumbnail.webp"
+  }
+}

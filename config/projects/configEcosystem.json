@@ -1,0 +1,22 @@
+{
+  "id": "configEcosystem",
+  "name": "Ecosystem Config",
+  "status": "active",
+  "listing": "public",
+  "destination": "central-station",
+  "repository": "ecosystem-config",
+  "repositoryVisibility": "public",
+  "deployments": {
+    "main": {
+      "name": "config-ecosystem",
+      "subdomain": "config"
+    }
+  },
+  "description": {
+    "en": "Centralized project metadata, schemas, validation, and generated configuration for my developer ecosystem."
+  },
+  "assets": {
+    "icon": "assets/projects/configEcosystem/icon.png",
+    "thumbnail": "assets/projects/configEcosystem/thumbnail.webp"
+  }
+}

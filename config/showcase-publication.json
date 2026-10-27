@@ -1,0 +1,481 @@
+[
+  {
+    "kind": "assessment",
+    "id": "aiSessionManager",
+    "surface": "az",
+    "fields": [
+      "title",
+      "year",
+      "description.en",
+      "description.id"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript"
+    ],
+    "fingerprint": "sha256:dc9bf2de243e174c836b6b2b6f2f62f799c5aead28410e0e791dc6b8ac65e633"
+  },
+  {
+    "kind": "project",
+    "id": "careerLens",
+    "surface": "az",
+    "fingerprint": "sha256:798706accadf322112372ce7d860d363b7017311a7ad086b58b75fb127409838",
+    "presentationFingerprint": "sha256:e7bcdf9d1332cb49a018f87ce89b9459668f099698403c0a4bc458ac4ac68896"
+  },
+  {
+    "kind": "project",
+    "id": "kodeStep",
+    "surface": "az",
+    "fingerprint": "sha256:47a25adbb178e5012bef4274dba623cd75661ba750fa50d006cf866ce937ae34",
+    "presentationFingerprint": "sha256:cf4bba50b5d954aac2f64bd5d058f263b2ffe3d10a8fafe50c781a7cd4cd6d4f"
+  },
+  {
+    "kind": "project",
+    "id": "multiRepoClone",
+    "surface": "az",
+    "fingerprint": "sha256:6a32d48e2e12b98fdc6ad6ef6d161e9ce2367d841e5ef6ae824e6f13c31615b0",
+    "presentationFingerprint": "sha256:f9af8693e5902f2765608eebed7f942685735c87d48c1881fc2064e7bfbf6c37"
+  },
+  {
+    "kind": "project",
+    "id": "pageLayr",
+    "surface": "az",
+    "fingerprint": "sha256:c8d89b119cb61a8af62659d6da5ac3bab829d0dd58a2a5835b8770f8de483444",
+    "presentationFingerprint": "sha256:b473289229926038fc339c3525393f2d58b9315f569bf8f4c1bcf1213fed1980"
+  },
+  {
+    "kind": "project",
+    "id": "tinyverse",
+    "surface": "az",
+    "fingerprint": "sha256:2dcf8e87acf0c6a7dd4f726b77b993a9e4004c5d1529d02d376f4745de712d4d",
+    "presentationFingerprint": "sha256:85f33a3ad1b3d85123e766d62b170d69eb0688516c67e0eaa408cdb5b00ccb9b"
+  },
+  {
+    "kind": "assessment",
+    "id": "evermosFrontend",
+    "surface": "az",
+    "fields": [
+      "title",
+      "year",
+      "description.en",
+      "description.id"
+    ],
+    "technologies": [
+      "Nuxt.js",
+      "Pinia"
+    ],
+    "fingerprint": "sha256:578a45e72ca4738e5d1e6328704d616ae7fa741563b88598134c85799e709c7e"
+  },
+  {
+    "kind": "work",
+    "employerId": "pixelHouseStudio",
+    "id": "nodejs-data-converter",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id"
+    ],
+    "technologies": [
+      "Node.js"
+    ],
+    "fingerprint": "sha256:f96b9c0f8427aacba90c2904d62731c23a457516936e32fd8e04b00faae23520"
+  },
+  {
+    "kind": "work",
+    "employerId": "pixelHouseStudio",
+    "id": "managix-page-builder",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id"
+    ],
+    "technologies": [
+      "Vue.js",
+      "Nuxt.js"
+    ],
+    "fingerprint": "sha256:dd8306bc7ea4ff859124eb45ab37a8d0b147f99714b71162ccadf51bc10edb41"
+  },
+  {
+    "kind": "engagement",
+    "id": "automotiveInventorySystem",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id"
+    ],
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MySQL"
+    ],
+    "publicTitle": "Automotive Inventory System",
+    "fingerprint": "sha256:4ad04cbde1fb8e5f8c74e9f2a4d3ba0143afb14d23eabf0e533a6a2807b41606"
+  },
+  {
+    "kind": "project",
+    "id": "cssTricks",
+    "surface": "az",
+    "fingerprint": "sha256:579794c16e7eff10181293ca1b34ba804cb38380d06282e61fc06949df3bdfaf",
+    "presentationFingerprint": "sha256:a8b59ee88e266759d6fcac3796bd8614d2e1891188e1cb03827a536948b6f3ad"
+  },
+  {
+    "kind": "project",
+    "id": "cv",
+    "surface": "az",
+    "fingerprint": "sha256:ca3417601260ebb412b349b875508a1a2d0202e082a4fe4c4244f0e4c0da2fc0",
+    "presentationFingerprint": "sha256:2c5b4263fbbe558d71abc1474062e8fff5ea6ccc63e636a10137d21cff0e809b"
+  },
+  {
+    "kind": "project",
+    "id": "developerRoadmap",
+    "surface": "az",
+    "fingerprint": "sha256:648e6097718df25bff8730ba94d29ecda66db85d8ea307ffc5f5516b208a19e4",
+    "presentationFingerprint": "sha256:5a0589a02118db0f928009a4d7b81d6f5dd5b9fbd478f2c33c2f5e7aef5c2278"
+  },
+  {
+    "kind": "project",
+    "id": "configEcosystem",
+    "surface": "az",
+    "fingerprint": "sha256:bf1fc19ab3aa9f9edd4aa89ad0e28f1748f07c03d11168310bf0d30c3631c58d",
+    "presentationFingerprint": "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900"
+  },
+  {
+    "kind": "project",
+    "id": "ecosystemSkills",
+    "surface": "az",
+    "fingerprint": "sha256:eddb1d4a1bdb30dfe52e14d57c5c3d287ef08af2e726687712c7eebf0ec9fd50",
+    "presentationFingerprint": "sha256:281ffdfbe3a64ee00c072bf325703d54d3b2831c3408d8266af5941b5b6386a3"
+  },
+  {
+    "kind": "project",
+    "id": "devtools",
+    "surface": "az",
+    "fingerprint": "sha256:f22fc52ccf5517dd625fb39bb1ff1d74032b9de8f6b40ea1177e122b93507184",
+    "presentationFingerprint": "sha256:53c8ef6ec909dccec9f51e81d8abecb758ff23a92d5f8a6d63d3e1fdab460748"
+  },
+  {
+    "kind": "project",
+    "id": "fmMonorepo",
+    "surface": "az",
+    "fingerprint": "sha256:db5c929fd51f1e5c8dc32b11afbd728a7d523a54f034a78082c88874d3c6effd",
+    "presentationFingerprint": "sha256:8995c45cc76b57f9657d7514b147ef9764f7ab81af71e60defb478db4a743005"
+  },
+  {
+    "kind": "project",
+    "id": "projects",
+    "surface": "az",
+    "fingerprint": "sha256:2b7c598a1a85e6bd0297ca230bdc3fb63c2969e763972f000a9f6c8e5a7578bc",
+    "presentationFingerprint": "sha256:918b5a1d94eba97a36b5bcb0f47313fd0ffa6b3e2af56623d52e9581d611305f"
+  },
+  {
+    "kind": "project",
+    "id": "roadmap",
+    "surface": "az",
+    "fingerprint": "sha256:f51c02b4577b7cd05a3d1aecdd2eec2ac511dd1ee8dd66bd80d2b6630d43dc0c",
+    "presentationFingerprint": "sha256:3ced05e69dde93fb805643b59ee6e1b62a9c2b22d66339fe4d5b12c732d896bb"
+  },
+  {
+    "kind": "project",
+    "id": "tools",
+    "surface": "az",
+    "fingerprint": "sha256:025166a948f9d8280cb8baa565e67dc76d74e794ce3b23cd1fa4868117e2856a",
+    "presentationFingerprint": "sha256:3069eff5cfa5c1676f3dbfe698f70bbb22c8d74b022ccbcba055eca8bda3c6c4"
+  },
+  {
+    "kind": "project",
+    "id": "foodieMap",
+    "surface": "az",
+    "fingerprint": "sha256:d8920fdff94df263c0d80d64320149b2003bb4fa04db0b6ebbf26b1be71403cf",
+    "presentationFingerprint": "sha256:0c3fcc43b0b7d1673afd9108c08e8a9acbfeca467d50daf83b4c6dc9b297d00d"
+  },
+  {
+    "kind": "project",
+    "id": "games",
+    "surface": "az",
+    "fingerprint": "sha256:3ba7ab5abcf3201eaf0e2d3a2b06c49db3c501d27c2b32c9c9e249ba257d79c3",
+    "presentationFingerprint": "sha256:3361ab1dccac92b15bdce2f680f944fc59e1339fb665540d1aaf3c026da3ba1b"
+  },
+  {
+    "kind": "project",
+    "id": "gateway",
+    "surface": "az",
+    "fingerprint": "sha256:d7774b0d2c2b1fbfb09ce42f16667155085e18b0abfc99d93953518a15b19abe",
+    "presentationFingerprint": "sha256:0206cae6b32c6377bc2d7f4ae3080007161858c2d06d7d9913c3bb105e571f3e"
+  },
+  {
+    "kind": "project",
+    "id": "inventory",
+    "surface": "az",
+    "fingerprint": "sha256:f01dcd50698c247eb906596288f89427c8a5d3506f6704facb3561583b6d95b6",
+    "presentationFingerprint": "sha256:617b008b20957f4acfcdfec7805c5e1267ef326cada2ddb9cbacba73670c41e9"
+  },
+  {
+    "kind": "project",
+    "id": "javascriptia",
+    "surface": "az",
+    "fingerprint": "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83",
+    "presentationFingerprint": "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84"
+  },
+  {
+    "kind": "project",
+    "id": "learning",
+    "surface": "az",
+    "fingerprint": "sha256:8382dc06ccec219521d0d30bb3adc9ba5991f01313260f890ba30b2682921d55",
+    "presentationFingerprint": "sha256:c0d770f36431d69d3076955ce93b6c8950378a770d3a8883ce960391dd8cf78b"
+  },
+  {
+    "kind": "project",
+    "id": "neuran",
+    "surface": "az",
+    "fingerprint": "sha256:e6cce4a69d873216f0755b225ace27d3e7ddcde48ec9883f205f1ef7807151ad",
+    "presentationFingerprint": "sha256:02a9a81174301b576916f9540e79d99ade5ff833290c02de16f89ccf55e7e92d"
+  },
+  {
+    "kind": "project",
+    "id": "nikahkuy",
+    "surface": "az",
+    "fingerprint": "sha256:e36f1992a2e59b9191411a1523c1673e1af69c42841f0a131f618f6be2a27663",
+    "presentationFingerprint": "sha256:a3aac107488b5548d0ae686395bfea3fb4e9de466257511467d615b44c44cec3"
+  },
+  {
+    "kind": "project",
+    "id": "nikahyuk",
+    "surface": "az",
+    "fingerprint": "sha256:0eb59f00ad8e19d312b782e95ab4981bab0f9ddfe71ffd977b8bc4b19054dd23",
+    "presentationFingerprint": "sha256:b640b88d974f4e37110e7c899a918ab2d1ff3b35ca2bfaf0955b6ea8dd1e2bf1"
+  },
+  {
+    "kind": "project",
+    "id": "nikahyukPrototype",
+    "surface": "az",
+    "fingerprint": "sha256:79a32e90d10f3272790d937430908e96ac26299c8e6fb24058e42caeb9a9c7d5",
+    "presentationFingerprint": "sha256:11959fcde9b00ae79387cf9ad971d3259bfdd7632ee772b148535cff8b657d92"
+  },
+  {
+    "kind": "project",
+    "id": "nodeApi",
+    "surface": "az",
+    "fingerprint": "sha256:3329a2f8d0e2d0389311360d5e7ece573502bb8b9cd9845d70f6592e293378de",
+    "presentationFingerprint": "sha256:e828f8abaf69a1ba69f81e42a0ebfe1e4d40428c2d8e736b6a2debf5b658f9ac"
+  },
+  {
+    "kind": "project",
+    "id": "playdeck",
+    "surface": "az",
+    "fingerprint": "sha256:952d03e9e528f9dfa2c8de0d127f364c796967201b8d39d9e2912dc83aaabc5b",
+    "presentationFingerprint": "sha256:833a87033909897d7a118a7d937f8e5ac98f5ce9431e776495ae2561c4aa7822"
+  },
+  {
+    "kind": "project",
+    "id": "playground",
+    "surface": "az",
+    "fingerprint": "sha256:560e418bff687bcc8dd6c2200986997e4de4733582074782f99c9c0a1f29f941",
+    "presentationFingerprint": "sha256:70dd9a8ea95c8dc8195a8b4171a9afc7238507cb3b7bc916bbdd2281eb6c5d81"
+  },
+  {
+    "kind": "project",
+    "id": "playnest",
+    "surface": "az",
+    "fingerprint": "sha256:72fcdc232db2a2f24a5804a65348146eb1afbbb1220a5af5f4a695900961d13f",
+    "presentationFingerprint": "sha256:2c60fdea7e57af2fe3df008e4960d90e572466ca64393e119c7d711813073e73"
+  },
+  {
+    "kind": "project",
+    "id": "scriptoria",
+    "surface": "az",
+    "fingerprint": "sha256:fdcb93be104a1836bedea1ed3d020a6e6030f921fc074287392d0cd71dbd1931",
+    "presentationFingerprint": "sha256:fa6cc69db22fba23fe7bbb0ebea132dd3c63f32ad10d9008b71674a27df7143b"
+  },
+  {
+    "kind": "project",
+    "id": "support",
+    "surface": "az",
+    "fingerprint": "sha256:db9a0cc5c28c8320cd007395119276ce39ba3301470c01ffb36b14ef7715d986",
+    "presentationFingerprint": "sha256:df3beec54bd7559500b7d0ce666591f25e4404313938f0af2f0facad60393739"
+  },
+  {
+    "kind": "project",
+    "id": "tcgHub",
+    "surface": "az",
+    "fingerprint": "sha256:82ecd8ee865a8f8fa1b4f0d942a68dee737d931d4265318b191bf2b4009afb65",
+    "presentationFingerprint": "sha256:3b7bcea7a871979d9bbe7906b745e8fdfdb0cd6467ed3618dacc673505d4415f"
+  },
+  {
+    "kind": "project",
+    "id": "courses",
+    "surface": "az",
+    "fingerprint": "sha256:9a6f2bdc00a7d904d3d437f1038c3002f594c9c1103bf351efd67c4ef47ab5d9",
+    "presentationFingerprint": "sha256:240547cf0f88392ffeab308516f0201ede977d02f747981ae22f8fefb9e7299d"
+  },
+  {
+    "kind": "project",
+    "id": "blog",
+    "surface": "az",
+    "fingerprint": "sha256:290f8459f371d8b87a6aceaab54e1ddf737e55f862f867a23951c5dd60ea91b6",
+    "presentationFingerprint": "sha256:1b37f3d31a8eda46945c15216d47b845a7a63d4c5e675ed00690ad2d3503dc74"
+  },
+  {
+    "kind": "project",
+    "id": "links",
+    "surface": "az",
+    "fingerprint": "sha256:5a341cca77f1ff590ddea4e2cc3fb9a021ca0e2cb2fcf5a8ae1ae9ca5eb4e446",
+    "presentationFingerprint": "sha256:fac1bb8ed644a388b26ba2f64470cddaa86433d72d0496de239ad86208a95248"
+  },
+  {
+    "kind": "project",
+    "id": "fmStudios",
+    "surface": "az",
+    "fingerprint": "sha256:c68d573bbf2c1f7ec25e42ec183c70a0912560935ed02d004a11692592400e19",
+    "presentationFingerprint": "sha256:883951177e3cea292e869c9b2c6b5bad59d60c152397cdb7dce075cfd9d71ffc"
+  },
+  {
+    "kind": "project",
+    "id": "templates",
+    "surface": "az",
+    "fingerprint": "sha256:30fe3d339c8598bc27abb7860573259adc1bec2c31d5ed79d4c38d504c5ba573",
+    "presentationFingerprint": "sha256:d50b88146da2306d93ab95e68dd9ae37babde1df4907f0a5b01654a94eb85fb1"
+  },
+  {
+    "kind": "project",
+    "id": "watch",
+    "surface": "az",
+    "fingerprint": "sha256:548a957eb225bedea1b35f822c2b78d819310050014cb00057afe6a109025689",
+    "presentationFingerprint": "sha256:169ca7927d834d93b7f28aeecc2709730e3ab539abffd8fda3efcbd790f1fdb3"
+  },
+  {
+    "kind": "project",
+    "id": "frontendLab",
+    "surface": "az",
+    "fingerprint": "sha256:57fe0fd2388563da2eff36f1f8eea86cb5a9e1fc3a7e6d0dc25137a2289eff13",
+    "presentationFingerprint": "sha256:0557a396c7c39fbcb6b609a1097a07bdcedc7bdfe2acab6fd4a41c6f965f35d4"
+  },
+  {
+    "kind": "project",
+    "id": "littleRoars",
+    "surface": "az",
+    "fingerprint": "sha256:924492f07ec22338179bd2965540e29df99a1a22c8526f08194c3e6bffdb3e19",
+    "presentationFingerprint": "sha256:aab215bc5a4a43faa50959f2fcfeffbdca0f81e4c32a2926a9f5474001c3edbb"
+  },
+  {
+    "kind": "project",
+    "id": "securityLab",
+    "surface": "az",
+    "fingerprint": "sha256:a7f991ca0b5101e3136aa7cfcddcba36a6b6898929d89a94342969c8c9e11a80",
+    "presentationFingerprint": "sha256:a2d7d41cf3e9aeccc3ab52f2bed6bd22f1fb7f586609649927938dea995c327f"
+  },
+  {
+    "kind": "project",
+    "id": "weddingVendorScraper",
+    "surface": "az",
+    "fingerprint": "sha256:3c0f6998458ef617b3379a932667c4600bac1ee93a6ddad775a41a89b7d46c4f",
+    "presentationFingerprint": "sha256:09a72c4f53b2917294dc6c991de24cd6a74af822105dec59afd128748536c37b"
+  },
+  {
+    "kind": "concept",
+    "id": "forgebox",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "status"
+    ],
+    "fingerprint": "sha256:a29d71c50532c410f3390fa3ec7ee4243a99dab088af3948786d0eb0c6943e1a",
+    "presentationFingerprint": "sha256:a5d383e53980effe79980f742521129500100e6922b6d44f324c8afd1eb6078a"
+  },
+  {
+    "kind": "concept",
+    "id": "hearthside",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "status"
+    ],
+    "fingerprint": "sha256:9a95862dc6a11b92c0f749740a07713673fcd4cd7af5d733273cb83c20259cce",
+    "presentationFingerprint": "sha256:b98a1f80cb7c485d6070c46b347d777910dc576d001e527c212df1492d3e62e7"
+  },
+  {
+    "kind": "concept",
+    "id": "momee",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "status"
+    ],
+    "fingerprint": "sha256:f8398738057ae4ba9a8532a5bf50766648218cf2b39e37fb1c26ec8633c916ce",
+    "presentationFingerprint": "sha256:c03987f591d4d5febe21902f7d48a666d8d7efd39c3b7c2d55ae28c16f2c03bb"
+  },
+  {
+    "kind": "concept",
+    "id": "ohBabyGrow",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "status"
+    ],
+    "fingerprint": "sha256:09366966450ad27d4936ce861ac0fc66e9686393aa0a97722a44378c1445d411",
+    "presentationFingerprint": "sha256:fecfaa0bc2e791dd930c62184d06904a395bf8d4b533e864611c9c1aa526d0f4"
+  },
+  {
+    "kind": "concept",
+    "id": "vynote",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "status"
+    ],
+    "fingerprint": "sha256:11bcda78d812d3405e7438e1ab4dbfbed197060660817c50017f1937162dfef4",
+    "presentationFingerprint": "sha256:d906e54c613b8d924f917000e71b0dc9927b37489adf7688062f9d2f30de9409"
+  },
+  {
+    "kind": "project",
+    "id": "quibiq",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "lifecycle"
+    ],
+    "fingerprint": "sha256:19e07f6afb85c85316399da9f2c047ecde5f04f7831cc2e51f9335dd849ca4c7",
+    "presentationFingerprint": "sha256:3b97d9ce3fcfc335f20643faa72ad0b8a32c37a7218e317fe9fb7d11ad73372c"
+  },
+  {
+    "kind": "project",
+    "id": "xyz",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "lifecycle"
+    ],
+    "fingerprint": "sha256:b740bd73b59f1c6351d59859eb06fc83dcb963fba536007e5e70398c3bd96dcb",
+    "presentationFingerprint": "sha256:23483bb173b0ac392643c779f626d5323f0446bbe320eb68e2bf288906fde50b"
+  },
+  {
+    "kind": "project",
+    "id": "yourSpace",
+    "surface": "az",
+    "fields": [
+      "title",
+      "description.en",
+      "description.id",
+      "lifecycle"
+    ],
+    "fingerprint": "sha256:7e162683d87c32aec5d690c38155154766fdd1f387135a16779fe3f4de18f250",
+    "presentationFingerprint": "sha256:b778ad4aca15dedbc41b071e04af8638ed2540f9d381a518e97d595c56b3d408"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "id": "hearthside",
+  "title": "Hearthside",
+  "kind": "concept",
+  "order": 20,
+  "status": "in-progress",
+  "destination": "platforms",
+  "description": {
+    "en": "A virtual workspace in development, with customizable rooms and avatars for meeting and working together.",
+    "id": "Ruang kerja virtual yang sedang dikembangkan, dengan ruangan dan avatar yang dapat disesuaikan untuk bertemu dan bekerja bersama."
+  }
+}

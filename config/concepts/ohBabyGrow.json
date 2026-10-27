@@ -1,0 +1,11 @@
+{
+  "id": "ohBabyGrow",
+  "title": "Oh Baby Grow",
+  "kind": "concept",
+  "order": 50,
+  "status": "planned",
+  "description": {
+    "en": "A planned app for tracking a baby's growth and development and exploring parenting education.",
+    "id": "Aplikasi yang direncanakan untuk memantau pertumbuhan dan perkembangan bayi serta mempelajari pengasuhan anak."
+  }
+}

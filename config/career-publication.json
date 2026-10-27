@@ -1,0 +1,148 @@
+{
+  "experience": [
+    {
+      "id": "spacetoco",
+      "fields": [
+        "company",
+        "role",
+        "start",
+        "end"
+      ],
+      "fingerprints": {
+        "fields": {
+          "company": "sha256:fd2fd9fb2c2b3fe674fc706ad3d7c9892bb02b8368067a3a0a9edd774e63e608",
+          "role": "sha256:988e0f06367fb7678b5f3db9fe91dc282eb2b03645c41eed52ad77a3063e9dbc",
+          "start": "sha256:fd28fb22738debf8899c3739ec6bf231ab27f522372c1f802c7e0e46a10d73dc",
+          "end": "sha256:a1e5a80b5bc8a8bf77ce770098cb4faf33cde678618cd27fbcc6354150eb164b"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "hacktiv8",
+      "fields": [
+        "company",
+        "role",
+        "start",
+        "end"
+      ],
+      "fingerprints": {
+        "fields": {
+          "company": "sha256:e635ef23e9709875c815c26013e828d48cc5808a8e0a2bd864eb9b6792693405",
+          "role": "sha256:c2952b0ffe3f5e3dee8bc8d597036ebcae31d1e1cd0629bb82a0a06b7d5694a9",
+          "start": "sha256:6c23e01958c3c2590db937667d88cbc51cea5f8752b137edcc271e7f252d0cd5",
+          "end": "sha256:fd9909f3b5b5d31933218d7850ec7f0e3b4951f5a6224bd12883e4de0270f586"
+        },
+        "technologies": {},
+        "relatedProjects": {}
+      }
+    }
+  ],
+  "work": [
+    {
+      "employerId": "pixelHouseStudio",
+      "id": "nodejs-data-converter",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Node.js"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:6f67bb6383109fa565b3141b4b6742aedb06d80008775403829849c8cbf478d8",
+          "description.en": "sha256:583219e565f91b027adb1d19a7cbc83311fe4e42a40dbae727be7b7002cdaa00",
+          "description.id": "sha256:d76d64e64e6b742182637d729f8e00452db0a7c6118d535c139fbdd01c933f31"
+        },
+        "technologies": {
+          "Node.js": "sha256:2a9f28dd13540028b3096979b40c6c3b5ebee708bcee36ab30d455315b8d441b"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "employerId": "hacktiv8",
+      "id": "github-classroom-automation",
+      "fields": [
+        "title",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Bash",
+        "GitHub CLI"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:23f4527a2b811309c7395075057c22b88b93408286652377352954bc0be16674",
+          "description.en": "sha256:1939ed12f64cba7e89f9745c88d5a1c68147c2921a594e10ce89635dc0156b2b",
+          "description.id": "sha256:2cdaa7a66be49d8eb2bbb50a8f0dcfa3a4eafc5d4ec18c83fde52332e750435b"
+        },
+        "technologies": {
+          "Bash": "sha256:f7758a7f56fb330b466caa452307fef3794a8c8b9927188614859d09d99ecbef",
+          "GitHub CLI": "sha256:7689edcfc5de3cffb06cb0914227e1a0911767187505152f5049556e82ee46ec"
+        },
+        "relatedProjects": {}
+      }
+    }
+  ],
+  "freelance": [],
+  "components": [],
+  "assessments": [
+    {
+      "id": "aiSessionManager",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:71275781246a60b3a09dcb8596eee3d2dfc8eea6dbc26a9e15ba23091cb7cffd",
+          "year": "sha256:001bce537a74725764c655da98a9592e33a08bf8ca64ab4fa53e49774b3b1f78",
+          "description.en": "sha256:410853598756af91a284971c19765e1ecbc7d93a66d937405a6d8f42881d341d",
+          "description.id": "sha256:818e8cc7af69b9ab28ee376d1d0e73458976ade59c388d5a6733912bf2c448d2"
+        },
+        "technologies": {
+          "Next.js": "sha256:fe9bc3812c9561274e3a3c7f8f49c34e2ad45efe9d36baa25a2b3a333ce00faa",
+          "TypeScript": "sha256:7e6356c0fbcd178d4afd85c8ebbae7075196576e6ae0715a6e8dc78dd2e36ce8"
+        },
+        "relatedProjects": {}
+      }
+    },
+    {
+      "id": "evermosFrontend",
+      "fields": [
+        "title",
+        "year",
+        "description.en",
+        "description.id"
+      ],
+      "technologies": [
+        "Nuxt.js",
+        "Pinia"
+      ],
+      "fingerprints": {
+        "fields": {
+          "title": "sha256:1710e06bbe93998db89fb7660a525e1d068c5bd0fe4c6f217c7893872f6c1566",
+          "year": "sha256:be41659d77a01490e5de6a9703f9a1bdf20063e8347ec5c7adfd0ff014ef4fc4",
+          "description.en": "sha256:e92de4eec05730d33b3770bcef1ee845c211ed12540fce1f51eb418e95c7fc57",
+          "description.id": "sha256:6c0ae1e50f0f9851d3be55867ee28415d05e95f376d17afdcb287bf7b83b33ee"
+        },
+        "technologies": {
+          "Nuxt.js": "sha256:879a2f30799fb6c6301a04ce74ec257d6a6763c2cb101a5ea29c65a53c386c2c",
+          "Pinia": "sha256:c8e0b502994d6070c5ddf7bc4edef32790684dc405524eeeee74f4c696903b56"
+        },
+        "relatedProjects": {}
+      }
+    }
+  ]
+}

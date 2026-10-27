@@ -1,0 +1,15 @@
+{
+  "id": "courses",
+  "name": "Courses",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "web-courses",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "courses",
+      "subdomain": "courses"
+    }
+  }
+}

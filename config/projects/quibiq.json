@@ -1,0 +1,12 @@
+{
+  "id": "quibiq",
+  "name": "Quibiq",
+  "status": "active",
+  "lifecycle": "in-progress",
+  "listing": "hidden",
+  "destination": "learning",
+  "description": {
+    "en": "A quiz platform in development, with a local quiz editor and solo play, plus simulated sign-in and host-led live sessions.",
+    "id": "Platform kuis yang sedang dikembangkan, dengan editor kuis dan permainan solo lokal, serta simulasi masuk akun dan sesi langsung yang dipandu pembawa acara."
+  }
+}

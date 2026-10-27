@@ -1,0 +1,12 @@
+{
+  "id": "momee",
+  "title": "Momee",
+  "kind": "concept",
+  "order": 30,
+  "status": "in-progress",
+  "destination": "learning",
+  "description": {
+    "en": "An interactive bilingual storybook adventure in development for parents and young children.",
+    "id": "Petualangan buku cerita interaktif dwibahasa yang sedang dikembangkan untuk orang tua dan anak kecil."
+  }
+}

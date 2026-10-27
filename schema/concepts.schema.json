@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://config-ecosystem.invalid/schema/concepts.schema.json",
+  "title": "Concepts",
+  "description": "Future project ideas in the assembled config: an array of concepts that keep their id, sorted by order ascending, then id. Each concept definition also describes its source file (config/concepts/<id>.json). Cross-record rules (unique ids across collections, unique orders, canonical order) are enforced by scripts/validate.mjs.",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/concept"
+  },
+  "$defs": {
+    "concept": {
+      "description": "A concept or placeholder. Optional reviewed metadata supports Portfolio consumers; publication permissions remain independent.",
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "kind",
+        "order"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "career.schema.json#/$defs/id"
+        },
+        "title": {
+          "$ref": "project.schema.json#/$defs/meaningfulString"
+        },
+        "kind": {
+          "description": "concept: a project idea. placeholder: a slot that is not an idea yet.",
+          "enum": [
+            "concept",
+            "placeholder"
+          ]
+        },
+        "order": {
+          "description": "Presentation order (ascending). Unique across concepts.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "description": "Reviewed concept lifecycle; omit when unknown. Does not imply a deployment.",
+          "enum": [
+            "planned",
+            "in-progress",
+            "paused",
+            "completed",
+            "archived"
+          ]
+        },
+        "destination": {
+          "$ref": "project.schema.json#/$defs/destination"
+        },
+        "description": {
+          "$ref": "project.schema.json#/$defs/localizedText"
+        }
+      }
+    }
+  }
+}

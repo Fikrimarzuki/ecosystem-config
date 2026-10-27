@@ -1,0 +1,12 @@
+{
+  "id": "yourSpace",
+  "name": "Your Space",
+  "status": "active",
+  "lifecycle": "in-progress",
+  "listing": "hidden",
+  "destination": "learning",
+  "description": {
+    "en": "A local-first study app in development, with learning plans, focus sessions and progress tracking, alongside customizable room prototypes.",
+    "id": "Aplikasi belajar berbasis lokal yang sedang dikembangkan, dengan rencana belajar, sesi fokus dan pelacakan kemajuan, serta prototipe ruangan yang dapat disesuaikan."
+  }
+}

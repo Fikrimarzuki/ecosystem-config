@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://config-ecosystem.invalid/schema/showcase-eligibility.schema.json",
+  "title": "Independent source-specific hidden project and concept eligibility for A\u2013Z only",
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "surface",
+          "listing",
+          "fingerprint"
+        ],
+        "properties": {
+          "kind": {
+            "const": "project"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "surface": {
+            "const": "az"
+          },
+          "listing": {
+            "const": "hidden"
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "surface",
+          "fingerprint"
+        ],
+        "properties": {
+          "kind": {
+            "const": "concept"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "surface": {
+            "const": "az"
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "surface",
+          "listing",
+          "fingerprint",
+          "lifecycle"
+        ],
+        "properties": {
+          "kind": {
+            "const": "project"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "surface": {
+            "const": "az"
+          },
+          "listing": {
+            "enum": [
+              "public",
+              "hidden"
+            ]
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          },
+          "lifecycle": {
+            "const": true
+          }
+        }
+      }
+    ]
+  }
+}

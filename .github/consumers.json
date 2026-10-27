@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "consumers": [
+    {
+      "repository": "web-gateway",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs config/production.json and the resume asset from main at build time; fails the build with no fallback.",
+        "Supports subdomain, apex (subdomain: null) and alias deployments, and explicit deployment.url (used as written).",
+        "Links repositories only when repositoryVisibility is public. Parses the current generated configuration.",
+        "Resolves Career (publication-gated; no records published), Origins and the approved Concepts titles into a separate public DTO. A strict production build against main passed on 2026-10-30; its checked-in snapshot is a development and offline fallback only."
+      ]
+    },
+    {
+      "repository": "web-cv",
+      "status": "blocked",
+      "notify": false,
+      "notes": [
+        "Syncs config/production.json at build time; the sync accepts the current top-level structure (it checks only projects and domains).",
+        "On a failed sync it falls back to its committed snapshot, which can serve stale data.",
+        "Its deployment resolver ignores deployment.url and builds a URL from subdomain, so an external deployment would resolve to the apex domain.",
+        "Its Developer Roadmap card resolves the roadmap project (the web-roadmap app, now named FM Roadmap) and needs review. Consumer fixes are tracked separately."
+      ]
+    },
+    {
+      "repository": "web-support",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs dist/ecosystem.json at build time with no fallback; a failed sync deletes the generated file and fails dev, build, typecheck and test.",
+        "Validates and copies only what it uses: version, domains.primary, ecosystem.name, and for projects status, listing, name, destination, deployments.main and description. Unknown fields are ignored; career, origins, concepts, profile, repositories, assets and taglines are not read.",
+        "Its contact-form selector offers public, active projects only and excludes itself by the project ID support. An offered project with an unknown destination fails its build.",
+        "Resolves deployments.main URLs per the contract (external url as written, subdomain: null as apex) for a planned Open link.",
+        "Deployment platform (Vercel per its README) and failure behaviour not verified beyond the repository."
+      ]
+    },
+    {
+      "repository": "web-tools",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck.",
+        "Validates the public support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "web-devtools",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck.",
+        "Validates the public support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "web-roadmap",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck.",
+        "Validates the public support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "web-projects",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck.",
+        "Validates the public support, gateway, cv, playground and tools main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "game-tinyverse",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck and test.",
+        "Validates the public support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "web-learning",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build and typecheck and test.",
+        "Validates the public support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Supports apex, subdomain and external HTTPS URLs; preserves external paths and trailing slashes. Unused canonical fields are ignored.",
+        "A failed fetch or invalid config removes generated output and fails the command, with no stale fallback. ECOSYSTEM_CONFIG_PATH is an explicit local-development override rejected in production/CI.",
+        "Consumer contract tests cover URL changes, visibility, minimal projection and sync failure cleanup. Notification dispatch and deployment-platform failure behaviour are not enabled or verified."
+      ]
+    },
+    {
+      "repository": "app-fm-studios",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before web dev, build and tests and typecheck.",
+        "Validates public active support and gateway main deployments, emits only their URLs, supports apex/subdomain/external HTTPS deployments and preserves external paths and trailing slashes.",
+        "No stale fallback: failed sync removes generated output and fails the command. Explicit local canonical artifacts are rejected in production builds and CI.",
+        "UI uses generated URL data; unrelated records, repositories and publication grants are never copied to browser data.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "app-hearthside",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before web dev, build and tests and typecheck.",
+        "Validates public active support and gateway main deployments, emits only their URLs, supports apex/subdomain/external HTTPS deployments and preserves external paths and trailing slashes.",
+        "No stale fallback: failed sync removes generated output and fails the command. Explicit local canonical artifacts are rejected in production builds and CI.",
+        "UI uses generated URL data; unrelated records, repositories and publication grants are never copied to browser data.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "web-playnest",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before web dev, build and tests.",
+        "Validates public active support and gateway main deployments, emits only their URLs, supports apex/subdomain/external HTTPS deployments and preserves external paths and trailing slashes.",
+        "No stale fallback: failed sync removes generated output and fails the command. Explicit local canonical artifacts are rejected in production builds and CI.",
+        "Playnest exposes the external links only inside its Grown-ups dialog after a word-based arithmetic check; closing the dialog or entering a game resets the check.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "learn-kodestep",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build, typecheck and test. Production builds and CI require fresh remote configuration.",
+        "Validates public active support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Apex, subdomain and external HTTPS URLs are supported; paths and trailing slashes are preserved.",
+        "A failed sync removes stale generated output and fails the command. Explicit local canonical artifacts are development-only. Unique staging files allow concurrent refreshes.",
+        "KodeStep uses its existing bilingual footer; Web Games uses its lobby footer; JavaScriptia uses its main-menu Contact dialog. Labels and local-data wording stay app-owned.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "web-games",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build, typecheck and test. Production builds and CI require fresh remote configuration.",
+        "Validates public active support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Apex, subdomain and external HTTPS URLs are supported; paths and trailing slashes are preserved.",
+        "A failed sync removes stale generated output and fails the command. Explicit local canonical artifacts are development-only. Unique staging files allow concurrent refreshes.",
+        "KodeStep uses its existing bilingual footer; Web Games uses its lobby footer; JavaScriptia uses its main-menu Contact dialog. Labels and local-data wording stay app-owned.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "game-javascriptia",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before dev, build, typecheck and test. Production builds and CI require fresh remote configuration.",
+        "Validates public active support and gateway main deployments and writes only resolved URLs to ignored src/generated/ecosystem-links.json. Apex, subdomain and external HTTPS URLs are supported; paths and trailing slashes are preserved.",
+        "A failed sync removes stale generated output and fails the command. Explicit local canonical artifacts are development-only. Unique staging files allow concurrent refreshes.",
+        "KodeStep uses its existing bilingual footer; Web Games uses its lobby footer; JavaScriptia uses its main-menu Contact dialog. Labels and local-data wording stay app-owned.",
+        "Consumer contract and UI tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "app-pagelayr",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Extends its existing Next-config sync of main/config/production.json (identical to dist/ecosystem.json). Direct Next dev/build and package dev/build sync; test, browser tests and typecheck also sync explicitly.",
+        "Validates only version, domains.primary and the public active support/gateway main deployments, and emits their URLs in ignored src/config/ecosystem.generated.ts. Supports apex/subdomain/external HTTPS URLs and preserves external paths and trailing slashes; unused fields are ignored.",
+        "Unique atomic staging files support concurrent syncs, unchanged URL output preserves mtime, and failed sync deletes stale generated output. ECOSYSTEM_CONFIG_FILE is a local-development input rejected in production builds and CI.",
+        "Landing Support and More projects links use canonical URLs with the existing same-tab behavior; the local-save notice is retained. Contract and responsive browser tests cover both links.",
+        "Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "app-playdeck",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json before package dev, build, typecheck, test/watch and browser tests. Production builds and CI require fresh remote configuration.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Supports apex, subdomains and explicit HTTPS URLs with external paths and trailing slashes preserved.",
+        "Failed sync removes stale output and fails the command. Unique atomic staging files support concurrent refreshes; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production builds and CI.",
+        "Support and More projects appear in the landing, mode chooser and project-library footers. Existing local-save wording remains; creator, presentation runtime and gameplay chrome are unchanged.",
+        "Consumer contract, UI and responsive browser tests are present. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "web-links",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "Support and More projects appear in the landing header and every footer (public pages and dashboard). Links itself is registered as `links` (display name FM Links; active, hidden, `deployments.main.subdomain: links`).",
+        "Consumer contract tests (pnpm test:ecosystem) and browser tests are present. Deployment at links.fikrimarzuki.work reported live by the owner and answering HTTP 200 on 2026-11-01; notifications and automatic deployments remain disabled."
+      ]
+    },
+    {
+      "repository": "web-templates",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback.",
+        "Support and More Projects appear in every page footer. Templates itself is registered as `templates` (display name FM Templates; completed, hidden until Gateway's Projects section is ready, deployments.main.subdomain templates).",
+        "Consumer contract tests (pnpm test:ecosystem) and browser tests are present. Deployment at templates.fikrimarzuki.work reported live by the owner and answering HTTP 200 on 2026-11-01; notifications and automatic deployments remain disabled."
+      ]
+    },
+    {
+      "repository": "web-watch",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback.",
+        "Support and More Projects appear only in the parent-facing shell footer, never in Kids Mode. FM Watch itself is registered as `watch` (paused, hidden, `deployments.main.subdomain: watch`).",
+        "Consumer contract tests (pnpm test:ecosystem) and browser tests are present. Deployment at watch.fikrimarzuki.work reported live by the owner and answering HTTP 200 on 2026-11-01; notifications and automatic deployments remain disabled."
+      ]
+    },
+    {
+      "repository": "game-little-roars",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "Support and More projects appear in the landing footer. Little Roars itself is registered as `littleRoars` (active, hidden, `deployments.main.subdomain: littleroars`).",
+        "Compatibility judged by reading scripts/sync-ecosystem.mjs on 2026-11-01 (a byte-level sibling of the lab-frontend script); its tests were not run. littleroars.fikrimarzuki.work answered HTTP 200. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "lab-frontend",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and ecosystem.name, and generates only resolved URLs and the ecosystem name in ignored src/generated output. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "Frontend Lab itself is registered as `frontendLab` (paused, hidden, `deployments.main.subdomain: frontend`).",
+        "Compatibility judged by reading scripts/sync-ecosystem.mjs on 2026-11-01; its tests were not run. frontend.fikrimarzuki.work answered HTTP 200. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "lab-security",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "Security Lab itself is registered as `securityLab` (paused, hidden, `deployments.main.subdomain: security`). The application's own canonical URL (`SITE_URL`, canonical and og:url) still names securitylab.fikrimarzuki.work, which does not resolve; that is an application-repository follow-up.",
+        "Compatibility judged by reading scripts/sync-ecosystem.mjs on 2026-11-01; its tests were not run. security.fikrimarzuki.work answered HTTP 200. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "web-blog",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Requires the gateway, support and cv projects, and reads more than the shared link contract: ecosystem.name, profile name and title, and public projects' name, status, destination and tagline. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "FM Blog (renamed from FM Journal on 2026-11-06; same id, repository and domain) is registered as `blog` (paused, hidden until Gateway's catalog-only placement is deployed, destination platforms, `deployments.main.subdomain: blog`). web-blog pins its own name and origin to this record in tests/ecosystem/site-identity.test.mjs when a sibling checkout exists.",
+        "Compatibility judged by reading scripts/sync-ecosystem.mjs on 2026-11-01; its tests were not run. blog.fikrimarzuki.work answered HTTP 200. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "web-courses",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, build, typecheck and test. Production builds and CI require fresh remote configuration; ECOSYSTEM_CONFIG_PATH is an explicit local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and generates only their resolved URLs in ignored src/generated/ecosystem-links.json. Failed sync removes stale output and fails the command; no fallback to the former config-ecosystem URL.",
+        "Courses itself is registered as `courses` (paused, hidden, `deployments.main.subdomain: courses`). It was deliberately not registered as public: its own docs record that a public entry would exceed the Gateway Learning world's primary capacity and break Gateway's pinned world counts.",
+        "Compatibility judged by reading scripts/sync-ecosystem.mjs on 2026-11-01; its tests were not run. courses.fikrimarzuki.work answered HTTP 200. Notifications and automatic deployments remain disabled; hosting failure behaviour is not verified."
+      ]
+    },
+    {
+      "repository": "tool-urchin-relay",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs main/dist/ecosystem.json (ecosystem-config) before dev, typecheck, test and build. `pnpm build` passes --production: any failure exits 1 and removes the output. ECOSYSTEM_CONFIG_PATH is a local-development input rejected in production and CI.",
+        "Validates public active support and gateway main deployments and ecosystem.name, and generates only the resolved URLs and the ecosystem name in ignored packages/app/src/generated output. A failed development sync writes { \"available\": false } and the app hides the Support and More projects links instead of guessing them.",
+        "Urchin Relay itself is registered as `urchinRelay` (active, lifecycle in-progress, hidden, destination tools, no repository and no deployments yet).",
+        "Compatibility verified on 2026-11-07 with its unit tests (sync script and link parsing) and browser tests (canonical links, missing-config behaviour). The repository is local only (not yet a git repository); notifications and automatic deployments remain disabled."
+      ]
+    }
+  ]
+}

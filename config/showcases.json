@@ -1,0 +1,224 @@
+[
+  {
+    "kind": "assessment",
+    "id": "aiSessionManager"
+  },
+  {
+    "kind": "engagement",
+    "id": "automotiveInventorySystem"
+  },
+  {
+    "kind": "project",
+    "id": "careerLens"
+  },
+  {
+    "kind": "assessment",
+    "id": "evermosFrontend"
+  },
+  {
+    "kind": "project",
+    "id": "kodeStep"
+  },
+  {
+    "kind": "work",
+    "employerId": "pixelHouseStudio",
+    "id": "managix-page-builder"
+  },
+  {
+    "kind": "project",
+    "id": "multiRepoClone"
+  },
+  {
+    "kind": "work",
+    "employerId": "pixelHouseStudio",
+    "id": "nodejs-data-converter"
+  },
+  {
+    "kind": "project",
+    "id": "pageLayr"
+  },
+  {
+    "kind": "project",
+    "id": "tinyverse"
+  },
+  {
+    "kind": "project",
+    "id": "cssTricks"
+  },
+  {
+    "kind": "project",
+    "id": "cv"
+  },
+  {
+    "kind": "project",
+    "id": "developerRoadmap"
+  },
+  {
+    "kind": "project",
+    "id": "configEcosystem"
+  },
+  {
+    "kind": "project",
+    "id": "ecosystemSkills"
+  },
+  {
+    "kind": "project",
+    "id": "devtools"
+  },
+  {
+    "kind": "project",
+    "id": "fmMonorepo"
+  },
+  {
+    "kind": "project",
+    "id": "projects"
+  },
+  {
+    "kind": "project",
+    "id": "roadmap"
+  },
+  {
+    "kind": "project",
+    "id": "tools"
+  },
+  {
+    "kind": "project",
+    "id": "foodieMap"
+  },
+  {
+    "kind": "project",
+    "id": "games"
+  },
+  {
+    "kind": "project",
+    "id": "gateway"
+  },
+  {
+    "kind": "project",
+    "id": "inventory"
+  },
+  {
+    "kind": "project",
+    "id": "javascriptia"
+  },
+  {
+    "kind": "project",
+    "id": "learning"
+  },
+  {
+    "kind": "project",
+    "id": "neuran"
+  },
+  {
+    "kind": "project",
+    "id": "nikahkuy"
+  },
+  {
+    "kind": "project",
+    "id": "nikahyuk"
+  },
+  {
+    "kind": "project",
+    "id": "nikahyukPrototype"
+  },
+  {
+    "kind": "project",
+    "id": "nodeApi"
+  },
+  {
+    "kind": "project",
+    "id": "playdeck"
+  },
+  {
+    "kind": "project",
+    "id": "playground"
+  },
+  {
+    "kind": "project",
+    "id": "playnest"
+  },
+  {
+    "kind": "project",
+    "id": "scriptoria"
+  },
+  {
+    "kind": "project",
+    "id": "support"
+  },
+  {
+    "kind": "project",
+    "id": "tcgHub"
+  },
+  {
+    "kind": "project",
+    "id": "courses"
+  },
+  {
+    "kind": "project",
+    "id": "blog"
+  },
+  {
+    "kind": "project",
+    "id": "links"
+  },
+  {
+    "kind": "project",
+    "id": "fmStudios"
+  },
+  {
+    "kind": "project",
+    "id": "templates"
+  },
+  {
+    "kind": "project",
+    "id": "watch"
+  },
+  {
+    "kind": "project",
+    "id": "frontendLab"
+  },
+  {
+    "kind": "project",
+    "id": "littleRoars"
+  },
+  {
+    "kind": "project",
+    "id": "securityLab"
+  },
+  {
+    "kind": "project",
+    "id": "weddingVendorScraper"
+  },
+  {
+    "kind": "concept",
+    "id": "forgebox"
+  },
+  {
+    "kind": "concept",
+    "id": "hearthside"
+  },
+  {
+    "kind": "concept",
+    "id": "momee"
+  },
+  {
+    "kind": "concept",
+    "id": "ohBabyGrow"
+  },
+  {
+    "kind": "concept",
+    "id": "vynote"
+  },
+  {
+    "kind": "project",
+    "id": "quibiq"
+  },
+  {
+    "kind": "project",
+    "id": "xyz"
+  },
+  {
+    "kind": "project",
+    "id": "yourSpace"
+  }
+]
