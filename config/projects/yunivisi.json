@@ -1,0 +1,38 @@
+{
+  "id": "yunivisi",
+  "name": "Yunivisi",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "deployments": {
+    "main": {
+      "name": "yunivisi",
+      "subdomain": "yunivisi"
+    }
+  },
+  "tagline": {
+    "en": "One Platform. Every Workforce.",
+    "id": "Satu Platform. Setiap Tenaga Kerja."
+  },
+  "description": {
+    "en": "An early build of a portfolio showcase for a workspace-first enterprise HRIS, with company workspaces, role-based consoles, simulated payroll and an employee mobile app. All data stays in your browser.",
+    "id": "Build awal showcase portofolio HRIS enterprise berbasis workspace, dengan ruang kerja perusahaan, konsol berbasis peran, simulasi penggajian, dan aplikasi karyawan seluler. Semua data tetap di browser."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "hris",
+    "local-first",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/yunivisi/thumbnail.webp"
+  }
+}

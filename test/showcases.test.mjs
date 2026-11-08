@@ -11,12 +11,17 @@ import { reviewShowcase } from "../scripts/review-showcase.mjs";
 const config = assemble();
 test("ten hidden projects have independent source-specific eligibility; first 37 grants (re-reviewed once in A4.14 for refreshed thumbnails and names) stay exact", () => {
   const ids = ["courses", "blog", "links", "fmStudios", "templates", "watch", "frontendLab", "littleRoars", "securityLab", "weddingVendorScraper"];
-  assert.equal(createHash("sha256").update(JSON.stringify(config.showcasePublication.slice(0, 37))).digest("hex"),
-    "2eda611606c1909a49e9b36c96a5897e350126c2903c46fc05bc208cb959de52");
+  const first37 = config.showcasePublication.slice(0, 37);
+  assert.equal(createHash("sha256").update(JSON.stringify(first37)).digest("hex"), "1b1d5940bdeb0007d333b6791dde3c2d1174369d59bc895e9d410c0dcc9c6684");
+  // JavaScriptia's thumbnail refresh (2026-11-09) re-approved its two fingerprints; restoring them reproduces the earlier pin, so nothing else in the first 37 changed.
+  const restored = first37.map(grant => grant.id === "javascriptia" ? { ...grant, fingerprint: "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83", presentationFingerprint: "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84" } : grant);
+  assert.equal(createHash("sha256").update(JSON.stringify(restored)).digest("hex"), "2eda611606c1909a49e9b36c96a5897e350126c2903c46fc05bc208cb959de52");
   assert.deepEqual(config.showcases.slice(37, 47), ids.map(id => ({ kind: "project", id })));
   assert.deepEqual(config.showcasePublication.slice(37, 47).map(grant => grant.id), ids);
   // A4.14B appended the four approved recent projects. A4.14: Hearthside, Momee, Quibiq, XYZ and Your Space joined the standard hidden-project path (no lifecycle decisions remain).
-  assert.deepEqual(config.showcaseEligibility.filter(item => item.kind === "project" && !item.lifecycle).map(decision => decision.id), [...ids, "hearthside", "momee", "quibiq", "xyz", "yourSpace", "vaults", "zketchly", "urchinRelay", "ecosystemAssets"]);
+  assert.deepEqual(config.showcaseEligibility.filter(item => item.kind === "project" && !item.lifecycle).map(decision => decision.id), [...ids, "hearthside", "momee", "quibiq", "xyz", "yourSpace", "vaults", "zketchly", "urchinRelay", "ecosystemAssets",
+    // 2026-11 registry refresh: sixteen owner-approved projects (Vynote replaced its concept entry).
+    "quillio", "xpenz", "zevorama", "havernia", "buddyChamp", "beacon", "ecosystemIdeas", "orynth", "ilyst", "vynote", "codyssey", "platformLab", "kenali", "keranjoo", "urusaha", "yunivisi"]);
   for (const decision of config.showcaseEligibility.filter(item => item.kind === "project" && !item.lifecycle)) {
     assert.equal(config.projects[decision.id].listing, "hidden");
     assert.deepEqual(Object.keys(decision).sort(), ["fingerprint", "id", "kind", "listing", "surface"]);
@@ -52,7 +57,7 @@ test("hidden eligibility is required per identity, listing and surface; stale/re
     assert.equal(validateConfig(stale).ok, false);
   }
 });
-test("59 independent A–Z grants (the original 55 plus four approved in A4.14B) preserve the original ten members and grants; Career unchanged", () => {
+test("74 independent A–Z grants (the original 55 plus four approved in A4.14B plus sixteen in the 2026-11 refresh, minus the replaced Vynote concept) preserve the original ten members and grants; Career unchanged", () => {
   assert.equal(validateConfig(config).ok, true);
   assert.deepEqual(config.showcases.slice(0, 10), [
     { kind: "assessment", id: "aiSessionManager" }, { kind: "engagement", id: "automotiveInventorySystem" },
@@ -63,8 +68,8 @@ test("59 independent A–Z grants (the original 55 plus four approved in A4.14B)
     { kind: "work", employerId: "pixelHouseStudio", id: "nodejs-data-converter" },
     { kind: "project", id: "pageLayr" }, { kind: "project", id: "tinyverse" },
   ]);
-  assert.equal(config.showcases.length, 59);
-  assert.equal(config.showcasePublication.length, 59);
+  assert.equal(config.showcases.length, 74); // 59 + 16 refreshed projects - the Vynote concept replaced by its project
+  assert.equal(config.showcasePublication.length, 74);
   assert.equal(createHash("sha256").update(JSON.stringify(config.showcasePublication.slice(0, 10))).digest("hex"),
     "01654dd0f9c26c3fe7c2ccf65e6a5cfd66dc3ff6ddec83de0dd91a72d511453b");
   assert.deepEqual(config.careerPublication, JSON.parse(readFileSync(new URL("../config/production.json", import.meta.url))).careerPublication);

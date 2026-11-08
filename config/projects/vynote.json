@@ -1,0 +1,40 @@
+{
+  "id": "vynote",
+  "name": "Vynote",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "app-vynote",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "vynote",
+      "subdomain": "vynote"
+    }
+  },
+  "tagline": {
+    "en": "Offline transcription for Mac.",
+    "id": "Transkripsi offline untuk Mac."
+  },
+  "description": {
+    "en": "A macOS desktop app that transcribes recordings on your device with whisper.cpp; live meeting capture is experimental. A local evaluation build exists, but there is no public installer yet.",
+    "id": "Aplikasi desktop macOS yang mentranskripsikan rekaman di perangkat Anda dengan whisper.cpp; perekaman rapat langsung masih eksperimental. Build evaluasi lokal sudah ada, tetapi belum ada installer publik."
+  },
+  "technologies": [
+    "Tauri",
+    "Rust",
+    "React",
+    "TypeScript",
+    "whisper.cpp",
+    "Swift"
+  ],
+  "tags": [
+    "desktop-app",
+    "transcription",
+    "local-first",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/vynote/thumbnail.webp"
+  }
+}

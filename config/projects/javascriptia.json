@@ -11,5 +11,8 @@
       "name": "javascriptia",
       "subdomain": "javascriptia"
     }
+  },
+  "assets": {
+    "thumbnail": "assets/projects/javascriptia/thumbnail.webp"
   }
 }

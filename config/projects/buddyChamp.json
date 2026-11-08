@@ -1,0 +1,39 @@
+{
+  "id": "buddyChamp",
+  "name": "BuddyChamp",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "web-buddychamp",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "buddychamp",
+      "subdomain": "buddychamp"
+    }
+  },
+  "tagline": {
+    "en": "Learn. Play. Grow.",
+    "id": "Belajar. Bermain. Tumbuh."
+  },
+  "description": {
+    "en": "A hybrid English academy for children aged 5–12, with teacher, parent and student experiences. The public site is a demo with fictional data, and sign-in is not open.",
+    "id": "Akademi bahasa Inggris hibrida untuk anak usia 5–12 tahun, dengan pengalaman guru, orang tua, dan siswa. Situs publiknya berupa demo dengan data fiktif, dan masuk akun belum dibuka."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "Drizzle ORM"
+  ],
+  "tags": [
+    "education",
+    "english-learning",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/buddyChamp/thumbnail.webp"
+  }
+}

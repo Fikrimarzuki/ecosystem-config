@@ -1,0 +1,39 @@
+{
+  "id": "urusaha",
+  "name": "Urusaha",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "deployments": {
+    "main": {
+      "name": "urusaha",
+      "subdomain": "urusaha"
+    }
+  },
+  "tagline": {
+    "en": "Your business, beautifully in order.",
+    "id": "Usaha tertata, kerja lebih ringan."
+  },
+  "description": {
+    "en": "A portfolio showcase of business workspaces for shops, cafés, restaurants, salons and laundries, with inventory, customer requests, a point of sale and receipts. All data stays in your browser.",
+    "id": "Showcase portofolio ruang kerja usaha untuk toko, kafe, restoran, salon, dan laundry, dengan inventaris, permintaan pelanggan, kasir, dan struk. Semua data tetap di browser."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Zustand",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "pos",
+    "local-first",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/urusaha/thumbnail.webp"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "quillio",
+  "name": "Quillio",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-quillio",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "quillio",
+      "subdomain": "quillio"
+    }
+  },
+  "tagline": {
+    "en": "A little space for every thought",
+    "id": "Ruang kecil untuk setiap pikiran"
+  },
+  "description": {
+    "en": "An early prototype of a notebook-style writing app, presented through an interactive notebook landing page. The writing editor is not built yet.",
+    "id": "Prototipe awal aplikasi menulis bergaya buku catatan, ditampilkan lewat halaman depan buku interaktif. Editor penulisan belum tersedia."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Hono"
+  ],
+  "tags": [
+    "notes",
+    "prototype",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/quillio/thumbnail.webp"
+  }
+}

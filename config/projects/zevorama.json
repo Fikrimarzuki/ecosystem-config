@@ -1,0 +1,39 @@
+{
+  "id": "zevorama",
+  "name": "Zevorama",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "app-zevorama",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "zevorama",
+      "subdomain": "zevorama"
+    }
+  },
+  "tagline": {
+    "en": "Your local dev. A world of its own.",
+    "id": "Dev lokalmu, sebuah dunia tersendiri."
+  },
+  "description": {
+    "en": "A local-first macOS desktop app that shows your running local services as buildings on floating islands. A preview exists, but there is no public download yet.",
+    "id": "Aplikasi desktop macOS local-first yang menampilkan layanan lokal Anda sebagai bangunan di pulau melayang. Pratinjaunya sudah ada, tetapi belum ada unduhan publik."
+  },
+  "technologies": [
+    "Tauri",
+    "Rust",
+    "React",
+    "TypeScript",
+    "Three.js",
+    "Next.js"
+  ],
+  "tags": [
+    "desktop-app",
+    "local-first",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/zevorama/thumbnail.webp"
+  }
+}

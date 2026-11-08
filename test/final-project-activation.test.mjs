@@ -25,9 +25,9 @@ const approved = [
 const current = {
   quibiq: { status: "paused", subdomain: "quibiq" }, xyz: { status: "paused", subdomain: "xyz" }, yourSpace: { status: "active", subdomain: "yourspace" },
 };
-test("55 grants are retained and the A4.13.14 projects are no longer lifecycle grants", () => {
+test("original grants are retained and the A4.13.14 projects are no longer lifecycle grants", () => {
   assert.equal(validateConfig(config).ok, true);
-  assert.equal(config.showcases.length, 55); assert.equal(config.showcasePublication.length, 55); assert.equal(config.showcaseEligibility.length, 18);
+  assert.equal(config.showcases.length, 74); assert.equal(config.showcasePublication.length, 74); assert.equal(config.showcaseEligibility.length, 37); // 2026-11 registry refresh: +16 projects, Vynote concept replaced by its project (59 + 16 - 1)
   for (const { id } of approved) {
     assert.equal(config.showcases.filter(item => item.kind === "project" && item.id === id).length, 1);
     assert.equal(config.showcasePublication.filter(item => item.kind === "project" && item.id === id).length, 1);

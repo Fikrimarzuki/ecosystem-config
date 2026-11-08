@@ -23,6 +23,45 @@
     "name": "FM Work"
   },
   "projects": {
+    "beacon": {
+      "name": "Beacon",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "tool-beacon",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "beacon",
+          "subdomain": "beacon"
+        }
+      },
+      "tagline": {
+        "en": "Know when something breaks.",
+        "id": "Ketahui saat ada yang rusak."
+      },
+      "description": {
+        "en": "A pre-release, self-hosted monitor that checks websites and APIs, opens one incident per failure and sends signed webhooks. It runs on your own server; there is no hosted service.",
+        "id": "Monitor self-hosted tahap pra-rilis yang memeriksa situs dan API, membuka satu insiden per kegagalan, dan mengirim webhook bertanda tangan. Dijalankan di server Anda sendiri; tidak ada layanan terkelola."
+      },
+      "technologies": [
+        "TypeScript",
+        "Fastify",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "React",
+        "Astro",
+        "Docker"
+      ],
+      "tags": [
+        "monitoring",
+        "self-hosted",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/beacon/thumbnail.webp"
+      }
+    },
     "blog": {
       "name": "FM Blog",
       "status": "paused",
@@ -55,6 +94,44 @@
         "thumbnail": "assets/projects/blog/thumbnail.webp"
       }
     },
+    "buddyChamp": {
+      "name": "BuddyChamp",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "learning",
+      "repository": "web-buddychamp",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "buddychamp",
+          "subdomain": "buddychamp"
+        }
+      },
+      "tagline": {
+        "en": "Learn. Play. Grow.",
+        "id": "Belajar. Bermain. Tumbuh."
+      },
+      "description": {
+        "en": "A hybrid English academy for children aged 5–12, with teacher, parent and student experiences. The public site is a demo with fictional data, and sign-in is not open.",
+        "id": "Akademi bahasa Inggris hibrida untuk anak usia 5–12 tahun, dengan pengalaman guru, orang tua, dan siswa. Situs publiknya berupa demo dengan data fiktif, dan masuk akun belum dibuka."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Drizzle ORM"
+      ],
+      "tags": [
+        "education",
+        "english-learning",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/buddyChamp/thumbnail.webp"
+      }
+    },
     "careerLens": {
       "name": "CareerLens",
       "status": "completed",
@@ -62,6 +139,43 @@
       "destination": "tools",
       "repository": "app-career-lens",
       "repositoryVisibility": "private"
+    },
+    "codyssey": {
+      "name": "Codyssey",
+      "status": "paused",
+      "listing": "hidden",
+      "destination": "learning",
+      "repository": "app-codyssey",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "codyssey",
+          "subdomain": "codyssey"
+        }
+      },
+      "tagline": {
+        "en": "Learn JavaScript through adventure.",
+        "id": "Belajar JavaScript lewat petualangan."
+      },
+      "description": {
+        "en": "A mobile app for learning JavaScript through short lessons, coding challenges and an illustrated island adventure. An early offline prototype; it is not on any app store.",
+        "id": "Aplikasi seluler untuk belajar JavaScript lewat pelajaran singkat, tantangan koding, dan petualangan pulau bergambar. Prototipe offline tahap awal; belum ada di toko aplikasi."
+      },
+      "technologies": [
+        "Expo",
+        "React Native",
+        "TypeScript",
+        "SQLite",
+        "Next.js"
+      ],
+      "tags": [
+        "mobile-app",
+        "education",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/codyssey/thumbnail.webp"
+      }
     },
     "configEcosystem": {
       "name": "Ecosystem Config",
@@ -194,6 +308,44 @@
         "thumbnail": "assets/projects/ecosystemAssets/thumbnail.webp"
       }
     },
+    "ecosystemIdeas": {
+      "name": "Ecosystem Ideas",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "ecosystem-idea",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "ideas",
+          "subdomain": "ideas"
+        }
+      },
+      "tagline": {
+        "en": "Combine ideas. See what hatches.",
+        "id": "Padukan ide, lihat apa yang menetas."
+      },
+      "description": {
+        "en": "A local-first workspace for combining ingredients into product ideas in the Alchemy Aquarium, then collecting and developing them. Idea Garden and My Space are not built yet.",
+        "id": "Ruang kerja local-first untuk memadukan bahan menjadi ide produk di Alchemy Aquarium, lalu mengumpulkan dan mengembangkannya. Idea Garden dan My Space belum dibuat."
+      },
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Three.js",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "ideas",
+        "local-first",
+        "web-app"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/ecosystemIdeas/thumbnail.webp"
+      }
+    },
     "ecosystemSkills": {
       "name": "Ecosystem Skills",
       "status": "active",
@@ -314,6 +466,43 @@
         "thumbnail": "assets/projects/gateway/thumbnail.webp"
       }
     },
+    "havernia": {
+      "name": "Havernia",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "extension-havernia",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "havernia",
+          "subdomain": "havernia"
+        }
+      },
+      "tagline": {
+        "en": "Your browser. Your worlds.",
+        "id": "Browsermu. Dunia-duniamu."
+      },
+      "description": {
+        "en": "A local-first Chrome extension that keeps windows as saved workspaces, with tab search, snapshots and recovery. In development and not yet installable; its 3D worlds are only planned.",
+        "id": "Ekstensi Chrome local-first yang menyimpan jendela sebagai ruang kerja, dengan pencarian tab, snapshot, dan pemulihan. Masih dikembangkan dan belum dapat dipasang; dunia 3D-nya baru rencana."
+      },
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Chrome Extension (Manifest V3)",
+        "IndexedDB"
+      ],
+      "tags": [
+        "browser-extension",
+        "local-first",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/havernia/thumbnail.webp"
+      }
+    },
     "hearthside": {
       "name": "Hearthside",
       "status": "paused",
@@ -333,6 +522,44 @@
       },
       "assets": {
         "thumbnail": "assets/projects/hearthside/thumbnail.webp"
+      }
+    },
+    "ilyst": {
+      "name": "Ilyst",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "web-ilyst",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "ilyst",
+          "subdomain": "ilyst"
+        }
+      },
+      "tagline": {
+        "en": "A little place for your next big thing.",
+        "id": "Tempat kecil untuk hal besarmu berikutnya."
+      },
+      "description": {
+        "en": "A local-first place for saved links, wishlists and plans, with collections and progress tracking. Data stays in your browser, with no account or server.",
+        "id": "Tempat local-first untuk tautan tersimpan, wishlist, dan rencana, lengkap dengan koleksi dan pelacakan progres. Data tetap di browser, tanpa akun atau server."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Dexie",
+        "IndexedDB",
+        "PWA"
+      ],
+      "tags": [
+        "wishlist",
+        "local-first",
+        "web-app"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/ilyst/thumbnail.webp"
       }
     },
     "inventory": {
@@ -367,6 +594,84 @@
           "name": "javascriptia",
           "subdomain": "javascriptia"
         }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/javascriptia/thumbnail.webp"
+      }
+    },
+    "kenali": {
+      "name": "Kenali Academy",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "learning",
+      "repository": "web-kenali",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "kenali",
+          "subdomain": "kenali"
+        }
+      },
+      "tagline": {
+        "en": "A space for curiosity.",
+        "id": "Ruang untuk rasa ingin tahu."
+      },
+      "description": {
+        "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. No lessons are released yet.",
+        "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Belum ada pelajaran yang dirilis."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zod"
+      ],
+      "tags": [
+        "education",
+        "prototype",
+        "indonesian"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/kenali/thumbnail.webp"
+      }
+    },
+    "keranjoo": {
+      "name": "Keranjoo",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "deployments": {
+        "main": {
+          "name": "keranjoo",
+          "subdomain": "keranjoo"
+        }
+      },
+      "tagline": {
+        "en": "A browser-local multi-vendor marketplace.",
+        "id": "Marketplace multi-penjual di browser."
+      },
+      "description": {
+        "en": "A portfolio showcase of a multi-vendor marketplace with customer, seller and administrator views. Everything is simulated and stored in your browser, with no real payments or server.",
+        "id": "Showcase portofolio marketplace multi-penjual dengan tampilan pembeli, penjual, dan administrator. Semuanya disimulasikan dan disimpan di browser, tanpa pembayaran nyata atau server."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "marketplace",
+        "local-first",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/keranjoo/thumbnail.webp"
       }
     },
     "kodeStep": {
@@ -588,6 +893,39 @@
       "repository": "lab-node-api",
       "repositoryVisibility": "public"
     },
+    "orynth": {
+      "name": "Orynth",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "games",
+      "repository": "game-orynth",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "orynth",
+          "subdomain": "orynth"
+        }
+      },
+      "tagline": {
+        "en": "History is waiting to be restored.",
+        "id": "Sejarah menunggu untuk dipulihkan."
+      },
+      "description": {
+        "en": "An original third-person 3D mystery exploration game about a forgotten civilization and the Echo Lens. In development; the website is a teaser, with no public demo or download yet.",
+        "id": "Gim eksplorasi misteri 3D orang ketiga tentang peradaban yang terlupakan dan Echo Lens. Sedang dikembangkan; situsnya berupa teaser, belum ada demo atau unduhan publik."
+      },
+      "technologies": [
+        "Godot"
+      ],
+      "tags": [
+        "3d-game",
+        "mystery",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/orynth/thumbnail.webp"
+      }
+    },
     "pageLayr": {
       "name": "Page Layr",
       "status": "active",
@@ -603,6 +941,44 @@
       },
       "assets": {
         "thumbnail": "assets/projects/pageLayr/thumbnail.webp"
+      }
+    },
+    "platformLab": {
+      "name": "Platform Lab",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "learning",
+      "repository": "lab-platform",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "platform",
+          "subdomain": "platform"
+        }
+      },
+      "tagline": {
+        "en": "Understand the infrastructure beneath your code.",
+        "id": "Pahami infrastruktur di balik kodemu."
+      },
+      "description": {
+        "en": "A bilingual learning workbench for platform engineering. Today it offers reference drafts, a technology catalog and local reading progress; interactive labs are still in development.",
+        "id": "Ruang belajar dwibahasa untuk rekayasa platform. Saat ini berisi draf referensi, katalog teknologi, dan progres membaca lokal; lab interaktifnya masih dikembangkan."
+      },
+      "technologies": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "MDX",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "platform-engineering",
+        "education",
+        "web-app"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/platformLab/thumbnail.webp"
       }
     },
     "playdeck": {
@@ -721,6 +1097,44 @@
       },
       "assets": {
         "thumbnail": "assets/projects/quibiq/thumbnail.webp"
+      }
+    },
+    "quillio": {
+      "name": "Quillio",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "web-quillio",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "quillio",
+          "subdomain": "quillio"
+        }
+      },
+      "tagline": {
+        "en": "A little space for every thought",
+        "id": "Ruang kecil untuk setiap pikiran"
+      },
+      "description": {
+        "en": "An early prototype of a notebook-style writing app, presented through an interactive notebook landing page. The writing editor is not built yet.",
+        "id": "Prototipe awal aplikasi menulis bergaya buku catatan, ditampilkan lewat halaman depan buku interaktif. Editor penulisan belum tersedia."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        "Hono"
+      ],
+      "tags": [
+        "notes",
+        "prototype",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/quillio/thumbnail.webp"
       }
     },
     "roadmap": {
@@ -906,6 +1320,44 @@
         "thumbnail": "assets/projects/urchinRelay/thumbnail.webp"
       }
     },
+    "urusaha": {
+      "name": "Urusaha",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "deployments": {
+        "main": {
+          "name": "urusaha",
+          "subdomain": "urusaha"
+        }
+      },
+      "tagline": {
+        "en": "Your business, beautifully in order.",
+        "id": "Usaha tertata, kerja lebih ringan."
+      },
+      "description": {
+        "en": "A portfolio showcase of business workspaces for shops, cafés, restaurants, salons and laundries, with inventory, customer requests, a point of sale and receipts. All data stays in your browser.",
+        "id": "Showcase portofolio ruang kerja usaha untuk toko, kafe, restoran, salon, dan laundry, dengan inventaris, permintaan pelanggan, kasir, dan struk. Semua data tetap di browser."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "pos",
+        "local-first",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/urusaha/thumbnail.webp"
+      }
+    },
     "vaults": {
       "name": "FM Vaults",
       "status": "active",
@@ -941,6 +1393,45 @@
       ],
       "assets": {
         "thumbnail": "assets/projects/vaults/thumbnail.webp"
+      }
+    },
+    "vynote": {
+      "name": "Vynote",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "app-vynote",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "vynote",
+          "subdomain": "vynote"
+        }
+      },
+      "tagline": {
+        "en": "Offline transcription for Mac.",
+        "id": "Transkripsi offline untuk Mac."
+      },
+      "description": {
+        "en": "A macOS desktop app that transcribes recordings on your device with whisper.cpp; live meeting capture is experimental. A local evaluation build exists, but there is no public installer yet.",
+        "id": "Aplikasi desktop macOS yang mentranskripsikan rekaman di perangkat Anda dengan whisper.cpp; perekaman rapat langsung masih eksperimental. Build evaluasi lokal sudah ada, tetapi belum ada installer publik."
+      },
+      "technologies": [
+        "Tauri",
+        "Rust",
+        "React",
+        "TypeScript",
+        "whisper.cpp",
+        "Swift"
+      ],
+      "tags": [
+        "desktop-app",
+        "transcription",
+        "local-first",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/vynote/thumbnail.webp"
       }
     },
     "watch": {
@@ -1003,6 +1494,45 @@
         "nikahyuk"
       ]
     },
+    "xpenz": {
+      "name": "Xpenz",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "web-xpenz",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "xpenz",
+          "subdomain": "xpenz"
+        }
+      },
+      "tagline": {
+        "en": "Your money, made simple",
+        "id": "Uangmu, dibuat sederhana"
+      },
+      "description": {
+        "en": "A local-first money tracker with wallets, budgets, recurring bills and analytics. Data stays in your browser, with no account or cloud sync.",
+        "id": "Pencatat keuangan local-first dengan dompet, anggaran, tagihan berulang, dan analitik. Data tetap di browser, tanpa akun dan tanpa sinkronisasi cloud."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Three.js",
+        "IndexedDB"
+      ],
+      "tags": [
+        "finance",
+        "local-first",
+        "web-app",
+        "pwa"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/xpenz/thumbnail.webp"
+      }
+    },
     "xyz": {
       "name": "XYZ",
       "status": "paused",
@@ -1039,6 +1569,81 @@
       },
       "assets": {
         "thumbnail": "assets/projects/yourSpace/thumbnail.webp"
+      }
+    },
+    "yunivisi": {
+      "name": "Yunivisi",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "deployments": {
+        "main": {
+          "name": "yunivisi",
+          "subdomain": "yunivisi"
+        }
+      },
+      "tagline": {
+        "en": "One Platform. Every Workforce.",
+        "id": "Satu Platform. Setiap Tenaga Kerja."
+      },
+      "description": {
+        "en": "An early build of a portfolio showcase for a workspace-first enterprise HRIS, with company workspaces, role-based consoles, simulated payroll and an employee mobile app. All data stays in your browser.",
+        "id": "Build awal showcase portofolio HRIS enterprise berbasis workspace, dengan ruang kerja perusahaan, konsol berbasis peran, simulasi penggajian, dan aplikasi karyawan seluler. Semua data tetap di browser."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "hris",
+        "local-first",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/yunivisi/thumbnail.webp"
+      }
+    },
+    "zevorama": {
+      "name": "Zevorama",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "app-zevorama",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "zevorama",
+          "subdomain": "zevorama"
+        }
+      },
+      "tagline": {
+        "en": "Your local dev. A world of its own.",
+        "id": "Dev lokalmu, sebuah dunia tersendiri."
+      },
+      "description": {
+        "en": "A local-first macOS desktop app that shows your running local services as buildings on floating islands. A preview exists, but there is no public download yet.",
+        "id": "Aplikasi desktop macOS local-first yang menampilkan layanan lokal Anda sebagai bangunan di pulau melayang. Pratinjaunya sudah ada, tetapi belum ada unduhan publik."
+      },
+      "technologies": [
+        "Tauri",
+        "Rust",
+        "React",
+        "TypeScript",
+        "Three.js",
+        "Next.js"
+      ],
+      "tags": [
+        "desktop-app",
+        "local-first",
+        "landing-page"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/zevorama/thumbnail.webp"
       }
     },
     "zketchly": {
@@ -1843,17 +2448,6 @@
         "en": "A planned app for tracking a baby's growth and development and exploring parenting education.",
         "id": "Aplikasi yang direncanakan untuk memantau pertumbuhan dan perkembangan bayi serta mempelajari pengasuhan anak."
       }
-    },
-    {
-      "id": "vynote",
-      "title": "Vynote",
-      "kind": "concept",
-      "order": 60,
-      "status": "planned",
-      "description": {
-        "en": "A planned desktop assistant for meeting transcription and communication support.",
-        "id": "Asisten desktop yang direncanakan untuk transkripsi rapat dan dukungan komunikasi."
-      }
     }
   ],
   "careerPublication": {
@@ -2402,10 +2996,6 @@
       "id": "ohBabyGrow"
     },
     {
-      "kind": "concept",
-      "id": "vynote"
-    },
-    {
       "kind": "project",
       "id": "quibiq"
     },
@@ -2432,6 +3022,70 @@
     {
       "kind": "project",
       "id": "ecosystemAssets"
+    },
+    {
+      "kind": "project",
+      "id": "quillio"
+    },
+    {
+      "kind": "project",
+      "id": "xpenz"
+    },
+    {
+      "kind": "project",
+      "id": "zevorama"
+    },
+    {
+      "kind": "project",
+      "id": "havernia"
+    },
+    {
+      "kind": "project",
+      "id": "buddyChamp"
+    },
+    {
+      "kind": "project",
+      "id": "beacon"
+    },
+    {
+      "kind": "project",
+      "id": "ecosystemIdeas"
+    },
+    {
+      "kind": "project",
+      "id": "orynth"
+    },
+    {
+      "kind": "project",
+      "id": "ilyst"
+    },
+    {
+      "kind": "project",
+      "id": "vynote"
+    },
+    {
+      "kind": "project",
+      "id": "codyssey"
+    },
+    {
+      "kind": "project",
+      "id": "platformLab"
+    },
+    {
+      "kind": "project",
+      "id": "kenali"
+    },
+    {
+      "kind": "project",
+      "id": "keranjoo"
+    },
+    {
+      "kind": "project",
+      "id": "urusaha"
+    },
+    {
+      "kind": "project",
+      "id": "yunivisi"
     }
   ],
   "showcasePublication": [
@@ -2653,8 +3307,8 @@
       "kind": "project",
       "id": "javascriptia",
       "surface": "az",
-      "fingerprint": "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83",
-      "presentationFingerprint": "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84"
+      "fingerprint": "sha256:57f906fe141778fe1e05017b1431f059c63274272220da93a4a6226319c7656a",
+      "presentationFingerprint": "sha256:d408f0b0222ee842a76a9b9abc9c4718a81632aa992199872b252b7db0b1634c"
     },
     {
       "kind": "project",
@@ -2745,7 +3399,7 @@
       "id": "courses",
       "surface": "az",
       "fingerprint": "sha256:117d92f4c746cfcdaf39d79d7d4aeca4b8ef846dccf78869a07af584019ca3a3",
-      "presentationFingerprint": "sha256:351c93f5d14cb49d15c85d05ce10f7b14059657716ed91e145dbad47aac77298"
+      "presentationFingerprint": "sha256:3d026a47fc9b101901bd3dfcaa4e33fd51cc73dd22f22c96fac974c97568648f"
     },
     {
       "kind": "project",
@@ -2766,7 +3420,7 @@
       "id": "fmStudios",
       "surface": "az",
       "fingerprint": "sha256:c68d573bbf2c1f7ec25e42ec183c70a0912560935ed02d004a11692592400e19",
-      "presentationFingerprint": "sha256:883951177e3cea292e869c9b2c6b5bad59d60c152397cdb7dce075cfd9d71ffc"
+      "presentationFingerprint": "sha256:882b537d2114464cf29f16edaba4571e9d94d17043ddd811ff452b792a584ff9"
     },
     {
       "kind": "project",
@@ -2787,21 +3441,21 @@
       "id": "frontendLab",
       "surface": "az",
       "fingerprint": "sha256:03959f650038a50ffeb5125cb94155357195249de9f82f32c94f5b2d8a85cee1",
-      "presentationFingerprint": "sha256:06d4f09115b11129d733281943b96a3d52a9727063ac7b5ceafa0b0228e19a6e"
+      "presentationFingerprint": "sha256:895cab18c3af40b5bc0ad22ea55b9d9b8e9de36118dc4973be8cb683d157becc"
     },
     {
       "kind": "project",
       "id": "littleRoars",
       "surface": "az",
       "fingerprint": "sha256:6cb741a22297a96490da871b2bebfbd6970f305dd3ce78a14bd73c03ba661784",
-      "presentationFingerprint": "sha256:0c39a6ad846573179da58d2fab1d721fa521be3f77efbe39b900995158e841aa"
+      "presentationFingerprint": "sha256:a1e48d69c559208997d34abf78668520ecbc010ae8184a4404ac9a51eff3cdf8"
     },
     {
       "kind": "project",
       "id": "securityLab",
       "surface": "az",
       "fingerprint": "sha256:dc99b988d21bbcb1291202c15768693c083e7b152e9b580cd8a31a83679eebce",
-      "presentationFingerprint": "sha256:37af59c9c44c266f7a8c9509ecb3a8c3abe2386dcf5131ab33795d7e1d3b79e1"
+      "presentationFingerprint": "sha256:decc82429b7486d804718fd209a09fea80cf703bd812b176d6c73da232c4638b"
     },
     {
       "kind": "project",
@@ -2828,7 +3482,7 @@
       "id": "hearthside",
       "surface": "az",
       "fingerprint": "sha256:bb9c47559310155fda28bc71c2698d48cc2fb2af9411e5c666b83f2ca9f000cb",
-      "presentationFingerprint": "sha256:5c930697f3fb8174410f0af2be1a0828fb877e78e7ac1e2e099f6c95c5dcb658"
+      "presentationFingerprint": "sha256:2b596d4e82fe27c2ae8e85229e866d27b4e164f7568401fdc6a539f2a5abdd76"
     },
     {
       "kind": "project",
@@ -2851,19 +3505,6 @@
       "presentationFingerprint": "sha256:fecfaa0bc2e791dd930c62184d06904a395bf8d4b533e864611c9c1aa526d0f4"
     },
     {
-      "kind": "concept",
-      "id": "vynote",
-      "surface": "az",
-      "fields": [
-        "title",
-        "description.en",
-        "description.id",
-        "status"
-      ],
-      "fingerprint": "sha256:11bcda78d812d3405e7438e1ab4dbfbed197060660817c50017f1937162dfef4",
-      "presentationFingerprint": "sha256:d906e54c613b8d924f917000e71b0dc9927b37489adf7688062f9d2f30de9409"
-    },
-    {
       "kind": "project",
       "id": "quibiq",
       "surface": "az",
@@ -2875,42 +3516,154 @@
       "id": "xyz",
       "surface": "az",
       "fingerprint": "sha256:7d748a453098f89eca57e00e8b29bc50375042f7be2f5cd958d1fdf70542ed4a",
-      "presentationFingerprint": "sha256:16df88bcc9bf40f3ddce80d1553353571579557329290081e02a7ad30c8dfa76"
+      "presentationFingerprint": "sha256:3c29f2b35e286954d1b9c61b33c642bf9a60cef4e991ed1e8cfe14c634aa477d"
     },
     {
       "kind": "project",
       "id": "yourSpace",
       "surface": "az",
       "fingerprint": "sha256:5d445f0d0a3068fcf1cef6c2c8f1b74f84b5ada82acb8df42b1503019132aa55",
-      "presentationFingerprint": "sha256:806df87259e28703c450c940ca6f66606604057f6f1baa0adfa14b6dfb00c787"
+      "presentationFingerprint": "sha256:9fc23cd97605782c8d19ff9650d77cf5b8b22a8468d9763d0b9db4d20f984e1c"
     },
     {
       "kind": "project",
       "id": "vaults",
       "surface": "az",
       "fingerprint": "sha256:fc50e93819b76b331b7445f3e73909362cb1ce70e7bb207209642ef290cf5968",
-      "presentationFingerprint": "sha256:25c6acf25985661fe58f41247d9043c37e0f670ffbda8a786371fecf4ad5258b"
+      "presentationFingerprint": "sha256:8f3e7b1aaf99883d7e6b37c8b36e910273c4ed0d10d96e6eee162ea0c399993c"
     },
     {
       "kind": "project",
       "id": "zketchly",
       "surface": "az",
       "fingerprint": "sha256:563c4440022802a73d90cf5802fd634731cbb6172a2d21f6067bb266d911ea28",
-      "presentationFingerprint": "sha256:093a1c8c973344e5f4b2f49c6df42859cacd0f4b996e5672b88b500c00d4b069"
+      "presentationFingerprint": "sha256:0498e1ca326c5c6f14062cc5c17d0000929b1a15551c49e451b9901bec2d3423"
     },
     {
       "kind": "project",
       "id": "urchinRelay",
       "surface": "az",
       "fingerprint": "sha256:68a3f06b8f6145c953d8518a8a9441a7a5c3e714ba7ec8853b53bd27f4c791d1",
-      "presentationFingerprint": "sha256:c3d26bdc96b7f54e347c787099b28f4db06b794e7c2879fe49f6a4550a199e73"
+      "presentationFingerprint": "sha256:b0a7e56d6cadf62aa79eb34dfd99aeb5217a46c7345094c57c5f6fe5e023944a"
     },
     {
       "kind": "project",
       "id": "ecosystemAssets",
       "surface": "az",
       "fingerprint": "sha256:44fabe58fe807a710c1c345f29e80f8af34862ab597232e4fb091fe142e1fd02",
-      "presentationFingerprint": "sha256:5c83a676fcb63464b589d77e6bb66725b3e3d21370cafde83aa1ed0e7e81f8b4"
+      "presentationFingerprint": "sha256:ac419d97b5c996e076a4be073ef2f63c4200d82268a773f7ac0edccea30e848c"
+    },
+    {
+      "kind": "project",
+      "id": "quillio",
+      "surface": "az",
+      "fingerprint": "sha256:f81e46801a6dc34c91f3b6ebdfbf88a3f862856f1175eae03bc5a8ba4b0cd16e",
+      "presentationFingerprint": "sha256:056ed43b544f96166151869b4cf4017f7952ef0a83bd37f503efc15848f5d0da"
+    },
+    {
+      "kind": "project",
+      "id": "xpenz",
+      "surface": "az",
+      "fingerprint": "sha256:3dcae2325f893f13a9ba1b0f1e96461d9e15091e1366c18e396d17b22fafef18",
+      "presentationFingerprint": "sha256:573c8dcbd9e32dca4cab2597f249c420f252ea8733f7715d16c05b97b1668d31"
+    },
+    {
+      "kind": "project",
+      "id": "zevorama",
+      "surface": "az",
+      "fingerprint": "sha256:23061f58d04f4a4a963a14b9f4ab0b84caf921bc3f8a7f2a2a9f1d7c764ecee3",
+      "presentationFingerprint": "sha256:0f4f1be631ddc0dd92154f1c76b6801b377655b25eb5d7e7de9fa56a1a99c609"
+    },
+    {
+      "kind": "project",
+      "id": "havernia",
+      "surface": "az",
+      "fingerprint": "sha256:363f0b27fa09fa4569fad7c40e479b3c399974eedd2ee699e0a2c03f5bfa57c8",
+      "presentationFingerprint": "sha256:7be85c02ade813d16049d9d87500bc757f223e76d07affd8562be98ec5420407"
+    },
+    {
+      "kind": "project",
+      "id": "buddyChamp",
+      "surface": "az",
+      "fingerprint": "sha256:b1d209261d52474fabfbdd1f0239cfdb908932e12d109fd8090e33fa71a39572",
+      "presentationFingerprint": "sha256:85e0737130a3aae78a2db3cb32af83f5af015323e3d765e342a61a81e7349947"
+    },
+    {
+      "kind": "project",
+      "id": "beacon",
+      "surface": "az",
+      "fingerprint": "sha256:59bf67f89d8431795cf2c42eeeed515682833ac1fe19bc69fe83c8971835e777",
+      "presentationFingerprint": "sha256:86ce5c2784b7831806d2b7e1cadda2a41e18bb9d57e3ed7b10a1d059be785a07"
+    },
+    {
+      "kind": "project",
+      "id": "ecosystemIdeas",
+      "surface": "az",
+      "fingerprint": "sha256:b471fdefb8d1ab04dcaa9c91097cfe015ed68bbd97936f907db0d987aff0a22b",
+      "presentationFingerprint": "sha256:209a82128d90a6da8451692f92b688a3fc167c98327524d58dfcac2d06e6ebee"
+    },
+    {
+      "kind": "project",
+      "id": "orynth",
+      "surface": "az",
+      "fingerprint": "sha256:fbaed67994cd50b2abdd515f9677df4f6be254ca7774a9bfd6b869fbbacac29d",
+      "presentationFingerprint": "sha256:a9c3b2e35a1eb5220ed0f6523090e78da3abe7c0579a2a13ecad217a8360edb6"
+    },
+    {
+      "kind": "project",
+      "id": "ilyst",
+      "surface": "az",
+      "fingerprint": "sha256:883cd562cea68886b98bba334751a3d55463ad0269e15b896291e96db7d6ee95",
+      "presentationFingerprint": "sha256:df4bfc6a02e2835ff9d6a8bfbbc854730765350a4ff0255f45fa65548ee7c437"
+    },
+    {
+      "kind": "project",
+      "id": "vynote",
+      "surface": "az",
+      "fingerprint": "sha256:f666e0cc3b4f21cf768ecc59308aeab680e384c7e5e3a4dd2fae9cf18cfe5b2d",
+      "presentationFingerprint": "sha256:ee51198ee90f9b6da69e921e1f109528e70b5b542802feef71e6bd4c5735b2d1"
+    },
+    {
+      "kind": "project",
+      "id": "codyssey",
+      "surface": "az",
+      "fingerprint": "sha256:7bcb99c894429cb4920aec2d99a79356f455fc0f98e307b626b0894de94175af",
+      "presentationFingerprint": "sha256:4e8ef270434725402d85299e1600bdae30529ab093bacc00128cb1d689dd23f7"
+    },
+    {
+      "kind": "project",
+      "id": "platformLab",
+      "surface": "az",
+      "fingerprint": "sha256:966805b63fa0732b5bbc6f392e0f8e1154ef21ea5149860a977b669b719531d5",
+      "presentationFingerprint": "sha256:e4f8c3b25954713906fde691c24cde0f2df11aac65a512f0c50909d0c2df5526"
+    },
+    {
+      "kind": "project",
+      "id": "kenali",
+      "surface": "az",
+      "fingerprint": "sha256:3cbd5b3948a5aa0a174284d3a1158df870c1315b8e3ce3fd94c5f2230b0be64c",
+      "presentationFingerprint": "sha256:783916f1bf08f7ad3af44252068c628d44e63379a33289338c00ff290190bb06"
+    },
+    {
+      "kind": "project",
+      "id": "keranjoo",
+      "surface": "az",
+      "fingerprint": "sha256:3ea692c52a47afc2e10cc03d4366a3b9511e30a1f5029d9201e5e4621e03631c",
+      "presentationFingerprint": "sha256:482b80da50b729549901126dddb390f5156b0d20fdf9cfa54bfd68b26f01dc86"
+    },
+    {
+      "kind": "project",
+      "id": "urusaha",
+      "surface": "az",
+      "fingerprint": "sha256:faccc969b0b0fd3fcab49271d72cda197cbfce41626cf99343fba40d1a1bf0f0",
+      "presentationFingerprint": "sha256:8c8ebb32f54fcb52727b68422f2553bc1389c7bcf4af392bf51b5f87ebedae6d"
+    },
+    {
+      "kind": "project",
+      "id": "yunivisi",
+      "surface": "az",
+      "fingerprint": "sha256:c917efbcc70c595dabf382d9a748add0a9605316e0f828c98356d659413136e2",
+      "presentationFingerprint": "sha256:19d523c04e2bf29811227f1c8f0ffde98d2a594d6ab88b90d0734f5c28bdd970"
     }
   ],
   "showcaseEligibility": [
@@ -3011,12 +3764,6 @@
       "fingerprint": "sha256:54cdc1a3af67c44758a514913dd85c17d697e573fc03551014479b4696164f95"
     },
     {
-      "kind": "concept",
-      "id": "vynote",
-      "surface": "az",
-      "fingerprint": "sha256:f13657bbc50cf442e5acf52199123eb48807a2cf8fd7b7518e7b3a0af0d267c3"
-    },
-    {
       "kind": "project",
       "id": "quibiq",
       "surface": "az",
@@ -3064,6 +3811,118 @@
       "surface": "az",
       "listing": "hidden",
       "fingerprint": "sha256:c9a8eae2666034b85f31fd75fb71d22441190d913f33194b4a0d955354dd0060"
+    },
+    {
+      "kind": "project",
+      "id": "quillio",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:6900a119ac4961a8cf1b3b5f3fd82bade471c0120d65bde7925ae67a8986f4dc"
+    },
+    {
+      "kind": "project",
+      "id": "xpenz",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:92eb912d01494177e3f266da741f57a2223921c3ffbe88cf5c34cdc76dccfde4"
+    },
+    {
+      "kind": "project",
+      "id": "zevorama",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:34718e5f3ef416f89916d12038031462ac83d2dd909cc2b59e9ae663f3358b15"
+    },
+    {
+      "kind": "project",
+      "id": "havernia",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:0ef4f895ebd5af00357fcd99a0f52c6d51b6e20a0c6863382c29fc78187ed9c3"
+    },
+    {
+      "kind": "project",
+      "id": "buddyChamp",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:413fe6078e45edd9f8e25acaf393245c968094e7989e352c466d452a7ab5e96c"
+    },
+    {
+      "kind": "project",
+      "id": "beacon",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:d22732ccefe9f0018a62b8e3826b4796c112649ceaedc419fb52cece33578b94"
+    },
+    {
+      "kind": "project",
+      "id": "ecosystemIdeas",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:4c526f870d0362f29814ed391d7ec4c041262b36bd7c8b88976a20c233194fa5"
+    },
+    {
+      "kind": "project",
+      "id": "orynth",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:20332119a9708a9a0434f31961c8e2ec047dde1eae7741d3ef3997527996ede7"
+    },
+    {
+      "kind": "project",
+      "id": "ilyst",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:aff5ef59c5426a405feae2e2201e78a7b814bea2cd081944d76a85c7fe645460"
+    },
+    {
+      "kind": "project",
+      "id": "vynote",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:cb3bf0008a12059b1727845a07ae76866d2e26a5a048ff7e9c458ac04715c407"
+    },
+    {
+      "kind": "project",
+      "id": "codyssey",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:3a4b64183dbdb1aa26994d66c6463967410a6f80257f9ef586a23bac9316cf0a"
+    },
+    {
+      "kind": "project",
+      "id": "platformLab",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:c8ccd4c0978af1de57f852c50d62876c0d3e13534d8cfbd9e4c15b685f5cc30f"
+    },
+    {
+      "kind": "project",
+      "id": "kenali",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:12158e69b65b2e417ac386b8d7d068187a807cc4c2c4dbb96fbd3f3d0229e815"
+    },
+    {
+      "kind": "project",
+      "id": "keranjoo",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:85c913e4872873cbc16b91287c312fa15dfa49f5cc4f7131dcc511d44c77b009"
+    },
+    {
+      "kind": "project",
+      "id": "urusaha",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:b3a778e225db6d5b2de48789e738c7a1055c53b975bae15ba44dffc09e684b81"
+    },
+    {
+      "kind": "project",
+      "id": "yunivisi",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:ebd93e18be27b0694a626067c3631916e667ddd9b5cfd7de2af97114da1abfd5"
     }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "id": "kenali",
+  "name": "Kenali Academy",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "web-kenali",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "kenali",
+      "subdomain": "kenali"
+    }
+  },
+  "tagline": {
+    "en": "A space for curiosity.",
+    "id": "Ruang untuk rasa ingin tahu."
+  },
+  "description": {
+    "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. No lessons are released yet.",
+    "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Belum ada pelajaran yang dirilis."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zod"
+  ],
+  "tags": [
+    "education",
+    "prototype",
+    "indonesian"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/kenali/thumbnail.webp"
+  }
+}

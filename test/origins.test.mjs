@@ -294,7 +294,7 @@ describe("committed origins records", () => {
   });
 
   test("existing projects and career collections match authoritative source membership", () => {
-    assert.equal(Object.keys(production.projects).length, 52); // A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
+    assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
     // These are internal source collections, not the six independently published Career leaves.
     // Exact source equality also detects missing/reordered/changed nested work and engagements.
     assert.deepEqual(production.career, assemble().career);

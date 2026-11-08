@@ -304,3 +304,11 @@ grant. 55 memberships and 55 grants remain. Eighteen grants and ten eligibility 
 explicit review helpers (new name, status, deployment or thumbnail bytes); the other 37 are byte-identical. Order is
 preserved. FM Vaults, Zketchly, Urchin Relay and Ecosystem Assets are hidden records with no A–Z or Portfolio grant.
 Thumbnails (22 refreshed/added, 1280×720 WebP ≤ 150 KB) live in `assets/projects/<id>/thumbnail.webp`; no icon changed.
+
+## 2026-11 registry refresh (local, unpublished)
+
+Sixteen owner-approved projects joined A–Z through the same hidden-project path (membership, `az`/`hidden` eligibility, four-field grant with source and
+presentation fingerprints): Quillio, Xpenz, Zevorama, Havernia, BuddyChamp, Beacon, Ecosystem Ideas, Orynth, Ilyst, Vynote, Codyssey, Platform Lab, Kenali
+Academy, Keranjoo, Urusaha and Yunivisi. Vynote's concept membership, eligibility and grant were replaced by its project ones (same id, no duplicate). Hearthside's
+presentation fingerprint alone was re-approved for its released link and new thumbnail; the other 57 existing grants are byte-identical. Totals: 74 memberships
+and grants, 37 eligibility decisions. See [Registry refresh 2026-11](registry-refresh-2026-11.md) for the full record and publication sequence.

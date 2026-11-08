@@ -1,0 +1,34 @@
+{
+  "id": "orynth",
+  "name": "Orynth",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "games",
+  "repository": "game-orynth",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "orynth",
+      "subdomain": "orynth"
+    }
+  },
+  "tagline": {
+    "en": "History is waiting to be restored.",
+    "id": "Sejarah menunggu untuk dipulihkan."
+  },
+  "description": {
+    "en": "An original third-person 3D mystery exploration game about a forgotten civilization and the Echo Lens. In development; the website is a teaser, with no public demo or download yet.",
+    "id": "Gim eksplorasi misteri 3D orang ketiga tentang peradaban yang terlupakan dan Echo Lens. Sedang dikembangkan; situsnya berupa teaser, belum ada demo atau unduhan publik."
+  },
+  "technologies": [
+    "Godot"
+  ],
+  "tags": [
+    "3d-game",
+    "mystery",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/orynth/thumbnail.webp"
+  }
+}

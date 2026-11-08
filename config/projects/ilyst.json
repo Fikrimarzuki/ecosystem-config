@@ -1,0 +1,39 @@
+{
+  "id": "ilyst",
+  "name": "Ilyst",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "web-ilyst",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "ilyst",
+      "subdomain": "ilyst"
+    }
+  },
+  "tagline": {
+    "en": "A little place for your next big thing.",
+    "id": "Tempat kecil untuk hal besarmu berikutnya."
+  },
+  "description": {
+    "en": "A local-first place for saved links, wishlists and plans, with collections and progress tracking. Data stays in your browser, with no account or server.",
+    "id": "Tempat local-first untuk tautan tersimpan, wishlist, dan rencana, lengkap dengan koleksi dan pelacakan progres. Data tetap di browser, tanpa akun atau server."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Dexie",
+    "IndexedDB",
+    "PWA"
+  ],
+  "tags": [
+    "wishlist",
+    "local-first",
+    "web-app"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/ilyst/thumbnail.webp"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "platformLab",
+  "name": "Platform Lab",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "lab-platform",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "platform",
+      "subdomain": "platform"
+    }
+  },
+  "tagline": {
+    "en": "Understand the infrastructure beneath your code.",
+    "id": "Pahami infrastruktur di balik kodemu."
+  },
+  "description": {
+    "en": "A bilingual learning workbench for platform engineering. Today it offers reference drafts, a technology catalog and local reading progress; interactive labs are still in development.",
+    "id": "Ruang belajar dwibahasa untuk rekayasa platform. Saat ini berisi draf referensi, katalog teknologi, dan progres membaca lokal; lab interaktifnya masih dikembangkan."
+  },
+  "technologies": [
+    "TypeScript",
+    "Next.js",
+    "React",
+    "MDX",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "platform-engineering",
+    "education",
+    "web-app"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/platformLab/thumbnail.webp"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "keranjoo",
+  "name": "Keranjoo",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "deployments": {
+    "main": {
+      "name": "keranjoo",
+      "subdomain": "keranjoo"
+    }
+  },
+  "tagline": {
+    "en": "A browser-local multi-vendor marketplace.",
+    "id": "Marketplace multi-penjual di browser."
+  },
+  "description": {
+    "en": "A portfolio showcase of a multi-vendor marketplace with customer, seller and administrator views. Everything is simulated and stored in your browser, with no real payments or server.",
+    "id": "Showcase portofolio marketplace multi-penjual dengan tampilan pembeli, penjual, dan administrator. Semuanya disimulasikan dan disimpan di browser, tanpa pembayaran nyata atau server."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Zustand",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "marketplace",
+    "local-first",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/keranjoo/thumbnail.webp"
+  }
+}

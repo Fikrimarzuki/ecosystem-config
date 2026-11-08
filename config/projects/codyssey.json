@@ -1,0 +1,38 @@
+{
+  "id": "codyssey",
+  "name": "Codyssey",
+  "status": "paused",
+  "listing": "hidden",
+  "destination": "learning",
+  "repository": "app-codyssey",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "codyssey",
+      "subdomain": "codyssey"
+    }
+  },
+  "tagline": {
+    "en": "Learn JavaScript through adventure.",
+    "id": "Belajar JavaScript lewat petualangan."
+  },
+  "description": {
+    "en": "A mobile app for learning JavaScript through short lessons, coding challenges and an illustrated island adventure. An early offline prototype; it is not on any app store.",
+    "id": "Aplikasi seluler untuk belajar JavaScript lewat pelajaran singkat, tantangan koding, dan petualangan pulau bergambar. Prototipe offline tahap awal; belum ada di toko aplikasi."
+  },
+  "technologies": [
+    "Expo",
+    "React Native",
+    "TypeScript",
+    "SQLite",
+    "Next.js"
+  ],
+  "tags": [
+    "mobile-app",
+    "education",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/codyssey/thumbnail.webp"
+  }
+}

@@ -206,10 +206,6 @@
     "id": "ohBabyGrow"
   },
   {
-    "kind": "concept",
-    "id": "vynote"
-  },
-  {
     "kind": "project",
     "id": "quibiq"
   },
@@ -236,5 +232,69 @@
   {
     "kind": "project",
     "id": "ecosystemAssets"
+  },
+  {
+    "kind": "project",
+    "id": "quillio"
+  },
+  {
+    "kind": "project",
+    "id": "xpenz"
+  },
+  {
+    "kind": "project",
+    "id": "zevorama"
+  },
+  {
+    "kind": "project",
+    "id": "havernia"
+  },
+  {
+    "kind": "project",
+    "id": "buddyChamp"
+  },
+  {
+    "kind": "project",
+    "id": "beacon"
+  },
+  {
+    "kind": "project",
+    "id": "ecosystemIdeas"
+  },
+  {
+    "kind": "project",
+    "id": "orynth"
+  },
+  {
+    "kind": "project",
+    "id": "ilyst"
+  },
+  {
+    "kind": "project",
+    "id": "vynote"
+  },
+  {
+    "kind": "project",
+    "id": "codyssey"
+  },
+  {
+    "kind": "project",
+    "id": "platformLab"
+  },
+  {
+    "kind": "project",
+    "id": "kenali"
+  },
+  {
+    "kind": "project",
+    "id": "keranjoo"
+  },
+  {
+    "kind": "project",
+    "id": "urusaha"
+  },
+  {
+    "kind": "project",
+    "id": "yunivisi"
   }
 ]

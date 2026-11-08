@@ -1,0 +1,39 @@
+{
+  "id": "ecosystemIdeas",
+  "name": "Ecosystem Ideas",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "ecosystem-idea",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "ideas",
+      "subdomain": "ideas"
+    }
+  },
+  "tagline": {
+    "en": "Combine ideas. See what hatches.",
+    "id": "Padukan ide, lihat apa yang menetas."
+  },
+  "description": {
+    "en": "A local-first workspace for combining ingredients into product ideas in the Alchemy Aquarium, then collecting and developing them. Idea Garden and My Space are not built yet.",
+    "id": "Ruang kerja local-first untuk memadukan bahan menjadi ide produk di Alchemy Aquarium, lalu mengumpulkan dan mengembangkannya. Idea Garden dan My Space belum dibuat."
+  },
+  "technologies": [
+    "TypeScript",
+    "Next.js",
+    "React",
+    "Three.js",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "ideas",
+    "local-first",
+    "web-app"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/ecosystemIdeas/thumbnail.webp"
+  }
+}

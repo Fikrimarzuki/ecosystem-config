@@ -37,5 +37,5 @@ test("A4.7 scraper keeps its existing completed/private/hidden identity and no d
   assert.equal(record.deployments, undefined);
   assert.match(record.description.en, /CSV\/JSON exports/);
   assert.match(record.description.id, /ekspor CSV\/JSON/);
-  assert.equal(Object.keys(production.projects).length, 52); // A4.14 +5 hidden (ecosystemAssets, hearthside, momee, vaults, zketchly); + urchinRelay (hidden, Urchin Relay M0.2)
+  assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 +5 hidden (ecosystemAssets, hearthside, momee, vaults, zketchly); + urchinRelay (hidden, Urchin Relay M0.2)
 });

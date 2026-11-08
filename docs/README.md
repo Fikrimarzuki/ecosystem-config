@@ -23,5 +23,6 @@
 
 * [Career publication approvals](career-publication-approvals.md): independent field grants and content fingerprints.
 * [Concepts publication approvals](concepts-publication-approvals.md): title-only grants, reviewer workflow and consumer adoption.
+* [Registry refresh 2026-11](registry-refresh-2026-11.md): sixteen projects, thumbnails and A–Z evidence (local, not yet published).
 
 Historical verification reports and logs live in `diagnostics/`; use the guides above for the current contracts.

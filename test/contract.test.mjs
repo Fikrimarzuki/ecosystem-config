@@ -107,8 +107,8 @@ describe("GitHub username", () => {
 });
 
 describe("project ids", () => {
-  test("all 46 existing project ids are camelCase", () => {
-    assert.equal(Object.keys(production.projects).length, 52); // A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
+  test("all existing project ids are camelCase", () => {
+    assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
     for (const id of Object.keys(production.projects)) assert.match(id, /^[a-z][a-zA-Z0-9]*$/, id);
   });
 
@@ -208,13 +208,13 @@ describe("source tree", () => {
 describe("generated data unchanged", () => {
   test("collection counts", () => {
     assert.equal(production.version, 1);
-    assert.equal(Object.keys(production.projects).length, 52); // A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
+    assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
     assert.equal(production.career.experience.length, 6);
     assert.equal(production.career.experience.reduce((total, record) => total + (record.work ?? []).length, 0), 13);
     assert.equal(production.career.freelance.length, 6);
     assert.equal(production.career.assessments.length, 7);
     assert.equal(production.origins.length, 6);
-    assert.equal(production.concepts.length, 4); // A4.14: Hearthside and Momee became hidden projects
+    assert.equal(production.concepts.length, 3); // A4.14: Hearthside and Momee became hidden projects; 2026-11: Vynote did too
   });
 });
 

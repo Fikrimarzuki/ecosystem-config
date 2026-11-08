@@ -295,6 +295,17 @@
         "Urchin Relay itself is registered as `urchinRelay` (active, lifecycle in-progress, hidden, destination tools, no repository and no deployments yet).",
         "Compatibility verified on 2026-11-07 with its unit tests (sync script and link parsing) and browser tests (canonical links, missing-config behaviour). The repository is local only (not yet a git repository); notifications and automatic deployments remain disabled."
       ]
+    },
+    {
+      "repository": "ecosystem-idea",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Ecosystem Ideas (a private, local-first idea workspace; public preview only). Consumed artifact: the generated canonical registry `dist/ecosystem.json`.",
+        "Consumption model: a PINNED SNAPSHOT committed in its own repository (`publication/ecosystem-registry.json` with the upstream commit and SHA-256 in `publication/input-pins.json`), refreshed ONLY by the explicit manual command `pnpm run sync:ecosystem-config`. It never fetches at build or run time, so no automatic synchronization, notification or deployment from this repository is needed (`notify` stays false).",
+        "Publication filtering is performed by Ecosystem Ideas, not by this repository: a project reaches its public preview only through an exact-ID owner allowlist plus a publication scanner, and registry visibility here is never changed by it. It also reads the public active Support and Gateway main destinations for its footer links.",
+        "Its private exclusion list is kept outside Git entirely and supplied to the build as one sensitive environment variable. Compatibility verified on 2026-11-21 with a clean-checkout public-preview build against registry commit 66b1dcf (52 projects); a failed or mismatched snapshot fails the build with no fallback."
+      ]
     }
   ]
 }

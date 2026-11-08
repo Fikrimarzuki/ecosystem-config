@@ -1,0 +1,38 @@
+{
+  "id": "havernia",
+  "name": "Havernia",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "extension-havernia",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "havernia",
+      "subdomain": "havernia"
+    }
+  },
+  "tagline": {
+    "en": "Your browser. Your worlds.",
+    "id": "Browsermu. Dunia-duniamu."
+  },
+  "description": {
+    "en": "A local-first Chrome extension that keeps windows as saved workspaces, with tab search, snapshots and recovery. In development and not yet installable; its 3D worlds are only planned.",
+    "id": "Ekstensi Chrome local-first yang menyimpan jendela sebagai ruang kerja, dengan pencarian tab, snapshot, dan pemulihan. Masih dikembangkan dan belum dapat dipasang; dunia 3D-nya baru rencana."
+  },
+  "technologies": [
+    "TypeScript",
+    "React",
+    "Vite",
+    "Chrome Extension (Manifest V3)",
+    "IndexedDB"
+  ],
+  "tags": [
+    "browser-extension",
+    "local-first",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/havernia/thumbnail.webp"
+  }
+}

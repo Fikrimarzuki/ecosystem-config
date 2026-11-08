@@ -9,20 +9,26 @@ const approved = [
     en: "A planned app for tracking a baby's growth and development and exploring parenting education.",
     id: "Aplikasi yang direncanakan untuk memantau pertumbuhan dan perkembangan bayi serta mempelajari pengasuhan anak.",
   } },
-  { id: "vynote", title: "Vynote", kind: "concept", order: 60, status: "planned", description: {
-    en: "A planned desktop assistant for meeting transcription and communication support.",
-    id: "Asisten desktop yang direncanakan untuk transkripsi rapat dan dukungan komunikasi.",
-  } },
+  // 2026-11 registry refresh: the Vynote concept (order 60) was promoted to a hidden project with the same id, so only Oh Baby Grow remains a concept.
 ];
-test("activation adds exactly two independent concept approvals and preserves the first 50 grants (18 re-reviewed in A4.14 with refreshed thumbnails and names)", () => {
+test("one independent concept approval remains (Vynote became a project) and the first 50 grants are preserved (18 re-reviewed in A4.14 with refreshed thumbnails and names)", () => {
   assert.equal(validateConfig(production).ok, true);
-  assert.equal(production.showcases.length, 55); assert.equal(production.showcasePublication.length, 55);
-  assert.equal(production.showcaseEligibility.length, 18);
+  assert.equal(production.showcases.length, 74); assert.equal(production.showcasePublication.length, 74);
+  assert.equal(production.showcaseEligibility.length, 37);
+  assert.equal(production.showcases.some(item => item.kind === "concept" && item.id === "vynote"), false);
+  assert.equal(production.showcasePublication.some(item => item.kind === "concept" && item.id === "vynote"), false);
+  assert.equal(production.showcaseEligibility.some(item => item.kind === "concept" && item.id === "vynote"), false);
+  for (const list of [production.showcases, production.showcasePublication, production.showcaseEligibility]) assert.equal(list.filter(item => item.kind === "project" && item.id === "vynote").length, 1);
   // Re-pinned 2026-11-06 for the FM Journal → FM Blog rename: only grant [38] (project blog) was re-reviewed; every other grant is byte-identical (docs/showcase-publication-approvals.md).
-  assert.equal(createHash("sha256").update(JSON.stringify(production.showcasePublication.slice(0, 50))).digest("hex"),
-    "02541b7b0965078f735a9157d22a7709fbccf039f333542b24ae1ef90541ca31");
-  assert.deepEqual(production.showcases.slice(50, 52), approved.map(record => ({ kind: "concept", id: record.id })));
-  assert.deepEqual(production.showcasePublication.slice(50, 52).map(record => record.id), approved.map(record => record.id));
+  // Re-pinned 2026-11-21: the earlier value pre-dated P9C (seven re-approved presentation fingerprints, see a4-14-parity). The value below equals published revision 1689c7b
+  // once Hearthside's presentation fingerprint (re-approved in the 2026-11 refresh for its released link and new thumbnail) is restored to its previously published value.
+  const hearthsidePublished = "sha256:5c930697f3fb8174410f0af2be1a0828fb877e78e7ac1e2e099f6c95c5dcb658";
+  assert.notEqual(production.showcasePublication.find(item => item.kind === "project" && item.id === "hearthside").presentationFingerprint, hearthsidePublished);
+  assert.equal(createHash("sha256").update(JSON.stringify(production.showcasePublication.slice(0, 50)
+    .map(item => item.kind === "project" && item.id === "hearthside" ? { ...item, presentationFingerprint: hearthsidePublished } : item))).digest("hex"),
+    "473c8c50c997c4a7fef065b727adab08124a0818d28c366382e5e383597e1ecd");
+  assert.deepEqual(production.showcases.slice(50, 51), approved.map(record => ({ kind: "concept", id: record.id })));
+  assert.deepEqual(production.showcasePublication.slice(50, 51).map(record => record.id), approved.map(record => record.id));
 });
 for (const record of approved) test(`exact registration, static fingerprints, independent revocation: ${record.title}`, () => {
   assert.deepEqual(production.concepts.find(item => item.id === record.id), record);

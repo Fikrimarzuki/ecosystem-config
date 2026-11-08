@@ -1,0 +1,40 @@
+{
+  "id": "beacon",
+  "name": "Beacon",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "tool-beacon",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "beacon",
+      "subdomain": "beacon"
+    }
+  },
+  "tagline": {
+    "en": "Know when something breaks.",
+    "id": "Ketahui saat ada yang rusak."
+  },
+  "description": {
+    "en": "A pre-release, self-hosted monitor that checks websites and APIs, opens one incident per failure and sends signed webhooks. It runs on your own server; there is no hosted service.",
+    "id": "Monitor self-hosted tahap pra-rilis yang memeriksa situs dan API, membuka satu insiden per kegagalan, dan mengirim webhook bertanda tangan. Dijalankan di server Anda sendiri; tidak ada layanan terkelola."
+  },
+  "technologies": [
+    "TypeScript",
+    "Fastify",
+    "PostgreSQL",
+    "Drizzle ORM",
+    "React",
+    "Astro",
+    "Docker"
+  ],
+  "tags": [
+    "monitoring",
+    "self-hosted",
+    "landing-page"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/beacon/thumbnail.webp"
+  }
+}

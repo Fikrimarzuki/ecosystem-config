@@ -1,0 +1,40 @@
+{
+  "id": "xpenz",
+  "name": "Xpenz",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "web-xpenz",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "xpenz",
+      "subdomain": "xpenz"
+    }
+  },
+  "tagline": {
+    "en": "Your money, made simple",
+    "id": "Uangmu, dibuat sederhana"
+  },
+  "description": {
+    "en": "A local-first money tracker with wallets, budgets, recurring bills and analytics. Data stays in your browser, with no account or cloud sync.",
+    "id": "Pencatat keuangan local-first dengan dompet, anggaran, tagihan berulang, dan analitik. Data tetap di browser, tanpa akun dan tanpa sinkronisasi cloud."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Three.js",
+    "IndexedDB"
+  ],
+  "tags": [
+    "finance",
+    "local-first",
+    "web-app",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/xpenz/thumbnail.webp"
+  }
+}

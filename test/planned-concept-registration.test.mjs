@@ -16,7 +16,7 @@ test("planned registration preparation is pure, schema-valid and never creates p
   assert.deepEqual(result.concepts.at(-1), record);
   assert.equal(result.concepts.at(-1).destination, undefined);
   for (const key of ["showcases", "showcaseEligibility", "showcasePublication", "conceptsPublication", "careerPublication", "projects", "career", "origins"]) assert.deepEqual(result[key], production[key]);
-  assert.equal(result.showcases.length, 55); assert.equal(result.showcasePublication.length, 55);
+  assert.equal(result.showcases.length, 74); assert.equal(result.showcasePublication.length, 74); // 2026-11 registry refresh (59 + 16 - 1)
   assert.throws(() => reviewShowcaseEligibility(result, { kind: "concept", id: record.id, surface: "az" }));
 });
 for (const [name, mutate] of [
