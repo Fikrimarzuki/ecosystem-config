@@ -367,6 +367,9 @@
           "name": "javascriptia",
           "subdomain": "javascriptia"
         }
+      },
+      "assets": {
+        "thumbnail": "assets/projects/javascriptia/thumbnail.webp"
       }
     },
     "kodeStep": {
@@ -2653,8 +2656,8 @@
       "kind": "project",
       "id": "javascriptia",
       "surface": "az",
-      "fingerprint": "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83",
-      "presentationFingerprint": "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84"
+      "fingerprint": "sha256:57f906fe141778fe1e05017b1431f059c63274272220da93a4a6226319c7656a",
+      "presentationFingerprint": "sha256:d408f0b0222ee842a76a9b9abc9c4718a81632aa992199872b252b7db0b1634c"
     },
     {
       "kind": "project",
@@ -2745,7 +2748,7 @@
       "id": "courses",
       "surface": "az",
       "fingerprint": "sha256:117d92f4c746cfcdaf39d79d7d4aeca4b8ef846dccf78869a07af584019ca3a3",
-      "presentationFingerprint": "sha256:351c93f5d14cb49d15c85d05ce10f7b14059657716ed91e145dbad47aac77298"
+      "presentationFingerprint": "sha256:3d026a47fc9b101901bd3dfcaa4e33fd51cc73dd22f22c96fac974c97568648f"
     },
     {
       "kind": "project",
@@ -2766,7 +2769,7 @@
       "id": "fmStudios",
       "surface": "az",
       "fingerprint": "sha256:c68d573bbf2c1f7ec25e42ec183c70a0912560935ed02d004a11692592400e19",
-      "presentationFingerprint": "sha256:883951177e3cea292e869c9b2c6b5bad59d60c152397cdb7dce075cfd9d71ffc"
+      "presentationFingerprint": "sha256:882b537d2114464cf29f16edaba4571e9d94d17043ddd811ff452b792a584ff9"
     },
     {
       "kind": "project",
@@ -2787,21 +2790,21 @@
       "id": "frontendLab",
       "surface": "az",
       "fingerprint": "sha256:03959f650038a50ffeb5125cb94155357195249de9f82f32c94f5b2d8a85cee1",
-      "presentationFingerprint": "sha256:06d4f09115b11129d733281943b96a3d52a9727063ac7b5ceafa0b0228e19a6e"
+      "presentationFingerprint": "sha256:895cab18c3af40b5bc0ad22ea55b9d9b8e9de36118dc4973be8cb683d157becc"
     },
     {
       "kind": "project",
       "id": "littleRoars",
       "surface": "az",
       "fingerprint": "sha256:6cb741a22297a96490da871b2bebfbd6970f305dd3ce78a14bd73c03ba661784",
-      "presentationFingerprint": "sha256:0c39a6ad846573179da58d2fab1d721fa521be3f77efbe39b900995158e841aa"
+      "presentationFingerprint": "sha256:a1e48d69c559208997d34abf78668520ecbc010ae8184a4404ac9a51eff3cdf8"
     },
     {
       "kind": "project",
       "id": "securityLab",
       "surface": "az",
       "fingerprint": "sha256:dc99b988d21bbcb1291202c15768693c083e7b152e9b580cd8a31a83679eebce",
-      "presentationFingerprint": "sha256:37af59c9c44c266f7a8c9509ecb3a8c3abe2386dcf5131ab33795d7e1d3b79e1"
+      "presentationFingerprint": "sha256:decc82429b7486d804718fd209a09fea80cf703bd812b176d6c73da232c4638b"
     },
     {
       "kind": "project",
@@ -2875,42 +2878,42 @@
       "id": "xyz",
       "surface": "az",
       "fingerprint": "sha256:7d748a453098f89eca57e00e8b29bc50375042f7be2f5cd958d1fdf70542ed4a",
-      "presentationFingerprint": "sha256:16df88bcc9bf40f3ddce80d1553353571579557329290081e02a7ad30c8dfa76"
+      "presentationFingerprint": "sha256:3c29f2b35e286954d1b9c61b33c642bf9a60cef4e991ed1e8cfe14c634aa477d"
     },
     {
       "kind": "project",
       "id": "yourSpace",
       "surface": "az",
       "fingerprint": "sha256:5d445f0d0a3068fcf1cef6c2c8f1b74f84b5ada82acb8df42b1503019132aa55",
-      "presentationFingerprint": "sha256:806df87259e28703c450c940ca6f66606604057f6f1baa0adfa14b6dfb00c787"
+      "presentationFingerprint": "sha256:9fc23cd97605782c8d19ff9650d77cf5b8b22a8468d9763d0b9db4d20f984e1c"
     },
     {
       "kind": "project",
       "id": "vaults",
       "surface": "az",
       "fingerprint": "sha256:fc50e93819b76b331b7445f3e73909362cb1ce70e7bb207209642ef290cf5968",
-      "presentationFingerprint": "sha256:25c6acf25985661fe58f41247d9043c37e0f670ffbda8a786371fecf4ad5258b"
+      "presentationFingerprint": "sha256:8f3e7b1aaf99883d7e6b37c8b36e910273c4ed0d10d96e6eee162ea0c399993c"
     },
     {
       "kind": "project",
       "id": "zketchly",
       "surface": "az",
       "fingerprint": "sha256:563c4440022802a73d90cf5802fd634731cbb6172a2d21f6067bb266d911ea28",
-      "presentationFingerprint": "sha256:093a1c8c973344e5f4b2f49c6df42859cacd0f4b996e5672b88b500c00d4b069"
+      "presentationFingerprint": "sha256:0498e1ca326c5c6f14062cc5c17d0000929b1a15551c49e451b9901bec2d3423"
     },
     {
       "kind": "project",
       "id": "urchinRelay",
       "surface": "az",
       "fingerprint": "sha256:68a3f06b8f6145c953d8518a8a9441a7a5c3e714ba7ec8853b53bd27f4c791d1",
-      "presentationFingerprint": "sha256:c3d26bdc96b7f54e347c787099b28f4db06b794e7c2879fe49f6a4550a199e73"
+      "presentationFingerprint": "sha256:b0a7e56d6cadf62aa79eb34dfd99aeb5217a46c7345094c57c5f6fe5e023944a"
     },
     {
       "kind": "project",
       "id": "ecosystemAssets",
       "surface": "az",
       "fingerprint": "sha256:44fabe58fe807a710c1c345f29e80f8af34862ab597232e4fb091fe142e1fd02",
-      "presentationFingerprint": "sha256:5c83a676fcb63464b589d77e6bb66725b3e3d21370cafde83aa1ed0e7e81f8b4"
+      "presentationFingerprint": "sha256:ac419d97b5c996e076a4be073ef2f63c4200d82268a773f7ac0edccea30e848c"
     }
   ],
   "showcaseEligibility": [
