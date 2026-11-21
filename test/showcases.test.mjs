@@ -11,7 +11,9 @@ import { reviewShowcase } from "../scripts/review-showcase.mjs";
 const config = assemble();
 test("ten hidden projects have independent source-specific eligibility; first 37 grants (re-reviewed once in A4.14 for refreshed thumbnails and names) stay exact", () => {
   const ids = ["courses", "blog", "links", "fmStudios", "templates", "watch", "frontendLab", "littleRoars", "securityLab", "weddingVendorScraper"];
-  const first37 = config.showcasePublication.slice(0, 37);
+  // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
+  const first37 = config.showcasePublication.slice(0, 37).map(grant => grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
+  assert.notEqual(config.showcasePublication.find(grant => grant.id === "configEcosystem").presentationFingerprint, "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900");
   assert.equal(createHash("sha256").update(JSON.stringify(first37)).digest("hex"), "1b1d5940bdeb0007d333b6791dde3c2d1174369d59bc895e9d410c0dcc9c6684");
   // JavaScriptia's thumbnail refresh (2026-11-09) re-approved its two fingerprints; restoring them reproduces the earlier pin, so nothing else in the first 37 changed.
   const restored = first37.map(grant => grant.id === "javascriptia" ? { ...grant, fingerprint: "sha256:1a989201621af4902ba88e62049532bf255375157652dbe759eff42be5bf6c83", presentationFingerprint: "sha256:16cfd4107e8dfc53035d86865570f8f097bef78cc25af755b48fbe54875e8c84" } : grant);

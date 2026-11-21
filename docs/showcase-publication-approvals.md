@@ -312,3 +312,16 @@ presentation fingerprints): Quillio, Xpenz, Zevorama, Havernia, BuddyChamp, Beac
 Academy, Keranjoo, Urusaha and Yunivisi. Vynote's concept membership, eligibility and grant were replaced by its project ones (same id, no duplicate). Hearthside's
 presentation fingerprint alone was re-approved for its released link and new thumbnail; the other 57 existing grants are byte-identical. Totals: 74 memberships
 and grants, 37 eligibility decisions. See [Registry refresh 2026-11](registry-refresh-2026-11.md) for the full record and publication sequence.
+
+## EC-W5 — Ecosystem Config thumbnail (2026-11-22)
+
+The Ecosystem Config website was redesigned (Living Blueprint, Vite + React in `site/`). Its canonical thumbnail,
+`assets/projects/configEcosystem/thumbnail.webp`, is now an unaltered 1280×720 capture of the production build's Overview:
+light theme, English, reduced motion, WebP quality 82, 57,038 bytes, SHA-256
+`811b9bd5067ef6eca8aa31f075dbba2ef0859c491f1d5f2c3861b6f43f8d60a6`. The path is unchanged, so the project record and its
+source fingerprint are unchanged.
+
+Gateway's presentation digest binds the artwork bytes, so exactly one grant was re-reviewed with `review-showcase.mjs` and
+Gateway's real presentation pipeline: `configEcosystem`'s `presentationFingerprint` moved from
+`sha256:973f7ea2…0b900` to `sha256:656c117e…aab52`. Every other grant, eligibility decision and membership is byte-identical.
+The Ecosystem Skills thumbnail stays deferred until its own redesign.

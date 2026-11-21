@@ -66,7 +66,9 @@ test("A–Z publication grants: the original 55 are preserved exactly; A4.14B ad
   assert.notEqual(config.showcasePublication.find(grant => grant.id === "hearthside").presentationFingerprint, hearthsideBefore);
   assert.equal(config.showcasePublication.some(grant => grant.kind === "concept" && grant.id === "vynote"), false);
   const original = [...config.showcasePublication.slice(0, 51), vynoteConceptGrant, ...config.showcasePublication.slice(51, 54)]
-    .map(grant => grant.kind === "project" && grant.id === "hearthside" ? { ...grant, presentationFingerprint: hearthsideBefore } : grant);
+    .map(grant => grant.kind === "project" && grant.id === "hearthside" ? { ...grant, presentationFingerprint: hearthsideBefore }
+      : grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
+  // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
   assert.equal(original.length, 55);
   assert.equal(sha(original), "6377d6fda4dd4d1d92369d1b390531eb9e156537dab343b4b2a338bece091b6f");
   for (const [id, [, approved]] of Object.entries(released)) assert.equal(original.find(grant => grant.id === id)?.presentationFingerprint, approved, id);

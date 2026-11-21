@@ -48,7 +48,7 @@ Notes:
 ## Thumbnails
 
 All are unaltered 1280×720 viewport captures of public pages, light appearance where the site offers it, reduced motion, encoded as WebP quality 82. Captured 2026-11-21.
-No credentials, personal data or pairing codes appear. Ecosystem Config and Ecosystem Skills thumbnails are deliberately **unchanged** (their sites are being redesigned).
+No credentials, personal data or pairing codes appear. Ecosystem Config and Ecosystem Skills thumbnails were deliberately left **unchanged** here (their sites were being redesigned); Ecosystem Config's was refreshed in EC-W5 (see the showcase approvals guide).
 
 | Id | Captured page | Bytes | SHA-256 |
 | --- | --- | ---: | --- |

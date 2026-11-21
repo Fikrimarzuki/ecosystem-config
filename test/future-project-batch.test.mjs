@@ -37,7 +37,8 @@ const approved = [
 test("first future batch keeps its three grants in place; Hearthside and Momee were promoted to projects in A4.14", () => {
   assert.equal(config.showcases.length, 74); assert.equal(config.showcasePublication.length, 74); assert.equal(config.showcaseEligibility.length, 37); // 2026-11 registry refresh: +16 projects, Vynote concept replaced by its project (59 + 16 - 1)
   // Re-pinned 2026-11-06 for the FM Journal → FM Blog rename: only grant [38] (project blog) was re-reviewed; every other grant is byte-identical (docs/showcase-publication-approvals.md).
-  assert.equal(createHash("sha256").update(JSON.stringify(config.showcasePublication.slice(0, 47))).digest("hex"), "a0f10925ed066bc62145e216ce20de90e515b1b9fcb0828dba8741d821a418f8");
+  // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
+  assert.equal(createHash("sha256").update(JSON.stringify(config.showcasePublication.slice(0, 47).map(grant => grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant))).digest("hex"), "a0f10925ed066bc62145e216ce20de90e515b1b9fcb0828dba8741d821a418f8");
   // Re-pinned 2026-11-21: the earlier value pre-dated P9C, which re-approved seven presentation fingerprints (see a4-14-parity). This value equals published revision 1689c7b, so the 2026-11 refresh left these 47 grants byte-identical.
   assert.deepEqual(config.showcases.slice(47, 50), approved.map(({ id }) => ({ kind: id === "forgebox" ? "concept" : "project", id })));
   assert.deepEqual(config.showcasePublication.slice(47, 50).map(x => x.id), approved.map(x => x.id));

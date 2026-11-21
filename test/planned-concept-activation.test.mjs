@@ -25,7 +25,8 @@ test("one independent concept approval remains (Vynote became a project) and the
   const hearthsidePublished = "sha256:5c930697f3fb8174410f0af2be1a0828fb877e78e7ac1e2e099f6c95c5dcb658";
   assert.notEqual(production.showcasePublication.find(item => item.kind === "project" && item.id === "hearthside").presentationFingerprint, hearthsidePublished);
   assert.equal(createHash("sha256").update(JSON.stringify(production.showcasePublication.slice(0, 50)
-    .map(item => item.kind === "project" && item.id === "hearthside" ? { ...item, presentationFingerprint: hearthsidePublished } : item))).digest("hex"),
+    .map(item => item.kind === "project" && item.id === "hearthside" ? { ...item, presentationFingerprint: hearthsidePublished }
+      : item.kind === "project" && item.id === "configEcosystem" ? { ...item, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : item))).digest("hex"), // EC-W5: Ecosystem Config presentation restored to its prior value for this pin
     "473c8c50c997c4a7fef065b727adab08124a0818d28c366382e5e383597e1ecd");
   assert.deepEqual(production.showcases.slice(50, 51), approved.map(record => ({ kind: "concept", id: record.id })));
   assert.deepEqual(production.showcasePublication.slice(50, 51).map(record => record.id), approved.map(record => record.id));

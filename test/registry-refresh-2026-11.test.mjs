@@ -92,8 +92,8 @@ test("no refreshed project joined a planet and none exposes a private repository
   for (const id of Object.keys(refreshed)) assert.equal(publicIds.includes(id), false, id);
   for (const id of Object.keys(refreshed)) assert.equal(p[id].links, undefined, id); // no extra links beyond the registered deployment
 });
-test("deferred thumbnails for Ecosystem Config and Ecosystem Skills are unchanged", () => {
+test("Ecosystem Config's thumbnail is the EC-W5 capture of the redesigned site; Ecosystem Skills stays deferred", () => {
   const sha = path => createHash("sha256").update(readFileSync(new URL(`../${path}`, import.meta.url))).digest("hex");
-  assert.equal(sha(p.configEcosystem.assets.thumbnail), "c89d34d1c00e1eaed0beaf6fa2c54369f3141acedab78b7f5335fa10a5d86ecc");
+  assert.equal(sha(p.configEcosystem.assets.thumbnail), "811b9bd5067ef6eca8aa31f075dbba2ef0859c491f1d5f2c3861b6f43f8d60a6");
   assert.equal(sha(p.ecosystemSkills.assets.thumbnail), "a09a1a98162313c7dd873098f3e931191a82f0a9bd17650502bc83fab5410096");
 });
