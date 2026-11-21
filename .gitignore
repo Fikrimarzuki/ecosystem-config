@@ -3,7 +3,10 @@ node_modules/
 # Temporary file created by build.mjs during validation; never committed.
 dist/.ecosystem.tmp.json
 
-# Generated documentation site; dist/ecosystem.json remains tracked.
-docs/.vitepress/dist/
-docs/.vitepress/cache/
-docs/.vitepress/.temp/
+# Former VitePress output (the site now lives in site/); dist/ecosystem.json remains tracked.
+docs/.vitepress/
+
+# Website (Vite + React): build output and build-time generated data.
+site/dist/
+site/src/generated/
+site/public/generated/

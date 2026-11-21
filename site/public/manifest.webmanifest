@@ -1,0 +1,19 @@
+{
+  "name": "Ecosystem Config",
+  "short_name": "EC Config",
+  "description": "The architecture behind FM Work: the shared registry, its projects, consumers and guides.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "background_color": "#FBFAF6",
+  "theme_color": "#FBFAF6",
+  "categories": ["developer", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

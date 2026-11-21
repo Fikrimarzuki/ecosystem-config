@@ -2,7 +2,23 @@
 
 [Documentation](README.md) · [Repository overview](../README.md)
 
-The documentation site uses VitePress to render the Markdown guides in `docs/`. The landing page lives in `docs/index.md`, with its layout and styles in `docs/.vitepress/theme/`. Edit a guide once to update both the repository documentation and the website.
+The website at `https://config.fikrimarzuki.work/` is a static Vite + React + TypeScript application in `site/`. Its visual direction is called *Living Blueprint*. It shows the registry as an architectural plan: an overview, an interactive Ecosystem Blueprint, a project registry, consumers and connections, a build-time health snapshot, an About page and these guides.
+
+The Markdown guides stay in `docs/` and remain the source: edit a guide once and it updates both GitHub and the website.
+
+## What the site is, and what it is not
+
+* **A consumer of the registry, not an endpoint.** At build time, `site/scripts/build-data.mjs` reads the committed `dist/ecosystem.json` and `.github/consumers.json`. It runs the same validator as CI and writes a public projection to the ignored `site/src/generated/`. The registry files are still served only from the repository's raw URLs. The site never publishes another copy of them, and the service worker never handles those URLs.
+* **Privacy by projection** (`site/scripts/projection.mjs`, tested by `test/site-projection.test.mjs`):
+  * A project is described only when it is `listing: public` or has an owner-approved A–Z project grant. Any other record contributes to counts only.
+  * Repository names are never emitted. A repository link appears only for `repositoryVisibility: public`.
+  * Technologies are shown for publicly listed projects only.
+  * Website links follow the registered deployments, except the ones the owner has withheld (`withheldDeploymentIds`, kept in step with Gateway's `withheldPortfolioDeploymentIds`).
+* **Real data only.** The Blueprint draws destinations, registry consumers, `related` links and the two relationships the documentation states:
+  * Ecosystem Assets holds Gateway's 3D sources.
+  * Ecosystem Assets holds the icon masters.
+
+  The Health page is a build-time snapshot: the build time, the source revision, the validation result and record counts. It is not monitoring.
 
 ## Local development
 
@@ -10,25 +26,37 @@ Use Node.js 24 and the pnpm version declared in `package.json`.
 
 ```sh
 pnpm install --frozen-lockfile
-pnpm docs:dev
+pnpm site:dev          # build-time data + Vite dev server
+pnpm site:typecheck    # TypeScript
+pnpm site:lint         # ESLint (website only)
+pnpm site:build        # data, typecheck, Vite build and postbuild
+pnpm site:preview      # serve site/dist
 ```
 
-To verify the production output:
+`docs:dev`, `docs:build` and `docs:preview` remain as aliases. `site:build` runs `site/scripts/postbuild.mjs` after Vite, which writes:
 
-```sh
-pnpm docs:build
-pnpm docs:preview
-```
+* **One real HTML file per route**, with its own title, description, canonical URL and Open Graph tags. GitHub Pages has no rewrites, so every deep link is a real file. The former guide URLs keep their form (`/projects.html`, `/consumers/integration.html`), and `/README.html` is the guide index.
+* **`404.html`**, which carries `noindex`.
+* **`sitemap.xml` and `robots.txt`**, on the configured domain (`SITE_ORIGIN` overrides it for previews).
+* **`sw.js`**, an offline-capable app shell:
+  * Pages are network-first.
+  * Hashed assets are cached on first use.
+  * Every deploy replaces the previous caches.
 
-The default base path is `/ecosystem-config/`, matching a GitHub Pages project site. The published site is served from the custom domain root, `https://config.fikrimarzuki.work/`, and CI takes the real path from GitHub Pages. Open the URL printed by the server. Output and caches live in `docs/.vitepress/` and are ignored by Git; `dist/ecosystem.json` remains the committed registry artifact.
+  The registry data inside the site is a build-time snapshot. When offline, the site says so and shows the date the snapshot was built.
 
-Guides have local search, section navigation and light/dark themes. Historical `docs/diagnostics/` files are excluded from site generation and search; links to them open their source on GitHub. Links to repository files outside `docs/` also point to GitHub. The website does not assemble or publish another copy of the registry or project assets.
+Generated output (`site/dist/`, `site/src/generated/`, `site/public/generated/`) is ignored by Git. `dist/ecosystem.json` remains the committed registry artifact.
+
+Base path: `DOCS_BASE` sets it (default `/`). CI passes the real path from GitHub Pages: `/` on the custom domain, `/ecosystem-config/` for pull-request builds.
 
 ## GitHub Pages deployment
 
-In the repository's **Settings → Pages**, select **GitHub Actions** as the build source. The [Documentation workflow](../.github/workflows/docs.yml) builds the site on relevant pushes to `main`, then deploys the static output with GitHub's Pages actions. Pull requests build and check links without deploying. You can also start the workflow manually from the Actions tab.
+In the repository's **Settings → Pages**, select **GitHub Actions** as the build source. The [Documentation workflow](../.github/workflows/docs.yml) builds the site on relevant pushes to `main`, which include:
 
-The workflow obtains the base path from `actions/configure-pages`, so the same configuration supports the default project URL (`/ecosystem-config/`) and the custom domain (`/`). Markdown references remain in this repository; no separate website repository is needed.
+* the guides, the site and the project assets;
+* `dist/ecosystem.json` and `.github/consumers.json`, because the site shows them.
+
+The workflow then deploys `site/dist` with GitHub's Pages actions. Pull requests lint and build without deploying. You can also start the workflow manually from the Actions tab.
 
 ## Custom domain
 
@@ -39,6 +67,6 @@ The site is published at `https://config.fikrimarzuki.work/`. To set the domain 
 3. Add a DNS `CNAME` for `config` pointing to `fikrimarzuki.github.io` at your DNS provider.
 4. Enable **Enforce HTTPS** when the certificate is available, then rerun the Documentation workflow so the build uses the root base path.
 
-For a root-path build locally, use `DOCS_BASE=/ pnpm docs:build`. Because this deployment uses GitHub Actions, configure the domain in Pages settings; a source `CNAME` file is not needed.
+For a root-path build locally, use `DOCS_BASE=/ pnpm site:build`. Because this deployment uses GitHub Actions, configure the domain in Pages settings; a source `CNAME` file is not needed.
 
 See [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) for the current DNS and verification steps.

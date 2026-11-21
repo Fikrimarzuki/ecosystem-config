@@ -1,10 +1,18 @@
 name: Documentation
 
+# Builds and deploys the website (site/, Vite + React) to GitHub Pages. It reads the committed registry at build
+# time; the registry files themselves are served from the repository (raw URLs), never from this site.
+
 on:
   push:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'site/**'
+      - 'assets/projects/**'
+      - 'dist/ecosystem.json'
+      - '.github/consumers.json'
+      - 'eslint.config.mjs'
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
@@ -13,6 +21,11 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'site/**'
+      - 'assets/projects/**'
+      - 'dist/ecosystem.json'
+      - '.github/consumers.json'
+      - 'eslint.config.mjs'
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
@@ -29,7 +42,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: read
       pages: read
@@ -45,14 +58,16 @@ jobs:
         if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build documentation
-        run: pnpm docs:build
+      - name: Lint website
+        run: pnpm site:lint
+      - name: Build website
+        run: pnpm site:build
         env:
           DOCS_BASE: ${{ github.event_name == 'pull_request' && '/ecosystem-config/' || format('{0}/', steps.pages.outputs.base_path) }}
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
-          path: docs/.vitepress/dist
+          path: site/dist
 
   deploy:
     if: github.event_name != 'pull_request'

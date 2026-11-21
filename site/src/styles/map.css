@@ -1,0 +1,38 @@
+/* Interactive blueprint canvas (loaded with the map only). */
+.bp-map { position: relative; min-height: min(72vh, 760px); height: 100%; border: 1px solid var(--rule-strong); border-radius: var(--radius-l); overflow: hidden;
+  background-color: var(--paper-raised);
+  background-image: linear-gradient(var(--grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--grid-major) 1px, transparent 1px), linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 96px 96px, 96px 96px, 16px 16px, 16px 16px; }
+.bp-map .react-flow { --xy-edge-stroke: var(--line); background: transparent; }
+.bp-map .react-flow__pane { cursor: grab; }
+.bp-map .react-flow__pane.dragging { cursor: grabbing; }
+.map-controls { display: grid; gap: 6px; margin: 12px; }
+.map-controls .icon-button { box-shadow: var(--shadow); }
+
+.react-flow__node:focus-visible { outline: none; }
+.react-flow__node:focus-visible .map-node { outline: 2px solid var(--focus); outline-offset: 3px; }
+.map-node { width: 100%; height: 100%; display: flex; align-items: center; gap: 7px; font-family: var(--font); color: var(--ink); cursor: pointer; transition: opacity 0.2s ease; }
+.map-node.project { padding: 0 10px; border: 1px solid var(--rule-strong); border-radius: 6px; background: var(--paper-raised); font-size: 12.5px; font-weight: 560; }
+.map-node.project .map-label { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.map-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+.map-node[data-status="paused"] .map-dot { background: var(--paused); border-radius: 1px; }
+.map-node[data-status="completed"] .map-dot { background: var(--completed); }
+.map-node[data-status="archived"] .map-dot { background: var(--archived); }
+.map-node.category { justify-content: center; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--paper); font-size: 14px; font-weight: 680; font-variation-settings: "wdth" 114; letter-spacing: -0.005em; }
+.map-node.hub { justify-content: center; text-align: center; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 14px; font-weight: 700; font-variation-settings: "wdth" 112; line-height: 1.15; padding: 12px; box-shadow: 0 0 0 8px color-mix(in srgb, var(--teal) 22%, transparent); }
+.map-node.assets { justify-content: center; border: 1px dashed var(--faint); border-radius: 6px; background: var(--paper); font-size: 12.5px; font-weight: 600; color: var(--graphite); }
+.map-node[data-state="selected"] { box-shadow: 0 0 0 3px var(--teal); }
+.map-node.project[data-state="selected"] { border-color: var(--teal); background: var(--teal-wash); }
+.map-node[data-state="connected"] { border-color: var(--teal); }
+.map-node[data-state="dim"] { opacity: 0.22; }
+.map-node[data-match] { box-shadow: 0 0 0 2px var(--paused); }
+
+.map-edge path { stroke: var(--line); stroke-width: 1; fill: none; transition: opacity 0.2s ease; }
+.map-edge.structure path { stroke: var(--rule-strong); stroke-dasharray: 3 5; }
+.map-edge.consumes path { stroke: var(--teal); stroke-dasharray: 5 4; stroke-opacity: 0.7; }
+.map-edge.documented path { stroke: var(--completed); stroke-width: 1.5; }
+.map-edge.related path { stroke: var(--paused); stroke-dasharray: 2 3; stroke-width: 1.5; }
+.map-edge.assets path { stroke: var(--faint); stroke-dasharray: 2 4; stroke-opacity: 0.6; }
+.map-edge.active path { stroke-width: 2; stroke-opacity: 1; }
+.map-edge.dim path { opacity: 0.12; }
+@media (max-width: 980px) { .bp-map { min-height: 62vh; } }

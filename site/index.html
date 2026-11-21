@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Ecosystem Config: the architecture behind FM Work</title>
+    <meta name="description" content="The shared registry behind FM Work: projects, deployments, consumers and the contracts that keep them in sync." />
+    <link rel="canonical" href="https://config.fikrimarzuki.work/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ecosystem Config" />
+    <meta property="og:title" content="Ecosystem Config: the architecture behind FM Work" />
+    <meta property="og:description" content="The shared registry behind FM Work: projects, deployments, consumers and the contracts that keep them in sync." />
+    <meta property="og:url" content="https://config.fikrimarzuki.work/" />
+    <meta property="og:image" content="https://config.fikrimarzuki.work/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Ecosystem Config overview: a blueprint of FM Work's projects around the shared registry." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#FBFAF6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A1628" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script>
+      // Apply the saved theme and language before first paint. Storage may be unavailable.
+      (function () {
+        var d = document.documentElement, theme = null, lang = null;
+        try { theme = localStorage.getItem("ec.theme"); lang = localStorage.getItem("ec.lang"); } catch (e) {}
+        if (theme !== "light" && theme !== "dark") theme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        if (lang !== "en" && lang !== "id") lang = (navigator.language || "").toLowerCase().indexOf("id") === 0 ? "id" : "en";
+        d.setAttribute("data-theme", theme); d.setAttribute("lang", lang);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="max-width:40rem;margin:3rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6">
+        Ecosystem Config is the shared registry behind FM Work. This interactive site needs JavaScript.
+        The registry itself is plain JSON: <a href="https://raw.githubusercontent.com/Fikrimarzuki/ecosystem-config/main/dist/ecosystem.json">dist/ecosystem.json</a>,
+        and the guides are readable on <a href="https://github.com/Fikrimarzuki/ecosystem-config/tree/main/docs">GitHub</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

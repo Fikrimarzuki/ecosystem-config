@@ -23,7 +23,7 @@ pnpm validate   # validate the assembled configuration
 pnpm test       # schema, semantic, source-tree and contract tests
 ```
 
-Documentation site (VitePress) while editing the guides: `pnpm docs:dev`, then `pnpm docs:build` and `pnpm docs:preview` to check the production output.
+Website (Vite + React, in [site/](site/)): `pnpm site:dev` while editing, then `pnpm site:build` and `pnpm site:preview` to check the production output. `pnpm site:typecheck` and `pnpm site:lint` check the code. The old `docs:*` script names still work.
 
 ## Repository structure
 
@@ -35,7 +35,8 @@ Documentation site (VitePress) while editing the guides: `pnpm docs:dev`, then `
 | [scripts/](scripts/) | `build.mjs` and `validate.mjs`, plus the collection helpers and the publication fingerprint and review tools |
 | [test/](test/) | Node's built-in test runner: schema, semantic, source-tree and contract checks |
 | [assets/](assets/) | Shared profile, ecosystem and per-project files (images and the resume PDF) |
-| [docs/](docs/) | Reference, integration and publication guides, and the VitePress site |
+| [docs/](docs/) | Reference, integration and publication guides (Markdown, also rendered on the website) |
+| [site/](site/) | The website: Vite + React + TypeScript, reading the committed registry at build time |
 | [.github/](.github/) | The validation and documentation workflows, and the consumer registry |
 
 ## Where to edit
