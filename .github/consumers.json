@@ -306,6 +306,17 @@
         "Publication filtering is performed by Ecosystem Ideas, not by this repository: a project reaches its public preview only through an exact-ID owner allowlist plus a publication scanner, and registry visibility here is never changed by it. It also reads the public active Support and Gateway main destinations for its footer links.",
         "Its private exclusion list is kept outside Git entirely and supplied to the build as one sensitive environment variable. Compatibility verified on 2026-11-21 with a clean-checkout public-preview build against registry commit 66b1dcf (52 projects); a failed or mismatched snapshot fails the build with no fallback."
       ]
+    },
+    {
+      "repository": "ecosystem-assets",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Ecosystem Assets (the FM Work creative museum). Consumed artifact: the generated canonical registry `dist/ecosystem.json`.",
+        "Reads only the public `contact.supportEmail`, `contact.supportUrl` and the public active Gateway main deployment, and writes just those three values to a committed snapshot (`apps/web/src/generated/ecosystem.json`). Unknown fields are ignored; no registry data, career, origins, concepts, profile or repository metadata reach visitors.",
+        "Consumption model: a COMMITTED SNAPSHOT refreshed only by the explicit manual command `pnpm sync` (or `pnpm sync --from <path>` for a local checkout). `web:dev` and `web:build` only check that the snapshot is present and valid (`sync-ecosystem.mjs --check`); there is no fetch at build or run time, so no automatic synchronization, notification or deployment from this repository is needed (`notify` stays false).",
+        "The Request Asset action opens a `mailto:` to `contact.supportEmail`; a missing or invalid snapshot fails the build rather than inventing an address. Deployment-platform failure behaviour is not verified."
+      ]
     }
   ]
 }

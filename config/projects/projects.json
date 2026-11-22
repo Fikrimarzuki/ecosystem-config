@@ -13,7 +13,8 @@
     }
   },
   "assets": {
-    "icon": "assets/projects/projects/icon.png"
+    "icon": "assets/projects/projects/icon.png",
+    "thumbnail": "assets/projects/projects/thumbnail.webp"
   },
   "description": {
     "en": "A curated collection of smaller applications, utilities, experiments, and showcases.",

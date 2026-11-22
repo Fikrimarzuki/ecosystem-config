@@ -10,6 +10,9 @@
 // * Website links come from registered deployments, except where the owner withheld the link
 //   (mirrors web-gateway lib/portfolio-policy.mjs `withheldPortfolioDeploymentIds`).
 // * Consumers are named by their registry project, never by repository.
+// * The A–Z Showcase lists only entries with BOTH a membership and a publication grant. For concept and Career-derived
+//   entries it emits exactly the granted fields; Career-derived entries (assessment, work, engagement) share one generic
+//   "case" type and an opaque handle, so no employer, record kind, classification or canonical id is published.
 
 /** Owner-withheld website links (keep in step with web-gateway's withheldPortfolioDeploymentIds). */
 export const withheldDeploymentIds = Object.freeze([
@@ -20,6 +23,52 @@ export const withheldDeploymentIds = Object.freeze([
 export const categoryOrder = Object.freeze([
   "games", "learning", "tools", "products", "platforms", "career", "labs", "central-station", "sun", "moon",
 ]);
+
+import { createHash } from "node:crypto";
+
+const showcaseKey = entry => JSON.stringify([entry.kind, entry.kind === "work" ? entry.employerId : null, entry.id]);
+export const showcaseHandle = entry => createHash("sha256").update(showcaseKey(entry)).digest("hex").slice(0, 12);
+
+function careerRecord(config, entry) {
+  const career = config.career ?? {};
+  if (entry.kind === "assessment") return (career.assessments ?? []).find(record => record.id === entry.id);
+  if (entry.kind === "engagement") return (career.freelance ?? []).find(record => record.id === entry.id);
+  if (entry.kind === "work") return (career.experience ?? []).find(record => record.id === entry.employerId)?.work?.find(record => record.id === entry.id);
+  return undefined;
+}
+
+/** Authorized A–Z entries: membership AND grant. Granted fields only. */
+export function projectShowcases(config, describedIds) {
+  const grants = new Map((config.showcasePublication ?? []).map(grant => [showcaseKey(grant), grant]));
+  const entries = [];
+  for (const member of config.showcases ?? []) {
+    const grant = grants.get(showcaseKey(member));
+    if (!grant) continue;
+    const handle = showcaseHandle(member);
+    if (member.kind === "project") {
+      if (!describedIds.has(member.id)) continue;
+      entries.push({ handle, kind: "project", projectId: member.id, title: config.projects[member.id].name });
+    } else if (member.kind === "concept") {
+      const record = (config.concepts ?? []).find(item => item.id === member.id);
+      if (!record) continue;
+      const fields = new Set(grant.fields ?? []);
+      entries.push({ handle, kind: "concept", title: record.title,
+        description: { ...(fields.has("description.en") ? { en: record.description.en } : {}), ...(fields.has("description.id") && record.description.id ? { id: record.description.id } : {}) },
+        ...(fields.has("status") ? { status: record.status } : {}) });
+    } else {
+      const record = careerRecord(config, member);
+      if (!record) continue;
+      const fields = new Set(grant.fields ?? []);
+      const title = member.kind === "engagement" && grant.publicTitle !== undefined ? grant.publicTitle : record.title;
+      if (!fields.has("title")) continue;
+      entries.push({ handle, kind: "case", title,
+        ...(fields.has("year") && record.year !== undefined ? { year: record.year } : {}),
+        description: { ...(fields.has("description.en") ? { en: record.description.en } : {}), ...(fields.has("description.id") && record.description?.id ? { id: record.description.id } : {}) },
+        ...(grant.technologies?.length ? { technologies: (record.technologies ?? []).filter(value => grant.technologies.includes(value)) } : {}) });
+    }
+  }
+  return entries;
+}
 
 export function deploymentUrl(config, deployment) {
   if (deployment.url) return deployment.url;
@@ -85,7 +134,9 @@ export function projectSite(config, consumerRegistry, facts = {}) {
   const count = (items, key) => items.reduce((total, item) => ({ ...total, [item[key]]: (total[item[key]] ?? 0) + 1 }), {});
   const all = Object.values(config.projects);
   const career = config.career ?? {};
+  const showcases = projectShowcases(config, describedIds);
   return {
+    showcases,
     generated: {
       builtAt: facts.builtAt ?? null, revision: facts.revision ?? null, version: config.version,
       validation: facts.validation ?? null, ecosystem: config.ecosystem?.name ?? null, domain: config.domains.primary,
@@ -104,6 +155,7 @@ export function projectSite(config, consumerRegistry, facts = {}) {
       consumersByStatus: count(consumerRegistry.consumers ?? [], "status"),
       consumersByArtifact: count(consumers, "artifact"),
       showcases: (config.showcases ?? []).length,
+      showcasesPublished: showcases.length,
       showcaseGrants: (config.showcasePublication ?? []).length,
       showcaseEligibility: (config.showcaseEligibility ?? []).length,
       deployments: all.reduce((total, project) => total + Object.keys(project.deployments ?? {}).length, 0),

@@ -13,8 +13,8 @@
     }
   },
   "description": {
-    "en": "Creative source files, brand assets and production tooling for the FM Work ecosystem, with a public Asset Studio website.",
-    "id": "File sumber kreatif, aset merek, dan perangkat produksi untuk ekosistem FM Work, dengan situs Asset Studio publik."
+    "en": "Creative source files, brand assets and production tooling for the FM Work ecosystem, with a public Creative Museum website.",
+    "id": "File sumber kreatif, aset merek, dan perangkat produksi untuk ekosistem FM Work, dengan situs Museum Kreatif publik."
   },
   "technologies": [
     "React",

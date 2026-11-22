@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import { assemble } from "../scripts/build.mjs";
 import { validateConfig } from "../scripts/validate.mjs";
+import { beforeEcW7, creativeMuseumGrant, ecW8Grants } from "./helpers/republished-evidence.mjs";
 
 // A4.14: owner-approved metadata, deployment domains and thumbnails. Statuses here are the approved canonical values.
 const config = assemble();
@@ -65,7 +66,8 @@ test("A–Z publication grants: the original 55 are preserved exactly; A4.14B ad
   const hearthsideBefore = "sha256:5c930697f3fb8174410f0af2be1a0828fb877e78e7ac1e2e099f6c95c5dcb658";
   assert.notEqual(config.showcasePublication.find(grant => grant.id === "hearthside").presentationFingerprint, hearthsideBefore);
   assert.equal(config.showcasePublication.some(grant => grant.kind === "concept" && grant.id === "vynote"), false);
-  const original = [...config.showcasePublication.slice(0, 51), vynoteConceptGrant, ...config.showcasePublication.slice(51, 54)]
+  // EC-W7 re-approved eight thumbnail-bound grants (test/helpers/republished-evidence.mjs); beforeEcW7 restores their published values.
+  const original = beforeEcW7([...config.showcasePublication.slice(0, 51), vynoteConceptGrant, ...config.showcasePublication.slice(51, 54)])
     .map(grant => grant.kind === "project" && grant.id === "hearthside" ? { ...grant, presentationFingerprint: hearthsideBefore }
       : grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
   // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
@@ -86,8 +88,13 @@ test("A–Z publication grants: the original 55 are preserved exactly; A4.14B ad
   const added = ["vaults", "zketchly", "urchinRelay", "ecosystemAssets"];
   assert.deepEqual(config.showcases.slice(54, 58), added.map(id => ({ kind: "project", id })));
   assert.deepEqual(config.showcasePublication.slice(54, 58).map(grant => grant.id), added);
+  // Creative Museum (2026-11-22): exactly Ecosystem Assets' presentation fingerprint was re-approved for its new description. Pin the new value,
+  // then restore the prior one so the rest of the pin below proves nothing else moved.
+  // EC-W8 then replaced its artwork, re-approving the presentation fingerprint once more: pin that value, restore the Creative Museum one.
+  assert.equal(config.showcasePublication.find(grant => grant.id === creativeMuseumGrant.id).presentationFingerprint, ecW8Grants.ecosystemAssets.after);
+  assert.equal(ecW8Grants.ecosystemAssets.before, creativeMuseumGrant.after);
   // P9C: the four A4.14B grants keep their source fingerprints; their presentation fingerprints are the approved live-link ones.
-  assert.deepEqual(config.showcasePublication.slice(54, 58).map(grant => [grant.fingerprint, grant.presentationFingerprint]), [
+  assert.deepEqual(config.showcasePublication.slice(54, 58).map(grant => grant.id === creativeMuseumGrant.id ? { ...grant, presentationFingerprint: creativeMuseumGrant.before } : grant).map(grant => [grant.fingerprint, grant.presentationFingerprint]), [
     ["sha256:fc50e93819b76b331b7445f3e73909362cb1ce70e7bb207209642ef290cf5968", "sha256:8f3e7b1aaf99883d7e6b37c8b36e910273c4ed0d10d96e6eee162ea0c399993c"],
     ["sha256:563c4440022802a73d90cf5802fd634731cbb6172a2d21f6067bb266d911ea28", "sha256:0498e1ca326c5c6f14062cc5c17d0000929b1a15551c49e451b9901bec2d3423"],
     ["sha256:68a3f06b8f6145c953d8518a8a9441a7a5c3e714ba7ec8853b53bd27f4c791d1", "sha256:b0a7e56d6cadf62aa79eb34dfd99aeb5217a46c7345094c57c5f6fe5e023944a"],

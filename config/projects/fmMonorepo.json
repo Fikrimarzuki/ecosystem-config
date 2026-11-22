@@ -9,5 +9,8 @@
   "description": {
     "en": "A completed, reusable monorepo architecture for learning, isolated experiments, shared documentation tooling, and application implementations.",
     "id": "Arsitektur monorepo yang telah selesai dan dapat digunakan ulang untuk pembelajaran, eksperimen terisolasi, perkakas dokumentasi bersama, dan implementasi aplikasi."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/fmMonorepo/thumbnail.webp"
   }
 }

@@ -21,5 +21,9 @@
   },
   "ecosystem": {
     "name": "FM Work"
+  },
+  "contact": {
+    "supportEmail": "marzuki.fikri@gmail.com",
+    "supportUrl": "https://support.fikrimarzuki.work/"
   }
 }

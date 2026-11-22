@@ -25,9 +25,16 @@ export type Project = {
   azShowcase: boolean;
 };
 
+/** An authorized A–Z entry: membership plus publication grant. Concepts and case studies carry granted fields only. */
+export type Showcase =
+  | { handle: string; kind: "project"; projectId: string; title: string }
+  | { handle: string; kind: "concept"; title: string; description: { en?: string; id?: string }; status?: string }
+  | { handle: string; kind: "case"; title: string; year?: number; description: { en?: string; id?: string }; technologies?: string[] };
+
 export type Consumer = { projectId: string; status: string; artifact: Artifact | null; notify: boolean };
 
 export type SiteData = {
+  showcases: Showcase[];
   generated: {
     builtAt: string | null;
     revision: string | null;
@@ -43,7 +50,7 @@ export type SiteData = {
     projects: number; listingPublic: number; described: number; notDescribed: number;
     byStatus: Partial<Record<Status, number>>; byCategory: Partial<Record<Category, number>>;
     consumers: number; consumersByStatus: Record<string, number>; consumersByArtifact: Partial<Record<Artifact, number>>;
-    showcases: number; showcaseGrants: number; showcaseEligibility: number;
+    showcases: number; showcasesPublished: number; showcaseGrants: number; showcaseEligibility: number;
     deployments: number; thumbnails: number; publicRepositories: number;
     career: Record<string, number>; origins: number; concepts: number; schemas: number | null;
   };

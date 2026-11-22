@@ -165,7 +165,8 @@ test("existing reviewer CLI supports Concepts without writing config, grants or 
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
 
-const global = JSON.parse(readFileSync(join(root, "config/global.json"), "utf8"));
+// The fixture has no Support project, so it omits the shared contact block (checked against Support elsewhere).
+const { contact: _contact, ...global } = JSON.parse(readFileSync(join(root, "config/global.json"), "utf8"));
 const sourceFixture = (load, grants) => {
   const tmp = temporaryDirectory();
   try {

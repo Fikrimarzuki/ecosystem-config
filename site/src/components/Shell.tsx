@@ -2,9 +2,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import { data, registryUrl, repositoryUrl } from "../app/data";
 import { useI18n, type Language } from "../app/i18n";
 import { href, routePaths, type Route } from "../app/router";
-import { useTheme, type Theme } from "../app/theme";
+import { useTheme } from "../app/theme";
 
-const navOrder = ["overview", "blueprint", "registry", "connections", "health", "about", "guides"] as const;
+// The brand links home, so Overview is not repeated in the navigation.
+const navOrder = ["blueprint", "registry", "az", "connections", "health", "about", "guides"] as const;
 
 function activePage(route: Route) {
   return route.page === "guide" ? "guides" : route.page;
@@ -12,7 +13,6 @@ function activePage(route: Route) {
 
 export function Header({ route }: { route: Route }) {
   const { t, language, setLanguage } = useI18n();
-  const { theme, setTheme } = useTheme();
   // The menu belongs to the route it was opened on, so navigating closes it without an effect.
   const [openOn, setOpenOn] = useState<Route | null>(null);
   const open = openOn === route;
@@ -27,7 +27,7 @@ export function Header({ route }: { route: Route }) {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href={href("")}>
+        <a className="brand" href={href("")} aria-current={route.page === "overview" ? "page" : undefined} aria-label={`${t.brand}, ${t.nav.overview}`}>
           <img src={`${import.meta.env.BASE_URL}icons/icon-192.png`} alt="" width={30} height={30} />
           <span className="brand-name">{t.brand}<span className="brand-note">{t.brandNote}</span></span>
         </a>
@@ -39,17 +39,13 @@ export function Header({ route }: { route: Route }) {
           </ul>
         </nav>
         <div className="header-tools">
-          <div className="segmented" role="group" aria-label={t.language}>
+          <div className="segmented sm" role="group" aria-label={t.language}>
             {(["en", "id"] as Language[]).map(code => (
               <button key={code} type="button" aria-pressed={language === code} lang={code} onClick={() => setLanguage(code)}
                 title={code === "en" ? "English" : "Bahasa Indonesia"}>{code.toUpperCase()}</button>
             ))}
           </div>
-          <div className="segmented" role="group" aria-label={t.theme}>
-            {(["light", "dark"] as Theme[]).map(mode => (
-              <button key={mode} type="button" aria-pressed={theme === mode} onClick={() => setTheme(mode)}>{mode === "light" ? t.light : t.dark}</button>
-            ))}
-          </div>
+          <ThemeToggle />
           <button type="button" className="icon-button menu-button" aria-expanded={open} aria-controls="main-nav"
             aria-label={open ? t.closeMenu : t.menu} onClick={() => setOpen(value => !value)}>
             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
@@ -59,6 +55,21 @@ export function Header({ route }: { route: Route }) {
         </div>
       </div>
     </header>
+  );
+}
+
+/** One icon button. It shows the current theme (sun or moon) and is labelled with the action it performs. */
+function ThemeToggle() {
+  const { t } = useI18n();
+  const { theme, setTheme } = useTheme();
+  const next = theme === "light" ? "dark" : "light";
+  const label = next === "dark" ? t.toDark : t.toLight;
+  return (
+    <button type="button" className="icon-button theme-toggle" data-theme={theme} aria-label={label} data-tooltip={label} onClick={() => setTheme(next)}>
+      {theme === "light"
+        ? <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6" /><path d="M10 1.8v2.1M10 16.1v2.1M1.8 10h2.1M16.1 10h2.1M4.2 4.2l1.5 1.5M14.3 14.3l1.5 1.5M4.2 15.8l1.5-1.5M14.3 5.7l1.5-1.5" /></svg>
+        : <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.2 12.6A6.6 6.6 0 0 1 7.4 3.8a6.6 6.6 0 1 0 8.8 8.8Z" /></svg>}
+    </button>
   );
 }
 

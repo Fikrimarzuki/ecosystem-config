@@ -9,7 +9,7 @@ export default function About() {
     <div className="container page">
       <PageHead title={t.about.title} lead={t.about.lead} />
       <ol className="pipeline" aria-label={t.about.pipeline}>
-        {t.about.pipelineSteps.map(([title, text]) => <li key={title}><h2 className="step-title">{title}</h2><p className="muted small">{text}</p></li>)}
+        {t.about.pipelineSteps.map(([title, text]) => <li key={title}><span className="step-arrow" aria-hidden="true" /><h2 className="step-title">{title}</h2><p className="muted small">{text}</p></li>)}
       </ol>
       <div className="two-col section">
         <section aria-labelledby="owns"><h2 id="owns">{t.about.owns}</h2><ul className="ruled-list" style={{ marginTop: 16 }}>{t.about.ownsList.map(item => <li key={item}>{item}</li>)}</ul></section>

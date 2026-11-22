@@ -4,13 +4,13 @@ import { useEffect, useState, type AnchorHTMLAttributes, type MouseEvent } from 
 // so deep links work on GitHub Pages without a server-side rewrite. Legacy guide URLs keep their
 // "<slug>.html" form.
 export type Route =
-  | { page: "overview" } | { page: "blueprint" } | { page: "registry" } | { page: "connections" }
+  | { page: "overview" } | { page: "blueprint" } | { page: "registry" } | { page: "az" } | { page: "connections" }
   | { page: "health" } | { page: "about" } | { page: "guides" } | { page: "guide"; slug: string } | { page: "not-found" };
 
 const base = import.meta.env.BASE_URL;
 export const href = (path: string) => `${base}${path.replace(/^\//, "")}`;
 
-export const routePaths = { overview: "", blueprint: "blueprint/", registry: "registry/", connections: "connections/", health: "health/", about: "about/", guides: "README.html" } as const;
+export const routePaths = { overview: "", blueprint: "blueprint/", registry: "registry/", az: "a-z/", connections: "connections/", health: "health/", about: "about/", guides: "README.html" } as const;
 export const guideHref = (slug: string) => href(`${slug}.html`);
 
 export function parseRoute(pathname: string, guideSlugs: ReadonlySet<string>): Route {
@@ -20,6 +20,7 @@ export function parseRoute(pathname: string, guideSlugs: ReadonlySet<string>): R
   for (const page of ["blueprint", "registry", "connections", "health", "about"] as const) {
     if (path === page || path === `${page}/`) return { page };
   }
+  if (path === "a-z" || path === "a-z/") return { page: "az" };
   if (path === "README.html" || path === "README" || path === "guides/" || path === "guides") return { page: "guides" };
   const slug = path.replace(/\.html$/, "").replace(/\/$/, "");
   if (guideSlugs.has(slug)) return { page: "guide", slug };

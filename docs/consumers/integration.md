@@ -24,6 +24,7 @@ Top-level shape of the output:
   "domains": { "primary": "fikrimarzuki.work" },
   "profile": { "name": "...", "title": "...", "email": "...", "links": {}, "assets": {} },
   "ecosystem": { "name": "FM Work" },
+  "contact": { "supportEmail": "...", "supportUrl": "https://..." },
   "projects": { "playdeck": { "name": "Playdeck" } },
   "career": { "experience": [], "freelance": [], "assessments": [] },
   "origins": [],
@@ -34,6 +35,7 @@ Top-level shape of the output:
 
 * `version` is `1`. Reject any other value rather than guessing.
 * `profile` and `ecosystem` are optional objects; their members are optional too, except `name`.
+* `contact` is an optional object holding the canonical **public** contact: `supportEmail` (an inbox that is read) and `supportUrl` (equal to the Support deployment). Treat a missing or invalid `contact` as "unavailable" and disable the contact action rather than inventing an address. See [Contact](#contact).
 * `projects` is an object keyed by **project ID**. IDs are stable identifiers; never rename them locally.
 * `career` is always present, with three **arrays** (`experience`, `freelance`, `assessments`) that may be empty. See [section 6](#6-career).
 * `origins` is always present, as an **array** that may be empty. See [section 7](#7-origins).
@@ -239,6 +241,10 @@ const repositoryUrls = (entry) =>
 After verifying the schemas and semantic/fingerprint checks, a browser-facing consumer filters canonical `concepts` by valid grant identity in the existing array order and copies **only** `{ title }`. IDs, kind, numeric order, grant selectors and evidence stay build-only. New records and placeholder slots have no implicit permission. Neither project visibility nor Career/Origins approvals authorize a concept.
 
 Exactly three Concepts title grants are active: Forgebox, Hearthside and Momee. Gateway M8.6b.2 recognizes and verifies this contract; its in-memory public projection returns those titles only. M8.6b.3 changes no Gateway files or Frontier UI, and does not publish a deployment. See [Concepts publication approvals](../concepts-publication-approvals.md) for exact fingerprint serialization, reviewer use and fail-closed compatibility.
+
+## Contact
+
+`contact.supportEmail` and `contact.supportUrl` are the shared public contact (see [configuration](../configuration.md#shared-public-contact)). Read them in your build-time sync like any other field, validate the address and the HTTPS URL, and write both to the generated file. A page that offers contact (for example a "Request" button) builds a `mailto:` link from `supportEmail` at build time and falls back to a disabled control that links to `supportUrl` when the snapshot is unavailable. Do not add a per-app environment variable for the address, and do not ship a copy that is edited by hand.
 
 ## 9. When things are unavailable or missing
 

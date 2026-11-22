@@ -7,12 +7,13 @@ import { validateConfig } from "../scripts/validate.mjs";
 import { showcaseFingerprint, showcasePresentationFingerprint, showcaseEligibilityFingerprint } from "../scripts/showcases.mjs";
 import { reviewShowcaseEligibility } from "../scripts/review-showcase-eligibility.mjs";
 import { reviewShowcase } from "../scripts/review-showcase.mjs";
+import { beforeEcW7 } from "./helpers/republished-evidence.mjs";
 
 const config = assemble();
 test("ten hidden projects have independent source-specific eligibility; first 37 grants (re-reviewed once in A4.14 for refreshed thumbnails and names) stay exact", () => {
   const ids = ["courses", "blog", "links", "fmStudios", "templates", "watch", "frontendLab", "littleRoars", "securityLab", "weddingVendorScraper"];
   // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
-  const first37 = config.showcasePublication.slice(0, 37).map(grant => grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
+  const first37 = beforeEcW7(config.showcasePublication.slice(0, 37)).map(grant => grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
   assert.notEqual(config.showcasePublication.find(grant => grant.id === "configEcosystem").presentationFingerprint, "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900");
   assert.equal(createHash("sha256").update(JSON.stringify(first37)).digest("hex"), "1b1d5940bdeb0007d333b6791dde3c2d1174369d59bc895e9d410c0dcc9c6684");
   // JavaScriptia's thumbnail refresh (2026-11-09) re-approved its two fingerprints; restoring them reproduces the earlier pin, so nothing else in the first 37 changed.
@@ -72,7 +73,7 @@ test("74 independent A–Z grants (the original 55 plus four approved in A4.14B 
   ]);
   assert.equal(config.showcases.length, 74); // 59 + 16 refreshed projects - the Vynote concept replaced by its project
   assert.equal(config.showcasePublication.length, 74);
-  assert.equal(createHash("sha256").update(JSON.stringify(config.showcasePublication.slice(0, 10))).digest("hex"),
+  assert.equal(createHash("sha256").update(JSON.stringify(beforeEcW7(config.showcasePublication.slice(0, 10)))).digest("hex"),
     "01654dd0f9c26c3fe7c2ccf65e6a5cfd66dc3ff6ddec83de0dd91a72d511453b");
   assert.deepEqual(config.careerPublication, JSON.parse(readFileSync(new URL("../config/production.json", import.meta.url))).careerPublication);
   const ai = config.showcasePublication.find(grant => grant.kind === "assessment");
@@ -180,7 +181,31 @@ test("professional and freelance approvals select only exact narratives, technol
   assert.equal(a.publicTitle, "Automotive Inventory System");
   assert.equal(config.career.freelance.find(record => record.id === a.id).title, "Automotive Spare Parts Inventory Management System");
   assert(!config.careerPublication.work.some(grant => grant.id === m.id));
-  assert.equal(config.careerPublication.freelance.length, 0);
+  // The Career freelance list is no longer empty: six owner-approved engagements are published (Gateway be49e6d). Each must satisfy the
+  // publication contract rather than a hardcoded count: canonical public record, an explicit engagement classification, an allowlist of
+  // real canonical fields, a reviewed-content fingerprint for every selected field, and no A–Z or other permission inferred from it.
+  const approvedEngagements = ["automotiveInventorySystem", "miningOperationsPlatform", "myconnect", "shipMonitoringPlatform", "tokenLoyaltyPlatform", "tradingCommunityPlatform"];
+  assert.deepEqual(config.careerPublication.freelance.map(grant => grant.id).sort(), approvedEngagements);
+  assert.equal(new Set(config.careerPublication.freelance.map(grant => grant.id)).size, approvedEngagements.length);
+  for (const grant of config.careerPublication.freelance) {
+    const record = config.career.freelance.find(item => item.id === grant.id);
+    assert.equal(record.listing, "public", grant.id);
+    assert(record.engagement, `${grant.id} has an explicit engagement classification`);
+    assert(grant.fields.includes("engagement") && grant.fields.includes("title"), grant.id);
+    assert.deepEqual(Object.keys(grant.fingerprints.fields).sort(), [...grant.fields].sort(), `${grant.id}: one fingerprint per selected field`);
+    for (const digest of Object.values(grant.fingerprints.fields)) assert.match(digest, /^sha256:[a-f0-9]{64}$/);
+    for (const field of grant.fields) assert.notEqual(field.split(".").reduce((value, key) => value?.[key], record), undefined, `${grant.id}.${field}`);
+    assert(!grant.fields.some(field => ["repository", "company", "client"].includes(field)), `${grant.id} approves no repository or client field`);
+    // A Career grant is independent of A–Z: only the one engagement with its own A–Z grant is a showcase.
+    assert.equal(config.showcases.some(item => item.kind === "engagement" && item.id === grant.id), grant.id === "automotiveInventorySystem", grant.id);
+  }
+  // Tampering with approved content or evidence still fails closed.
+  for (const mutate of [
+    c => { c.career.freelance.find(item => item.id === "myconnect").title += " drift"; },
+    c => { c.careerPublication.freelance[0].fingerprints.fields.title = "sha256:" + "0".repeat(64); },
+    c => { c.career.freelance.find(item => item.id === "tokenLoyaltyPlatform").listing = "hidden"; },
+    c => { delete c.careerPublication.freelance[1].fingerprints.fields.title; },
+  ]) { const changed = structuredClone(config); mutate(changed); assert.equal(validateConfig(changed).ok, false); }
 });
 
 test("engagement existence, explicit freelance classification, title overrides and allowlists fail closed", () => {

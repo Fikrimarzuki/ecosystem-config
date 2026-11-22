@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type KeyboardEvent } from "react";
 import { projectById, thumbnailSrc, type Project, type Status } from "../app/data";
 import { useI18n } from "../app/i18n";
+import { JsonViewer } from "./JsonViewer";
 
 export function StatusBadge({ status }: { status: Status }) {
   const { t } = useI18n();
@@ -46,7 +47,9 @@ export function ProjectFacts({ project }: { project: Project }) {
   );
 }
 
-export function ProjectDialog({ project, onClose }: { project: Project | null; onClose: () => void }) {
+export type DialogTab = "overview" | "json";
+
+export function ProjectDialog({ project, tab = "overview", onTab, onClose }: { project: Project | null; tab?: DialogTab; onTab?: (tab: DialogTab) => void; onClose: () => void }) {
   const { t } = useI18n();
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -58,12 +61,12 @@ export function ProjectDialog({ project, onClose }: { project: Project | null; o
   return (
     <dialog ref={ref} className="dialog" aria-labelledby="project-dialog-title" onClose={onClose}
       onClick={event => { if (event.target === ref.current) onClose(); }}>
-      {project && <DialogBody project={project} onClose={onClose} closeLabel={t.registry.close} />}
+      {project && <DialogBody project={project} tab={tab} onTab={onTab} onClose={onClose} closeLabel={t.registry.close} />}
     </dialog>
   );
 }
 
-function DialogBody({ project, onClose, closeLabel }: { project: Project; onClose: () => void; closeLabel: string }) {
+function DialogBody({ project, tab, onTab, onClose, closeLabel }: { project: Project; tab: DialogTab; onTab?: (tab: DialogTab) => void; onClose: () => void; closeLabel: string }) {
   const { t } = useI18n();
   const { summary, tagline } = useProjectText(project);
   return (
@@ -78,11 +81,27 @@ function DialogBody({ project, onClose, closeLabel }: { project: Project; onClos
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" /></svg>
         </button>
       </div>
-      <ProjectArtwork project={project} eager />
-      {summary && <p>{summary}</p>}
-      <ProjectFacts project={project} />
-      <p className="small muted">{project.visibility === "public" ? t.registry.publicListing : t.registry.showcase}</p>
-      {project.website[0] && <div className="actions"><a className="button primary" href={project.website[0].url} rel="noopener">{t.registry.visit}</a></div>}
+      <div className="tabs" role="tablist" aria-label={t.json.tabs} onKeyDown={(event: KeyboardEvent) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        const next: DialogTab = event.key === "Home" || event.key === "ArrowLeft" ? "overview" : "json";
+        onTab?.(next); document.getElementById(`project-tab-${next}`)?.focus();
+      }}>
+        {(["overview", "json"] as DialogTab[]).map(name => (
+          <button key={name} id={`project-tab-${name}`} type="button" role="tab" aria-selected={tab === name} aria-controls={`project-panel-${name}`} tabIndex={tab === name ? 0 : -1} onClick={() => onTab?.(name)}>
+            {name === "overview" ? t.json.overview : "JSON"}
+          </button>
+        ))}
+      </div>
+      {tab === "overview"
+        ? <div id="project-panel-overview" role="tabpanel" aria-labelledby="project-tab-overview" className="dialog-panel">
+        <ProjectArtwork project={project} eager />
+        {summary && <p>{summary}</p>}
+        <ProjectFacts project={project} />
+        <p className="small muted">{project.visibility === "public" ? t.registry.publicListing : t.registry.showcase}</p>
+        {project.website[0] && <div className="actions"><a className="button primary" href={project.website[0].url} rel="noopener">{t.registry.visit}</a></div>}
+        </div>
+        : <div id="project-panel-json" role="tabpanel" aria-labelledby="project-tab-json" className="dialog-panel"><JsonViewer project={project} /></div>}
     </div>
   );
 }

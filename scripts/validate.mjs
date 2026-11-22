@@ -451,6 +451,27 @@ function checkCareer(config, errors) {
   }
 }
 
+// The shared public contact block must describe the real Support deployment, so a consumer can never be
+// pointed at a different site than the registry's. Email addresses are structural (schema) only.
+function checkContact(config, errors) {
+  if (!config.contact) return;
+  const support = config.projects.support;
+  const deployment = support?.deployments?.main;
+  if (!deployment) {
+    errors.push('contact.supportUrl: requires projects.support with a "main" deployment');
+    return;
+  }
+  const expected = deployment.url ?? `https://${deployment.subdomain === null ? config.domains.primary.toLowerCase() : `${deployment.subdomain.toLowerCase()}.${config.domains.primary.toLowerCase()}`}/`;
+  let actual;
+  try {
+    actual = new URL(config.contact.supportUrl).href;
+  } catch {
+    errors.push(`contact.supportUrl: "${config.contact.supportUrl}" is not a valid URL`);
+    return;
+  }
+  if (actual !== new URL(expected).href) errors.push(`contact.supportUrl: "${config.contact.supportUrl}" must equal the Support deployment (${new URL(expected).href})`);
+}
+
 function validateSemantics(config) {
   const errors = [];
   checkMeaningfulStrings(config, "", errors);
@@ -461,6 +482,8 @@ function validateSemantics(config) {
   checkShowcases(config, errors);
   checkOrigins(config, errors);
   checkConcepts(config, errors);
+
+  checkContact(config, errors);
 
   const primary = config.domains.primary.toLowerCase();
   const hostnames = new Map(); // hostname → location that claimed it

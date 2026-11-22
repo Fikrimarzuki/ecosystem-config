@@ -2,7 +2,7 @@
 
 [Documentation](README.md) · [Repository overview](../README.md)
 
-The website at `https://config.fikrimarzuki.work/` is a static Vite + React + TypeScript application in `site/`. Its visual direction is called *Living Blueprint*. It shows the registry as an architectural plan: an overview, an interactive Ecosystem Blueprint, a project registry, consumers and connections, a build-time health snapshot, an About page and these guides.
+The website at `https://config.fikrimarzuki.work/` is a static Vite + React + TypeScript application in `site/`. Its visual direction is called *Living Blueprint*. It shows the registry as an architectural plan: an Overview with an animated exploded drawing of the registry, an Ecosystem Blueprint (Schematic, Network and List views), a project Registry, the A–Z Showcase, consumers and connections, a build-time Health snapshot, an About page and these guides.
 
 The Markdown guides stay in `docs/` and remain the source: edit a guide once and it updates both GitHub and the website.
 
@@ -14,6 +14,7 @@ The Markdown guides stay in `docs/` and remain the source: edit a guide once and
   * Repository names are never emitted. A repository link appears only for `repositoryVisibility: public`.
   * Technologies are shown for publicly listed projects only.
   * Website links follow the registered deployments, except the ones the owner has withheld (`withheldDeploymentIds`, kept in step with Gateway's `withheldPortfolioDeploymentIds`).
+* **A–Z Showcase** (`/a-z/`) lists only entries with both a membership and a publication grant. Concepts and Career-derived case studies show exactly their granted fields; Career-derived entries share one generic type and an opaque handle, so no employer, record kind or canonical id is published.
 * **Real data only.** The Blueprint draws destinations, registry consumers, `related` links and the two relationships the documentation states:
   * Ecosystem Assets holds Gateway's 3D sources.
   * Ecosystem Assets holds the icon masters.

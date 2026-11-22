@@ -5,5 +5,8 @@
   "listing": "public",
   "destination": "tools",
   "repository": "app-career-lens",
-  "repositoryVisibility": "private"
+  "repositoryVisibility": "private",
+  "assets": {
+    "thumbnail": "assets/projects/careerLens/thumbnail.webp"
+  }
 }

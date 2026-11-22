@@ -99,4 +99,23 @@ Two optional objects in `config/global.json` carry shared identity. They are add
 * `profile` is the personal identity of the owner. `name` is required; `title` (a non-blank string) and `email` (a valid email address) are optional. `links` holds the canonical social links, keyed by platform (`github`, `linkedin`, `website`, or any other key). Each value must be an absolute `https://` URL. New platforms need no schema or code change; add only links that really exist.
 * `ecosystem` is the shared brand identity (`name` is required), separate from the person.
 
+### Shared public contact
+
+An optional `contact` object in `config/global.json` is the one canonical **public** contact for every ecosystem site:
+
+```json
+{
+  "contact": {
+    "supportEmail": "marzuki.fikri@gmail.com",
+    "supportUrl": "https://support.fikrimarzuki.work/"
+  }
+}
+```
+
+* `supportEmail` is the public address that receives support and request mail: an inbox that is actually read. It is **not** an email-sending identity: a Resend sender such as `support@...` that only appears in a `From` header is not a receiving inbox and must not be listed unless mail to it is delivered and read.
+* `supportUrl` is the Support website. `scripts/validate.mjs` requires it to equal the Support project's `main` deployment, so it cannot drift from the registry.
+* Both fields are required when `contact` is present, and no other fields are allowed. Never put API keys, private recipient addresses, sender credentials or tokens here: everything in the config is public. The private recipient that Support's server uses stays in Support's deployment environment (`SUPPORT_EMAIL`).
+
+Consumers read `contact` at build time (see the [integration guide](consumers/integration.md#contact)); none should hardcode the address or require its own environment variable for it.
+
 Consumers (Gateway, CV, Support, ...) should read these fields instead of hardcoding names and social URLs, and render whichever links are present. Content that only one app needs (page copy, layout, labels) stays in that app. To change shared metadata, edit `config/global.json`, run `pnpm build`, and commit the regenerated files.

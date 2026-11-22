@@ -13,6 +13,7 @@
     }
   },
   "assets": {
-    "icon": "assets/projects/tools/icon.png"
+    "icon": "assets/projects/tools/icon.png",
+    "thumbnail": "assets/projects/tools/thumbnail.webp"
   }
 }

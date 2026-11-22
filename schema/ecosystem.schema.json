@@ -85,6 +85,22 @@
         }
       }
     },
+    "contact": {
+      "description": "Canonical public contact channels shared by every ecosystem site. Optional. Public values only: never API keys, private recipient addresses or sender credentials. scripts/validate.mjs requires supportUrl to match the Support deployment.",
+      "type": "object",
+      "required": ["supportEmail", "supportUrl"],
+      "additionalProperties": false,
+      "properties": {
+        "supportEmail": {
+          "description": "Public address that receives support and request mail (the inbox, not an email-sending identity).",
+          "$ref": "#/$defs/email"
+        },
+        "supportUrl": {
+          "description": "Public URL of the Support website; must equal the Support project's main deployment.",
+          "$ref": "project.schema.json#/$defs/httpsUrl"
+        }
+      }
+    },
     "projects": {
       "type": "object",
       "propertyNames": { "$ref": "project.schema.json#/$defs/projectId" },

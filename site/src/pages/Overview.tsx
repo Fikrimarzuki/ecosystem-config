@@ -1,5 +1,5 @@
 import guideIndex from "../generated/guide-index.json";
-import { BlueprintPlate } from "../components/BlueprintPlate";
+import { AssemblyDrawing } from "../components/AssemblyDrawing";
 import { data } from "../app/data";
 import { useI18n } from "../app/i18n";
 import { guideHref, href, routePaths } from "../app/router";
@@ -21,7 +21,7 @@ export default function Overview() {
             <a className="button" href={href(routePaths.guides)}>{t.overview.readGuides}</a>
           </div>
         </div>
-        <BlueprintPlate />
+        <AssemblyDrawing />
       </section>
 
       <section className="section" aria-labelledby="flow-title">

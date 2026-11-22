@@ -1,12 +1,14 @@
 import { lazy, Suspense, useEffect, useMemo } from "react";
 import guideIndex from "./generated/guide-index.json";
 import { Footer, Header, OfflineNotice } from "./components/Shell";
+import { DraftingBackground } from "./components/DraftingBackground";
 import { useI18n } from "./app/i18n";
 import { onLinkClick, parseRoute, useLocation, type Route } from "./app/router";
 import Overview from "./pages/Overview";
 
 const Blueprint = lazy(() => import("./pages/Blueprint"));
 const Registry = lazy(() => import("./pages/Registry"));
+const AZ = lazy(() => import("./pages/AZ"));
 const Connections = lazy(() => import("./pages/Connections"));
 const Health = lazy(() => import("./pages/Health"));
 const About = lazy(() => import("./pages/About"));
@@ -21,6 +23,7 @@ function Page({ route }: { route: Route }) {
     case "overview": return <Overview />;
     case "blueprint": return <Blueprint />;
     case "registry": return <Registry />;
+    case "az": return <AZ />;
     case "connections": return <Connections />;
     case "health": return <Health />;
     case "about": return <About />;
@@ -36,7 +39,7 @@ export default function App() {
   const route = useMemo(() => parseRoute(location.pathname, guideSlugs), [location.pathname]);
   useEffect(() => {
     const titles: Partial<Record<Route["page"], string>> = {
-      blueprint: t.blueprint.title, registry: t.registry.title, connections: t.connections.title, health: t.health.title,
+      blueprint: t.blueprint.title, registry: t.registry.title, az: t.az.title, connections: t.connections.title, health: t.health.title,
       about: t.about.title, guides: t.guides.title, "not-found": t.notFound.title,
     };
     const name = route.page === "guide" ? guideIndex.find(guide => guide.slug === route.slug)?.title : titles[route.page];
@@ -49,6 +52,7 @@ export default function App() {
   }, [location.pathname]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div onClick={onLinkClick}>
+      <DraftingBackground />
       <a className="skip-link" href="#main">{t.skip}</a>
       <OfflineNotice />
       <Header route={route} />

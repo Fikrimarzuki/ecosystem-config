@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { PageHead } from "../components/Shell";
+import { SearchField, Segmented, SelectField } from "../components/Controls";
 import { ProjectArtwork, ProjectDialog, StatusBadge, useProjectText } from "../components/Project";
 import { data, projectById, type Category, type Project, type Status } from "../app/data";
 import { useI18n } from "../app/i18n";
@@ -15,6 +16,7 @@ export default function Registry() {
   const query = params.get("q") ?? "";
   const category = (params.get("category") ?? "") as Category | "";
   const status = (params.get("status") ?? "") as Status | "";
+  const tab = params.get("tab") === "json" ? "json" : "overview";
   const layout = params.get("layout") === "list" ? "list" : "cards";
   const selected = projectById.get(params.get("project") ?? "") ?? null;
   const [draft, setDraft] = useState(query);
@@ -38,25 +40,20 @@ export default function Registry() {
     <div className="container page">
       <PageHead title={t.registry.title} lead={t.registry.lead(data.stats.described, data.stats.projects)} />
       <form className="toolbar" role="search" onSubmit={event => { event.preventDefault(); update({ q: draft.trim() || null }); }}>
-        <label className="field">{t.registry.search}
-          <input className="input" type="search" value={draft} placeholder={t.registry.placeholder}
-            onChange={event => { setDraft(event.target.value); update({ q: event.target.value.trim() || null }); }} />
-        </label>
-        <label className="field">{t.registry.destination}
-          <select className="select" value={category} onChange={event => update({ category: event.target.value || null })}>
-            <option value="">{t.blueprint.allCategories}</option>
-            {data.categories.map(id => <option key={id} value={id}>{t.categories[id]} ({data.stats.byCategory[id] ?? 0})</option>)}
-          </select>
-        </label>
-        <label className="field">{t.blueprint.status}
-          <select className="select" value={status} onChange={event => update({ status: event.target.value || null })}>
-            <option value="">{t.blueprint.allStatuses}</option>
-            {statuses.filter(id => data.projects.some(project => project.status === id)).map(id => <option key={id} value={id}>{t.statuses[id]}</option>)}
-          </select>
-        </label>
-        <div className="segmented" role="group" aria-label={t.registry.layout}>
-          <button type="button" aria-pressed={layout === "cards"} onClick={() => update({ layout: null })}>{t.registry.cards}</button>
-          <button type="button" aria-pressed={layout === "list"} onClick={() => update({ layout: "list" })}>{t.registry.rows}</button>
+        <SearchField label={t.registry.search} value={draft} placeholder={t.registry.placeholder}
+          onChange={value => { setDraft(value); update({ q: value.trim() || null }); }} />
+        <SelectField label={t.registry.destination} value={category} onChange={value => update({ category: value || null })}>
+          <option value="">{t.blueprint.allCategories}</option>
+          {data.categories.map(id => <option key={id} value={id}>{t.categories[id]} ({data.stats.byCategory[id] ?? 0})</option>)}
+        </SelectField>
+        <SelectField label={t.blueprint.status} value={status} onChange={value => update({ status: value || null })}>
+          <option value="">{t.blueprint.allStatuses}</option>
+          {statuses.filter(id => data.projects.some(project => project.status === id)).map(id => <option key={id} value={id}>{t.statuses[id]}</option>)}
+        </SelectField>
+        <div className="field">
+          <span className="field-label">{t.registry.layout}</span>
+          <Segmented label={t.registry.layout} value={layout} onChange={value => update({ layout: value === "list" ? "list" : null })}
+            options={[{ value: "cards", label: t.registry.cards }, { value: "list", label: t.registry.rows }]} />
         </div>
       </form>
       <div className="result-bar">
@@ -66,9 +63,9 @@ export default function Registry() {
       {results.length === 0
         ? <div className="empty"><p>{t.registry.none}</p><button type="button" className="button" onClick={() => { setDraft(""); update({ q: null, category: null, status: null }); }}>{t.registry.clearFilters}</button></div>
         : layout === "cards"
-          ? <ul className="card-grid">{results.map(project => <li key={project.id}><ProjectCard project={project} onOpen={() => update({ project: project.id }, false)} /></li>)}</ul>
-          : <ul className="row-list">{results.map(project => <ProjectRow key={project.id} project={project} onOpen={() => update({ project: project.id }, false)} />)}</ul>}
-      <ProjectDialog project={selected} onClose={() => update({ project: null })} />
+          ? <ul className="card-grid">{results.map(project => <li key={project.id}><ProjectCard project={project} onOpen={() => update({ project: project.id, tab: null }, false)} /></li>)}</ul>
+          : <ul className="row-list">{results.map(project => <ProjectRow key={project.id} project={project} onOpen={() => update({ project: project.id, tab: null }, false)} />)}</ul>}
+      <ProjectDialog project={selected} tab={tab} onTab={tab => update({ tab: tab === "json" ? "json" : null }, true)} onClose={() => update({ project: null, tab: null })} />
     </div>
   );
 }

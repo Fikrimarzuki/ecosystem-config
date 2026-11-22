@@ -14,5 +14,8 @@
   },
   "description": {
     "en": "A local-first virtual software studio in development: a manager supervises a team of AI employees through a private dashboard."
+  },
+  "assets": {
+    "thumbnail": "assets/projects/fmStudios/thumbnail.webp"
   }
 }

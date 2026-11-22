@@ -20,6 +20,7 @@ const pages = [
   { path: "", title: "Ecosystem Config: the architecture behind FM Work", description: "The shared registry behind FM Work: projects, deployments, consumers and the contracts that keep them in sync." },
   { path: "blueprint/", title: "Ecosystem Blueprint | Ecosystem Config", description: "An interactive map of the FM Work registry: destinations, the applications that read it, and documented links." },
   { path: "registry/", title: "Project registry | Ecosystem Config", description: "Every publicly described FM Work project, with its status, destination, website and approved screenshot." },
+  { path: "a-z/", title: "A–Z Showcase | Ecosystem Config", description: "Every FM Work entry the owner has explicitly approved for public discovery, filed alphabetically: projects, concepts and case studies." },
   { path: "connections/", title: "Connections | Ecosystem Config", description: "Which applications read the registry, which file they use, and how the sibling repositories relate." },
   { path: "health/", title: "Registry health | Ecosystem Config", description: "A build-time snapshot of the registry: validation result, source revision and record counts." },
   { path: "about/", title: "About | Ecosystem Config", description: "What Ecosystem Config is, what it owns, and how a fact travels from source to every FM Work application." },

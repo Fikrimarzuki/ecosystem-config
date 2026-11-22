@@ -53,6 +53,29 @@ describe("repository names", () => {
   });
 });
 
+describe("shared public contact", () => {
+  test("the committed config carries a public Support email and the Support deployment URL", () => {
+    assert.match(production.contact.supportEmail, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+    assert.equal(production.contact.supportUrl, "https://support.fikrimarzuki.work/");
+  });
+
+  test("the block is optional and accepts a valid address and URL", () => {
+    assertValid((c) => { delete c.contact; });
+    assertValid((c) => (c.contact.supportEmail = "inbox@example.test"));
+  });
+
+  test("rejects a malformed email, extra fields (secrets have no place here), and a missing field", () => {
+    assertInvalid((c) => (c.contact.supportEmail = "not an email"), /contact\.supportEmail/);
+    assertInvalid((c) => (c.contact.resendApiKey = "re_secret"), /contact/);
+    assertInvalid((c) => { delete c.contact.supportUrl; }, /contact/);
+  });
+
+  test("supportUrl must equal the Support deployment", () => {
+    assertInvalid((c) => (c.contact.supportUrl = "https://example.invalid/"), /contact\.supportUrl: .* must equal the Support deployment/);
+    assertInvalid((c) => (c.contact.supportUrl = "http://support.fikrimarzuki.work/"), /contact\.supportUrl/);
+  });
+});
+
 describe("trimmed strings consumed by Gateway", () => {
   const fields = {
     "project name": [(c, v) => (c.projects.playdeck.name = v), /projects\.playdeck\.name: must be a non-empty string without leading or trailing whitespace/],

@@ -325,3 +325,43 @@ Gateway's presentation digest binds the artwork bytes, so exactly one grant was 
 Gateway's real presentation pipeline: `configEcosystem`'s `presentationFingerprint` moved from
 `sha256:973f7ea2…0b900` to `sha256:656c117e…aab52`. Every other grant, eligibility decision and membership is byte-identical.
 The Ecosystem Skills thumbnail stays deferred until its own redesign.
+
+## EC-W7 — project thumbnails (2026-11-22, local)
+
+Canonical thumbnails were added for seven projects that previously had none, and the Ecosystem Skills thumbnail (deferred
+until its redesign) was refreshed. Each is an unaltered 1280×720 capture of the project's public site, encoded as WebP quality 82:
+
+| Project | Captured page | Bytes | SHA-256 (prefix) |
+| --- | --- | ---: | --- |
+| `careerLens` | `careerlens.fikrimarzuki.work` landing | 30,472 | `4fbe3a71eb12c652` |
+| `ecosystemSkills` | `skills.fikrimarzuki.work` overview | 78,110 | `eec655660b228cad` |
+| `devtools` | `devtools.fikrimarzuki.work/en/` | 38,606 | `ba1877a282c36b74` |
+| `fmMonorepo` | `monorepo.fikrimarzuki.work` (Atlas overview) | 64,782 | `b1f6ef3a1d6e5ff7` |
+| `projects` | `projects.fikrimarzuki.work` | 41,658 | `ebe7480256994bfb` |
+| `fmStudios` | `fm-studios.fikrimarzuki.work` landing (unchanged product) | 48,954 | `fe79e3f89fa825e6` |
+| `tools` | `tools.fikrimarzuki.work` | 34,092 | `beff03c86e1b2ea8` |
+| `playground` | `play.fikrimarzuki.work`, public Guest desktop | 69,308 | `b82ee53b717a958c` |
+
+CareerLens and FM Monorepo have no registered deployment; their sites were captured for the thumbnail only, and no
+deployment was added. Registering those addresses is a separate owner decision.
+
+The thumbnail path is bound into project source facts and Gateway's presentation digest binds the artwork bytes, so the
+official helpers re-issued exactly: seven source fingerprints, eight presentation fingerprints and one eligibility decision
+(`fmStudios`, hidden). Gateway's `portfolioThumbnailIds` gains `fmStudios` so its screenshot can be presented. Every other
+grant, eligibility decision and membership is byte-identical; `test/helpers/republished-evidence.mjs` records the prior
+published values so the historical hash pins still prove that. Totals are unchanged: 74 memberships and grants, 37 eligibility.
+
+Playground was not missing: `playground` is a registered, publicly listed (paused) project in Games with an A–Z grant.
+It had no canonical thumbnail, so registry surfaces fell back to a monogram; Gateway used its own older preview image.
+
+## EC-W8 — Ecosystem Config and Ecosystem Assets thumbnails (2026-11-22, local)
+
+Both thumbnails were replaced with unaltered captures of the deployed, redesigned sites, 1280×720 WebP quality 82:
+
+| Project | Captured page | Bytes | SHA-256 before → after (prefix) |
+| --- | --- | ---: | --- |
+| `configEcosystem` | `config.fikrimarzuki.work` Overview, light, English, after the construction animation had settled | 58,692 | `811b9bd5` → `17aefbec` |
+| `ecosystemAssets` | `assets.fikrimarzuki.work` Creative Museum entrance (1920×1080 viewport scaled to 1280×720: arch hero plus the first featured exhibits) | 42,198 | `d922f22e` → `57f8a7be` |
+
+Paths are unchanged, so source fingerprints and eligibility are unchanged. The official review path re-issued exactly two presentation
+fingerprints (`configEcosystem` `656c117e…` → `4b782730…`; `ecosystemAssets` `57189039…` → `abe5c70e…`). Totals stay 74 / 74 / 37.

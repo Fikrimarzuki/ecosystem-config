@@ -22,6 +22,10 @@
   "ecosystem": {
     "name": "FM Work"
   },
+  "contact": {
+    "supportEmail": "marzuki.fikri@gmail.com",
+    "supportUrl": "https://support.fikrimarzuki.work/"
+  },
   "projects": {
     "beacon": {
       "name": "Beacon",
@@ -138,7 +142,10 @@
       "listing": "public",
       "destination": "tools",
       "repository": "app-career-lens",
-      "repositoryVisibility": "private"
+      "repositoryVisibility": "private",
+      "assets": {
+        "thumbnail": "assets/projects/careerLens/thumbnail.webp"
+      }
     },
     "codyssey": {
       "name": "Codyssey",
@@ -278,7 +285,8 @@
         }
       },
       "assets": {
-        "icon": "assets/projects/devtools/icon.png"
+        "icon": "assets/projects/devtools/icon.png",
+        "thumbnail": "assets/projects/devtools/thumbnail.webp"
       }
     },
     "ecosystemAssets": {
@@ -295,8 +303,8 @@
         }
       },
       "description": {
-        "en": "Creative source files, brand assets and production tooling for the FM Work ecosystem, with a public Asset Studio website.",
-        "id": "File sumber kreatif, aset merek, dan perangkat produksi untuk ekosistem FM Work, dengan situs Asset Studio publik."
+        "en": "Creative source files, brand assets and production tooling for the FM Work ecosystem, with a public Creative Museum website.",
+        "id": "File sumber kreatif, aset merek, dan perangkat produksi untuk ekosistem FM Work, dengan situs Museum Kreatif publik."
       },
       "technologies": [
         "React",
@@ -375,6 +383,9 @@
       "description": {
         "en": "A completed, reusable monorepo architecture for learning, isolated experiments, shared documentation tooling, and application implementations.",
         "id": "Arsitektur monorepo yang telah selesai dan dapat digunakan ulang untuk pembelajaran, eksperimen terisolasi, perkakas dokumentasi bersama, dan implementasi aplikasi."
+      },
+      "assets": {
+        "thumbnail": "assets/projects/fmMonorepo/thumbnail.webp"
       }
     },
     "fmStudios": {
@@ -392,6 +403,9 @@
       },
       "description": {
         "en": "A local-first virtual software studio in development: a manager supervises a team of AI employees through a private dashboard."
+      },
+      "assets": {
+        "thumbnail": "assets/projects/fmStudios/thumbnail.webp"
       }
     },
     "foodieMap": {
@@ -1025,7 +1039,8 @@
         }
       },
       "assets": {
-        "icon": "assets/projects/playground/icon.png"
+        "icon": "assets/projects/playground/icon.png",
+        "thumbnail": "assets/projects/playground/thumbnail.webp"
       }
     },
     "playnest": {
@@ -1073,7 +1088,8 @@
         }
       },
       "assets": {
-        "icon": "assets/projects/projects/icon.png"
+        "icon": "assets/projects/projects/icon.png",
+        "thumbnail": "assets/projects/projects/thumbnail.webp"
       },
       "description": {
         "en": "A curated collection of smaller applications, utilities, experiments, and showcases.",
@@ -1285,7 +1301,8 @@
         }
       },
       "assets": {
-        "icon": "assets/projects/tools/icon.png"
+        "icon": "assets/projects/tools/icon.png",
+        "thumbnail": "assets/projects/tools/thumbnail.webp"
       }
     },
     "urchinRelay": {
@@ -3109,8 +3126,8 @@
       "kind": "project",
       "id": "careerLens",
       "surface": "az",
-      "fingerprint": "sha256:798706accadf322112372ce7d860d363b7017311a7ad086b58b75fb127409838",
-      "presentationFingerprint": "sha256:e7bcdf9d1332cb49a018f87ce89b9459668f099698403c0a4bc458ac4ac68896"
+      "fingerprint": "sha256:4b15350f31f4e1728c32cd8b12320c5fee9621801c6c2f38a02890a087d3d3b4",
+      "presentationFingerprint": "sha256:6573ace152c4451ba02f939b5858024a9e6a43fda8ac875e37c1ac99d5d4599a"
     },
     {
       "kind": "project",
@@ -3231,35 +3248,35 @@
       "id": "configEcosystem",
       "surface": "az",
       "fingerprint": "sha256:bf1fc19ab3aa9f9edd4aa89ad0e28f1748f07c03d11168310bf0d30c3631c58d",
-      "presentationFingerprint": "sha256:656c117ea0e7c289e4d1c8f2f93f585880e4479d204c0dcdddbb3b5333faab52"
+      "presentationFingerprint": "sha256:4b782730a05dce43a3b617d5cb339e35d2281d4e99d2b472642c73e56b0b0d32"
     },
     {
       "kind": "project",
       "id": "ecosystemSkills",
       "surface": "az",
       "fingerprint": "sha256:69fa64ef9c4942581e64239bd05d728ec9531998711d37ccb7646f4e0d517b97",
-      "presentationFingerprint": "sha256:e7018a017f1e4cbc02d01a859815927fd35b4cc2c62be61d6dd90c7d83eb1a1b"
+      "presentationFingerprint": "sha256:4614f99cf3eaf4d29e099083f014ae90960ece8d1cf9e5fa624634788000bb60"
     },
     {
       "kind": "project",
       "id": "devtools",
       "surface": "az",
-      "fingerprint": "sha256:f22fc52ccf5517dd625fb39bb1ff1d74032b9de8f6b40ea1177e122b93507184",
-      "presentationFingerprint": "sha256:53c8ef6ec909dccec9f51e81d8abecb758ff23a92d5f8a6d63d3e1fdab460748"
+      "fingerprint": "sha256:8c1a9531cbde140506e9c007ca1b1945b1abd59807ba26af7b25298e15b29d18",
+      "presentationFingerprint": "sha256:4327791eb086118af43adda41a10e94491cd43f3c1b8360c99950d82bbd169ae"
     },
     {
       "kind": "project",
       "id": "fmMonorepo",
       "surface": "az",
-      "fingerprint": "sha256:db5c929fd51f1e5c8dc32b11afbd728a7d523a54f034a78082c88874d3c6effd",
-      "presentationFingerprint": "sha256:8995c45cc76b57f9657d7514b147ef9764f7ab81af71e60defb478db4a743005"
+      "fingerprint": "sha256:c45806c2a2b2c34a90447372749635ede55db038ba6f56e118821a3ef490b7a4",
+      "presentationFingerprint": "sha256:53baa93d26d0268d3ed717ce0a067cc3a9d76be220be6688339e4155e033fefc"
     },
     {
       "kind": "project",
       "id": "projects",
       "surface": "az",
-      "fingerprint": "sha256:2b7c598a1a85e6bd0297ca230bdc3fb63c2969e763972f000a9f6c8e5a7578bc",
-      "presentationFingerprint": "sha256:918b5a1d94eba97a36b5bcb0f47313fd0ffa6b3e2af56623d52e9581d611305f"
+      "fingerprint": "sha256:2666cb086c0670fcadc3ca0ade7a88410977e50b01f7d2a25a7e69e1e933927d",
+      "presentationFingerprint": "sha256:39c7db2ca8e916e4886a4d5bff86dbf1519bb360da5321c226475d5261f00491"
     },
     {
       "kind": "project",
@@ -3272,8 +3289,8 @@
       "kind": "project",
       "id": "tools",
       "surface": "az",
-      "fingerprint": "sha256:025166a948f9d8280cb8baa565e67dc76d74e794ce3b23cd1fa4868117e2856a",
-      "presentationFingerprint": "sha256:3069eff5cfa5c1676f3dbfe698f70bbb22c8d74b022ccbcba055eca8bda3c6c4"
+      "fingerprint": "sha256:915137ee9d2ad758742c68820c9bf5eb46936cb8cad0e65ca3ae6ec27c87f601",
+      "presentationFingerprint": "sha256:bb73737fc75beddbd2f402057d5db8d9f9130572b9000dbb33121769f5bfa2b1"
     },
     {
       "kind": "project",
@@ -3363,8 +3380,8 @@
       "kind": "project",
       "id": "playground",
       "surface": "az",
-      "fingerprint": "sha256:560e418bff687bcc8dd6c2200986997e4de4733582074782f99c9c0a1f29f941",
-      "presentationFingerprint": "sha256:70dd9a8ea95c8dc8195a8b4171a9afc7238507cb3b7bc916bbdd2281eb6c5d81"
+      "fingerprint": "sha256:a55052368d308924183dc284c1a2205a9e6c092ed258976d4ae8a2077ada1c2d",
+      "presentationFingerprint": "sha256:9f2e28860030da3140c7542173a32f9b08aa32e1f2f309f992fbbdb250b13fce"
     },
     {
       "kind": "project",
@@ -3419,8 +3436,8 @@
       "kind": "project",
       "id": "fmStudios",
       "surface": "az",
-      "fingerprint": "sha256:c68d573bbf2c1f7ec25e42ec183c70a0912560935ed02d004a11692592400e19",
-      "presentationFingerprint": "sha256:882b537d2114464cf29f16edaba4571e9d94d17043ddd811ff452b792a584ff9"
+      "fingerprint": "sha256:3478bfd2e290f5591fe566ef78a65fbd7e7474b361d3f6b92eb4e9e9ff1a4490",
+      "presentationFingerprint": "sha256:54e2e7ccdf62673fab6b7d88623bbc9e9645e48702f5d8442d1f1e09da3313fe"
     },
     {
       "kind": "project",
@@ -3551,7 +3568,7 @@
       "id": "ecosystemAssets",
       "surface": "az",
       "fingerprint": "sha256:44fabe58fe807a710c1c345f29e80f8af34862ab597232e4fb091fe142e1fd02",
-      "presentationFingerprint": "sha256:ac419d97b5c996e076a4be073ef2f63c4200d82268a773f7ac0edccea30e848c"
+      "presentationFingerprint": "sha256:abe5c70e4ab516a3269c17293cf25fe0c7ea3853cacc2c2763e8bf998cdc6479"
     },
     {
       "kind": "project",
@@ -3693,7 +3710,7 @@
       "id": "fmStudios",
       "surface": "az",
       "listing": "hidden",
-      "fingerprint": "sha256:f8bc93dd118003819f5880d0545a1515cf880825a9ca80c353a9be37e7c1f51b"
+      "fingerprint": "sha256:7cc95f68c2da095ab5e3c9b57512678c07608ff48fe98e1bf12424e8a4287171"
     },
     {
       "kind": "project",
