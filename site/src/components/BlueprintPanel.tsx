@@ -3,7 +3,7 @@ import { HUB_ID, data, projectById, type Category } from "../app/data";
 import { useI18n } from "../app/i18n";
 import { DIST_ID, DIST_READERS_ID, PROD_ID, SOURCES_ID, categoryOf, docUrl, isCategory, type Relation, type Subject } from "../app/relations";
 import { href, routePaths } from "../app/router";
-import { ProjectArtwork, StatusBadge, useProjectText } from "./Project";
+import { linkLabel, ProjectArtwork, StatusBadge, useProjectText } from "./Project";
 
 type T = ReturnType<typeof useI18n>["t"];
 export const legendKinds = ["membership", "consumes", "documented", "related", "assets", "build"] as const;
@@ -190,7 +190,7 @@ function ProjectSummary({ id }: { id: string }) {
       {id === HUB_ID && <p className="small muted">{t.blueprint.hubNote}</p>}
       <div className="actions">
         <a className="button small" href={`${href(routePaths.registry)}?project=${id}`}>{t.registry.details}</a>
-        {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener">{t.registry.visit}</a>}
+        {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener">{linkLabel(project, t.registry)}</a>}
       </div>
     </>
   );

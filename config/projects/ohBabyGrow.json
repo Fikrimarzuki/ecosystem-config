@@ -1,0 +1,38 @@
+{
+  "id": "ohBabyGrow",
+  "name": "Oh Baby Grow",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "app-oh-baby-grow",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "oh-baby-grow",
+      "subdomain": "ohbabygrow"
+    }
+  },
+  "tagline": {
+    "en": "Learn together. Grow together.",
+    "id": "Belajar bersama. Tumbuh bersama."
+  },
+  "description": {
+    "en": "A private, bilingual app for parents of children aged 0–36 months: growth records on WHO standard charts, milestone observations, play activities, parenting guides, a photo journal and in-app reminders, stored on your device. For learning and observation, not medical diagnosis.",
+    "id": "Aplikasi privat dwibahasa untuk orang tua anak usia 0–36 bulan: catatan pertumbuhan pada grafik standar WHO, pengamatan tonggak perkembangan, aktivitas bermain, panduan pengasuhan, jurnal foto, dan pengingat dalam aplikasi, disimpan di perangkat Anda. Untuk belajar dan mengamati, bukan diagnosis medis."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "IndexedDB"
+  ],
+  "tags": [
+    "baby-tracking",
+    "parenting-education",
+    "local-first",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/ohBabyGrow/thumbnail.webp"
+  }
+}

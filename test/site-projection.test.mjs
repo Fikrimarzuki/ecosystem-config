@@ -1,13 +1,16 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { assemble } from "../scripts/build.mjs";
-import { consumerArtifact, deploymentUrl, projectSite, withheldDeploymentIds } from "../site/scripts/projection.mjs";
+import { validateConfig } from "../scripts/validate.mjs";
+import { approvedCaseArtwork, caseArtworkSources, consumerArtifact, deploymentUrl, projectSite, websiteDecisions } from "../site/scripts/projection.mjs";
 
 // The website is a consumer of the registry. Its build-time projection must never widen publication.
 const config = assemble();
 const consumers = JSON.parse(readFileSync(new URL("../.github/consumers.json", import.meta.url), "utf8"));
 const site = projectSite(config, consumers);
+const withheld = [...websiteDecisions(config)].filter(([, action]) => action === "withheld").map(([id]) => id).sort();
 const serialized = JSON.stringify(site);
 const granted = new Set(config.showcasePublication.filter(grant => grant.kind === "project").map(grant => grant.id));
 
@@ -46,13 +49,42 @@ test("no private repository or consumer repository name is emitted", () => {
 test("technologies only for publicly listed projects; withheld website links stay unpublished", () => {
   for (const project of site.projects) {
     if (project.technologies) assert.equal(config.projects[project.id].listing, "public", project.id);
-    if (withheldDeploymentIds.includes(project.id)) assert.deepEqual(project.website, [], project.id);
+    if (withheld.includes(project.id)) assert.deepEqual(project.website, [], project.id);
+    else if (config.projects[project.id].deployments) assert(project.website.length > 0, `${project.id}: registered link is offered`);
+    assert.equal(project.websiteAction === undefined, project.website.length === 0, `${project.id}: an action exactly when linked`);
   }
-  for (const id of ["keranjoo", "urusaha", "yunivisi", "momee", "quibiq"]) {
+  // Released with the owner's approval (EC-W9.2), including Paused projects with private repositories.
+  for (const [id, action] of [["momee", "demo"], ["quibiq", "demo"], ["watch", "app"]]) {
     const project = site.projects.find(item => item.id === id);
-    if (project) { assert.deepEqual(project.website, [], id); assert.equal(project.websiteWithheld, true, id); }
+    assert.deepEqual(project.website, [{ key: "main", url: `https://${id}.fikrimarzuki.work` }], id);
+    assert.equal(project.websiteAction, action, id);
+    assert.equal(project.websiteWithheld, false, id); assert.equal(project.repositoryUrl, undefined, id);
   }
-  assert.deepEqual(site.projects.find(project => project.id === "hearthside")?.website, [{ key: "main", url: "https://hearthside.fikrimarzuki.work" }]);
+  // Released once their hostnames resolved (EC-W9.1).
+  for (const id of ["keranjoo", "urusaha", "yunivisi"]) {
+    const project = site.projects.find(item => item.id === id);
+    assert.deepEqual(project.website, [{ key: "main", url: `https://${id}.fikrimarzuki.work` }], id);
+    assert.equal(project.websiteAction, "demo", id);
+  }
+});
+
+test("link decisions: owner-withheld set is exact, and a registry without decisions never releases links", () => {
+  // EC-W9.3: nothing is withheld any more; the mechanism stays, exercised below on a copy.
+  assert.deepEqual(withheld, []);
+  const held = structuredClone(config); held.websiteLinks.find(entry => entry.id === "momee").action = "withheld";
+  const heldMomee = projectSite(held, consumers).projects.find(project => project.id === "momee");
+  assert.deepEqual([heldMomee.website, heldMomee.websiteWithheld], [[], true]);
+  const scraper = site.projects.find(project => project.id === "weddingVendorScraper");
+  assert.deepEqual(scraper.website, [{ key: "main", url: "https://wedding-vendor-scrapper.fikrimarzuki.work" }]);
+  assert.deepEqual([scraper.websiteAction, scraper.category, scraper.repositoryUrl, scraper.technologies], ["website", "labs", undefined, undefined]);
+  assert(!JSON.stringify(site).includes("lab-wedding-vendor-scraper"));
+  const missing = structuredClone(config); delete missing.websiteLinks;
+  assert.throws(() => websiteDecisions(missing), /websiteLinks/);
+  for (const mutate of [
+    c => c.websiteLinks.push({ id: "momee", action: "app" }),
+    c => c.websiteLinks.push({ id: "notAProject", action: "website" }),
+    c => delete c.projects.forgebox.deployments,
+  ]) { const candidate = structuredClone(config); mutate(candidate); assert.equal(validateConfig(candidate).ok, false); }
 });
 
 test("deployment URLs follow the consumer contract", () => {
@@ -62,6 +94,8 @@ test("deployment URLs follow the consumer contract", () => {
 });
 
 test("consumers map to registry projects and their documented artifact", () => {
+  // EC-W9 granted Oh Baby Grow A–Z, so its consumer entry now maps to a described project like every other one.
+  assert(site.consumers.some(consumer => consumer.projectId === "ohBabyGrow"));
   assert.equal(site.consumers.length, consumers.consumers.length);
   assert.equal(consumerArtifact({ notes: ["Syncs config/production.json; unlike dist/ecosystem.json readers…"] }), "config/production.json");
   assert.equal(site.consumers.find(consumer => consumer.projectId === "gateway").artifact, "config/production.json");
@@ -83,7 +117,7 @@ test("A–Z Showcase: exactly the entries with membership and grant, granted fie
   for (const entry of site.showcases) {
     assert(["project", "concept", "case"].includes(entry.kind), entry.kind);
     if (entry.kind === "case") {
-      assert.deepEqual(Object.keys(entry).filter(field => !["handle", "kind", "title", "year", "description", "technologies"].includes(field)), [], entry.title);
+      assert.deepEqual(Object.keys(entry).filter(field => !["handle", "kind", "title", "year", "description", "technologies", "thumbnail"].includes(field)), [], entry.title);
     }
     if (entry.kind === "project") assert(site.projects.some(project => project.id === entry.projectId), entry.projectId);
   }
@@ -99,9 +133,24 @@ test("A–Z Showcase: exactly the entries with membership and grant, granted fie
   assert(!projectSite(revoked, consumers).showcases.some(entry => entry.title === "Forgebox"));
 });
 
+test("A–Z case-study artwork: only the approved files, under opaque handles", () => {
+  assert.deepEqual(site.showcases.filter(entry => entry.kind === "case" && entry.thumbnail).map(entry => entry.title).sort(),
+    ["AI Session Manager", "Automotive Inventory System", "Managix Page Builder"]);
+  const sources = caseArtworkSources(config);
+  assert.equal(sources.length, approvedCaseArtwork.size);
+  for (const { path, sha256 } of sources) assert.equal(createHash("sha256").update(readFileSync(new URL(`../${path}`, import.meta.url))).digest("hex"), sha256, path);
+  // A record with artwork but no image approval stays a monogram, and no registry path is published.
+  assert(!JSON.stringify(site).includes("assets/career/"));
+  const added = structuredClone(config);
+  added.career.assessments.find(record => record.id === "evermosFrontend").assets = { thumbnail: "assets/career/assessments/evermosFrontend/thumbnail.webp" };
+  assert.deepEqual(caseArtworkSources(added), sources);
+  // The build withholds a file that no longer matches (facts list only verified handles).
+  assert(projectSite(config, consumers, { caseArtwork: new Set() }).showcases.every(entry => !entry.thumbnail));
+});
+
 test("JSON viewer: every project record is exactly the public projection, with no withheld field", () => {
   // Guard, not a second allowlist: the viewer serialises the projection's own object, so this only proves the projection's output.
-  const allowed = new Set(["id", "name", "status", "category", "visibility", "tagline", "description", "technologies", "website", "websiteWithheld",
+  const allowed = new Set(["id", "name", "status", "category", "visibility", "tagline", "description", "technologies", "website", "websiteAction", "websiteWithheld",
     "repositoryUrl", "thumbnail", "sharedAssets", "related", "consumer", "azShowcase"]);
   const privateNames = privateRepositoryNames();
   for (const project of site.projects) {
@@ -113,7 +162,7 @@ test("JSON viewer: every project record is exactly the public projection, with n
     assert(!/repository"|repositoryVisibility|\/Users\/|\.env|secret|password|token/i.test(json.replace(/"description":\s*\{[^}]*\}/g, "")), `${project.id}: internal field or secret-like text`);
     const record = config.projects[project.id];
     if (project.technologies) assert.equal(record.listing, "public", `${project.id}: technologies only for publicly listed projects`);
-    if (withheldDeploymentIds.includes(project.id)) for (const deployment of Object.values(record.deployments ?? {})) assert(!json.includes(deploymentUrl(config, deployment)), `${project.id}: withheld link`);
+    if (withheld.includes(project.id)) for (const deployment of Object.values(record.deployments ?? {})) assert(!json.includes(deploymentUrl(config, deployment)), `${project.id}: withheld link`);
     for (const site_ of project.website) assert(Object.values(record.deployments ?? {}).some(deployment => deploymentUrl(config, deployment) === site_.url), `${project.id}: link is a registered deployment`);
   }
   // Records that are not described never reach the viewer's data.

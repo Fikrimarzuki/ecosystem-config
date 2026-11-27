@@ -19,5 +19,8 @@
     "Vitest"
   ],
   "repository": "test-ai-session-manager",
-  "repositoryVisibility": "public"
+  "repositoryVisibility": "public",
+  "assets": {
+    "thumbnail": "assets/career/assessments/aiSessionManager/thumbnail.webp"
+  }
 }

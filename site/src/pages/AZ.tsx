@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { PageHead } from "../components/Shell";
 import { SearchField, SelectField } from "../components/Controls";
-import { ProjectArtwork, StatusBadge } from "../components/Project";
-import { data, projectById, type Showcase } from "../app/data";
+import { linkLabel, ProjectArtwork, StatusBadge } from "../components/Project";
+import { caseThumbnailSrc, data, projectById, type Showcase } from "../app/data";
 import { useI18n } from "../app/i18n";
 import { href, navigate, routePaths, useLocation } from "../app/router";
 
@@ -86,9 +86,12 @@ export default function AZ() {
 function IndexCard({ entry, number, summary }: { entry: Showcase; number: string; summary: string }) {
   const { t } = useI18n();
   const project = entry.kind === "project" ? projectById.get(entry.projectId) : undefined;
+  const image = caseThumbnailSrc(entry);
   return (
     <article className="az-card" data-kind={entry.kind} aria-labelledby={`card-${entry.handle}`}>
-      {project ? <ProjectArtwork project={project} /> : <div className="art"><div className="art-fallback" aria-hidden="true"><span>{entry.title.replace(/^FM\s+/, "").split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase()}</span></div></div>}
+      {project ? <ProjectArtwork project={project} /> : image
+        ? <div className="art"><img src={image} alt="" width={1280} height={720} loading="lazy" decoding="async" /></div>
+        : <div className="art"><div className="art-fallback" aria-hidden="true"><span>{entry.title.replace(/^FM\s+/, "").split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase()}</span></div></div>}
       <div className="az-card-body">
         <div className="az-card-meta">
           <span className="az-number" aria-hidden="true">{number}</span>
@@ -103,7 +106,7 @@ function IndexCard({ entry, number, summary }: { entry: Showcase; number: string
         {project && (
           <div className="card-actions">
             <a className="button small" href={`${href(routePaths.registry)}?project=${project.id}`}>{t.az.details}</a>
-            {project.website[0] ? <a className="button small quiet" href={project.website[0].url} rel="noopener">{t.az.visit}</a> : <span className="muted small">{t.az.noLink}</span>}
+            {project.website[0] ? <a className="button small quiet" href={project.website[0].url} rel="noopener">{linkLabel(project, t.registry)}</a> : <span className="muted small">{t.az.noLink}</span>}
           </div>
         )}
       </div>

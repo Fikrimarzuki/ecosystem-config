@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { PageHead } from "../components/Shell";
 import { SearchField, Segmented, SelectField } from "../components/Controls";
-import { ProjectArtwork, ProjectDialog, StatusBadge, useProjectText } from "../components/Project";
+import { linkLabel, ProjectArtwork, ProjectDialog, StatusBadge, useProjectText } from "../components/Project";
 import { data, projectById, type Category, type Project, type Status } from "../app/data";
 import { useI18n } from "../app/i18n";
 import { navigate, useLocation } from "../app/router";
@@ -82,7 +82,7 @@ function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void
         <p className="card-summary">{summary || <span className="muted small">{t.registry.noSummary}</span>}</p>
         <div className="card-actions">
           <button type="button" className="button small" onClick={onOpen} aria-label={`${t.registry.details}: ${project.name}`}>{t.registry.details}</button>
-          {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener" aria-label={`${t.registry.visit}: ${project.name}`}>{t.registry.visit}</a>}
+          {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener" aria-label={`${linkLabel(project, t.registry)}: ${project.name}`}>{linkLabel(project, t.registry)}</a>}
         </div>
       </div>
     </article>
@@ -102,7 +102,7 @@ function ProjectRow({ project, onOpen }: { project: Project; onOpen: () => void 
       <p className="card-summary row-summary">{summary || <span className="muted small">{t.registry.noSummary}</span>}</p>
       <div className="card-actions row-actions">
         <button type="button" className="button small" onClick={onOpen} aria-label={`${t.registry.details}: ${project.name}`}>{t.registry.details}</button>
-        {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener" aria-label={`${t.registry.visit}: ${project.name}`}>{t.registry.visit}</a>}
+        {project.website[0] && <a className="button small quiet" href={project.website[0].url} rel="noopener" aria-label={`${linkLabel(project, t.registry)}: ${project.name}`}>{linkLabel(project, t.registry)}</a>}
       </div>
     </li>
   );

@@ -1,0 +1,41 @@
+{
+  "id": "forgebox",
+  "name": "Forgebox",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "app-forgebox",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "forgebox",
+      "subdomain": "forgebox"
+    }
+  },
+  "tagline": {
+    "en": "Make worlds. Make games.",
+    "id": "Bangun dunia. Ciptakan gim."
+  },
+  "description": {
+    "en": "A browser-based 3D game creation studio: build and paint worlds, add characters, quests and visual When/If/Then logic, play-test them and export a standalone web game. Projects stay on your device.",
+    "id": "Studio pembuatan gim 3D berbasis browser: bangun dan lukis dunia, tambahkan karakter, misi, dan logika visual Ketika/Jika/Maka, uji mainkan, lalu ekspor menjadi gim web mandiri. Proyek tetap di perangkat Anda."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "React Three Fiber",
+    "Tailwind CSS",
+    "IndexedDB"
+  ],
+  "tags": [
+    "game-creation",
+    "3d",
+    "local-first",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/forgebox/thumbnail.webp"
+  }
+}

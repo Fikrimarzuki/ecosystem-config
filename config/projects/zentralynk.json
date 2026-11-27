@@ -1,0 +1,41 @@
+{
+  "id": "zentralynk",
+  "name": "Zentralynk",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "repository": "web-zentralynk",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "zentralynk",
+      "subdomain": "zentralynk"
+    }
+  },
+  "tagline": {
+    "en": "Where enterprise systems connect.",
+    "id": "Tempat sistem perusahaan terhubung."
+  },
+  "description": {
+    "en": "A standalone SAP-inspired enterprise suite showcase covering procurement, sales, manufacturing, inventory, finance, HR, assets, quality, projects and approvals with demo companies. SAP and Odoo connectors are simulated; it is not affiliated with either vendor and is not a production ERP.",
+    "id": "Showcase mandiri suite perusahaan yang terinspirasi SAP: pengadaan, penjualan, manufaktur, inventaris, keuangan, SDM, aset, mutu, proyek, dan persetujuan dengan perusahaan demo. Konektor SAP dan Odoo disimulasikan; tidak berafiliasi dengan kedua vendor dan bukan ERP untuk produksi."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "enterprise",
+    "erp",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/zentralynk/thumbnail.webp"
+  }
+}

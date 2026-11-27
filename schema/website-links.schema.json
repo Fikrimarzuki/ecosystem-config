@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://config-ecosystem.invalid/schema/website-links.schema.json",
+  "title": "Owner decisions about public website links",
+  "description": "One entry per project. app, demo and website name the action consumers offer for its registered deployment; withheld means consumers must not link it until the owner releases it. A project without an entry is offered as a website.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "action"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z][a-zA-Z0-9]*$" },
+      "action": { "enum": ["app", "demo", "website", "withheld"] }
+    }
+  }
+}

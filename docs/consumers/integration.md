@@ -313,3 +313,7 @@ explicitly publishes the reviewed Forgebox, Hearthside and Momee summaries in a
 separate DTO; it does not add them to planet membership or Frontier content.
 Ecosystem Skills is a public Station infrastructure record with no asserted
 repository or deployment URL.
+
+## Website links
+
+If you link to project websites, apply `websiteLinks`: skip projects marked `withheld`, and name the link by its `action`. See [website link decisions](../website-links.md).

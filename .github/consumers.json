@@ -317,6 +317,15 @@
         "Consumption model: a COMMITTED SNAPSHOT refreshed only by the explicit manual command `pnpm sync` (or `pnpm sync --from <path>` for a local checkout). `web:dev` and `web:build` only check that the snapshot is present and valid (`sync-ecosystem.mjs --check`); there is no fetch at build or run time, so no automatic synchronization, notification or deployment from this repository is needed (`notify` stays false).",
         "The Request Asset action opens a `mailto:` to `contact.supportEmail`; a missing or invalid snapshot fails the build rather than inventing an address. Deployment-platform failure behaviour is not verified."
       ]
+    },
+    {
+      "repository": "app-oh-baby-grow",
+      "status": "compatible",
+      "notify": false,
+      "notes": [
+        "Syncs dist/ecosystem.json before dev, build and typecheck to resolve Support and Gateway URLs. No runtime registry request.",
+        "Hidden project (A–Z and Portfolio showcase only) with a public deployment."
+      ]
     }
   ]
 }

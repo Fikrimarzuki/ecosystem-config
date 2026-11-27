@@ -30,7 +30,10 @@
         "Vue.js",
         "Nuxt.js"
       ],
-      "kind": "product"
+      "kind": "product",
+      "assets": {
+        "thumbnail": "assets/career/experience/pixelHouseStudio/managix-page-builder/thumbnail.webp"
+      }
     },
     {
       "id": "nodejs-data-converter",

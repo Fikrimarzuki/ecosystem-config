@@ -16,12 +16,12 @@ test("planned registration preparation is pure, schema-valid and never creates p
   assert.deepEqual(result.concepts.at(-1), record);
   assert.equal(result.concepts.at(-1).destination, undefined);
   for (const key of ["showcases", "showcaseEligibility", "showcasePublication", "conceptsPublication", "careerPublication", "projects", "career", "origins"]) assert.deepEqual(result[key], production[key]);
-  assert.equal(result.showcases.length, 74); assert.equal(result.showcasePublication.length, 74); // 2026-11 registry refresh (59 + 16 - 1)
+  assert.equal(result.showcases.length, 82); assert.equal(result.showcasePublication.length, 82); // EC-W9: +10 - Forgebox concept. 2026-11 registry refresh (59 + 16 - 1)
   assert.throws(() => reviewShowcaseEligibility(result, { kind: "concept", id: record.id, surface: "az" }));
 });
 for (const [name, mutate] of [
-  ["duplicate concept", r => r.id = "forgebox"], ["project collision", r => r.id = "gateway"],
-  ["order collision", r => r.order = 10], ["malformed identity", r => r.id = "bad-id"],
+  ["duplicate concept", r => r.id = "comingSoon"], ["project collision", r => r.id = "gateway"],
+  ["order collision", r => r.order = 40], ["malformed identity", r => r.id = "bad-id"],
   ["wrong source kind", r => r.kind = "project"], ["placeholder", r => r.kind = "placeholder"],
   ["missing EN", r => delete r.description.en], ["missing ID", r => delete r.description.id],
   ["empty ID", r => r.description.id = " "], ["missing status", r => delete r.status],

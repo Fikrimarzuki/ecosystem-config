@@ -1,0 +1,40 @@
+{
+  "id": "fmLogs",
+  "name": "FM Logs",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-fm-logs",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "fm-logs",
+      "subdomain": "fm-logs"
+    }
+  },
+  "tagline": {
+    "en": "A clearer record of what happened.",
+    "id": "Catatan lebih jelas tentang yang terjadi."
+  },
+  "description": {
+    "en": "A browser-local event logging workspace with a filtered timeline, developer and security views, retention controls and an SDK with a playground for integration demos. Events stay in your browser; it is not a hosted monitoring service.",
+    "id": "Ruang kerja pencatatan peristiwa lokal di browser dengan linimasa berfilter, tampilan pengembang dan keamanan, pengaturan retensi, serta SDK dan playground untuk demo integrasi. Peristiwa tetap di browser Anda; ini bukan layanan pemantauan daring."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "logging",
+    "local-first",
+    "sdk",
+    "developer-tool"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/fmLogs/thumbnail.webp"
+  }
+}

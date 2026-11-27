@@ -197,12 +197,12 @@ test("global config cannot bypass the dedicated Concepts permission source", () 
   finally { tmp.cleanup(); }
 });
 
-test("real declarations authorize exactly the owner-approved title and nothing else (A4.14: Hearthside and Momee left Concepts)", () => {
+test("real declarations authorize exactly the owner-approved title and nothing else (EC-W9: no concept remains to authorize)", () => {
   const c = JSON.parse(readFileSync(join(root, "config/production.json"), "utf8"));
-  const approved = ["Forgebox"];
+  const approved = [];
   for (const path of ["config/concepts-publication.json", "config/production.json", "dist/ecosystem.json"]) {
     const data = JSON.parse(readFileSync(join(root, path), "utf8")), grants = Array.isArray(data) ? data : data.conceptsPublication;
-    assert.equal(grants.length, 1); assert.equal(new Set(grants.map(g => g.id)).size, 1);
+    assert.equal(grants.length, 0);
     assert.deepEqual(grants, c.conceptsPublication);
     for (const g of grants) {
       assert.deepEqual(Object.keys(g).sort(), ["fields", "fingerprints", "id"]);

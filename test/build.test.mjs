@@ -158,5 +158,5 @@ describe("generated files", () => {
     assert.equal(production, JSON.stringify(assemble(), null, 2) + "\n"));
 
   test("the output keeps every existing top-level field and appends independent publication declarations", () =>
-    assert.deepEqual(Object.keys(JSON.parse(production)), ["version", "username", "domains", "profile", "ecosystem", "contact", "projects", "career", "origins", "concepts", "careerPublication", "conceptsPublication", "showcases", "showcasePublication", "showcaseEligibility"]));
+    assert.deepEqual(Object.keys(JSON.parse(production)), ["version", "username", "domains", "profile", "ecosystem", "contact", "projects", "career", "origins", "concepts", "careerPublication", "conceptsPublication", "showcases", "showcasePublication", "showcaseEligibility", "websiteLinks"]));
 });

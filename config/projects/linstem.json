@@ -1,0 +1,39 @@
+{
+  "id": "linstem",
+  "name": "Linstem",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "deployments": {
+    "main": {
+      "name": "linstem",
+      "subdomain": "linstem"
+    }
+  },
+  "tagline": {
+    "en": "One system. Every business flow.",
+    "id": "Satu sistem. Setiap alur bisnis."
+  },
+  "description": {
+    "en": "A browser-local ERP for small and medium businesses, with sales, purchasing, inventory, invoicing, payments and returns connected end to end. All data stays in your browser.",
+    "id": "ERP lokal di browser untuk usaha kecil dan menengah, dengan penjualan, pembelian, inventaris, faktur, pembayaran, dan retur yang terhubung dari awal hingga akhir. Semua data tetap di browser."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Zustand",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "erp",
+    "local-first",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/linstem/thumbnail.webp"
+  }
+}

@@ -84,3 +84,7 @@ The consumer requirements below remain the compatibility contract (implemented b
 6. Exercise synthetic valid/invalid grants, all parity/offline/publication regressions and emitted selectors/evidence/placeholder scans before considering UI integration. Real grants may remain empty through that adoption.
 
 Review and publish canonical changes separately from consumer releases; a local commit does not publish them. Coordinate consumer adoption before distributing the new schema shape. Canonical release preparation does not approve a deployment or modify Gateway's checks/UI. Career and Origins publication behavior remains independent and unchanged. Historical deployments/caches/source copies are not remediated by a build-time contract.
+
+## EC-W9: Forgebox left Concepts (2026-11-28)
+
+Forgebox became a hidden project with the same id, so `config/concepts/forgebox.json` and its title-only grant were removed, as Hearthside and Momee were earlier. `config/concepts-publication.json` is now empty, which denies every Concepts title. The grant mechanism is unchanged and stays covered by tests.

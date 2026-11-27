@@ -45,7 +45,7 @@ test("sixteen refreshed projects: identity, category, private repository and own
   }
   assert.equal(p.keranjoo.deployments.main.subdomain, "keranjoo"); // never the misspelling "keranjo"
   assert.equal(Object.values(p).some(project => project.deployments?.main?.subdomain === "keranjo"), false);
-  assert.equal(Object.keys(p).length, 68);
+  assert.equal(Object.keys(p).length, 78); // 70 with Linstem and Oh Baby Grow, +8 in EC-W9
 });
 test("honest lifecycle: Codyssey keeps its owner-stated Paused status; Hearthside stays Paused", () => {
   assert.equal(p.codyssey.status, "paused");
@@ -83,7 +83,7 @@ test("every refreshed project has exactly one membership, one hidden eligibility
     assert.equal(decisions[0].fingerprint, showcaseEligibilityFingerprint(config, decisions[0]), id);
     assert.equal(grants[0].fingerprint, showcaseFingerprint(config, grants[0]), id);
   }
-  assert.equal(new Set(config.showcases.map(item => `${item.kind}:${item.id}`)).size, 74);
+  assert.equal(new Set(config.showcases.map(item => `${item.kind}:${item.id}`)).size, 82); // EC-W9: 73 + 10 - the retired Forgebox concept
   assert.equal(validateConfig(config).ok, true);
 });
 test("no refreshed project joined a planet and none exposes a private repository or extra public field", () => {

@@ -2,10 +2,13 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { assemble } from "../scripts/build.mjs";
+import { beforeEcW9 } from "./helpers/republished-evidence.mjs";
 import { validateConfig } from "../scripts/validate.mjs";
 import { conceptShowcasePresentation, showcaseFingerprint, showcaseEligibilityFingerprint, showcasePresentationFingerprint } from "../scripts/showcases.mjs";
 import { beforeEcW7 } from "./helpers/republished-evidence.mjs";
-const config = assemble();
+const current = assemble();
+// The concept batch is exercised on the manifests as they were before EC-W9 promoted Forgebox, the last committed concept.
+const config = beforeEcW9(current);
 const approved = [
   {
     "id": "forgebox",
@@ -36,7 +39,7 @@ const approved = [
   }
 ];
 test("first future batch keeps its three grants in place; Hearthside and Momee were promoted to projects in A4.14", () => {
-  assert.equal(config.showcases.length, 74); assert.equal(config.showcasePublication.length, 74); assert.equal(config.showcaseEligibility.length, 37); // 2026-11 registry refresh: +16 projects, Vynote concept replaced by its project (59 + 16 - 1)
+  assert.equal(config.showcases.length, 73); assert.equal(config.showcasePublication.length, 73); assert.equal(config.showcaseEligibility.length, 36); // 2026-11 registry refresh: +16 projects, Vynote concept replaced by its project (59 + 16 - 1)
   // Re-pinned 2026-11-06 for the FM Journal → FM Blog rename: only grant [38] (project blog) was re-reviewed; every other grant is byte-identical (docs/showcase-publication-approvals.md).
   // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
   assert.equal(createHash("sha256").update(JSON.stringify(beforeEcW7(config.showcasePublication.slice(0, 47)).map(grant => grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant))).digest("hex"), "a0f10925ed066bc62145e216ce20de90e515b1b9fcb0828dba8741d821a418f8");

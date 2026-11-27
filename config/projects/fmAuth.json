@@ -1,0 +1,40 @@
+{
+  "id": "fmAuth",
+  "name": "FM Auth",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "platforms",
+  "repository": "web-fm-auth",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "fm-auth",
+      "subdomain": "fm-auth"
+    }
+  },
+  "tagline": {
+    "en": "Your identity, locally.",
+    "id": "Identitas Anda, secara lokal."
+  },
+  "description": {
+    "en": "A browser-local identity hub with local accounts, per-app identities, a consent window and a developer SDK for integration demos. Sessions and verification codes are simulated and stay in your browser; it is not a hosted authentication service.",
+    "id": "Pusat identitas lokal di browser dengan akun lokal, identitas per aplikasi, jendela persetujuan, dan SDK pengembang untuk demo integrasi. Sesi dan kode verifikasi disimulasikan dan tetap di browser Anda; ini bukan layanan autentikasi daring."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "identity",
+    "local-first",
+    "sdk",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/fmAuth/thumbnail.webp"
+  }
+}

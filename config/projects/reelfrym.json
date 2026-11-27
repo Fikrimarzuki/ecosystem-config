@@ -1,0 +1,40 @@
+{
+  "id": "reelfrym",
+  "name": "Reelfrym",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-reelfrym",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "reelfrym",
+      "subdomain": "reelfrym"
+    }
+  },
+  "tagline": {
+    "en": "Every frame in motion.",
+    "id": "Setiap bingkai bergerak."
+  },
+  "description": {
+    "en": "A browser-based motion graphics editor with templates, scenes, text and shapes, entrance effects, a timeline and one audio track, exporting WebM video and PNG frames. Projects stay on your device. Video clip editing, MP4 export and AI features are not available.",
+    "id": "Editor grafis gerak berbasis browser dengan templat, adegan, teks dan bentuk, efek masuk, linimasa, dan satu trek audio, dengan ekspor video WebM dan bingkai PNG. Proyek tetap di perangkat Anda. Pengeditan klip video, ekspor MP4, dan fitur AI belum tersedia."
+  },
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "motion-graphics",
+    "video-editor",
+    "local-first",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/reelfrym/thumbnail.webp"
+  }
+}

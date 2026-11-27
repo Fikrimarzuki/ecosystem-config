@@ -28,6 +28,7 @@ import { CAREER_COLLECTIONS } from "./career.mjs";
 import { originsOrder } from "./origins.mjs";
 import { conceptsOrder } from "./concepts.mjs";
 import { checkShowcases } from "./showcases.mjs";
+import { checkWebsiteLinks } from "./website-links.mjs";
 import { checkCareerPublication, emptyCareerPublication } from "./career-publication.mjs";
 import { checkConceptsPublication, emptyConceptsPublication } from "./concepts-publication.mjs";
 
@@ -93,11 +94,12 @@ function getValidators() {
   ajv.addSchema(conceptsSchema);
   const conceptsPublicationSchema = readJson(conceptsPublicationSchemaPath, "schema/concepts-publication.schema.json");
   ajv.addSchema(conceptsPublicationSchema);
-  for (const name of ["showcases", "showcase-publication", "showcase-eligibility"]) ajv.addSchema(readJson(resolve(root, `schema/${name}.schema.json`), name));
+  for (const name of ["showcases", "showcase-publication", "showcase-eligibility", "website-links"]) ajv.addSchema(readJson(resolve(root, `schema/${name}.schema.json`), name));
   validators = {
     showcases: { validate: ajv.getSchema("https://config-ecosystem.invalid/schema/showcases.schema.json"), schema: "schema/showcases.schema.json" },
     showcaseEligibility: { validate: ajv.getSchema("https://config-ecosystem.invalid/schema/showcase-eligibility.schema.json"), schema: "schema/showcase-eligibility.schema.json" },
     showcasePublication: { validate: ajv.getSchema("https://config-ecosystem.invalid/schema/showcase-publication.schema.json"), schema: "schema/showcase-publication.schema.json" },
+    websiteLinks: { validate: ajv.getSchema("https://config-ecosystem.invalid/schema/website-links.schema.json"), schema: "schema/website-links.schema.json" },
     conceptsPublication: { validate: ajv.getSchema(conceptsPublicationSchema.$id), schema: "schema/concepts-publication.schema.json" },
     careerPublication: { validate: ajv.getSchema(careerPublicationSchema.$id), schema: "schema/career-publication.schema.json" },
     project: { validate: ajv.getSchema(projectSchema.$id), schema: "schema/project.schema.json" },
@@ -301,9 +303,9 @@ export function assemble({ configDir = resolve(root, "config") } = {}) {
     fail("config/concepts-publication.json does not match schema/concepts-publication.schema.json",
       [...new Set(schemas.conceptsPublication.validate.errors.map(formatProjectError).filter(Boolean))]);
   }
-  for (const key of ["showcases", "showcasePublication", "showcaseEligibility"]) if (key in global_) fail(`config/global.json must not contain ${key}`);
+  for (const key of ["showcases", "showcasePublication", "showcaseEligibility", "websiteLinks"]) if (key in global_) fail(`config/global.json must not contain ${key}`);
   const extras = {};
-  for (const [key, file] of [["showcases", "showcases.json"], ["showcasePublication", "showcase-publication.json"], ["showcaseEligibility", "showcase-eligibility.json"]]) {
+  for (const [key, file] of [["showcases", "showcases.json"], ["showcasePublication", "showcase-publication.json"], ["showcaseEligibility", "showcase-eligibility.json"], ["websiteLinks", "website-links.json"]]) {
     const path = resolve(configDir, file);
     if (existsSync(path)) {
       extras[key] = readJson(path, `config/${file}`);
@@ -314,6 +316,9 @@ export function assemble({ configDir = resolve(root, "config") } = {}) {
   const showcaseErrors = [];
   checkShowcases(assembled, showcaseErrors);
   if (showcaseErrors.length) fail("Invalid showcase approvals", showcaseErrors);
+  const websiteLinkErrors = [];
+  checkWebsiteLinks(assembled, websiteLinkErrors);
+  if (websiteLinkErrors.length) fail("Invalid website link decisions", websiteLinkErrors);
   const publicationErrors = [];
   checkCareerPublication(assembled, publicationErrors);
   if (publicationErrors.length) fail("Invalid Career publication approvals", publicationErrors);

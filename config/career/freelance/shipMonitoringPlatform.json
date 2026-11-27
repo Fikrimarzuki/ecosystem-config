@@ -17,5 +17,8 @@
     "Material UI",
     "Tailwind CSS"
   ],
-  "engagement": "freelance"
+  "engagement": "freelance",
+  "assets": {
+    "thumbnail": "assets/career/freelance/shipMonitoringPlatform/thumbnail.webp"
+  }
 }

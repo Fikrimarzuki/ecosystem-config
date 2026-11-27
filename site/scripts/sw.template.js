@@ -38,7 +38,7 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  if (url.pathname.startsWith(`${BASE}generated/projects/`)) {
+  if (url.pathname.startsWith(`${BASE}generated/projects/`) || url.pathname.startsWith(`${BASE}generated/cases/`)) {
     event.respondWith(caches.open(MEDIA).then(async cache => {
       const cached = await cache.match(request, { ignoreVary: true });
       const network = fetch(request).then(response => { if (response.ok) { cache.put(request, response.clone()); trimMedia(); } return response; });

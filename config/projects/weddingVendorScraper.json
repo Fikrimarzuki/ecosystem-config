@@ -6,9 +6,20 @@
   "destination": "labs",
   "repository": "lab-wedding-vendor-scraper",
   "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "wedding-vendor-scraper",
+      "subdomain": "wedding-vendor-scrapper"
+    }
+  },
   "description": {
     "en": "A local tool for collecting wedding vendor profiles, packages, and reviews from supported directories, with resumable runs and CSV/JSON exports.",
     "id": "Alat lokal untuk mengumpulkan profil vendor pernikahan, paket, dan ulasan dari direktori yang didukung, dengan proses yang dapat dilanjutkan serta ekspor CSV/JSON."
   },
-  "related": ["nikahyuk"]
+  "related": [
+    "nikahyuk"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/weddingVendorScraper/thumbnail.webp"
+  }
 }

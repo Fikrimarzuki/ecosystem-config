@@ -27,15 +27,18 @@ test("optional concept metadata is typed, legacy-compatible and does not grant p
   assert(production.conceptsPublication.every(grant => grant.fields.length === 1 && grant.fields[0] === "title"));
 });
 
-test("A4.7 scraper keeps its existing completed/private/hidden identity and no deployment", () => {
+test("A4.7 scraper keeps its completed/private/hidden identity; EC-W9.3 adds only its website and thumbnail", () => {
   const record = production.projects.weddingVendorScraper;
   assert.equal(record.repository, "lab-wedding-vendor-scraper");
   assert.equal(record.status, "completed");
   assert.equal(record.destination, "labs");
   assert.equal(record.listing, "hidden");
   assert.equal(record.repositoryVisibility, "private");
-  assert.equal(record.deployments, undefined);
+  // The hostname's double "p" is the owner's intentional spelling; project, repository and deployment names are not renamed.
+  assert.equal(record.name, "Wedding Vendor Scraper");
+  assert.deepEqual(record.deployments, { main: { name: "wedding-vendor-scraper", subdomain: "wedding-vendor-scrapper" } });
+  assert.deepEqual(record.assets, { thumbnail: "assets/projects/weddingVendorScraper/thumbnail.webp" });
   assert.match(record.description.en, /CSV\/JSON exports/);
   assert.match(record.description.id, /ekspor CSV\/JSON/);
-  assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 +5 hidden (ecosystemAssets, hearthside, momee, vaults, zketchly); + urchinRelay (hidden, Urchin Relay M0.2)
+  assert.equal(Object.keys(production.projects).length, 78); // EC-W9 adds eight hidden projects (fmAuth, fmMail, fmLogs, journigo, zentralynk, reelfrym, relyxee, forgebox). Before that, 70: M6.1 adds hidden Oh Baby Grow. Before that, 69 included Linstem (hidden). Earlier: 68 = 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 +5 hidden (ecosystemAssets, hearthside, momee, vaults, zketchly); + urchinRelay (hidden, Urchin Relay M0.2)
 });

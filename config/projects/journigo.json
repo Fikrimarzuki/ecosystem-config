@@ -1,0 +1,41 @@
+{
+  "id": "journigo",
+  "name": "Journigo",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "web-journigo",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "journigo",
+      "subdomain": "journigo"
+    }
+  },
+  "tagline": {
+    "en": "Your journey starts here.",
+    "id": "Perjalananmu dimulai di sini."
+  },
+  "description": {
+    "en": "A travel marketplace showcase for stays, flights, activities, transport, events and packages, with customer, host, partner and admin views. Listings are sample data and bookings and payments are simulated: nothing is reserved or charged.",
+    "id": "Showcase marketplace perjalanan untuk penginapan, penerbangan, aktivitas, transportasi, acara, dan paket, dengan tampilan pelanggan, tuan rumah, mitra, dan admin. Daftarnya adalah data contoh; pemesanan dan pembayaran disimulasikan: tidak ada yang benar-benar dipesan atau ditagih."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "travel",
+    "marketplace",
+    "portfolio",
+    "browser-demo"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/journigo/thumbnail.webp"
+  }
+}

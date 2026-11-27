@@ -24,7 +24,9 @@ test("ten hidden projects have independent source-specific eligibility; first 37
   // A4.14B appended the four approved recent projects. A4.14: Hearthside, Momee, Quibiq, XYZ and Your Space joined the standard hidden-project path (no lifecycle decisions remain).
   assert.deepEqual(config.showcaseEligibility.filter(item => item.kind === "project" && !item.lifecycle).map(decision => decision.id), [...ids, "hearthside", "momee", "quibiq", "xyz", "yourSpace", "vaults", "zketchly", "urchinRelay", "ecosystemAssets",
     // 2026-11 registry refresh: sixteen owner-approved projects (Vynote replaced its concept entry).
-    "quillio", "xpenz", "zevorama", "havernia", "buddyChamp", "beacon", "ecosystemIdeas", "orynth", "ilyst", "vynote", "codyssey", "platformLab", "kenali", "keranjoo", "urusaha", "yunivisi"]);
+    "quillio", "xpenz", "zevorama", "havernia", "buddyChamp", "beacon", "ecosystemIdeas", "orynth", "ilyst", "vynote", "codyssey", "platformLab", "kenali", "keranjoo", "urusaha", "yunivisi",
+    // EC-W9: ten implemented projects (Forgebox replaced its concept entry).
+    "fmAuth", "fmMail", "fmLogs", "journigo", "zentralynk", "reelfrym", "relyxee", "forgebox", "ohBabyGrow", "linstem"]);
   for (const decision of config.showcaseEligibility.filter(item => item.kind === "project" && !item.lifecycle)) {
     assert.equal(config.projects[decision.id].listing, "hidden");
     assert.deepEqual(Object.keys(decision).sort(), ["fingerprint", "id", "kind", "listing", "surface"]);
@@ -60,7 +62,7 @@ test("hidden eligibility is required per identity, listing and surface; stale/re
     assert.equal(validateConfig(stale).ok, false);
   }
 });
-test("74 independent A–Z grants (the original 55 plus four approved in A4.14B plus sixteen in the 2026-11 refresh, minus the replaced Vynote concept) preserve the original ten members and grants; Career unchanged", () => {
+test("82 independent A–Z grants after EC-W9 preserve the original ten members and grants; Career unchanged", () => {
   assert.equal(validateConfig(config).ok, true);
   assert.deepEqual(config.showcases.slice(0, 10), [
     { kind: "assessment", id: "aiSessionManager" }, { kind: "engagement", id: "automotiveInventorySystem" },
@@ -71,8 +73,8 @@ test("74 independent A–Z grants (the original 55 plus four approved in A4.14B 
     { kind: "work", employerId: "pixelHouseStudio", id: "nodejs-data-converter" },
     { kind: "project", id: "pageLayr" }, { kind: "project", id: "tinyverse" },
   ]);
-  assert.equal(config.showcases.length, 74); // 59 + 16 refreshed projects - the Vynote concept replaced by its project
-  assert.equal(config.showcasePublication.length, 74);
+  assert.equal(config.showcases.length, 82);
+  assert.equal(config.showcasePublication.length, 82);
   assert.equal(createHash("sha256").update(JSON.stringify(beforeEcW7(config.showcasePublication.slice(0, 10)))).digest("hex"),
     "01654dd0f9c26c3fe7c2ccf65e6a5cfd66dc3ff6ddec83de0dd91a72d511453b");
   assert.deepEqual(config.careerPublication, JSON.parse(readFileSync(new URL("../config/production.json", import.meta.url))).careerPublication);

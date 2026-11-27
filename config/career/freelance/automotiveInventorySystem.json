@@ -20,5 +20,8 @@
     "Sequelize",
     "MySQL"
   ],
-  "engagement": "freelance"
+  "engagement": "freelance",
+  "assets": {
+    "thumbnail": "assets/career/freelance/automotiveInventorySystem/thumbnail.webp"
+  }
 }

@@ -16,6 +16,7 @@ export type Project = {
   description?: Localized;
   technologies?: string[];
   website: { key: string; url: string }[];
+  websiteAction?: "app" | "demo" | "website";
   websiteWithheld: boolean;
   repositoryUrl?: string;
   thumbnail: boolean;
@@ -29,7 +30,7 @@ export type Project = {
 export type Showcase =
   | { handle: string; kind: "project"; projectId: string; title: string }
   | { handle: string; kind: "concept"; title: string; description: { en?: string; id?: string }; status?: string }
-  | { handle: string; kind: "case"; title: string; year?: number; description: { en?: string; id?: string }; technologies?: string[] };
+  | { handle: string; kind: "case"; title: string; year?: number; description: { en?: string; id?: string }; technologies?: string[]; thumbnail?: boolean };
 
 export type Consumer = { projectId: string; status: string; artifact: Artifact | null; notify: boolean };
 
@@ -63,4 +64,5 @@ export const registryUrl = "https://raw.githubusercontent.com/Fikrimarzuki/ecosy
 export const legacyRegistryUrl = "https://raw.githubusercontent.com/Fikrimarzuki/ecosystem-config/main/config/production.json";
 export const repositoryUrl = "https://github.com/Fikrimarzuki/ecosystem-config";
 
+export const caseThumbnailSrc = (entry: Showcase) => entry.kind === "case" && entry.thumbnail ? `${import.meta.env.BASE_URL}generated/cases/${entry.handle}.webp` : null;
 export const thumbnailSrc = (project: Project) => project.thumbnail ? `${import.meta.env.BASE_URL}generated/projects/${project.id}.webp` : null;

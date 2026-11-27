@@ -1,0 +1,40 @@
+{
+  "id": "fmMail",
+  "name": "FM Mail",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "tools",
+  "repository": "web-fm-mail",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "fm-mail",
+      "subdomain": "fm-mail"
+    }
+  },
+  "tagline": {
+    "en": "Every email your app sends. None of it leaves the browser.",
+    "id": "Setiap email dari aplikasimu. Tak satu pun keluar dari browser."
+  },
+  "description": {
+    "en": "A browser-local email simulator with a mailbox, templates, local identities and an SDK that lets demo apps deliver messages into it. Delivery is simulated: no real email is ever sent.",
+    "id": "Simulator email lokal di browser dengan kotak surat, templat, identitas lokal, dan SDK agar aplikasi demo dapat mengirim pesan ke dalamnya. Pengirimannya disimulasikan: tidak ada email sungguhan yang dikirim."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Zustand",
+    "Dexie",
+    "IndexedDB"
+  ],
+  "tags": [
+    "email-simulator",
+    "local-first",
+    "sdk",
+    "developer-tool"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/fmMail/thumbnail.webp"
+  }
+}

@@ -2,12 +2,13 @@
 // Build-time data for the website. Reads the committed registry artifact and the Markdown guides;
 // writes only ignored, generated files under site/. It never writes the registry or its outputs.
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import MarkdownIt from "markdown-it";
 import { validateConfig } from "../../scripts/validate.mjs";
-import { projectSite } from "./projection.mjs";
+import { caseArtworkSources, projectSite } from "./projection.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const site = join(root, "site");
@@ -29,7 +30,14 @@ const facts = {
   builtAt: new Date().toISOString(),
   schemas: readdirSync(join(root, "schema")).filter(name => name.endsWith(".schema.json")).length,
 };
-const data = projectSite(config, consumers, facts);
+// Only case-study images whose bytes still match the owner's approval are published.
+const caseArtwork = caseArtworkSources(config).filter(({ path, sha256 }) => {
+  const source = join(root, path);
+  const approved = existsSync(source) && createHash("sha256").update(readFileSync(source)).digest("hex") === sha256;
+  if (!approved) console.warn(`site data: withheld an unapproved case-study image (${path})`);
+  return approved;
+});
+const data = projectSite(config, consumers, { ...facts, caseArtwork: new Set(caseArtwork.map(source => source.handle)) });
 
 rmSync(publicGenerated, { recursive: true, force: true });
 mkdirSync(join(publicGenerated, "projects"), { recursive: true });
@@ -40,6 +48,8 @@ for (const project of data.projects) {
   if (!existsSync(source) || !path.endsWith(".webp")) { project.thumbnail = false; continue; }
   copyFileSync(source, join(publicGenerated, "projects", `${project.id}.webp`));
 }
+mkdirSync(join(publicGenerated, "cases"), { recursive: true });
+for (const { handle, path } of caseArtwork) copyFileSync(join(root, path), join(publicGenerated, "cases", `${handle}.webp`));
 
 // ── Guides ───────────────────────────────────────────────────────────────────
 const sections = {

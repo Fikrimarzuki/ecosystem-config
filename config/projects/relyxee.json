@@ -1,0 +1,40 @@
+{
+  "id": "relyxee",
+  "name": "Relyxee",
+  "status": "active",
+  "listing": "hidden",
+  "destination": "products",
+  "repository": "web-relyxee",
+  "repositoryVisibility": "private",
+  "deployments": {
+    "main": {
+      "name": "relyxee",
+      "subdomain": "relyxee"
+    }
+  },
+  "tagline": {
+    "en": "Capture reality. Create in 3D. Preserve memories.",
+    "id": "Tangkap realitas. Berkreasi dalam 3D. Abadikan kenangan."
+  },
+  "description": {
+    "en": "A local-first creative space for collecting photos and video frames, turning an image into a 2.5D relief, arranging 3D scenes and keeping memory galleries with tours. It does not reconstruct 3D models by photogrammetry or Gaussian splatting.",
+    "id": "Ruang kreatif yang menyimpan data di perangkat untuk mengumpulkan foto dan bingkai video, mengubah gambar menjadi relief 2,5D, menata adegan 3D, dan menyimpan galeri kenangan dengan tur. Tidak merekonstruksi model 3D lewat fotogrametri atau Gaussian splatting."
+  },
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Three.js",
+    "React Three Fiber",
+    "IndexedDB"
+  ],
+  "tags": [
+    "3d",
+    "memory-gallery",
+    "local-first",
+    "pwa"
+  ],
+  "assets": {
+    "thumbnail": "assets/projects/relyxee/thumbnail.webp"
+  }
+}

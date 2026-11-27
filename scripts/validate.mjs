@@ -17,6 +17,7 @@ import { originsOrder, ORIGINS_ORDER_DESCRIPTION } from "./origins.mjs";
 import { conceptsOrder, CONCEPTS_ORDER_DESCRIPTION } from "./concepts.mjs";
 import { checkCareerPublication } from "./career-publication.mjs";
 import { checkShowcases } from "./showcases.mjs";
+import { checkWebsiteLinks } from "./website-links.mjs";
 import { checkConceptsPublication } from "./concepts-publication.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -109,7 +110,7 @@ function validateSchema(config) {
     ajv.addSchema(readJson(originsSchemaPath, "origins schema"));
     ajv.addSchema(readJson(conceptsSchemaPath, "concepts schema"));
     ajv.addSchema(readJson(conceptsPublicationSchemaPath, "concepts publication schema"));
-    for (const name of ["showcases", "showcase-publication", "showcase-eligibility"]) ajv.addSchema(readJson(resolve(root, `schema/${name}.schema.json`), name));
+    for (const name of ["showcases", "showcase-publication", "showcase-eligibility", "website-links"]) ajv.addSchema(readJson(resolve(root, `schema/${name}.schema.json`), name));
     compiledSchema = ajv.compile(readJson(schemaPath, "schema"));
   }
   const validate = compiledSchema;
@@ -480,6 +481,7 @@ function validateSemantics(config) {
   checkCareerPublication(config, errors);
   checkConceptsPublication(config, errors);
   checkShowcases(config, errors);
+  checkWebsiteLinks(config, errors);
   checkOrigins(config, errors);
   checkConcepts(config, errors);
 

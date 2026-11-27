@@ -7,17 +7,22 @@
 //   Every other record contributes to counts only.
 // * Repository names are never emitted. A repository link is emitted only for `repositoryVisibility: public`.
 // * Technologies are emitted for `listing: public` projects only.
-// * Website links come from registered deployments, except where the owner withheld the link
-//   (mirrors web-gateway lib/portfolio-policy.mjs `withheldPortfolioDeploymentIds`).
+// * Website links come from registered deployments, except where config/website-links.json withholds them. The same
+//   file names each link's action (open app, view demo or visit website).
 // * Consumers are named by their registry project, never by repository.
 // * The A–Z Showcase lists only entries with BOTH a membership and a publication grant. For concept and Career-derived
 //   entries it emits exactly the granted fields; Career-derived entries (assessment, work, engagement) share one generic
 //   "case" type and an opaque handle, so no employer, record kind, classification or canonical id is published.
+// * A text grant never publishes an image. A case study shows one only when the owner approved that exact file
+//   (approvedCaseArtwork below); it is served under the opaque handle, never under its registry path.
 
-/** Owner-withheld website links (keep in step with web-gateway's withheldPortfolioDeploymentIds). */
-export const withheldDeploymentIds = Object.freeze([
-  "watch", "weddingVendorScraper", "momee", "quibiq", "keranjoo", "urusaha", "yunivisi",
-]);
+/** Owner link decisions from the registry (config/website-links.json), shared with every consumer. Fails closed:
+ * a registry without the list is an error, never an instruction to link everything.
+ * @returns {Map<string, "app" | "demo" | "website" | "withheld">} */
+export function websiteDecisions(config) {
+  if (!Array.isArray(config.websiteLinks)) throw new Error("Registry has no websiteLinks decisions");
+  return new Map(config.websiteLinks.map(entry => [entry.id, entry.action]));
+}
 
 /** Display order of canonical destinations. Labels are localized in the app. */
 export const categoryOrder = Object.freeze([
@@ -29,6 +34,14 @@ import { createHash } from "node:crypto";
 const showcaseKey = entry => JSON.stringify([entry.kind, entry.kind === "work" ? entry.employerId : null, entry.id]);
 export const showcaseHandle = entry => createHash("sha256").update(showcaseKey(entry)).digest("hex").slice(0, 12);
 
+/** Owner image approvals for Career-derived entries (2026-11-28), bound to the SHA-256 of the approved file.
+ * A replaced image, or one added to another record, stays unpublished until it is approved here. */
+export const approvedCaseArtwork = new Map([
+  [{ kind: "assessment", id: "aiSessionManager" }, "3ecd1c17e0035c33ef26209afac807f8176567baa22cb697e7cb5a6568afc1bf"],
+  [{ kind: "work", employerId: "pixelHouseStudio", id: "managix-page-builder" }, "d886835b984390bb51f6bf87615a699581db9ba0d6b314577ce2a1d7c8fc0fee"],
+  [{ kind: "engagement", id: "automotiveInventorySystem" }, "5515b0527693c1dcbb16e921296a44286d6d3815ac9d0678de84117a4c4a37da"],
+].map(([source, sha256]) => [showcaseKey(source), sha256]));
+
 function careerRecord(config, entry) {
   const career = config.career ?? {};
   if (entry.kind === "assessment") return (career.assessments ?? []).find(record => record.id === entry.id);
@@ -37,8 +50,17 @@ function careerRecord(config, entry) {
   return undefined;
 }
 
-/** Authorized A–Z entries: membership AND grant. Granted fields only. */
-export function projectShowcases(config, describedIds) {
+/** Image files to copy for the A–Z page: registry path, approved digest and the public handle. */
+export function caseArtworkSources(config) {
+  return (config.showcases ?? []).flatMap(member => {
+    const sha256 = approvedCaseArtwork.get(showcaseKey(member));
+    const path = sha256 ? careerRecord(config, member)?.assets?.thumbnail : undefined;
+    return typeof path === "string" && path.endsWith(".webp") ? [{ handle: showcaseHandle(member), path, sha256 }] : [];
+  });
+}
+
+/** Authorized A–Z entries: membership AND grant. Granted fields only, plus separately approved artwork. */
+export function projectShowcases(config, describedIds, artwork = new Set(caseArtworkSources(config).map(source => source.handle))) {
   const grants = new Map((config.showcasePublication ?? []).map(grant => [showcaseKey(grant), grant]));
   const entries = [];
   for (const member of config.showcases ?? []) {
@@ -64,7 +86,8 @@ export function projectShowcases(config, describedIds) {
       entries.push({ handle, kind: "case", title,
         ...(fields.has("year") && record.year !== undefined ? { year: record.year } : {}),
         description: { ...(fields.has("description.en") ? { en: record.description.en } : {}), ...(fields.has("description.id") && record.description?.id ? { id: record.description.id } : {}) },
-        ...(grant.technologies?.length ? { technologies: (record.technologies ?? []).filter(value => grant.technologies.includes(value)) } : {}) });
+        ...(grant.technologies?.length ? { technologies: (record.technologies ?? []).filter(value => grant.technologies.includes(value)) } : {}),
+        ...(artwork.has(handle) ? { thumbnail: true } : {}) });
     }
   }
   return entries;
@@ -88,7 +111,7 @@ const localized = value => value ? { en: value.en, ...(value.id ? { id: value.id
 /**
  * @param {object} config assembled canonical registry (dist/ecosystem.json)
  * @param {{ consumers: object[] }} consumerRegistry .github/consumers.json
- * @param {{ thumbnails?: Set<string>, validation?: { ok: boolean, errors: number }, revision?: string|null, builtAt?: string, schemas?: number }} [facts]
+ * @param {{ thumbnails?: Set<string>, caseArtwork?: Set<string>, validation?: { ok: boolean, errors: number }, revision?: string|null, builtAt?: string, schemas?: number }} [facts]
  */
 export function projectSite(config, consumerRegistry, facts = {}) {
   const granted = new Set((config.showcasePublication ?? []).filter(grant => grant.kind === "project").map(grant => grant.id));
@@ -107,11 +130,14 @@ export function projectSite(config, consumerRegistry, facts = {}) {
   }
   const consumerOf = new Map(consumers.map(consumer => [consumer.projectId, consumer]));
 
+  const decisions = websiteDecisions(config);
   const described = Object.entries(config.projects).filter(([id, project]) => project.listing === "public" || granted.has(id));
   const describedIds = new Set(described.map(([id]) => id));
   const projects = described.map(([id, project]) => {
     const isPublic = project.listing === "public";
-    const website = withheldDeploymentIds.includes(id) ? [] : Object.entries(project.deployments ?? {}).map(([key, deployment]) => ({
+    const decision = decisions.get(id) ?? "website";
+    const withheld = decision === "withheld";
+    const website = withheld ? [] : Object.entries(project.deployments ?? {}).map(([key, deployment]) => ({
       key, url: deploymentUrl(config, deployment),
     }));
     return {
@@ -121,7 +147,8 @@ export function projectSite(config, consumerRegistry, facts = {}) {
       ...(project.description ? { description: localized(project.description) } : {}),
       ...(isPublic && project.technologies ? { technologies: [...project.technologies] } : {}),
       website,
-      websiteWithheld: withheldDeploymentIds.includes(id) && Object.keys(project.deployments ?? {}).length > 0,
+      ...(website.length ? { websiteAction: decision } : {}),
+      websiteWithheld: withheld && Object.keys(project.deployments ?? {}).length > 0,
       ...(project.repositoryVisibility === "public" ? { repositoryUrl: `https://github.com/${config.username}/${project.repository}${project.path ? `/tree/main/${project.path}` : ""}` } : {}),
       thumbnail: Boolean(project.assets?.thumbnail && (facts.thumbnails?.has(id) ?? true)),
       sharedAssets: Object.keys(project.assets ?? {}).filter(key => key !== "media").sort(),
@@ -134,7 +161,7 @@ export function projectSite(config, consumerRegistry, facts = {}) {
   const count = (items, key) => items.reduce((total, item) => ({ ...total, [item[key]]: (total[item[key]] ?? 0) + 1 }), {});
   const all = Object.values(config.projects);
   const career = config.career ?? {};
-  const showcases = projectShowcases(config, describedIds);
+  const showcases = projectShowcases(config, describedIds, facts.caseArtwork);
   return {
     showcases,
     generated: {

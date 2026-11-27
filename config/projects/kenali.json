@@ -17,8 +17,8 @@
     "id": "Ruang untuk rasa ingin tahu."
   },
   "description": {
-    "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. No lessons are released yet.",
-    "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Belum ada pelajaran yang dirilis."
+    "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. Two illustrative early-childhood games are playable; the other worlds are previews.",
+    "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Dua gim ilustratif untuk anak usia dini sudah bisa dimainkan; dunia lainnya masih berupa pratinjau."
   },
   "technologies": [
     "Next.js",

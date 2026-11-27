@@ -1,0 +1,286 @@
+[
+  {
+    "id": "beacon",
+    "action": "website"
+  },
+  {
+    "id": "blog",
+    "action": "website"
+  },
+  {
+    "id": "buddyChamp",
+    "action": "demo"
+  },
+  {
+    "id": "codyssey",
+    "action": "website"
+  },
+  {
+    "id": "configEcosystem",
+    "action": "website"
+  },
+  {
+    "id": "courses",
+    "action": "website"
+  },
+  {
+    "id": "cssTricks",
+    "action": "website"
+  },
+  {
+    "id": "cv",
+    "action": "website"
+  },
+  {
+    "id": "devtools",
+    "action": "app"
+  },
+  {
+    "id": "ecosystemAssets",
+    "action": "website"
+  },
+  {
+    "id": "ecosystemIdeas",
+    "action": "demo"
+  },
+  {
+    "id": "ecosystemSkills",
+    "action": "website"
+  },
+  {
+    "id": "fmAuth",
+    "action": "demo"
+  },
+  {
+    "id": "fmLogs",
+    "action": "demo"
+  },
+  {
+    "id": "fmMail",
+    "action": "demo"
+  },
+  {
+    "id": "fmStudios",
+    "action": "demo"
+  },
+  {
+    "id": "foodieMap",
+    "action": "demo"
+  },
+  {
+    "id": "forgebox",
+    "action": "app"
+  },
+  {
+    "id": "frontendLab",
+    "action": "app"
+  },
+  {
+    "id": "games",
+    "action": "app"
+  },
+  {
+    "id": "gateway",
+    "action": "website"
+  },
+  {
+    "id": "havernia",
+    "action": "website"
+  },
+  {
+    "id": "hearthside",
+    "action": "demo"
+  },
+  {
+    "id": "ilyst",
+    "action": "app"
+  },
+  {
+    "id": "inventory",
+    "action": "demo"
+  },
+  {
+    "id": "javascriptia",
+    "action": "app"
+  },
+  {
+    "id": "journigo",
+    "action": "demo"
+  },
+  {
+    "id": "kenali",
+    "action": "demo"
+  },
+  {
+    "id": "keranjoo",
+    "action": "demo"
+  },
+  {
+    "id": "kodeStep",
+    "action": "app"
+  },
+  {
+    "id": "learning",
+    "action": "app"
+  },
+  {
+    "id": "links",
+    "action": "website"
+  },
+  {
+    "id": "linstem",
+    "action": "app"
+  },
+  {
+    "id": "littleRoars",
+    "action": "app"
+  },
+  {
+    "id": "momee",
+    "action": "demo"
+  },
+  {
+    "id": "neuran",
+    "action": "website"
+  },
+  {
+    "id": "nikahkuy",
+    "action": "demo"
+  },
+  {
+    "id": "nikahyuk",
+    "action": "website"
+  },
+  {
+    "id": "nikahyukPrototype",
+    "action": "demo"
+  },
+  {
+    "id": "ohBabyGrow",
+    "action": "app"
+  },
+  {
+    "id": "orynth",
+    "action": "website"
+  },
+  {
+    "id": "pageLayr",
+    "action": "app"
+  },
+  {
+    "id": "platformLab",
+    "action": "website"
+  },
+  {
+    "id": "playdeck",
+    "action": "app"
+  },
+  {
+    "id": "playground",
+    "action": "website"
+  },
+  {
+    "id": "playnest",
+    "action": "app"
+  },
+  {
+    "id": "projects",
+    "action": "app"
+  },
+  {
+    "id": "quibiq",
+    "action": "demo"
+  },
+  {
+    "id": "quillio",
+    "action": "website"
+  },
+  {
+    "id": "reelfrym",
+    "action": "app"
+  },
+  {
+    "id": "relyxee",
+    "action": "app"
+  },
+  {
+    "id": "roadmap",
+    "action": "app"
+  },
+  {
+    "id": "securityLab",
+    "action": "app"
+  },
+  {
+    "id": "support",
+    "action": "website"
+  },
+  {
+    "id": "tcgHub",
+    "action": "demo"
+  },
+  {
+    "id": "templates",
+    "action": "website"
+  },
+  {
+    "id": "tinyverse",
+    "action": "app"
+  },
+  {
+    "id": "tools",
+    "action": "app"
+  },
+  {
+    "id": "urchinRelay",
+    "action": "demo"
+  },
+  {
+    "id": "urusaha",
+    "action": "demo"
+  },
+  {
+    "id": "vaults",
+    "action": "app"
+  },
+  {
+    "id": "vynote",
+    "action": "website"
+  },
+  {
+    "id": "watch",
+    "action": "app"
+  },
+  {
+    "id": "weddingVendorScraper",
+    "action": "website"
+  },
+  {
+    "id": "xpenz",
+    "action": "app"
+  },
+  {
+    "id": "xyz",
+    "action": "app"
+  },
+  {
+    "id": "yourSpace",
+    "action": "app"
+  },
+  {
+    "id": "yunivisi",
+    "action": "demo"
+  },
+  {
+    "id": "zentralynk",
+    "action": "demo"
+  },
+  {
+    "id": "zevorama",
+    "action": "website"
+  },
+  {
+    "id": "zketchly",
+    "action": "app"
+  }
+]

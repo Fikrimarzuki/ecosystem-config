@@ -35,4 +35,73 @@ export const ecW8Grants = Object.freeze({
 });
 
 /** Restore the EC-W7 prior values on project grants (other grants pass through untouched). */
-export const beforeEcW7 = grants => grants.map(grant => grant.kind === "project" && Object.hasOwn(ecW7Grants, grant.id) ? { ...grant, ...ecW7Grants[grant.id] } : grant);
+export const beforeEcW7 = grants => beforeEcW92(grants).map(grant => grant.kind === "project" && Object.hasOwn(ecW7Grants, grant.id) ? { ...grant, ...ecW7Grants[grant.id] } : grant);
+
+// EC-W9 (2026-11-28): ten implemented projects were approved for Portfolio and A–Z. Forgebox moved from Concepts to a hidden
+// project (same id), so its concept membership, eligibility, grant and title-only Concepts grant were retired; Kenali Academy's
+// description changed, which re-approved only its presentation fingerprint. These exact prior values let historical pins and the
+// concept-mechanism tests rebuild the manifests as published at revision 08e5238.
+export const ecW9Added = Object.freeze(["fmAuth", "fmMail", "fmLogs", "journigo", "zentralynk", "reelfrym", "relyxee", "forgebox", "ohBabyGrow", "linstem"]);
+export const ecW9KenaliGrant = Object.freeze({ before: "sha256:783916f1bf08f7ad3af44252068c628d44e63379a33289338c00ff290190bb06", after: "sha256:7e84e81c9114b7ad0c7a599364e12ac38747ff967937eaa3bc9fc689807a3372" });
+const forgeboxConcept = {"id": "forgebox", "title": "Forgebox", "kind": "concept", "order": 10, "status": "planned", "destination": "tools", "description": {"en": "A planned creative sandbox for building 3D worlds and designing playable game experiences.", "id": "Sandbox kreatif yang direncanakan untuk membangun dunia 3D dan merancang pengalaman permainan yang dapat dimainkan."}};
+const forgeboxTitleGrant = {"id": "forgebox", "fields": ["title"], "fingerprints": {"fields": {"title": "sha256:af534a918ea0fdfa392c6c267c640288d5e9a978fbc10d49e7cda86f14559ef2"}}};
+const forgeboxSlots = {
+  showcases: [47, {"kind": "concept", "id": "forgebox"}],
+  showcaseEligibility: [10, {"kind": "concept", "id": "forgebox", "surface": "az", "fingerprint": "sha256:145f306d0a24a9723cfe773ab57c20616d56f9d5ddf614c30f29aee9034819fb"}],
+  showcasePublication: [47, {"kind": "concept", "id": "forgebox", "surface": "az", "fields": ["title", "description.en", "description.id", "status"], "fingerprint": "sha256:a29d71c50532c410f3390fa3ec7ee4243a99dab088af3948786d0eb0c6943e1a", "presentationFingerprint": "sha256:a5d383e53980effe79980f742521129500100e6922b6d44f324c8afd1eb6078a"}],
+};
+
+/** One manifest as it was before EC-W9: the ten additions removed, Forgebox's concept entry back in its slot, Kenali's value restored. */
+export function manifestBeforeEcW9(key, list) {
+  const rest = list.filter(item => !(item.kind === "project" && ecW9Added.includes(item.id)));
+  const [index, entry] = forgeboxSlots[key];
+  rest.splice(index, 0, structuredClone(entry));
+  return key === "showcasePublication"
+    ? rest.map(item => item.id === "kenali" ? { ...item, presentationFingerprint: ecW9KenaliGrant.before } : item) : rest;
+}
+
+/** The whole configuration with Forgebox still a concept; the other new project records stay (hidden and unselected). */
+export function beforeEcW9(config) {
+  const projects = { ...config.projects };
+  delete projects.forgebox;
+  return { ...config, projects,
+    // Forgebox had no project, so no link decision either.
+    websiteLinks: (config.websiteLinks ?? []).filter(entry => entry.id !== "forgebox"),
+    concepts: [structuredClone(forgeboxConcept), ...config.concepts],
+    conceptsPublication: [structuredClone(forgeboxTitleGrant)],
+    showcases: manifestBeforeEcW9("showcases", config.showcases),
+    showcaseEligibility: manifestBeforeEcW9("showcaseEligibility", config.showcaseEligibility),
+    showcasePublication: manifestBeforeEcW9("showcasePublication", config.showcasePublication) };
+}
+
+// EC-W9.1 (2026-11-28): the Keranjoo, Urusaha and Yunivisi links were released once their hostnames resolved. Their
+// presentation now carries the link, so the official review path re-approved exactly these presentation fingerprints.
+export const ecW91Grants = Object.freeze({
+  keranjoo: "sha256:482b80da50b729549901126dddb390f5156b0d20fdf9cfa54bfd68b26f01dc86",
+  urusaha: "sha256:8c8ebb32f54fcb52727b68422f2553bc1389c7bcf4af392bf51b5f87ebedae6d",
+  yunivisi: "sha256:19d523c04e2bf29811227f1c8f0ffde98d2a594d6ab88b90d0734f5c28bdd970",
+});
+/** Restore the pre-EC-W9.1 presentation values (other grants pass through untouched). */
+export const beforeEcW91 = grants => beforeEcW92(grants).map(grant => grant.kind === "project" && Object.hasOwn(ecW91Grants, grant.id) ? { ...grant, presentationFingerprint: ecW91Grants[grant.id] } : grant);
+
+// EC-W9.2 (2026-11-28): the owner approved the Momee, Quibiq and FM Watch website links, and FM Watch's thumbnail was recaptured
+// with its pairing code masked (same path, so no source fingerprint changed). Exactly these presentation fingerprints were re-approved.
+const ecW92Grants = Object.freeze({
+  watch: "sha256:b6d53d054a66aef86ce6d155511b9709ecfb734f59421c0aa80b50415ec70d2f",
+  momee: "sha256:a36de7604f1b7440cd2e9f3040c2e5b2a64567365d6c75cf8071258dc3d06d6d",
+  quibiq: "sha256:f95333b3489b33fb44fbb082dded87cf4ce0238774eba34820567018b79acd0c",
+});
+/** Restore the pre-EC-W9.2 presentation values (other grants pass through untouched). */
+export function beforeEcW92(grants) {
+  return beforeEcW93(grants).map(grant => grant.kind === "project" && Object.hasOwn(ecW92Grants, grant.id) ? { ...grant, presentationFingerprint: ecW92Grants[grant.id] } : grant);
+}
+
+// EC-W9.3 (2026-11-28): Wedding Vendor Scraper gained its owner-confirmed website and a thumbnail of that landing page. Both are
+// source facts, so its eligibility decision and grant were re-issued with the official helpers; nothing else changed.
+function beforeEcW93(grants) {
+  return grants.map(grant => grant.kind === "project" && grant.id === "weddingVendorScraper" ? { ...grant,
+    fingerprint: "sha256:3c0f6998458ef617b3379a932667c4600bac1ee93a6ddad775a41a89b7d46c4f",
+    presentationFingerprint: "sha256:09a72c4f53b2917294dc6c991de24cd6a74af822105dec59afd128748536c37b" } : grant);
+}
+export const beforeEcW93Eligibility = decisions => decisions.map(decision => decision.id === "weddingVendorScraper"
+  ? { ...decision, fingerprint: "sha256:c6c1083fde3364f82ac2f85964ba16f0e570b5205dff0bfa50e7c066305ff321" } : decision);

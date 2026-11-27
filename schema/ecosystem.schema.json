@@ -113,6 +113,7 @@
     "showcases": { "$ref": "showcases.schema.json" },
     "showcasePublication": { "$ref": "showcase-publication.schema.json" },
     "showcaseEligibility": { "$ref": "showcase-eligibility.schema.json" },
+    "websiteLinks": { "$ref": "website-links.schema.json" },
     "career": {
       "description": "Career collections (experience, freelance, assessments). Always present; each collection may be empty.",
       "$ref": "career.schema.json"

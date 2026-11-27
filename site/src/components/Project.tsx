@@ -22,6 +22,10 @@ export function ProjectArtwork({ project, eager = false }: { project: Project; e
   );
 }
 
+/** The link label the registry decided for this project. */
+export const linkLabel = (project: Project | undefined, copy: { visit: string; openApp: string; viewDemo: string }) =>
+  project?.websiteAction === "app" ? copy.openApp : project?.websiteAction === "demo" ? copy.viewDemo : copy.visit;
+
 export function useProjectText(project: Project) {
   const { text } = useI18n();
   return { summary: text(project.description) || text(project.tagline), tagline: text(project.tagline) };
@@ -99,7 +103,7 @@ function DialogBody({ project, tab, onTab, onClose, closeLabel }: { project: Pro
         {summary && <p>{summary}</p>}
         <ProjectFacts project={project} />
         <p className="small muted">{project.visibility === "public" ? t.registry.publicListing : t.registry.showcase}</p>
-        {project.website[0] && <div className="actions"><a className="button primary" href={project.website[0].url} rel="noopener">{t.registry.visit}</a></div>}
+        {project.website[0] && <div className="actions"><a className="button primary" href={project.website[0].url} rel="noopener">{linkLabel(project, t.registry)}</a></div>}
         </div>
         : <div id="project-panel-json" role="tabpanel" aria-labelledby="project-tab-json" className="dialog-panel"><JsonViewer project={project} /></div>}
     </div>

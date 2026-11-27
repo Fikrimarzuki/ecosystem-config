@@ -23,6 +23,8 @@
 
 * [Career publication approvals](career-publication-approvals.md): independent field grants and content fingerprints.
 * [Concepts publication approvals](concepts-publication-approvals.md): title-only grants, reviewer workflow and consumer adoption.
+* [Website link decisions](website-links.md): which public websites are linked, and the button each one gets.
 * [Registry refresh 2026-11](registry-refresh-2026-11.md): sixteen projects, thumbnails and A–Z evidence (local, not yet published).
+* [Registry expansion EC-W9](registry-expansion-ec-w9.md): ten projects approved for Portfolio and A–Z, thumbnails and publication order.
 
 Historical verification reports and logs live in `diagnostics/`; use the guides above for the current contracts.

@@ -15,6 +15,7 @@ The Markdown guides stay in `docs/` and remain the source: edit a guide once and
   * Technologies are shown for publicly listed projects only.
   * Website links follow the registered deployments, except the ones the owner has withheld (`withheldDeploymentIds`, kept in step with Gateway's `withheldPortfolioDeploymentIds`).
 * **A–Z Showcase** (`/a-z/`) lists only entries with both a membership and a publication grant. Concepts and Career-derived case studies show exactly their granted fields; Career-derived entries share one generic type and an opaque handle, so no employer, record kind or canonical id is published.
+  * A text grant never publishes an image. A case study shows one only when the owner approved that exact file: `approvedCaseArtwork` in `site/scripts/projection.mjs` binds each approval to the file's SHA-256, and the image is served under the entry's opaque handle. After replacing an approved image, review it and update its digest.
 * **Real data only.** The Blueprint draws destinations, registry consumers, `related` links and the two relationships the documentation states:
   * Ecosystem Assets holds Gateway's 3D sources.
   * Ecosystem Assets holds the icon masters.

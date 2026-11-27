@@ -373,6 +373,123 @@
         "thumbnail": "assets/projects/ecosystemSkills/thumbnail.webp"
       }
     },
+    "fmAuth": {
+      "name": "FM Auth",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "web-fm-auth",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "fm-auth",
+          "subdomain": "fm-auth"
+        }
+      },
+      "tagline": {
+        "en": "Your identity, locally.",
+        "id": "Identitas Anda, secara lokal."
+      },
+      "description": {
+        "en": "A browser-local identity hub with local accounts, per-app identities, a consent window and a developer SDK for integration demos. Sessions and verification codes are simulated and stay in your browser; it is not a hosted authentication service.",
+        "id": "Pusat identitas lokal di browser dengan akun lokal, identitas per aplikasi, jendela persetujuan, dan SDK pengembang untuk demo integrasi. Sesi dan kode verifikasi disimulasikan dan tetap di browser Anda; ini bukan layanan autentikasi daring."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "identity",
+        "local-first",
+        "sdk",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/fmAuth/thumbnail.webp"
+      }
+    },
+    "fmLogs": {
+      "name": "FM Logs",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "web-fm-logs",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "fm-logs",
+          "subdomain": "fm-logs"
+        }
+      },
+      "tagline": {
+        "en": "A clearer record of what happened.",
+        "id": "Catatan lebih jelas tentang yang terjadi."
+      },
+      "description": {
+        "en": "A browser-local event logging workspace with a filtered timeline, developer and security views, retention controls and an SDK with a playground for integration demos. Events stay in your browser; it is not a hosted monitoring service.",
+        "id": "Ruang kerja pencatatan peristiwa lokal di browser dengan linimasa berfilter, tampilan pengembang dan keamanan, pengaturan retensi, serta SDK dan playground untuk demo integrasi. Peristiwa tetap di browser Anda; ini bukan layanan pemantauan daring."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "logging",
+        "local-first",
+        "sdk",
+        "developer-tool"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/fmLogs/thumbnail.webp"
+      }
+    },
+    "fmMail": {
+      "name": "FM Mail",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "web-fm-mail",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "fm-mail",
+          "subdomain": "fm-mail"
+        }
+      },
+      "tagline": {
+        "en": "Every email your app sends. None of it leaves the browser.",
+        "id": "Setiap email dari aplikasimu. Tak satu pun keluar dari browser."
+      },
+      "description": {
+        "en": "A browser-local email simulator with a mailbox, templates, local identities and an SDK that lets demo apps deliver messages into it. Delivery is simulated: no real email is ever sent.",
+        "id": "Simulator email lokal di browser dengan kotak surat, templat, identitas lokal, dan SDK agar aplikasi demo dapat mengirim pesan ke dalamnya. Pengirimannya disimulasikan: tidak ada email sungguhan yang dikirim."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Zustand",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "email-simulator",
+        "local-first",
+        "sdk",
+        "developer-tool"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/fmMail/thumbnail.webp"
+      }
+    },
     "fmMonorepo": {
       "name": "FM Monorepo",
       "status": "completed",
@@ -424,6 +541,46 @@
       },
       "assets": {
         "thumbnail": "assets/projects/foodieMap/thumbnail.webp"
+      }
+    },
+    "forgebox": {
+      "name": "Forgebox",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "app-forgebox",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "forgebox",
+          "subdomain": "forgebox"
+        }
+      },
+      "tagline": {
+        "en": "Make worlds. Make games.",
+        "id": "Bangun dunia. Ciptakan gim."
+      },
+      "description": {
+        "en": "A browser-based 3D game creation studio: build and paint worlds, add characters, quests and visual When/If/Then logic, play-test them and export a standalone web game. Projects stay on your device.",
+        "id": "Studio pembuatan gim 3D berbasis browser: bangun dan lukis dunia, tambahkan karakter, misi, dan logika visual Ketika/Jika/Maka, uji mainkan, lalu ekspor menjadi gim web mandiri. Proyek tetap di perangkat Anda."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React Three Fiber",
+        "Tailwind CSS",
+        "IndexedDB"
+      ],
+      "tags": [
+        "game-creation",
+        "3d",
+        "local-first",
+        "pwa"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/forgebox/thumbnail.webp"
       }
     },
     "frontendLab": {
@@ -613,6 +770,46 @@
         "thumbnail": "assets/projects/javascriptia/thumbnail.webp"
       }
     },
+    "journigo": {
+      "name": "Journigo",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "web-journigo",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "journigo",
+          "subdomain": "journigo"
+        }
+      },
+      "tagline": {
+        "en": "Your journey starts here.",
+        "id": "Perjalananmu dimulai di sini."
+      },
+      "description": {
+        "en": "A travel marketplace showcase for stays, flights, activities, transport, events and packages, with customer, host, partner and admin views. Listings are sample data and bookings and payments are simulated: nothing is reserved or charged.",
+        "id": "Showcase marketplace perjalanan untuk penginapan, penerbangan, aktivitas, transportasi, acara, dan paket, dengan tampilan pelanggan, tuan rumah, mitra, dan admin. Daftarnya adalah data contoh; pemesanan dan pembayaran disimulasikan: tidak ada yang benar-benar dipesan atau ditagih."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "travel",
+        "marketplace",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/journigo/thumbnail.webp"
+      }
+    },
     "kenali": {
       "name": "Kenali Academy",
       "status": "active",
@@ -631,8 +828,8 @@
         "id": "Ruang untuk rasa ingin tahu."
       },
       "description": {
-        "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. No lessons are released yet.",
-        "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Belum ada pelajaran yang dirilis."
+        "en": "A prototype learning platform for Indonesian students from early childhood to senior high, with four age-based worlds and fictional learner profiles. Two illustrative early-childhood games are playable; the other worlds are previews.",
+        "id": "Prototipe platform belajar untuk siswa Indonesia dari PAUD hingga SMA, dengan empat dunia belajar berdasarkan usia dan profil siswa fiktif. Dua gim ilustratif untuk anak usia dini sudah bisa dimainkan; dunia lainnya masih berupa pratinjau."
       },
       "technologies": [
         "Next.js",
@@ -758,6 +955,44 @@
       "assets": {
         "icon": "assets/projects/links/icon.png",
         "thumbnail": "assets/projects/links/thumbnail.webp"
+      }
+    },
+    "linstem": {
+      "name": "Linstem",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "deployments": {
+        "main": {
+          "name": "linstem",
+          "subdomain": "linstem"
+        }
+      },
+      "tagline": {
+        "en": "One system. Every business flow.",
+        "id": "Satu sistem. Setiap alur bisnis."
+      },
+      "description": {
+        "en": "A browser-local ERP for small and medium businesses, with sales, purchasing, inventory, invoicing, payments and returns connected end to end. All data stays in your browser.",
+        "id": "ERP lokal di browser untuk usaha kecil dan menengah, dengan penjualan, pembelian, inventaris, faktur, pembayaran, dan retur yang terhubung dari awal hingga akhir. Semua data tetap di browser."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "erp",
+        "local-first",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/linstem/thumbnail.webp"
       }
     },
     "littleRoars": {
@@ -906,6 +1141,43 @@
       "destination": "labs",
       "repository": "lab-node-api",
       "repositoryVisibility": "public"
+    },
+    "ohBabyGrow": {
+      "name": "Oh Baby Grow",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "app-oh-baby-grow",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "oh-baby-grow",
+          "subdomain": "ohbabygrow"
+        }
+      },
+      "tagline": {
+        "en": "Learn together. Grow together.",
+        "id": "Belajar bersama. Tumbuh bersama."
+      },
+      "description": {
+        "en": "A private, bilingual app for parents of children aged 0–36 months: growth records on WHO standard charts, milestone observations, play activities, parenting guides, a photo journal and in-app reminders, stored on your device. For learning and observation, not medical diagnosis.",
+        "id": "Aplikasi privat dwibahasa untuk orang tua anak usia 0–36 bulan: catatan pertumbuhan pada grafik standar WHO, pengamatan tonggak perkembangan, aktivitas bermain, panduan pengasuhan, jurnal foto, dan pengingat dalam aplikasi, disimpan di perangkat Anda. Untuk belajar dan mengamati, bukan diagnosis medis."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "IndexedDB"
+      ],
+      "tags": [
+        "baby-tracking",
+        "parenting-education",
+        "local-first",
+        "pwa"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/ohBabyGrow/thumbnail.webp"
+      }
     },
     "orynth": {
       "name": "Orynth",
@@ -1151,6 +1423,84 @@
       ],
       "assets": {
         "thumbnail": "assets/projects/quillio/thumbnail.webp"
+      }
+    },
+    "reelfrym": {
+      "name": "Reelfrym",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "tools",
+      "repository": "web-reelfrym",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "reelfrym",
+          "subdomain": "reelfrym"
+        }
+      },
+      "tagline": {
+        "en": "Every frame in motion.",
+        "id": "Setiap bingkai bergerak."
+      },
+      "description": {
+        "en": "A browser-based motion graphics editor with templates, scenes, text and shapes, entrance effects, a timeline and one audio track, exporting WebM video and PNG frames. Projects stay on your device. Video clip editing, MP4 export and AI features are not available.",
+        "id": "Editor grafis gerak berbasis browser dengan templat, adegan, teks dan bentuk, efek masuk, linimasa, dan satu trek audio, dengan ekspor video WebM dan bingkai PNG. Proyek tetap di perangkat Anda. Pengeditan klip video, ekspor MP4, dan fitur AI belum tersedia."
+      },
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "motion-graphics",
+        "video-editor",
+        "local-first",
+        "pwa"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/reelfrym/thumbnail.webp"
+      }
+    },
+    "relyxee": {
+      "name": "Relyxee",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "products",
+      "repository": "web-relyxee",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "relyxee",
+          "subdomain": "relyxee"
+        }
+      },
+      "tagline": {
+        "en": "Capture reality. Create in 3D. Preserve memories.",
+        "id": "Tangkap realitas. Berkreasi dalam 3D. Abadikan kenangan."
+      },
+      "description": {
+        "en": "A local-first creative space for collecting photos and video frames, turning an image into a 2.5D relief, arranging 3D scenes and keeping memory galleries with tours. It does not reconstruct 3D models by photogrammetry or Gaussian splatting.",
+        "id": "Ruang kreatif yang menyimpan data di perangkat untuk mengumpulkan foto dan bingkai video, mengubah gambar menjadi relief 2,5D, menata adegan 3D, dan menyimpan galeri kenangan dengan tur. Tidak merekonstruksi model 3D lewat fotogrametri atau Gaussian splatting."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Three.js",
+        "React Three Fiber",
+        "IndexedDB"
+      ],
+      "tags": [
+        "3d",
+        "memory-gallery",
+        "local-first",
+        "pwa"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/relyxee/thumbnail.webp"
       }
     },
     "roadmap": {
@@ -1503,13 +1853,22 @@
       "destination": "labs",
       "repository": "lab-wedding-vendor-scraper",
       "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "wedding-vendor-scraper",
+          "subdomain": "wedding-vendor-scrapper"
+        }
+      },
       "description": {
         "en": "A local tool for collecting wedding vendor profiles, packages, and reviews from supported directories, with resumable runs and CSV/JSON exports.",
         "id": "Alat lokal untuk mengumpulkan profil vendor pernikahan, paket, dan ulasan dari direktori yang didukung, dengan proses yang dapat dilanjutkan serta ekspor CSV/JSON."
       },
       "related": [
         "nikahyuk"
-      ]
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/weddingVendorScraper/thumbnail.webp"
+      }
     },
     "xpenz": {
       "name": "Xpenz",
@@ -1625,6 +1984,46 @@
         "thumbnail": "assets/projects/yunivisi/thumbnail.webp"
       }
     },
+    "zentralynk": {
+      "name": "Zentralynk",
+      "status": "active",
+      "listing": "hidden",
+      "destination": "platforms",
+      "repository": "web-zentralynk",
+      "repositoryVisibility": "private",
+      "deployments": {
+        "main": {
+          "name": "zentralynk",
+          "subdomain": "zentralynk"
+        }
+      },
+      "tagline": {
+        "en": "Where enterprise systems connect.",
+        "id": "Tempat sistem perusahaan terhubung."
+      },
+      "description": {
+        "en": "A standalone SAP-inspired enterprise suite showcase covering procurement, sales, manufacturing, inventory, finance, HR, assets, quality, projects and approvals with demo companies. SAP and Odoo connectors are simulated; it is not affiliated with either vendor and is not a production ERP.",
+        "id": "Showcase mandiri suite perusahaan yang terinspirasi SAP: pengadaan, penjualan, manufaktur, inventaris, keuangan, SDM, aset, mutu, proyek, dan persetujuan dengan perusahaan demo. Konektor SAP dan Odoo disimulasikan; tidak berafiliasi dengan kedua vendor dan bukan ERP untuk produksi."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        "Dexie",
+        "IndexedDB"
+      ],
+      "tags": [
+        "enterprise",
+        "erp",
+        "portfolio",
+        "browser-demo"
+      ],
+      "assets": {
+        "thumbnail": "assets/projects/zentralynk/thumbnail.webp"
+      }
+    },
     "zevorama": {
       "name": "Zevorama",
       "status": "active",
@@ -1732,7 +2131,10 @@
               "Vue.js",
               "Nuxt.js"
             ],
-            "kind": "product"
+            "kind": "product",
+            "assets": {
+              "thumbnail": "assets/career/experience/pixelHouseStudio/managix-page-builder/thumbnail.webp"
+            }
           },
           {
             "id": "nodejs-data-converter",
@@ -2108,7 +2510,10 @@
           "Sequelize",
           "MySQL"
         ],
-        "engagement": "freelance"
+        "engagement": "freelance",
+        "assets": {
+          "thumbnail": "assets/career/freelance/automotiveInventorySystem/thumbnail.webp"
+        }
       },
       {
         "id": "shipMonitoringPlatform",
@@ -2129,7 +2534,10 @@
           "Material UI",
           "Tailwind CSS"
         ],
-        "engagement": "freelance"
+        "engagement": "freelance",
+        "assets": {
+          "thumbnail": "assets/career/freelance/shipMonitoringPlatform/thumbnail.webp"
+        }
       },
       {
         "id": "tradingCommunityPlatform",
@@ -2173,7 +2581,10 @@
           "Vitest"
         ],
         "repository": "test-ai-session-manager",
-        "repositoryVisibility": "public"
+        "repositoryVisibility": "public",
+        "assets": {
+          "thumbnail": "assets/career/assessments/aiSessionManager/thumbnail.webp"
+        }
       },
       {
         "id": "evermosFrontend",
@@ -2438,33 +2849,10 @@
   ],
   "concepts": [
     {
-      "id": "forgebox",
-      "title": "Forgebox",
-      "kind": "concept",
-      "order": 10,
-      "status": "planned",
-      "destination": "tools",
-      "description": {
-        "en": "A planned creative sandbox for building 3D worlds and designing playable game experiences.",
-        "id": "Sandbox kreatif yang direncanakan untuk membangun dunia 3D dan merancang pengalaman permainan yang dapat dimainkan."
-      }
-    },
-    {
       "id": "comingSoon",
       "title": "Coming Soon",
       "kind": "placeholder",
       "order": 40
-    },
-    {
-      "id": "ohBabyGrow",
-      "title": "Oh Baby Grow",
-      "kind": "concept",
-      "order": 50,
-      "status": "planned",
-      "description": {
-        "en": "A planned app for tracking a baby's growth and development and exploring parenting education.",
-        "id": "Aplikasi yang direncanakan untuk memantau pertumbuhan dan perkembangan bayi serta mempelajari pengasuhan anak."
-      }
     }
   ],
   "careerPublication": {
@@ -2792,19 +3180,7 @@
       }
     ]
   },
-  "conceptsPublication": [
-    {
-      "id": "forgebox",
-      "fields": [
-        "title"
-      ],
-      "fingerprints": {
-        "fields": {
-          "title": "sha256:af534a918ea0fdfa392c6c267c640288d5e9a978fbc10d49e7cda86f14559ef2"
-        }
-      }
-    }
-  ],
+  "conceptsPublication": [],
   "showcases": [
     {
       "kind": "assessment",
@@ -2997,20 +3373,12 @@
       "id": "weddingVendorScraper"
     },
     {
-      "kind": "concept",
-      "id": "forgebox"
-    },
-    {
       "kind": "project",
       "id": "hearthside"
     },
     {
       "kind": "project",
       "id": "momee"
-    },
-    {
-      "kind": "concept",
-      "id": "ohBabyGrow"
     },
     {
       "kind": "project",
@@ -3103,6 +3471,46 @@
     {
       "kind": "project",
       "id": "yunivisi"
+    },
+    {
+      "kind": "project",
+      "id": "fmAuth"
+    },
+    {
+      "kind": "project",
+      "id": "fmMail"
+    },
+    {
+      "kind": "project",
+      "id": "fmLogs"
+    },
+    {
+      "kind": "project",
+      "id": "journigo"
+    },
+    {
+      "kind": "project",
+      "id": "zentralynk"
+    },
+    {
+      "kind": "project",
+      "id": "reelfrym"
+    },
+    {
+      "kind": "project",
+      "id": "relyxee"
+    },
+    {
+      "kind": "project",
+      "id": "forgebox"
+    },
+    {
+      "kind": "project",
+      "id": "ohBabyGrow"
+    },
+    {
+      "kind": "project",
+      "id": "linstem"
     }
   ],
   "showcasePublication": [
@@ -3451,7 +3859,7 @@
       "id": "watch",
       "surface": "az",
       "fingerprint": "sha256:2f78b5f53dbff78c313bca288bcf5b396a0de9cc833b7b363c2034e960bea8bc",
-      "presentationFingerprint": "sha256:b6d53d054a66aef86ce6d155511b9709ecfb734f59421c0aa80b50415ec70d2f"
+      "presentationFingerprint": "sha256:cef0dd28e489c7abbde97007b99015d2cb4bf9cddf1c7eef615c0922df436eea"
     },
     {
       "kind": "project",
@@ -3478,21 +3886,8 @@
       "kind": "project",
       "id": "weddingVendorScraper",
       "surface": "az",
-      "fingerprint": "sha256:3c0f6998458ef617b3379a932667c4600bac1ee93a6ddad775a41a89b7d46c4f",
-      "presentationFingerprint": "sha256:09a72c4f53b2917294dc6c991de24cd6a74af822105dec59afd128748536c37b"
-    },
-    {
-      "kind": "concept",
-      "id": "forgebox",
-      "surface": "az",
-      "fields": [
-        "title",
-        "description.en",
-        "description.id",
-        "status"
-      ],
-      "fingerprint": "sha256:a29d71c50532c410f3390fa3ec7ee4243a99dab088af3948786d0eb0c6943e1a",
-      "presentationFingerprint": "sha256:a5d383e53980effe79980f742521129500100e6922b6d44f324c8afd1eb6078a"
+      "fingerprint": "sha256:1bc58f2e154cd9f0ce595ccfd6bc66d16cd15dfbe3933986ceb63f4598ad7e88",
+      "presentationFingerprint": "sha256:27dee65a5136854d285eddf059975a5b315aea456f868c8ef65ed09791b40d85"
     },
     {
       "kind": "project",
@@ -3506,27 +3901,14 @@
       "id": "momee",
       "surface": "az",
       "fingerprint": "sha256:affc191993992166c2949081b93e7371b51d74b66d5ab5a83a11a9bc6c48fc19",
-      "presentationFingerprint": "sha256:a36de7604f1b7440cd2e9f3040c2e5b2a64567365d6c75cf8071258dc3d06d6d"
-    },
-    {
-      "kind": "concept",
-      "id": "ohBabyGrow",
-      "surface": "az",
-      "fields": [
-        "title",
-        "description.en",
-        "description.id",
-        "status"
-      ],
-      "fingerprint": "sha256:09366966450ad27d4936ce861ac0fc66e9686393aa0a97722a44378c1445d411",
-      "presentationFingerprint": "sha256:fecfaa0bc2e791dd930c62184d06904a395bf8d4b533e864611c9c1aa526d0f4"
+      "presentationFingerprint": "sha256:e7899e60011382bf57b1e3a4abaffc09980a41fc0694b06eecb08f788dd2ab2f"
     },
     {
       "kind": "project",
       "id": "quibiq",
       "surface": "az",
       "fingerprint": "sha256:92c4d5ae82e3b18108678d89177d9fb288d51d2a8b5c78f6d087ce3e41caa24d",
-      "presentationFingerprint": "sha256:f95333b3489b33fb44fbb082dded87cf4ce0238774eba34820567018b79acd0c"
+      "presentationFingerprint": "sha256:1963f93dac6583a70b67d901855172eb18800bfadb6a83ea9c44854417701b60"
     },
     {
       "kind": "project",
@@ -3659,28 +4041,98 @@
       "id": "kenali",
       "surface": "az",
       "fingerprint": "sha256:3cbd5b3948a5aa0a174284d3a1158df870c1315b8e3ce3fd94c5f2230b0be64c",
-      "presentationFingerprint": "sha256:783916f1bf08f7ad3af44252068c628d44e63379a33289338c00ff290190bb06"
+      "presentationFingerprint": "sha256:7e84e81c9114b7ad0c7a599364e12ac38747ff967937eaa3bc9fc689807a3372"
     },
     {
       "kind": "project",
       "id": "keranjoo",
       "surface": "az",
       "fingerprint": "sha256:3ea692c52a47afc2e10cc03d4366a3b9511e30a1f5029d9201e5e4621e03631c",
-      "presentationFingerprint": "sha256:482b80da50b729549901126dddb390f5156b0d20fdf9cfa54bfd68b26f01dc86"
+      "presentationFingerprint": "sha256:cbbc967b1ff5773d285dafe711eb8d60f5bacc59f0701719900893d635a99209"
     },
     {
       "kind": "project",
       "id": "urusaha",
       "surface": "az",
       "fingerprint": "sha256:faccc969b0b0fd3fcab49271d72cda197cbfce41626cf99343fba40d1a1bf0f0",
-      "presentationFingerprint": "sha256:8c8ebb32f54fcb52727b68422f2553bc1389c7bcf4af392bf51b5f87ebedae6d"
+      "presentationFingerprint": "sha256:d5ecc027852690598a8610b25cb7d0cb1e4e0fb4237ca2866fa469adb3e3ab80"
     },
     {
       "kind": "project",
       "id": "yunivisi",
       "surface": "az",
       "fingerprint": "sha256:c917efbcc70c595dabf382d9a748add0a9605316e0f828c98356d659413136e2",
-      "presentationFingerprint": "sha256:19d523c04e2bf29811227f1c8f0ffde98d2a594d6ab88b90d0734f5c28bdd970"
+      "presentationFingerprint": "sha256:441f39ceeca42cbfed1fdc2dad95b13a5f353ef8e5471c08867aa98a7a733274"
+    },
+    {
+      "kind": "project",
+      "id": "fmAuth",
+      "surface": "az",
+      "fingerprint": "sha256:14b9af79fd642d7001e4e3ece0328ef922f9cc73b48d70c079b010db49cf6608",
+      "presentationFingerprint": "sha256:455dcd86f6909b06da8249431f3c395d2317a470f11857d139618af6e50c2d2e"
+    },
+    {
+      "kind": "project",
+      "id": "fmMail",
+      "surface": "az",
+      "fingerprint": "sha256:397168874c983b7b206e76535f15f1b84ec85a429ce9bd6c09797c9b83788cf1",
+      "presentationFingerprint": "sha256:899238115d766a4e7d4df483c52b85bf2827539528feae6c7de9d7651c3deb26"
+    },
+    {
+      "kind": "project",
+      "id": "fmLogs",
+      "surface": "az",
+      "fingerprint": "sha256:f8cd96d3dbd97059788134f04e4f207e6b66ef6aaf9d603b0a68559542743dc2",
+      "presentationFingerprint": "sha256:39a6eb4fcb769b67589c95d691965f12bba2507ecc68ff57197ff4b9d813ac2d"
+    },
+    {
+      "kind": "project",
+      "id": "journigo",
+      "surface": "az",
+      "fingerprint": "sha256:c61d7a3c3c2e4bb4de723c485192a5090449da7bfe5bc88ff1cf846bd4960bae",
+      "presentationFingerprint": "sha256:e2b8b26a7420b3f25fbd29121b9aeeeb002b81f9d7c86e2812b3887d2fed51f4"
+    },
+    {
+      "kind": "project",
+      "id": "zentralynk",
+      "surface": "az",
+      "fingerprint": "sha256:b635dacd7d3b04d99aa9591e61d984d261a632c5349ecf859dc472758cb4836a",
+      "presentationFingerprint": "sha256:a26c57132c150154c4316e349501d3084064ffe6e48714e8189aebd2b0b0ee28"
+    },
+    {
+      "kind": "project",
+      "id": "reelfrym",
+      "surface": "az",
+      "fingerprint": "sha256:2ef2419d8dd41d89dbaa3cacf40c0c6b27f94e67fc6758a1242ee15411821d4b",
+      "presentationFingerprint": "sha256:30a75670439d6f55d9f4e1aa1d32fd135d747057408daa8e6ce306da754c9462"
+    },
+    {
+      "kind": "project",
+      "id": "relyxee",
+      "surface": "az",
+      "fingerprint": "sha256:5de226997aadda6b5d7610d24946a12e864c2c70eee605744043d8b2a6180d3b",
+      "presentationFingerprint": "sha256:120e4917de3a774321f45f9e59455683c59f479a1027b0fb82a9fc6eda0a1a31"
+    },
+    {
+      "kind": "project",
+      "id": "forgebox",
+      "surface": "az",
+      "fingerprint": "sha256:ac01e31b1ea2516c0eebf8e202c946a348360290bd1697b6472a0da2a25847d6",
+      "presentationFingerprint": "sha256:22581d29c3ccf1be38f5c44faeb6b747c07663a7e55f68575a69a44a0104a2c1"
+    },
+    {
+      "kind": "project",
+      "id": "ohBabyGrow",
+      "surface": "az",
+      "fingerprint": "sha256:26440f35ed39ca08065f04522204bcfecced1f88a91c09ee871e3c43022a4b15",
+      "presentationFingerprint": "sha256:c47d074990917f0a0ae71cf24eb786501499db59a529a06a7645f92692f3b545"
+    },
+    {
+      "kind": "project",
+      "id": "linstem",
+      "surface": "az",
+      "fingerprint": "sha256:2908635afef2cb76f5e986e4b5dad1caead67f252cb70683183770fde4476b5e",
+      "presentationFingerprint": "sha256:9f59f0a1365887c76a85eaefa7736a8175f62526ac7dc57dd30b7afb2c509600"
     }
   ],
   "showcaseEligibility": [
@@ -3752,13 +4204,7 @@
       "id": "weddingVendorScraper",
       "surface": "az",
       "listing": "hidden",
-      "fingerprint": "sha256:c6c1083fde3364f82ac2f85964ba16f0e570b5205dff0bfa50e7c066305ff321"
-    },
-    {
-      "kind": "concept",
-      "id": "forgebox",
-      "surface": "az",
-      "fingerprint": "sha256:145f306d0a24a9723cfe773ab57c20616d56f9d5ddf614c30f29aee9034819fb"
+      "fingerprint": "sha256:a447081d6416a78ab99c0223351df307e2df5e1261e8580943fd28c60a3e802f"
     },
     {
       "kind": "project",
@@ -3773,12 +4219,6 @@
       "surface": "az",
       "listing": "hidden",
       "fingerprint": "sha256:f2ac13f7184b17398ab04e2e3bdb6519e1749f0cf2401b084a3d554bddb6d393"
-    },
-    {
-      "kind": "concept",
-      "id": "ohBabyGrow",
-      "surface": "az",
-      "fingerprint": "sha256:54cdc1a3af67c44758a514913dd85c17d697e573fc03551014479b4696164f95"
     },
     {
       "kind": "project",
@@ -3940,6 +4380,362 @@
       "surface": "az",
       "listing": "hidden",
       "fingerprint": "sha256:ebd93e18be27b0694a626067c3631916e667ddd9b5cfd7de2af97114da1abfd5"
+    },
+    {
+      "kind": "project",
+      "id": "fmAuth",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:7fb25fae41a49d9d5d4715359e6306d7bf4fbf01a6713250d29108b8097ddb66"
+    },
+    {
+      "kind": "project",
+      "id": "fmMail",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:5f2fe41c15e95254e3ac4db793b9391edc2213317190edbf4785b7abddbff210"
+    },
+    {
+      "kind": "project",
+      "id": "fmLogs",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:927ce93f0915a84cb9a640626d3bb22b178dbba1047dd0d4323a6a6eb07739d7"
+    },
+    {
+      "kind": "project",
+      "id": "journigo",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:8f63bc8cf9b6b42fce298285ca45478b944a1b800388a572e42db0ef6cce2374"
+    },
+    {
+      "kind": "project",
+      "id": "zentralynk",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:47008e68cb164205673628c9180a58f39a65a74c21b6316200d3bad6892d1494"
+    },
+    {
+      "kind": "project",
+      "id": "reelfrym",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:5b4c00f7e79200949376dae508d10d96af31f79663ae94bdebd95df121fc6bac"
+    },
+    {
+      "kind": "project",
+      "id": "relyxee",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:280c4a23ead8edbaab0ad74beb42741ead94315bc9bfd98108a6b2e35ce6b016"
+    },
+    {
+      "kind": "project",
+      "id": "forgebox",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:70fab934097263aaa5ab7ec85d5fe1b1dcbc2486a33361cce886319040a8a061"
+    },
+    {
+      "kind": "project",
+      "id": "ohBabyGrow",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:b630afcbff52d5257de2b93bf0bef10cf3dc458e3966e0e3ddc30c885846b8b1"
+    },
+    {
+      "kind": "project",
+      "id": "linstem",
+      "surface": "az",
+      "listing": "hidden",
+      "fingerprint": "sha256:8edb6ed4fad2a573c06221d15aea5e9358a6d687d9bfcf0adf668b43f88736b1"
+    }
+  ],
+  "websiteLinks": [
+    {
+      "id": "beacon",
+      "action": "website"
+    },
+    {
+      "id": "blog",
+      "action": "website"
+    },
+    {
+      "id": "buddyChamp",
+      "action": "demo"
+    },
+    {
+      "id": "codyssey",
+      "action": "website"
+    },
+    {
+      "id": "configEcosystem",
+      "action": "website"
+    },
+    {
+      "id": "courses",
+      "action": "website"
+    },
+    {
+      "id": "cssTricks",
+      "action": "website"
+    },
+    {
+      "id": "cv",
+      "action": "website"
+    },
+    {
+      "id": "devtools",
+      "action": "app"
+    },
+    {
+      "id": "ecosystemAssets",
+      "action": "website"
+    },
+    {
+      "id": "ecosystemIdeas",
+      "action": "demo"
+    },
+    {
+      "id": "ecosystemSkills",
+      "action": "website"
+    },
+    {
+      "id": "fmAuth",
+      "action": "demo"
+    },
+    {
+      "id": "fmLogs",
+      "action": "demo"
+    },
+    {
+      "id": "fmMail",
+      "action": "demo"
+    },
+    {
+      "id": "fmStudios",
+      "action": "demo"
+    },
+    {
+      "id": "foodieMap",
+      "action": "demo"
+    },
+    {
+      "id": "forgebox",
+      "action": "app"
+    },
+    {
+      "id": "frontendLab",
+      "action": "app"
+    },
+    {
+      "id": "games",
+      "action": "app"
+    },
+    {
+      "id": "gateway",
+      "action": "website"
+    },
+    {
+      "id": "havernia",
+      "action": "website"
+    },
+    {
+      "id": "hearthside",
+      "action": "demo"
+    },
+    {
+      "id": "ilyst",
+      "action": "app"
+    },
+    {
+      "id": "inventory",
+      "action": "demo"
+    },
+    {
+      "id": "javascriptia",
+      "action": "app"
+    },
+    {
+      "id": "journigo",
+      "action": "demo"
+    },
+    {
+      "id": "kenali",
+      "action": "demo"
+    },
+    {
+      "id": "keranjoo",
+      "action": "demo"
+    },
+    {
+      "id": "kodeStep",
+      "action": "app"
+    },
+    {
+      "id": "learning",
+      "action": "app"
+    },
+    {
+      "id": "links",
+      "action": "website"
+    },
+    {
+      "id": "linstem",
+      "action": "app"
+    },
+    {
+      "id": "littleRoars",
+      "action": "app"
+    },
+    {
+      "id": "momee",
+      "action": "demo"
+    },
+    {
+      "id": "neuran",
+      "action": "website"
+    },
+    {
+      "id": "nikahkuy",
+      "action": "demo"
+    },
+    {
+      "id": "nikahyuk",
+      "action": "website"
+    },
+    {
+      "id": "nikahyukPrototype",
+      "action": "demo"
+    },
+    {
+      "id": "ohBabyGrow",
+      "action": "app"
+    },
+    {
+      "id": "orynth",
+      "action": "website"
+    },
+    {
+      "id": "pageLayr",
+      "action": "app"
+    },
+    {
+      "id": "platformLab",
+      "action": "website"
+    },
+    {
+      "id": "playdeck",
+      "action": "app"
+    },
+    {
+      "id": "playground",
+      "action": "website"
+    },
+    {
+      "id": "playnest",
+      "action": "app"
+    },
+    {
+      "id": "projects",
+      "action": "app"
+    },
+    {
+      "id": "quibiq",
+      "action": "demo"
+    },
+    {
+      "id": "quillio",
+      "action": "website"
+    },
+    {
+      "id": "reelfrym",
+      "action": "app"
+    },
+    {
+      "id": "relyxee",
+      "action": "app"
+    },
+    {
+      "id": "roadmap",
+      "action": "app"
+    },
+    {
+      "id": "securityLab",
+      "action": "app"
+    },
+    {
+      "id": "support",
+      "action": "website"
+    },
+    {
+      "id": "tcgHub",
+      "action": "demo"
+    },
+    {
+      "id": "templates",
+      "action": "website"
+    },
+    {
+      "id": "tinyverse",
+      "action": "app"
+    },
+    {
+      "id": "tools",
+      "action": "app"
+    },
+    {
+      "id": "urchinRelay",
+      "action": "demo"
+    },
+    {
+      "id": "urusaha",
+      "action": "demo"
+    },
+    {
+      "id": "vaults",
+      "action": "app"
+    },
+    {
+      "id": "vynote",
+      "action": "website"
+    },
+    {
+      "id": "watch",
+      "action": "app"
+    },
+    {
+      "id": "weddingVendorScraper",
+      "action": "website"
+    },
+    {
+      "id": "xpenz",
+      "action": "app"
+    },
+    {
+      "id": "xyz",
+      "action": "app"
+    },
+    {
+      "id": "yourSpace",
+      "action": "app"
+    },
+    {
+      "id": "yunivisi",
+      "action": "demo"
+    },
+    {
+      "id": "zentralynk",
+      "action": "demo"
+    },
+    {
+      "id": "zevorama",
+      "action": "website"
+    },
+    {
+      "id": "zketchly",
+      "action": "app"
     }
   ]
 }

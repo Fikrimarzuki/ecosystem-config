@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 import { assemble } from "../scripts/build.mjs";
 import { validateConfig } from "../scripts/validate.mjs";
-import { beforeEcW7, creativeMuseumGrant, ecW8Grants } from "./helpers/republished-evidence.mjs";
+import { beforeEcW7, beforeEcW9, creativeMuseumGrant, ecW8Grants } from "./helpers/republished-evidence.mjs";
 
 // A4.14: owner-approved metadata, deployment domains and thumbnails. Statuses here are the approved canonical values.
 const config = assemble();
@@ -42,12 +42,16 @@ test("no public record gained a planet: only previously public projects are publ
 });
 test("Hearthside and Momee left Concepts; other concepts are untouched", () => {
   // 2026-11 registry refresh: Vynote was promoted from a concept to a hidden project (same id), so it also left Concepts.
-  assert.deepEqual(config.concepts.map(item => item.id), ["forgebox", "comingSoon", "ohBabyGrow"]);
-  assert.deepEqual(config.conceptsPublication.map(item => item.id), ["forgebox"]);
+  // EC-W9: Forgebox left Concepts the same way, taking its title-only grant with it.
+  assert.deepEqual(config.concepts.map(item => item.id), ["comingSoon"]);
+  assert.deepEqual(config.conceptsPublication, []);
 });
 test("A–Z publication grants: the original 55 are preserved exactly; A4.14B adds exactly the four approved projects", () => {
+  assert.equal(config.showcases.length, 82); assert.equal(config.showcasePublication.length, 82); assert.equal(config.showcaseEligibility.length, 45);
+  // Historical pins below run on the manifests as they were before EC-W9.
+  const historical = beforeEcW9(config);
   // 2026-11 registry refresh: +16 projects; Vynote's concept membership/eligibility/grant was replaced by its project ones (59 + 16 - 1 = 74; 22 + 16 - 1 = 37).
-  assert.equal(config.showcases.length, 74); assert.equal(config.showcasePublication.length, 74); assert.equal(config.showcaseEligibility.length, 37);
+  assert.equal(historical.showcases.length, 73); assert.equal(historical.showcasePublication.length, 73); assert.equal(historical.showcaseEligibility.length, 36);
   const sha = grants => createHash("sha256").update(JSON.stringify(grants)).digest("hex");
   // P9C: the owner approved live links for seven of the original 55, so exactly their presentation fingerprints were re-approved.
   const released = {
@@ -62,12 +66,14 @@ test("A–Z publication grants: the original 55 are preserved exactly; A4.14B ad
   // 2026-11 registry refresh: exactly two of the original 55 changed. Vynote's concept grant (index 51) was replaced by its project grant (appended
   // at the end), and Hearthside's presentation fingerprint was re-approved for its released link and refreshed thumbnail (its source fingerprint is unchanged).
   // Restoring those two exact prior values reproduces the original pin, so nothing else moved.
+  // M6.1 withdrew the Oh Baby Grow grant. Restore it only to reconstruct the historical pin.
+  const ohBabyGrowConceptGrant = {"kind": "concept", "id": "ohBabyGrow", "surface": "az", "fields": ["title", "description.en", "description.id", "status"], "fingerprint": "sha256:09366966450ad27d4936ce861ac0fc66e9686393aa0a97722a44378c1445d411", "presentationFingerprint": "sha256:fecfaa0bc2e791dd930c62184d06904a395bf8d4b533e864611c9c1aa526d0f4"};
   const vynoteConceptGrant = { kind: "concept", id: "vynote", surface: "az", fields: ["title", "description.en", "description.id", "status"], fingerprint: "sha256:11bcda78d812d3405e7438e1ab4dbfbed197060660817c50017f1937162dfef4", presentationFingerprint: "sha256:d906e54c613b8d924f917000e71b0dc9927b37489adf7688062f9d2f30de9409" };
   const hearthsideBefore = "sha256:5c930697f3fb8174410f0af2be1a0828fb877e78e7ac1e2e099f6c95c5dcb658";
-  assert.notEqual(config.showcasePublication.find(grant => grant.id === "hearthside").presentationFingerprint, hearthsideBefore);
-  assert.equal(config.showcasePublication.some(grant => grant.kind === "concept" && grant.id === "vynote"), false);
+  assert.notEqual(historical.showcasePublication.find(grant => grant.id === "hearthside").presentationFingerprint, hearthsideBefore);
+  assert.equal(historical.showcasePublication.some(grant => grant.kind === "concept" && grant.id === "vynote"), false);
   // EC-W7 re-approved eight thumbnail-bound grants (test/helpers/republished-evidence.mjs); beforeEcW7 restores their published values.
-  const original = beforeEcW7([...config.showcasePublication.slice(0, 51), vynoteConceptGrant, ...config.showcasePublication.slice(51, 54)])
+  const original = beforeEcW7([...historical.showcasePublication.slice(0, 50), ohBabyGrowConceptGrant, vynoteConceptGrant, ...historical.showcasePublication.slice(50, 53)])
     .map(grant => grant.kind === "project" && grant.id === "hearthside" ? { ...grant, presentationFingerprint: hearthsideBefore }
       : grant.kind === "project" && grant.id === "configEcosystem" ? { ...grant, presentationFingerprint: "sha256:973f7ea22e4f94cf619729a0973455b5ed6b3fac8dc67229c9e0458040c0b900" } : grant);
   // EC-W5 (2026-11-22): the Ecosystem Config thumbnail was replaced with a capture of the redesigned website, which re-approved only its presentation fingerprint; restoring the prior value reproduces this pin.
@@ -81,26 +87,26 @@ test("A–Z publication grants: the original 55 are preserved exactly; A4.14B ad
   const restored = original.map(grant => Object.hasOwn(refreshed, grant.id) ? { ...grant, fingerprint: refreshed[grant.id].before[0], presentationFingerprint: refreshed[grant.id].before[1] }
     : Object.hasOwn(released, grant.id) ? { ...grant, presentationFingerprint: released[grant.id][0] } : grant);
   assert.equal(sha(restored), "53c84b59901064a74f1b910d95124d46ee1188ecc0b8281d49b3522cd5ce58c2");
-  for (const grant of config.showcasePublication.filter(grant => grant.kind === "project" && !grant.fields)) {
+  for (const grant of historical.showcasePublication.filter(grant => grant.kind === "project" && !grant.fields)) {
     assert.deepEqual(Object.keys(grant).sort(), ["fingerprint", "id", "kind", "presentationFingerprint", "surface"], `${grant.id} carries no extra (link) fields`);
   }
-  assert.equal(config.showcasePublication.some(grant => grant.kind === "project" && grant.fields), false);
+  assert.equal(historical.showcasePublication.some(grant => grant.kind === "project" && grant.fields), false);
   const added = ["vaults", "zketchly", "urchinRelay", "ecosystemAssets"];
-  assert.deepEqual(config.showcases.slice(54, 58), added.map(id => ({ kind: "project", id })));
-  assert.deepEqual(config.showcasePublication.slice(54, 58).map(grant => grant.id), added);
+  assert.deepEqual(historical.showcases.slice(53, 57), added.map(id => ({ kind: "project", id })));
+  assert.deepEqual(historical.showcasePublication.slice(53, 57).map(grant => grant.id), added);
   // Creative Museum (2026-11-22): exactly Ecosystem Assets' presentation fingerprint was re-approved for its new description. Pin the new value,
   // then restore the prior one so the rest of the pin below proves nothing else moved.
   // EC-W8 then replaced its artwork, re-approving the presentation fingerprint once more: pin that value, restore the Creative Museum one.
-  assert.equal(config.showcasePublication.find(grant => grant.id === creativeMuseumGrant.id).presentationFingerprint, ecW8Grants.ecosystemAssets.after);
+  assert.equal(historical.showcasePublication.find(grant => grant.id === creativeMuseumGrant.id).presentationFingerprint, ecW8Grants.ecosystemAssets.after);
   assert.equal(ecW8Grants.ecosystemAssets.before, creativeMuseumGrant.after);
   // P9C: the four A4.14B grants keep their source fingerprints; their presentation fingerprints are the approved live-link ones.
-  assert.deepEqual(config.showcasePublication.slice(54, 58).map(grant => grant.id === creativeMuseumGrant.id ? { ...grant, presentationFingerprint: creativeMuseumGrant.before } : grant).map(grant => [grant.fingerprint, grant.presentationFingerprint]), [
+  assert.deepEqual(historical.showcasePublication.slice(53, 57).map(grant => grant.id === creativeMuseumGrant.id ? { ...grant, presentationFingerprint: creativeMuseumGrant.before } : grant).map(grant => [grant.fingerprint, grant.presentationFingerprint]), [
     ["sha256:fc50e93819b76b331b7445f3e73909362cb1ce70e7bb207209642ef290cf5968", "sha256:8f3e7b1aaf99883d7e6b37c8b36e910273c4ed0d10d96e6eee162ea0c399993c"],
     ["sha256:563c4440022802a73d90cf5802fd634731cbb6172a2d21f6067bb266d911ea28", "sha256:0498e1ca326c5c6f14062cc5c17d0000929b1a15551c49e451b9901bec2d3423"],
     ["sha256:68a3f06b8f6145c953d8518a8a9441a7a5c3e714ba7ec8853b53bd27f4c791d1", "sha256:b0a7e56d6cadf62aa79eb34dfd99aeb5217a46c7345094c57c5f6fe5e023944a"],
     ["sha256:44fabe58fe807a710c1c345f29e80f8af34862ab597232e4fb091fe142e1fd02", "sha256:ac419d97b5c996e076a4be073ef2f63c4200d82268a773f7ac0edccea30e848c"],
   ]);
-  assert.deepEqual(config.showcaseEligibility.slice(17, 21).map(item => [item.id, item.surface, item.listing]), added.map(id => [id, "az", "hidden"]));
+  assert.deepEqual(historical.showcaseEligibility.slice(16, 20).map(item => [item.id, item.surface, item.listing]), added.map(id => [id, "az", "hidden"]));
   for (const id of added) assert.equal(config.projects[id].listing, "hidden", id);
   assert.equal(validateConfig(config).ok, true);
 });

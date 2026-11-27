@@ -486,13 +486,22 @@ describe("committed experience records", () => {
     assert.deepEqual(references, ["hacktiv8.github-classroom-automation -> multiRepoClone"]);
   });
 
-  test("work items have no dates or assets yet", () => {
+  test("work items have no dates and employers have no assets", () => {
     for (const record of experience) {
       for (const item of record.work ?? []) {
-        for (const field of ["start", "end", "assets"]) assert.ok(!(field in item), `${record.id}.${item.id} has ${field}`);
+        for (const field of ["start", "end"]) assert.ok(!(field in item), `${record.id}.${item.id} has ${field}`);
       }
       assert.ok(!("assets" in record), `${record.id} has assets`);
     }
+  });
+
+  test("only Managix Page Builder has work item artwork", () => {
+    const assets = experience.flatMap((record) => (record.work ?? [])
+      .filter((item) => "assets" in item)
+      .map((item) => [record.id, item.id, item.assets]));
+    assert.deepEqual(assets, [
+      ["pixelHouseStudio", "managix-page-builder", { thumbnail: "assets/career/experience/pixelHouseStudio/managix-page-builder/thumbnail.webp" }],
+    ]);
   });
 });
 
@@ -547,14 +556,23 @@ describe("committed freelance records", () => {
   test("no other record has components", () =>
     assert.deepEqual(freelance.filter((record) => record.components).map((record) => record.id), ["miningOperationsPlatform", "tokenLoyaltyPlatform"]));
 
-  test("no relatedProjects, assets, repository or deployment information", () => {
+  test("no relatedProjects, repository or deployment information", () => {
     for (const record of freelance) {
-      for (const field of ["relatedProjects", "assets", "repository", "repositoryVisibility", "deployments", "url"]) {
+      for (const field of ["relatedProjects", "repository", "repositoryVisibility", "deployments", "url"]) {
         assert.ok(!(field in record), `${record.id} has ${field}`);
       }
     }
     assert.doesNotMatch(JSON.stringify(freelance), /https?:\/\//);
   });
+
+  test("only Automotive Inventory System and Ship Monitoring Platform have freelance artwork", () =>
+    assert.deepEqual(
+      Object.fromEntries(freelance.filter((record) => "assets" in record).map(({ id, assets }) => [id, assets])),
+      {
+        automotiveInventorySystem: { thumbnail: "assets/career/freelance/automotiveInventorySystem/thumbnail.webp" },
+        shipMonitoringPlatform: { thumbnail: "assets/career/freelance/shipMonitoringPlatform/thumbnail.webp" },
+      },
+    ));
 
   test("record facts are unchanged", () =>
     assert.deepEqual(
@@ -628,13 +646,19 @@ describe("committed assessment records", () => {
     assert.doesNotMatch(JSON.stringify(assessments), /skiltestrsp|skilltestrsp/i);
   });
 
-  test("no assets, relatedProjects, deployments, engagement or type", () => {
+  test("no relatedProjects, deployments, engagement or type", () => {
     for (const record of assessments) {
-      for (const field of ["assets", "relatedProjects", "deployments", "url", "homepage", "engagement", "type"]) {
+      for (const field of ["relatedProjects", "deployments", "url", "homepage", "engagement", "type"]) {
         assert.ok(!(field in record), `${record.id} has ${field}`);
       }
     }
   });
+
+  test("only the owner-supplied AI Session Manager thumbnail is committed", () =>
+    assert.deepEqual(
+      Object.fromEntries(assessments.filter((record) => "assets" in record).map(({ id, assets }) => [id, assets])),
+      { aiSessionManager: { thumbnail: "assets/career/assessments/aiSessionManager/thumbnail.webp" } },
+    ));
 
   test("every record is public", () => assert.ok(assessments.every((record) => record.listing === "public")));
 

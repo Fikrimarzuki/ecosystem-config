@@ -181,25 +181,24 @@ describe("concept sources", () => {
 });
 
 describe("committed concepts", () => {
-  test("three stable concept identities in canonical order (A4.14: Hearthside and Momee became hidden projects; 2026-11: Vynote became a hidden project)", () =>
+  test("two stable concept identities in canonical order (A4.14: Hearthside and Momee became hidden projects; Vynote and Oh Baby Grow also became hidden projects)", () =>
     assert.deepEqual(production.concepts.map(({id,title,kind,order}) => ({id,title,kind,order})), [
-      { id: "forgebox", title: "Forgebox", kind: "concept", order: 10 },
+      // EC-W9: Forgebox became a hidden project, so only the placeholder remains.
       { id: "comingSoon", title: "Coming Soon", kind: "placeholder", order: 40 },
-      { id: "ohBabyGrow", title: "Oh Baby Grow", kind: "concept", order: 50 },
     ]));
 
   test("reviewed metadata is bilingual and never fabricates repositories or deployments", () => {
     for (const record of production.concepts.filter(record => record.kind === "concept")) {
-      assert.deepEqual(Object.keys(record), ["id", "title", "kind", "order", "status", ...(["ohBabyGrow", "vynote"].includes(record.id) ? [] : ["destination"]), "description"]);
+      assert.deepEqual(Object.keys(record), ["id", "title", "kind", "order", "status", "destination", "description"]);
       assert(record.description.en.length > 20); assert(record.description.id.length > 20);
       assert.equal(record.repository, undefined); assert.equal(record.deployments, undefined);
     }
-    assert.equal(production.concepts.find(record => record.id === "forgebox").status, "planned");
+    assert.equal(production.concepts.some(record => record.id === "forgebox"), false);
     assert.deepEqual(production.concepts.find(record => record.id === "comingSoon"), {id:"comingSoon",title:"Coming Soon",kind:"placeholder",order:40});
   });
 
   test("existing projects, career and origins match authoritative source membership", () => {
-    assert.equal(Object.keys(production.projects).length, 68); // 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
+    assert.equal(Object.keys(production.projects).length, 78); // EC-W9 adds eight hidden projects (fmAuth, fmMail, fmLogs, journigo, zentralynk, reelfrym, relyxee, forgebox). Before that, 70: M6.1 adds hidden Oh Baby Grow. Before that, 69 included Linstem (hidden). Earlier: 68 = 2026-11 registry refresh adds 16 hidden projects (quillio, xpenz, zevorama, havernia, buddyChamp, beacon, ecosystemIdeas, orynth, ilyst, vynote, codyssey, platformLab, kenali, keranjoo, urusaha, yunivisi). Earlier: 52 = A4.14 adds ecosystemAssets, hearthside, momee, vaults, zketchly (hidden). Earlier: 33 + fmStudios (hidden, M8.8c) + links (hidden, Links M1.5) + templates (hidden pending Gateway Projects integration, Templates M1.3) + watch (hidden, FM Watch M0) + littleRoars, courses, frontendLab, securityLab (hidden, A4.2) + blog (hidden, A4.3b) + urchinRelay (hidden, in-progress, Urchin Relay M0.2)
     // These are internal source collections, not the six independently published Career leaves.
     // Exact source equality also detects missing/reordered/changed nested work and engagements.
     assert.deepEqual(production.career, assemble().career);
